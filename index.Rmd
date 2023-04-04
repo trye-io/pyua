@@ -1,5 +1,5 @@
 --- 
-title: "Програмування на Python"
+title: "🐍 Python програмування"
 author: "Єгор Рудницький, PhD"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site

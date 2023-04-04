@@ -1,0 +1,5 @@
+# Керівні конструкції (control structures)
+
+## Умовні переходи if/else
+
+## for цикли (loop)
