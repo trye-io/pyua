@@ -40,3 +40,4 @@ numpy
 що-таке-stackoverflow
 як-використати-chatgpt
 google-account
+основи-та-синтаксис-markdown
