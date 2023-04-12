@@ -3,7 +3,15 @@
 програмування-кодування-та-алгоритми
 python-як-мова-програмування
 огляд-мов-програмування
+game-development
+web-development
+mobile-app-development
+data-science-machine-learning-та-artificial-intelligence
+domain-specific-languages
+бібліотеки
+summary
 чому-python-one-love
+чому-вивчати-python-це-гарна-ідея
 починаємо-використовувати-python
 google-colaboratory-програмуй-у-своєму-браузері
 що-таке-клітини-коду
@@ -31,3 +39,4 @@ numpy
 як-написати-запит-у-google
 що-таке-stackoverflow
 як-використати-chatgpt
+google-account
