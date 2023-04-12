@@ -1,0 +1,7 @@
+# (APPENDIX) Додаток {-}
+
+# Створюємо обліковий запис у Google {#google-account}
+
+Якщо вам менше 13 років (обліковий запис для дітей) 
+
+https://accounts.google.com/signup/v2/kidaccountinfo?flowName=GlifWebSignIn&flowEntry=ServiceLogin
