@@ -1,2 +1,2 @@
-# Основи та синтаксис Markdown
+# Основи та синтаксис Markdown {#markdown}
 
