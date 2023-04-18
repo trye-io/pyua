@@ -1,4 +1,4 @@
-# Керівні конструкції (control structures)
+# Керівні конструкції (control structures) {#control}
 
 ## Умовні переходи if/else
 
