@@ -144,7 +144,7 @@ XXX: screenshot of google colab new notebook from different devices (laptop and 
 365 / 7
 ```
 
-І натиснемо коло з трикутником (кнопка **Play**) зліва від коду. Це запустить наш код та порахує `365/7`. 
+І натиснемо коло з трикутником (кнопка **Play**) зліва від коду. Це запустить наш код та порахує `365/7`. Результат розрахунку з'явиться внизу під нашим кодом.
 
 XXX: screenshot of google colab with play button highlighted and calculated 365 / 7 
 
