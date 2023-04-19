@@ -23,7 +23,7 @@
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-04-18" />
+<meta name="date" content="2023-04-19" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -182,7 +182,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.2" data-path="змінні-функції-та-оператори.html"><a href="змінні-функції-та-оператори.html#функції"><i class="fa fa-check"></i><b>4.2</b> Функції</a></li>
 <li class="chapter" data-level="4.3" data-path="змінні-функції-та-оператори.html"><a href="змінні-функції-та-оператори.html#оператори"><i class="fa fa-check"></i><b>4.3</b> Оператори</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html"><i class="fa fa-check"></i><b>5</b> Синтаксис (правила написання) коду у Python</a></li>
+<li class="chapter" data-level="5" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html"><i class="fa fa-check"></i><b>5</b> Синтаксис (правила написання) коду у Python</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html#одна-інструкція-один-рядок"><i class="fa fa-check"></i><b>5.1</b> Одна інструкція – один рядок</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="типи-скалярних-змінних.html"><a href="типи-скалярних-змінних.html"><i class="fa fa-check"></i><b>6</b> Типи скалярних змінних</a></li>
 <li class="chapter" data-level="7" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html"><i class="fa fa-check"></i><b>7</b> Вбудованні структури даних</a>
 <ul>
@@ -304,7 +307,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <pre><code>## 7.03125</code></pre>
 <p>Якщо ви уважно дивились на цифри, то звернули увагу на те, що кількість фотографій збільшилась. Як таке можливо? Якщо ми придивимось, ми побачемо що ми наплутали та зазначили 5.5 замість 4.5. Насправді, ми зробили цю помилку не випадково. Ми використовували и переписували одне і те саме число (кількість вільної пам’яті у Gb) тричі, і тому вирогідність зробити помилку хоча б в одному місці дуже велика.</p>
 <p>Саме цей факт і є мотивацією нового концепту який називається змінна. Формально, <strong>змінна</strong> – це ділянка пам’яті комп’ютера, яка має своє <strong>ім’я</strong> та <strong>значення</strong>. Ми можемо створювати нові змінні, змінювати їх значення, але найважливіше – використовувати їх значення у коді.</p>
-<p>Давайте створемо нову змінну з ім’ям <code>free_space</code> (з англійскої – вільне місце) і запишемо в цю змінну значення <code>4.5</code>:</p>
+<p>Давайте створемо нову змінну з ім’ям <code>free_space</code> (з англійскої – вільне місце) і присвоємо цій змінній значення <code>4.5</code>:</p>
 <div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="змінні-функції-та-оператори.html#cb24-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">=</span> <span class="fl">4.5</span></span></code></pre></div>
 <p>Синтаксис створення змінних простий і складаєтся з трьох частин: <code>ім'я</code> змінної зліва, потім <code>знак дорівнює</code>, а все що залишається праворуч – це буде <code>значення</code>.</p>
 <!-- XXX: scheme of syntax of math operators -->
@@ -339,6 +342,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>І потім використати, наприклад для того, щоб порахувати кількість зайнятої пам’ті:</p>
 <div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="змінні-функції-та-оператори.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">-</span> free_space_percentage</span></code></pre></div>
 <pre><code>## 94</code></pre>
+<p>Ось приклад функції <code>max()</code>, яка повертає максимум серед зазначенних чисел:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="змінні-функції-та-оператори.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(<span class="dv">3</span>, <span class="fl">3.5</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">20</span>)</span></code></pre></div>
+<pre><code>## 10</code></pre>
+<p>А ось приклад функції <code>abs</code>, яка знаходить модуль числа:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="змінні-функції-та-оператори.html#cb47-1" aria-hidden="true" tabindex="-1"></a>absolute_value <span class="op">=</span> <span class="bu">abs</span>(<span class="op">-</span><span class="dv">10</span>)</span></code></pre></div>
 </div>
 <div id="оператори" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> Оператори<a href="змінні-функції-та-оператори.html#оператори" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -353,7 +361,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>У математчних операторів дуже інтуітивний синтаксис, який поділяється на три частини: перший операнд, беспосередньо сам оператор і другий операнд.</p>
 <!-- XXX: scheme of syntax of math operators -->
 <p>Ми вже бачили багато прикладів з операторами, коли робили наші підрахунки. Тут ми тільки глянемо на новий оператор піднесення до степіню:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="змінні-функції-та-оператори.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="змінні-функції-та-оператори.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## 9</code></pre>
 <p>Крім математичних операторів існують ще інші, як наприклад, логічні оператори. Ми до них повернемось у Главі <a href="control.html#control">8</a>.</p>
 <hr />
