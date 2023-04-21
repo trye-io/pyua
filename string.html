@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Глава 6 Типи скалярних змінних | 🐍 Python програмування</title>
+  <title>C Працюємо із текстовими стрічками | 🐍 Python програмування</title>
   <meta name="description" content="Ця книга є додатковим матеріалом для курсу “Програмування на Python”." />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Глава 6 Типи скалярних змінних | 🐍 Python програмування" />
+  <meta property="og:title" content="C Працюємо із текстовими стрічками | 🐍 Python програмування" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="Ця книга є додатковим матеріалом для курсу “Програмування на Python”." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Глава 6 Типи скалярних змінних | 🐍 Python програмування" />
+  <meta name="twitter:title" content="C Працюємо із текстовими стрічками | 🐍 Python програмування" />
   
   <meta name="twitter:description" content="Ця книга є додатковим матеріалом для курсу “Програмування на Python”." />
   
@@ -23,15 +23,15 @@
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-04-20" />
+<meta name="date" content="2023-04-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="синтаксис-правила-написання-коду-у-python.html"/>
-<link rel="next" href="вбудованні-структури-даних.html"/>
+<link rel="prev" href="markdown.html"/>
+
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -188,7 +188,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.2" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html#коментарі"><i class="fa fa-check"></i><b>5.2</b> Коментарі</a></li>
 <li class="chapter" data-level="5.3" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html#імена-змінних"><i class="fa fa-check"></i><b>5.3</b> Імена змінних</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="типи-скалярних-змінних.html"><a href="типи-скалярних-змінних.html"><i class="fa fa-check"></i><b>6</b> Типи скалярних змінних</a></li>
+<li class="chapter" data-level="6" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html"><i class="fa fa-check"></i><b>6</b> Типи скалярних даних</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#тип-int-для-цілих-чисел"><i class="fa fa-check"></i><b>6.1</b> Тип <code>int</code> для цілих чисел</a></li>
+<li class="chapter" data-level="6.2" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.2</b> Тип <code>float</code> для дійсних чисел</a></li>
+<li class="chapter" data-level="6.3" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.3</b> Тип <code>bool</code> для бульових значень</a></li>
+<li class="chapter" data-level="6.4" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.4</b> Тип <code>str</code> для текстових стрічок</a></li>
+<li class="chapter" data-level="6.5" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#перетворення-типів"><i class="fa fa-check"></i><b>6.5</b> Перетворення типів</a></li>
+</ul></li>
 <li class="chapter" data-level="7" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html"><i class="fa fa-check"></i><b>7</b> Вбудованні структури даних</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html#tuples"><i class="fa fa-check"></i><b>7.1</b> tuples</a></li>
@@ -223,6 +230,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="appendix"><span><b>Додаток</b></span></li>
 <li class="chapter" data-level="A" data-path="google-account.html"><a href="google-account.html"><i class="fa fa-check"></i><b>A</b> Створюємо обліковий запис у Google</a></li>
 <li class="chapter" data-level="B" data-path="markdown.html"><a href="markdown.html"><i class="fa fa-check"></i><b>B</b> Основи та синтаксис Markdown</a></li>
+<li class="chapter" data-level="C" data-path="string.html"><a href="string.html"><i class="fa fa-check"></i><b>C</b> Працюємо із текстовими стрічками</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="string.html"><a href="string.html#багаторядкові-текстові-стрічки"><i class="fa fa-check"></i><b>C.1</b> Багаторядкові текстові стрічки</a></li>
+<li class="chapter" data-level="C.2" data-path="string.html"><a href="string.html#спеціальні-та-керуючі-символи"><i class="fa fa-check"></i><b>C.2</b> Спеціальні та керуючі символи</a></li>
+<li class="chapter" data-level="C.3" data-path="string.html"><a href="string.html#оператори"><i class="fa fa-check"></i><b>C.3</b> Оператори</a></li>
+<li class="chapter" data-level="C.4" data-path="string.html"><a href="string.html#довжина-текстової-стрічки"><i class="fa fa-check"></i><b>C.4</b> Довжина текстової стрічки</a></li>
+<li class="chapter" data-level="C.5" data-path="string.html"><a href="string.html#індексація-та-слайсінг"><i class="fa fa-check"></i><b>C.5</b> Індексація та слайсінг</a></li>
+<li class="chapter" data-level="C.6" data-path="string.html"><a href="string.html#корисні-методи-стрічок"><i class="fa fa-check"></i><b>C.6</b> Корисні методи стрічок</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://trye.io" target="blank">Зробленно trye з ❤️ до України</a></li>
 
@@ -243,61 +259,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="типи-скалярних-змінних" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Глава 6</span> Типи скалярних змінних<a href="типи-скалярних-змінних.html#типи-скалярних-змінних" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<table>
-<thead>
-<tr class="header">
-<th>Назва</th>
-<th>Посилання</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Лекція в YouTube</td>
-<td><a href="https://" class="uri">https://</a></td>
-</tr>
-<tr class="even">
-<td>Подкаст-лекція</td>
-<td><a href="https://" class="uri">https://</a></td>
-</tr>
-<tr class="odd">
-<td>Код в Google Colab</td>
-<td><a href="https://" class="uri">https://</a></td>
-</tr>
-<tr class="even">
-<td>Вправи в Google Forms</td>
-<td><a href="https://" class="uri">https://</a></td>
-</tr>
-</tbody>
-</table>
-<p>Слухати:</p>
-<p>Приблизний час на опанування теми: 15 хвилин</p>
-<p>Для чого ми це вивчаємо:</p>
-<p>Результати навчання:</p>
-<ul>
-<li>Створювати змінні</li>
-<li>Використовувати та змінювати занчення змінних</li>
-<li>Викликати функцію та зазначати аргументи</li>
-<li>Використовувати математичні оператори</li>
-</ul>
-<p>Шпаргалка: summarized.pdf</p>
-<hr />
-<hr />
-<p>У попередніх главах, ми створювали змінні, які містили тільки одне значення. Такі змінні ми будемо називати скалярами. До сих пір, ми розглядали скаляри, які містили тільки числові значення. Цим типом значень скаляри не обмежуються, і ми можемо також створити скаляри, які будуть містити:</p>
-<ul>
-<li></li>
-</ul>
-<hr />
+<div id="string" class="section level1 hasAnchor" number="17">
+<h1><span class="header-section-number">C</span> Працюємо із текстовими стрічками<a href="string.html#string" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="багаторядкові-текстові-стрічки" class="section level2 hasAnchor" number="17.1">
+<h2><span class="header-section-number">C.1</span> Багаторядкові текстові стрічки<a href="string.html#багаторядкові-текстові-стрічки" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Стрічки можуть займати також кілька рядків. Щоб створити стрічку з декількох рядків, ми можемо використати три одинарні або три подвійні лапки:</p>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="string.html#cb97-1" aria-hidden="true" tabindex="-1"></a>poem <span class="op">=</span> <span class="st">&quot;&quot;&quot;Реве та стогне Дніпр широкий,</span></span>
+<span id="cb97-2"><a href="string.html#cb97-2" aria-hidden="true" tabindex="-1"></a><span class="st">Сердитий вітер завива...</span></span>
+<span id="cb97-3"><a href="string.html#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb97-4"><a href="string.html#cb97-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb97-5"><a href="string.html#cb97-5" aria-hidden="true" tabindex="-1"></a>poem</span></code></pre></div>
+<pre><code>## &#39;Реве та стогне Дніпр широкий,\nСердитий вітер завива...\n&#39;</code></pre>
+<p>Скоріш за все, ви звернули увагу, що замість нового рядку, Python видав комбінацію символів <code>\n</code>. Ця комбінація має спеціальний зміст, а саме – нова строка.</p>
+</div>
+<div id="спеціальні-та-керуючі-символи" class="section level2 hasAnchor" number="17.2">
+<h2><span class="header-section-number">C.2</span> Спеціальні та керуючі символи<a href="string.html#спеціальні-та-керуючі-символи" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Символ <code>\</code> (backslash) використовується як символ “виходу” (escape character) – символ після <code>/</code> буде інтерпертуватись по іншому. Наприклад, <code>\n</code> означає новий рядок, <code>\t</code> означає табуляцію.</p>
+</div>
+<div id="оператори" class="section level2 hasAnchor" number="17.3">
+<h2><span class="header-section-number">C.3</span> Оператори<a href="string.html#оператори" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="string.html#cb99-1" aria-hidden="true" tabindex="-1"></a>part1 <span class="op">=</span> <span class="st">&quot;Hey! &quot;</span></span>
+<span id="cb99-2"><a href="string.html#cb99-2" aria-hidden="true" tabindex="-1"></a>part2 <span class="op">=</span> <span class="st">&quot;How are you doing?&quot;</span></span>
+<span id="cb99-3"><a href="string.html#cb99-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb99-4"><a href="string.html#cb99-4" aria-hidden="true" tabindex="-1"></a>part1 <span class="op">+</span> part2</span></code></pre></div>
+<pre><code>## &#39;Hey! How are you doing?&#39;</code></pre>
+<div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb101-1"><a href="string.html#cb101-1" aria-hidden="true" tabindex="-1"></a>phraze <span class="op">=</span> <span class="st">&quot;Я не повторюю два рази! &quot;</span></span>
+<span id="cb101-2"><a href="string.html#cb101-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb101-3"><a href="string.html#cb101-3" aria-hidden="true" tabindex="-1"></a>phraze <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>## &#39;Я не повторюю два рази! Я не повторюю два рази! &#39;</code></pre>
+</div>
+<div id="довжина-текстової-стрічки" class="section level2 hasAnchor" number="17.4">
+<h2><span class="header-section-number">C.4</span> Довжина текстової стрічки<a href="string.html#довжина-текстової-стрічки" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb103"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="string.html#cb103-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb103-2"><a href="string.html#cb103-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(address)</span></code></pre></div>
+<pre><code>## 17</code></pre>
+<div class="sourceCode" id="cb105"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="string.html#cb105-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb105-2"><a href="string.html#cb105-2" aria-hidden="true" tabindex="-1"></a>address.split(<span class="st">&quot; &quot;</span>)</span></code></pre></div>
+<pre><code>## [&#39;221B&#39;, &#39;Baker&#39;, &#39;Street&#39;]</code></pre>
+</div>
+<div id="індексація-та-слайсінг" class="section level2 hasAnchor" number="17.5">
+<h2><span class="header-section-number">C.5</span> Індексація та слайсінг<a href="string.html#індексація-та-слайсінг" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb107"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb107-1"><a href="string.html#cb107-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb107-2"><a href="string.html#cb107-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## &#39;B&#39;</code></pre>
+<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="string.html#cb109-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb109-2"><a href="string.html#cb109-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">0</span>:<span class="dv">4</span>]</span></code></pre></div>
+<pre><code>## &#39;221B&#39;</code></pre>
+</div>
+<div id="корисні-методи-стрічок" class="section level2 hasAnchor" number="17.6">
+<h2><span class="header-section-number">C.6</span> Корисні методи стрічок<a href="string.html#корисні-методи-стрічок" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<!-- Подумай чи має сенс додавати це сюди? -->
+<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="string.html#cb111-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb111-2"><a href="string.html#cb111-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">0</span>:<span class="dv">4</span>]</span></code></pre></div>
+<pre><code>## &#39;221B&#39;</code></pre>
 
 </div>
+</div>
+
+
+
+
+
+
+
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="синтаксис-правила-написання-коду-у-python.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="вбудованні-структури-даних.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="markdown.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -328,7 +362,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/06-scalars.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/16-string.Rmd",
 "text": "Edit"
 },
 "history": {
