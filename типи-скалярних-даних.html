@@ -23,7 +23,7 @@
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-04-21" />
+<meta name="date" content="2023-04-24" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -237,7 +237,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="C.3" data-path="string.html"><a href="string.html#оператори"><i class="fa fa-check"></i><b>C.3</b> Оператори</a></li>
 <li class="chapter" data-level="C.4" data-path="string.html"><a href="string.html#довжина-текстової-стрічки"><i class="fa fa-check"></i><b>C.4</b> Довжина текстової стрічки</a></li>
 <li class="chapter" data-level="C.5" data-path="string.html"><a href="string.html#індексація-та-слайсінг"><i class="fa fa-check"></i><b>C.5</b> Індексація та слайсінг</a></li>
-<li class="chapter" data-level="C.6" data-path="string.html"><a href="string.html#корисні-методи-стрічок"><i class="fa fa-check"></i><b>C.6</b> Корисні методи стрічок</a></li>
+<li class="chapter" data-level="C.6" data-path="string.html"><a href="string.html#string-methods"><i class="fa fa-check"></i><b>C.6</b> Корисні методи стрічок</a></li>
 </ul></li>
 <li class="divider"></li>
 <li><a href="https://trye.io" target="blank">Зробленно trye з ❤️ до України</a></li>
@@ -354,33 +354,45 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="перетворення-типів" class="section level2 hasAnchor" number="6.5">
 <h2><span class="header-section-number">6.5</span> Перетворення типів<a href="типи-скалярних-даних.html#перетворення-типів" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Одна і та сама інформація може зберігатись в об’єктах різних типів. Залежно від типу даних, об’єкт буде себе поводитись різним чином.</p>
-<p>Наприклад, число <code>2008</code> (рік нарождення) може зебрігатись в об’єкті типу <code>int</code>, <code>float</code> або <code>str</code>. Спробуємо представити <code>2008</code> за допомогою об’єкта <code>str</code> та відняти від <code>2023</code>:</p>
+<p>Одна і та сама інформація може зберігатись в об’єктах різних типів. Наприклад, число <code>2008</code> (рік нарождення) може зебрігатись в об’єкті типу <code>int</code>, <code>float</code> або <code>str</code>. Давайте представимо <code>2008</code> за допомогою об’єкта <code>str</code></p>
 <div class="sourceCode" id="cb87"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="типи-скалярних-даних.html#cb87-1" aria-hidden="true" tabindex="-1"></a>year_str <span class="op">=</span> <span class="st">&quot;2008&quot;</span> <span class="co"># нагадуємо, що str створюється за допомогою лапок</span></span>
-<span id="cb87-2"><a href="типи-скалярних-даних.html#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2023</span> <span class="op">-</span> year_str</span></code></pre></div>
-<pre><code>## Error: TypeError: unsupported operand type(s) for -: &#39;int&#39; and &#39;str&#39;</code></pre>
-<p>Упс, щось пішло не так. Виявляється ми не можемо віднімати об’єкти з даними <code>int</code> та <code>str</code>. Давайте подивимось, що ми можемо зробити, якщо нам все одно треба додати ці числа. Але спершу, ми познайомимось із корисною фунцкією <code>type()</code>. Ця фунцкія повертає тип даних об’єкта:</p>
-<div class="sourceCode" id="cb89"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="типи-скалярних-даних.html#cb89-1" aria-hidden="true" tabindex="-1"></a>year_str <span class="op">=</span> <span class="st">&quot;2008&quot;</span></span>
-<span id="cb89-2"><a href="типи-скалярних-даних.html#cb89-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(year_str)</span></code></pre></div>
+<span id="cb87-2"><a href="типи-скалярних-даних.html#cb87-2" aria-hidden="true" tabindex="-1"></a>year_str</span></code></pre></div>
+<pre><code>## &#39;2008&#39;</code></pre>
+<p>Існує дуже корисна функція, яка дозволяє перевірити тип об’єкта. Називається вона <code>type()</code>:</p>
+<div class="sourceCode" id="cb89"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb89-1"><a href="типи-скалярних-даних.html#cb89-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(year_str)</span></code></pre></div>
 <pre><code>## &lt;class &#39;str&#39;&gt;</code></pre>
-<p>Або якщо наш рік <code>2008</code> були представлені об’єктом <code>float</code>:</p>
-<div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="типи-скалярних-даних.html#cb91-1" aria-hidden="true" tabindex="-1"></a>year_float <span class="op">=</span> <span class="fl">2008.0</span></span>
+<p>Головну інформацію, яку нам треба побачити, це – <code>str</code>. Усе інше, тобто <code>&lt;class ' '&gt;</code> ми можемо наразі проігнорувати. Якщо ж наш рік <code>2008</code> буде представлений об’єктом <code>float</code>, то фунцкія поверне <code>&lt;class 'float'&gt;</code>:</p>
+<div class="sourceCode" id="cb91"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="типи-скалярних-даних.html#cb91-1" aria-hidden="true" tabindex="-1"></a>year_float <span class="op">=</span> <span class="fl">2008.0</span> <span class="co"># нагадуємо, що float створюється за домомогою крапки</span></span>
 <span id="cb91-2"><a href="типи-скалярних-даних.html#cb91-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(year_float)</span></code></pre></div>
 <pre><code>## &lt;class &#39;float&#39;&gt;</code></pre>
-<p>Виявляється, ми можемо перетворювати об’єкти одного типу на інший. Для цього ми будемо використовувати функції:</p>
+<p>Залежно від типу даних, об’єкт буде себе поводитись різним чином. Наприклад, <code>int</code> та <code>float</code> без проблем можна використовувати в одному виразі:</p>
+<div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="типи-скалярних-даних.html#cb93-1" aria-hidden="true" tabindex="-1"></a>year_float <span class="op">=</span> <span class="fl">2008.0</span></span>
+<span id="cb93-2"><a href="типи-скалярних-даних.html#cb93-2" aria-hidden="true" tabindex="-1"></a>current_year <span class="op">=</span> <span class="dv">2023</span> <span class="co"># цей об&#39;єкт має тип int</span></span>
+<span id="cb93-3"><a href="типи-скалярних-даних.html#cb93-3" aria-hidden="true" tabindex="-1"></a>current_year <span class="op">-</span> year_float</span></code></pre></div>
+<pre><code>## 15.0</code></pre>
+<p>А ось якщо наш рік представлений об’єктом <code>str</code>, це означає що ми не можемо поводитись з ним, як з числом. Навіть якщо воно виглядає як число. Давайте подивимось, що трапиться, якщо ми відімимо рік народження, який зберігається в <code>str</code>, від числа <code>2023</code>:</p>
+<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="типи-скалярних-даних.html#cb95-1" aria-hidden="true" tabindex="-1"></a>year_str <span class="op">=</span> <span class="st">&quot;2008&quot;</span> </span>
+<span id="cb95-2"><a href="типи-скалярних-даних.html#cb95-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2023</span> <span class="op">-</span> year_str</span></code></pre></div>
+<pre><code>## Error: TypeError: unsupported operand type(s) for -: &#39;int&#39; and &#39;str&#39;</code></pre>
+<p>Упс, щось пішло не так. Виявляється ми не можемо віднімати об’єкти з даними <code>int</code> та <code>str</code>. Але що нам робити, якщо нам все одно треба відняти ці числа? Виявляється, ми можемо перетворювати об’єкти одного типу на інший. Для цього ми будемо використовувати функції:</p>
 <ul>
 <li><code>int()</code> для перетворення на об’єкт <code>int</code></li>
 <li><code>float()</code> для перетворення на об’єкт <code>int</code></li>
 <li><code>str()</code> для перетворення на об’єкт <code>str</code></li>
 </ul>
 <p>Давайте спробуємо перетворити <code>year_str</code> на об’єкт типу <code>int</code>:</p>
-<div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="типи-скалярних-даних.html#cb93-1" aria-hidden="true" tabindex="-1"></a>year_str <span class="op">=</span> <span class="st">&quot;2008&quot;</span></span>
-<span id="cb93-2"><a href="типи-скалярних-даних.html#cb93-2" aria-hidden="true" tabindex="-1"></a>year_int <span class="op">=</span> <span class="bu">int</span>(year_str)</span>
-<span id="cb93-3"><a href="типи-скалярних-даних.html#cb93-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(year_int)</span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="типи-скалярних-даних.html#cb97-1" aria-hidden="true" tabindex="-1"></a>year_str <span class="op">=</span> <span class="st">&quot;2008&quot;</span></span>
+<span id="cb97-2"><a href="типи-скалярних-даних.html#cb97-2" aria-hidden="true" tabindex="-1"></a>year_int <span class="op">=</span> <span class="bu">int</span>(year_str)</span>
+<span id="cb97-3"><a href="типи-скалярних-даних.html#cb97-3" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(year_int)</span></code></pre></div>
 <pre><code>## &lt;class &#39;int&#39;&gt;</code></pre>
 <p>Тепер ми можемо використати <code>year_int</code>, яка була створена з <code>year_str</code>, щоб порахувати вік:</p>
-<div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="типи-скалярних-даних.html#cb95-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2023</span> <span class="op">-</span> year_int</span></code></pre></div>
+<div class="sourceCode" id="cb99"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb99-1"><a href="типи-скалярних-даних.html#cb99-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2023</span> <span class="op">-</span> year_int</span></code></pre></div>
 <pre><code>## 15</code></pre>
+<p>Те що треба! Але будьте обережні, не завжди ми можемо перести <code>str</code> до <code>int</code> або <code>float</code>. Наприклад, перевести текстові символи, а не цифрові, ми не можемо, тому що це не має математичного сенсу:</p>
+<div class="sourceCode" id="cb101"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb101-1"><a href="типи-скалярних-даних.html#cb101-1" aria-hidden="true" tabindex="-1"></a>some_letters <span class="op">=</span> <span class="st">&quot;number&quot;</span></span>
+<span id="cb101-2"><a href="типи-скалярних-даних.html#cb101-2" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(some_letters)</span></code></pre></div>
+<pre><code>## Error: ValueError: invalid literal for int() with base 10: &#39;number&#39;</code></pre>
+<p>У вправах, ми познайомимось із перетворенням об’єктів типу <code>boolean</code> на інші типи, та навпаки.</p>
 <hr />
 
 </div>
