@@ -1,0 +1,25 @@
+# Семантіка Python 
+
+```{python, error = TRUE}
+a = 2
+b = a
+b
+```
+
+```{python, error = TRUE}
+a = 3
+b
+```
+
+
+```{python, error = TRUE}
+def append_element(x, element)
+    x.append(element)
+```
+
+
+```{python, error = TRUE}
+data = [1, 2, 3]
+append_element(data, 4)
+data
+```
