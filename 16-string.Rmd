@@ -40,11 +40,6 @@ address = "221B Baker Street"
 len(address)
 ```
 
-```{python}
-address = "221B Baker Street"
-address.split(" ")
-```
-
 ## Індексація та слайсінг
 
 ```{python}
@@ -52,16 +47,39 @@ address = "221B Baker Street"
 address[3]
 ```
 
+Але на відміну від list, наприклад, ми не можемо змінити стрічку. 
+
+```{python, error = TRUE}
+address = "221B Baker Street"
+address[3] = "A"
+```
+
+Проте, є все одно один маленький трюк -- метод `.replace()`, про який ми поговоримо у секції \@ref(string-methods).
+
+Слайсінг або зріз.
+
 ```{python}
 address = "221B Baker Street"
 address[0:4]
 ```
 
-## Корисні методи стрічок
 
 <!-- Подумай чи має сенс додавати це сюди? -->
 
+## Корисні методи стрічок {#string-methods}
+
+
 ```{python}
 address = "221B Baker Street"
-address[0:4]
+address.replace("221B", "222")
+```
+
+```{python}
+address = "221B Baker Street"
+address.split(" ")
+```
+
+```{python}
+address = "221B Baker Street"
+address.upper()
 ```
