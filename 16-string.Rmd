@@ -42,6 +42,8 @@ len(address)
 
 ## Індексація та слайсінг
 
+Те, що ми використовували для `list` та `tuples` (Глава XXX та XXX), можна використовувати й тут.
+
 ```{python}
 address = "221B Baker Street"
 address[3]
