@@ -13,7 +13,7 @@ b
 
 
 ```{python, error = TRUE}
-def append_element(x, element)
+def append_element(x, element):
     x.append(element)
 ```
 
