@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Глава 7 Списки list | 🐍 Python програмування</title>
+  <meta name="description" content="Ця книга є додатковим матеріалом для курсу “Програмування на Python”." />
+  <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Глава 7 Списки list | 🐍 Python програмування" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="Ця книга є додатковим матеріалом для курсу “Програмування на Python”." />
+  <meta name="github-repo" content="rstudio/bookdown-demo" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Глава 7 Списки list | 🐍 Python програмування" />
+  
+  <meta name="twitter:description" content="Ця книга є додатковим матеріалом для курсу “Програмування на Python”." />
+  
+
+<meta name="author" content="Єгор Рудницький, PhD" />
+
+
+<meta name="date" content="2023-04-25" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="типи-скалярних-даних.html"/>
+<link rel="next" href="вбудованні-структури-даних.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">🐍 Python програмування</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Вступ</a>
+<ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#яка-ціль-цієї-книги"><i class="fa fa-check"></i>Яка ціль цієї книги</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#для-кого-ця-книга"><i class="fa fa-check"></i>Для кого ця книга</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#які-зання-та-навички-я-отримаю"><i class="fa fa-check"></i>Які зання та навички я отримаю</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#як-читати-цю-книгу"><i class="fa fa-check"></i>Як читати цю книгу</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#мова-книги"><i class="fa fa-check"></i>Мова книги</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#про-автора"><i class="fa fa-check"></i>Про автора</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#як-ця-книга-вписується-в-программу-школи-trye"><i class="fa fa-check"></i>Як ця книга вписується в программу школи trye</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="programming.html"><a href="programming.html"><i class="fa fa-check"></i><b>1</b> Що таке програмування?</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="programming.html"><a href="programming.html#програма-додаток-програмне-забезпечення-та-код"><i class="fa fa-check"></i><b>1.1</b> Програма, додаток, програмне забезпечення та код</a></li>
+<li class="chapter" data-level="1.2" data-path="programming.html"><a href="programming.html#програмування-кодування-та-алгоритми"><i class="fa fa-check"></i><b>1.2</b> Програмування, кодування та алгоритми</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html"><i class="fa fa-check"></i><b>2</b> Python як мова програмування</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#огляд-мов-програмування"><i class="fa fa-check"></i><b>2.1</b> Огляд мов програмування</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#game-development"><i class="fa fa-check"></i><b>2.1.1</b> Game development</a></li>
+<li class="chapter" data-level="2.1.2" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#web-development"><i class="fa fa-check"></i><b>2.1.2</b> Web-development</a></li>
+<li class="chapter" data-level="2.1.3" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#mobile-app-development"><i class="fa fa-check"></i><b>2.1.3</b> Mobile app development</a></li>
+<li class="chapter" data-level="2.1.4" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#data-science-machine-learning-та-artificial-intelligence"><i class="fa fa-check"></i><b>2.1.4</b> Data science, machine learning та artificial intelligence</a></li>
+<li class="chapter" data-level="2.1.5" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#domain-specific-languages"><i class="fa fa-check"></i><b>2.1.5</b> Domain specific languages</a></li>
+<li class="chapter" data-level="2.1.6" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#бібліотеки"><i class="fa fa-check"></i><b>2.1.6</b> Бібліотеки</a></li>
+<li class="chapter" data-level="2.1.7" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#summary"><i class="fa fa-check"></i><b>2.1.7</b> Summary</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#чому-python-one-love"><i class="fa fa-check"></i><b>2.2</b> Чому Python – one love?</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#чому-вивчати-python-це-гарна-ідея"><i class="fa fa-check"></i><b>2.2.1</b> Чому вивчати Python – це гарна ідея?</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="python-як-мова-програмування.html"><a href="python-як-мова-програмування.html#починаємо-використовувати-python"><i class="fa fa-check"></i><b>2.3</b> Починаємо використовувати Python</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="google-colaboratory-програмуй-у-своєму-браузері.html"><a href="google-colaboratory-програмуй-у-своєму-браузері.html"><i class="fa fa-check"></i><b>3</b> Google Colaboratory: програмуй у своєму браузері</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="google-colaboratory-програмуй-у-своєму-браузері.html"><a href="google-colaboratory-програмуй-у-своєму-браузері.html#розбираємось-де-пишеться-код"><i class="fa fa-check"></i><b>3.1</b> Розбираємось де пишеться код</a></li>
+<li class="chapter" data-level="3.2" data-path="google-colaboratory-програмуй-у-своєму-браузері.html"><a href="google-colaboratory-програмуй-у-своєму-браузері.html#створємо-зберігаємо-відкриваємо-та-переіменовуємо-записники-у-google-colab"><i class="fa fa-check"></i><b>3.2</b> Створємо, зберігаємо, відкриваємо та переіменовуємо записники у Google Colab</a></li>
+<li class="chapter" data-level="3.3" data-path="google-colaboratory-програмуй-у-своєму-браузері.html"><a href="google-colaboratory-програмуй-у-своєму-браузері.html#працюємо-з-клітинками"><i class="fa fa-check"></i><b>3.3</b> Працюємо з клітинками</a></li>
+<li class="chapter" data-level="3.4" data-path="google-colaboratory-програмуй-у-своєму-браузері.html"><a href="google-colaboratory-програмуй-у-своєму-браузері.html#якщо-ви-натисните-курсором-на-клітинку-то-праворуч-зяляться-кнопки-з-опціями.-ми-будемо-ретельно-їх-роздивимось-у-вправах-в-google-forms."><i class="fa fa-check"></i><b>3.4</b> Якщо ви натисните курсором на клітинку, то праворуч з’яляться кнопки з опціями. Ми будемо ретельно їх роздивимось у вправах в Google Forms.</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="vars.html"><a href="vars.html"><i class="fa fa-check"></i><b>4</b> Змінні, функції та оператори</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="vars.html"><a href="vars.html#змінні"><i class="fa fa-check"></i><b>4.1</b> Змінні</a></li>
+<li class="chapter" data-level="4.2" data-path="vars.html"><a href="vars.html#функції"><i class="fa fa-check"></i><b>4.2</b> Функції</a></li>
+<li class="chapter" data-level="4.3" data-path="vars.html"><a href="vars.html#operators"><i class="fa fa-check"></i><b>4.3</b> Оператори</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html"><i class="fa fa-check"></i><b>5</b> Синтаксис (правила написання) коду у Python</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html#одна-інструкція-один-рядок"><i class="fa fa-check"></i><b>5.1</b> Одна інструкція – один рядок</a></li>
+<li class="chapter" data-level="5.2" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html#коментарі"><i class="fa fa-check"></i><b>5.2</b> Коментарі</a></li>
+<li class="chapter" data-level="5.3" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html#імена-змінних"><i class="fa fa-check"></i><b>5.3</b> Імена змінних</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html"><i class="fa fa-check"></i><b>6</b> Типи скалярних даних</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#тип-int-для-цілих-чисел"><i class="fa fa-check"></i><b>6.1</b> Тип <code>int</code> для цілих чисел</a></li>
+<li class="chapter" data-level="6.2" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.2</b> Тип <code>float</code> для дійсних чисел</a></li>
+<li class="chapter" data-level="6.3" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.3</b> Тип <code>bool</code> для бульових значень</a></li>
+<li class="chapter" data-level="6.4" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.4</b> Тип <code>str</code> для текстових стрічок</a></li>
+<li class="chapter" data-level="6.5" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#перетворення-типів"><i class="fa fa-check"></i><b>6.5</b> Перетворення типів</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="списки-list.html"><a href="списки-list.html"><i class="fa fa-check"></i><b>7</b> Списки <code>list</code></a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="списки-list.html"><a href="списки-list.html#створюємо-list"><i class="fa fa-check"></i><b>7.1</b> Створюємо <code>list</code></a></li>
+<li class="chapter" data-level="7.2" data-path="списки-list.html"><a href="списки-list.html#індексація"><i class="fa fa-check"></i><b>7.2</b> Індексація</a>
+<ul>
+<li class="chapter" data-level="7.2.1" data-path="списки-list.html"><a href="списки-list.html#отримуємо-елемент-за-його-індексом"><i class="fa fa-check"></i><b>7.2.1</b> Отримуємо елемент за його індексом</a></li>
+<li class="chapter" data-level="7.2.2" data-path="списки-list.html"><a href="списки-list.html#змінюємо-елемент-за-його-індексом"><i class="fa fa-check"></i><b>7.2.2</b> Змінюємо елемент за його індексом</a></li>
+</ul></li>
+<li class="chapter" data-level="7.3" data-path="списки-list.html"><a href="списки-list.html#слайсінг-зріз"><i class="fa fa-check"></i><b>7.3</b> Слайсінг (зріз)</a></li>
+<li class="chapter" data-level="7.4" data-path="списки-list.html"><a href="списки-list.html#корисні-оператори"><i class="fa fa-check"></i><b>7.4</b> Корисні оператори</a>
+<ul>
+<li class="chapter" data-level="7.4.1" data-path="списки-list.html"><a href="списки-list.html#перевіряємо-чи-присутній-обєкт-серед-елементів-списку"><i class="fa fa-check"></i><b>7.4.1</b> Перевіряємо чи присутній об’єкт серед елементів списку</a></li>
+<li class="chapter" data-level="7.4.2" data-path="списки-list.html"><a href="списки-list.html#зєднуємо-два-списка"><i class="fa fa-check"></i><b>7.4.2</b> З’єднуємо два списка</a></li>
+<li class="chapter" data-level="7.4.3" data-path="списки-list.html"><a href="списки-list.html#повторємо-список"><i class="fa fa-check"></i><b>7.4.3</b> Повторємо список</a></li>
+</ul></li>
+<li class="chapter" data-level="7.5" data-path="списки-list.html"><a href="списки-list.html#корисні-функції"><i class="fa fa-check"></i><b>7.5</b> Корисні функції</a></li>
+<li class="chapter" data-level="7.6" data-path="списки-list.html"><a href="списки-list.html#корисні-методи"><i class="fa fa-check"></i><b>7.6</b> Корисні методи</a>
+<ul>
+<li class="chapter" data-level="7.6.1" data-path="списки-list.html"><a href="списки-list.html#додаємо-елементи-у-список"><i class="fa fa-check"></i><b>7.6.1</b> Додаємо елементи у список</a></li>
+<li class="chapter" data-level="7.6.2" data-path="списки-list.html"><a href="списки-list.html#видаляємо-елементи-зі-списку"><i class="fa fa-check"></i><b>7.6.2</b> Видаляємо елементи зі списку</a></li>
+<li class="chapter" data-level="7.6.3" data-path="списки-list.html"><a href="списки-list.html#змінюємо-порядок-елементів-на-зворотній"><i class="fa fa-check"></i><b>7.6.3</b> Змінюємо порядок елементів на зворотній</a></li>
+<li class="chapter" data-level="7.6.4" data-path="списки-list.html"><a href="списки-list.html#сортуємо-списки"><i class="fa fa-check"></i><b>7.6.4</b> Сортуємо списки</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html"><i class="fa fa-check"></i><b>8</b> Вбудованні структури даних</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html#tuples"><i class="fa fa-check"></i><b>8.1</b> tuples</a></li>
+<li class="chapter" data-level="8.2" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html#list"><i class="fa fa-check"></i><b>8.2</b> list</a></li>
+<li class="chapter" data-level="8.3" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html#dict"><i class="fa fa-check"></i><b>8.3</b> dict</a></li>
+<li class="chapter" data-level="8.4" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html#set"><i class="fa fa-check"></i><b>8.4</b> set</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="вбудованні-структури-даних-1.html"><a href="вбудованні-структури-даних-1.html"><i class="fa fa-check"></i><b>9</b> Вбудованні структури даних</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="вбудованні-структури-даних-1.html"><a href="вбудованні-структури-даних-1.html#tuples-1"><i class="fa fa-check"></i><b>9.1</b> tuples</a></li>
+<li class="chapter" data-level="9.2" data-path="вбудованні-структури-даних-1.html"><a href="вбудованні-структури-даних-1.html#list-1"><i class="fa fa-check"></i><b>9.2</b> list</a></li>
+<li class="chapter" data-level="9.3" data-path="вбудованні-структури-даних-1.html"><a href="вбудованні-структури-даних-1.html#dict-1"><i class="fa fa-check"></i><b>9.3</b> dict</a></li>
+<li class="chapter" data-level="9.4" data-path="вбудованні-структури-даних-1.html"><a href="вбудованні-структури-даних-1.html#set-1"><i class="fa fa-check"></i><b>9.4</b> set</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="вбудованні-структури-даних-2.html"><a href="вбудованні-структури-даних-2.html"><i class="fa fa-check"></i><b>10</b> Вбудованні структури даних</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="вбудованні-структури-даних-2.html"><a href="вбудованні-структури-даних-2.html#tuples-2"><i class="fa fa-check"></i><b>10.1</b> tuples</a></li>
+<li class="chapter" data-level="10.2" data-path="вбудованні-структури-даних-2.html"><a href="вбудованні-структури-даних-2.html#list-2"><i class="fa fa-check"></i><b>10.2</b> list</a></li>
+<li class="chapter" data-level="10.3" data-path="вбудованні-структури-даних-2.html"><a href="вбудованні-структури-даних-2.html#dict-2"><i class="fa fa-check"></i><b>10.3</b> dict</a></li>
+<li class="chapter" data-level="10.4" data-path="вбудованні-структури-даних-2.html"><a href="вбудованні-структури-даних-2.html#set-2"><i class="fa fa-check"></i><b>10.4</b> set</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="control.html"><a href="control.html"><i class="fa fa-check"></i><b>11</b> Керівні конструкції (control structures)</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="control.html"><a href="control.html#умовні-переходи-ifelse"><i class="fa fa-check"></i><b>11.1</b> Умовні переходи if/else</a></li>
+<li class="chapter" data-level="11.2" data-path="control.html"><a href="control.html#for-цикли-loop"><i class="fa fa-check"></i><b>11.2</b> for цикли (loop)</a>
+<ul>
+<li class="chapter" data-level="11.2.1" data-path="control.html"><a href="control.html#range"><i class="fa fa-check"></i><b>11.2.1</b> <code>range()</code></a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="функції-1.html"><a href="функції-1.html"><i class="fa fa-check"></i><b>12</b> Функції</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="функції-1.html"><a href="функції-1.html#do-not-repeat-yourself"><i class="fa fa-check"></i><b>12.1</b> Do not repeat yourself</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="style.html"><a href="style.html"><i class="fa fa-check"></i><b>13</b> Стиль програмування</a>
+<ul>
+<li class="chapter" data-level="13.1" data-path="style.html"><a href="style.html#пробіли"><i class="fa fa-check"></i><b>13.1</b> Пробіли</a></li>
+</ul></li>
+<li class="chapter" data-level="14" data-path="що-таке-бібліотека-library-для-python.html"><a href="що-таке-бібліотека-library-для-python.html"><i class="fa fa-check"></i><b>14</b> Що таке бібліотека (library) для Python?</a></li>
+<li class="chapter" data-level="15" data-path="numpy.html"><a href="numpy.html"><i class="fa fa-check"></i><b>15</b> NumPy</a></li>
+<li class="chapter" data-level="16" data-path="початки-візуалізації-з-seaborn.html"><a href="початки-візуалізації-з-seaborn.html"><i class="fa fa-check"></i><b>16</b> Початки візуалізації з seaborn</a></li>
+<li class="chapter" data-level="17" data-path="що-робити-коли-код-не-працює.html"><a href="що-робити-коли-код-не-працює.html"><i class="fa fa-check"></i><b>17</b> Що робити коли код не працює?</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="що-робити-коли-код-не-працює.html"><a href="що-робити-коли-код-не-працює.html#що-таке-налагодження-debugging"><i class="fa fa-check"></i><b>17.1</b> Що таке налагодження (debugging)?</a></li>
+<li class="chapter" data-level="17.2" data-path="що-робити-коли-код-не-працює.html"><a href="що-робити-коли-код-не-працює.html#як-подивитись-документацію"><i class="fa fa-check"></i><b>17.2</b> Як подивитись документацію?</a></li>
+<li class="chapter" data-level="17.3" data-path="що-робити-коли-код-не-працює.html"><a href="що-робити-коли-код-не-працює.html#як-написати-запит-у-google"><i class="fa fa-check"></i><b>17.3</b> Як написати запит у Google?</a></li>
+<li class="chapter" data-level="17.4" data-path="що-робити-коли-код-не-працює.html"><a href="що-робити-коли-код-не-працює.html#що-таке-stackoverflow"><i class="fa fa-check"></i><b>17.4</b> Що таке Stackoverflow?</a></li>
+<li class="chapter" data-level="17.5" data-path="що-робити-коли-код-не-працює.html"><a href="що-робити-коли-код-не-працює.html#як-використати-chatgpt"><i class="fa fa-check"></i><b>17.5</b> Як використати ChatGPT?</a></li>
+</ul></li>
+<li class="appendix"><span><b>Додаток</b></span></li>
+<li class="chapter" data-level="A" data-path="google-account.html"><a href="google-account.html"><i class="fa fa-check"></i><b>A</b> Створюємо обліковий запис у Google</a></li>
+<li class="chapter" data-level="B" data-path="markdown.html"><a href="markdown.html"><i class="fa fa-check"></i><b>B</b> Основи та синтаксис Markdown</a></li>
+<li class="chapter" data-level="C" data-path="string.html"><a href="string.html"><i class="fa fa-check"></i><b>C</b> Працюємо із текстовими стрічками</a>
+<ul>
+<li class="chapter" data-level="C.1" data-path="string.html"><a href="string.html#багаторядкові-текстові-стрічки"><i class="fa fa-check"></i><b>C.1</b> Багаторядкові текстові стрічки</a></li>
+<li class="chapter" data-level="C.2" data-path="string.html"><a href="string.html#спеціальні-та-керуючі-символи"><i class="fa fa-check"></i><b>C.2</b> Спеціальні та керуючі символи</a></li>
+<li class="chapter" data-level="C.3" data-path="string.html"><a href="string.html#оператори"><i class="fa fa-check"></i><b>C.3</b> Оператори</a></li>
+<li class="chapter" data-level="C.4" data-path="string.html"><a href="string.html#довжина-текстової-стрічки"><i class="fa fa-check"></i><b>C.4</b> Довжина текстової стрічки</a></li>
+<li class="chapter" data-level="C.5" data-path="string.html"><a href="string.html#індексація-та-слайсінг"><i class="fa fa-check"></i><b>C.5</b> Індексація та слайсінг</a></li>
+<li class="chapter" data-level="C.6" data-path="string.html"><a href="string.html#string-methods"><i class="fa fa-check"></i><b>C.6</b> Корисні методи стрічок</a></li>
+</ul></li>
+<li class="chapter" data-level="D" data-path="семантіка-python.html"><a href="семантіка-python.html"><i class="fa fa-check"></i><b>D</b> Семантіка Python</a></li>
+<li class="divider"></li>
+<li><a href="https://trye.io" target="blank">Зробленно trye з ❤️ до України</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">🐍 Python програмування</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="списки-list" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Глава 7</span> Списки <code>list</code><a href="списки-list.html#списки-list" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<!-- Може краще назвати контейнери чи коллекції -->
+<!-- Мабудь ні, тому що тоді доведеться додавати сюди str -->
+<table>
+<thead>
+<tr class="header">
+<th>Назва</th>
+<th>Посилання</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Лекція в YouTube</td>
+<td><a href="https://" class="uri">https://</a></td>
+</tr>
+<tr class="even">
+<td>Подкаст-лекція</td>
+<td><a href="https://" class="uri">https://</a></td>
+</tr>
+<tr class="odd">
+<td>Код в Google Colab</td>
+<td><a href="https://" class="uri">https://</a></td>
+</tr>
+<tr class="even">
+<td>Вправи в Google Forms</td>
+<td><a href="https://" class="uri">https://</a></td>
+</tr>
+</tbody>
+</table>
+<p>Слухати:</p>
+<p>Приблизний час на опанування теми: 15 хвилин</p>
+<p>Для чого ми це вивчаємо:</p>
+<p>Результати навчання:</p>
+<ul>
+<li>Створювати змінні</li>
+<li>Використовувати та змінювати занчення змінних</li>
+<li>Викликати функцію та зазначати аргументи</li>
+<li>Використовувати математичні оператори</li>
+</ul>
+<p>Шпаргалка: summarized.pdf</p>
+<hr />
+<p>У цій главі, ми будемо вивчати чи не найважливіший контейнер.</p>
+<hr />
+<p>Ви пам’ятаєте хто входив у склад Guardians of the Galaxy (Вартові Галактики)? Це були Star-Lord, Gamora, Drax, Rocket та Groot. Ми вже знаємо як створювати змінні текстових стрічок <code>str</code>, і якщо нам знадобиться використати імена героїв у коді, ми можемо створити окремі змінні для кожного з них:</p>
+<div class="sourceCode" id="cb103"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb103-1"><a href="списки-list.html#cb103-1" aria-hidden="true" tabindex="-1"></a>guardian1 <span class="op">=</span> <span class="st">&quot;Star Lord&quot;</span></span>
+<span id="cb103-2"><a href="списки-list.html#cb103-2" aria-hidden="true" tabindex="-1"></a>guardian2 <span class="op">=</span> <span class="st">&quot;Gamora&quot;</span></span>
+<span id="cb103-3"><a href="списки-list.html#cb103-3" aria-hidden="true" tabindex="-1"></a>guardian3 <span class="op">=</span> <span class="st">&quot;Drax&quot;</span></span>
+<span id="cb103-4"><a href="списки-list.html#cb103-4" aria-hidden="true" tabindex="-1"></a>guardian4 <span class="op">=</span> <span class="st">&quot;Rocket&quot;</span></span>
+<span id="cb103-5"><a href="списки-list.html#cb103-5" aria-hidden="true" tabindex="-1"></a>guardian5 <span class="op">=</span> <span class="st">&quot;Groot&quot;</span></span></code></pre></div>
+<p>Якщо нам треба буде вивести на екран імена усіх вартових, то нам потрібно буде прописати кожну змінну:</p>
+<div class="sourceCode" id="cb104"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb104-1"><a href="списки-list.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian1)</span></code></pre></div>
+<pre><code>## Star Lord</code></pre>
+<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="списки-list.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian2)</span></code></pre></div>
+<pre><code>## Gamora</code></pre>
+<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="списки-list.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian3)</span></code></pre></div>
+<pre><code>## Drax</code></pre>
+<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="списки-list.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian3)</span></code></pre></div>
+<pre><code>## Drax</code></pre>
+<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="списки-list.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian5)</span></code></pre></div>
+<pre><code>## Groot</code></pre>
+<p>Це не дуже зручно, тим паче що ми зробили помилку і два рази вивели Drax замість Rocket. Тобто ми написали другий раз <code>print(guardian3)</code>, замість <code>print(guardian4)</code>. Ракеті це точно б не сподобалось. А уявіть скільки треба буде писати, коли до вартових ще приєднати Yondu, Mantis, Nebula, Thor та Kraglin Obfonteri? Це вже десять членів, і нам треба буде писати щоразу десять рядків коду, якщо захочемо вивести їх імена на екран.</p>
+<p>На щястя, у Python існує тип об’єкту, який називається <code>list</code>, або українською <strong>список</strong>. Під списком ми розуміємо впорядковану послідовність якихось об’єктів, які ми будемо називати елементами. Простими словами, список – це ланцюжок із елементів. Такі елементи можуть бути будь чим – числами <code>int</code>, стрічками <code>int</code> або навіть іншими списками <code>list</code>. І також <code>list</code> дозволяє зберігати скільки завгодно однакових елементів.</p>
+<!-- XXX: draw a diagram of a list-->
+<p>Списки <code>list</code> можуть мати будь яку довжину. Ми зможемо змінювати їх елементи, додавати та видаляти елементи. Для нас буде дуже важливий порядок цих елементів, тому що доступ до елементів реалізований через їх порядковий номер.</p>
+<p>Використовуються списки вони зазвичай для переліків та списків. Наприклад, імена членів вашої родини, називи країн які входять до Європейського союзу, роки випуску платівок The Beatles, ваш to-do список на сьогодні тощо. З іншого боку, нас ніхто не обмежує додати до списку будь-яку не повязану між собою інформацію.</p>
+<div id="створюємо-list" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Створюємо <code>list</code><a href="списки-list.html#створюємо-list" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Найпростіший спосіб створення <code>list</code> – це прописати його елементи через кому <code>,</code> і “загорнути” у квадратні дужки <code>[</code> та <code>]</code>. Давайте створемо новий <code>list</code> з ім’ям <code>guardians</code>:</p>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="списки-list.html#cb114-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">=</span> [<span class="st">&quot;Star Lord&quot;</span>, <span class="st">&quot;Gamora&quot;</span>, <span class="st">&quot;Drax&quot;</span>, <span class="st">&quot;Rocket&quot;</span>, <span class="st">&quot;Groot&quot;</span>]</span></code></pre></div>
+<!-- XXX: draw a diagram of creating a list-->
+<p>Тепер нам буде набагато простіше вивести імена на екран:</p>
+<div class="sourceCode" id="cb115"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb115-1"><a href="списки-list.html#cb115-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket&#39;, &#39;Groot&#39;]</code></pre>
+<p>Не забувайте, що ми також можемо замість конкретних значень зазначити також змінні або вирази:</p>
+<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="списки-list.html#cb117-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">=</span> [guardian1, guardian2, guardian3, guardian4, guardian5]</span></code></pre></div>
+<p>Давайте ще створимо <code>list</code>, який буде містити абсолютно довільні значення:</p>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="списки-list.html#cb118-1" aria-hidden="true" tabindex="-1"></a>star_lord <span class="op">=</span> [<span class="st">&quot;Peter Jason Quill&quot;</span>, <span class="dv">1976</span>, <span class="dv">2023</span> <span class="op">-</span> <span class="dv">1976</span>, <span class="fl">1.88</span>, <span class="va">True</span>]</span>
+<span id="cb118-2"><a href="списки-list.html#cb118-2" aria-hidden="true" tabindex="-1"></a>star_lord</span></code></pre></div>
+<pre><code>## [&#39;Peter Jason Quill&#39;, 1976, 47, 1.88, True]</code></pre>
+<p>Список <code>star_lord</code> містить елемент типу <code>str</code> зі значенням <code>"Peter Jason Quill"</code>, елемент типу <code>int</code> зі значенням <code>1976</code>, вираз <code>2023 - 1976</code> який поверне об’єкт з типом <code>int</code>, елемент типу <code>float</code> зі значенням <code>1.88</code> та елемент типу <code>bool</code> зі значенням <code>True</code>.</p>
+<p>А ще ми казали, що елементами списків, можуть бути інші списки. Давайте створимо список, перший елемент якого буде також список:</p>
+<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="списки-list.html#cb120-1" aria-hidden="true" tabindex="-1"></a>gamora <span class="op">=</span> [[<span class="st">&quot;Gamora&quot;</span>, <span class="st">&quot;Zen&quot;</span>, <span class="st">&quot;Whoberi&quot;</span>, <span class="st">&quot;Ben&quot;</span>, <span class="st">&quot;Titan&quot;</span>], <span class="dv">1975</span>]</span>
+<span id="cb120-2"><a href="списки-list.html#cb120-2" aria-hidden="true" tabindex="-1"></a>gamora</span></code></pre></div>
+<pre><code>## [[&#39;Gamora&#39;, &#39;Zen&#39;, &#39;Whoberi&#39;, &#39;Ben&#39;, &#39;Titan&#39;], 1975]</code></pre>
+</div>
+<div id="індексація" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Індексація<a href="списки-list.html#індексація" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Друкувати усі елементи – це звичайно зручно, але нам буде ще потрібен механізм доступу до елементів. Іншими словами, як ми можемо роздрукувати чи замінити той чи інший елемент? Цей механізм реалізовано за допомогою індексації. Кожен елемент списку має свій індекс, за яким ми можемо його отримати. Такй собі порядковий номер.</p>
+<p>Ви можете собі уявити це як чергу в магазині. Ви не знаєете як кого звуть, але у кожного члена цієї черги є ім’я. Ви можете спитати яке ім’я у першого, хто стоїть у черзі, або наприклад у останнього. Звичайно це буде трохи не зручно, і в реальному житті це ніхто робити не буде, але це дуже яскрава матефора яка пояснює концепт індексації.</p>
+<p><strong>Індексація у Python починається з нуля.</strong> Це означає що перший елемент має індекс <code>0</code>, другий – <code>1</code>, і так далі. Іншими словами, <code>n</code>-ий елемент має індекс <code>n - 1</code>.</p>
+<!-- XXX: indexing -->
+<div id="отримуємо-елемент-за-його-індексом" class="section level3 hasAnchor" number="7.2.1">
+<h3><span class="header-section-number">7.2.1</span> Отримуємо елемент за його індексом<a href="списки-list.html#отримуємо-елемент-за-його-індексом" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Для того, щоб отримати значення якогось елемента у списку, нам треба спершу написати ім’я цього списку, а потім його індекс у дужках. Давайте отримаємо значення найпершого елементу (індекс <code>0</code>):</p>
+<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="списки-list.html#cb122-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">0</span>]</span></code></pre></div>
+<pre><code>## &#39;Star Lord&#39;</code></pre>
+<!-- XXX: how to get an element -->
+<p>А тепер давайте отримаємо четвертий елемент (індекс <code>3</code>):</p>
+<div class="sourceCode" id="cb124"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="списки-list.html#cb124-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">3</span>]</span></code></pre></div>
+<pre><code>## &#39;Rocket&#39;</code></pre>
+</div>
+<div id="змінюємо-елемент-за-його-індексом" class="section level3 hasAnchor" number="7.2.2">
+<h3><span class="header-section-number">7.2.2</span> Змінюємо елемент за його індексом<a href="списки-list.html#змінюємо-елемент-за-його-індексом" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ми також можемо змінювати елементи у списку. Для цього нам треба зазначити ім’я списка, індекс загорнутий у квадратні дужки, знак присвоєння і саме значення чи вираз:</p>
+<div class="sourceCode" id="cb126"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="списки-list.html#cb126-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">3</span>] <span class="op">=</span> <span class="st">&quot;Rocket Raccoon&quot;</span></span></code></pre></div>
+<!-- XXX: how to change an element -->
+</div>
+</div>
+<div id="слайсінг-зріз" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Слайсінг (зріз)<a href="списки-list.html#слайсінг-зріз" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>На цьому наші пригоди з індексами не закінчуються. Будуть часи, коли вам знадобиться отримати не один елемент зі списку, а декілька. Наприклад, перші три елементи чи кожен другий елемент. Ми можемо це зробити отримаючи кожен елемент індивідуально, але у Python реалізована така крута річ, як слайсінг.</p>
+<p>Ідея проста – ми записуємо ім’я змінної, і далі вираз у формі <code>start:stop</code> загорнутий у квадратні дужки. Python поверне усі елементи між індексами <code>start</code> (включно) і <code>stop</code> (виключно). Давайте отримаємо другий, третій та четветий елемент:</p>
+<div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="списки-list.html#cb127-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">1</span>:<span class="dv">4</span>]</span></code></pre></div>
+<pre><code>## [&#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;]</code></pre>
+<!-- XXX: show how slicing works -->
+<p>Якщо ми пропутсимо <code>start</code> і зазначимо тільки <code>:stop</code>, то по замовченню Python поверне елементи починаючи з першого і до <code>stop</code>:</p>
+<div class="sourceCode" id="cb129"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb129-1"><a href="списки-list.html#cb129-1" aria-hidden="true" tabindex="-1"></a>guardians[:<span class="dv">4</span>]</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;]</code></pre>
+<p>І навпаки, якщо ми тільки зазначимо <code>start:</code> без <code>stop</code>, то Python поверне елементи починаючи з <code>start</code> і до кінця.</p>
+<div class="sourceCode" id="cb131"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb131-1"><a href="списки-list.html#cb131-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">1</span>:]</span></code></pre></div>
+<pre><code>## [&#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;]</code></pre>
+<!-- XXX: show how slicing works when omitting/skipping start and stop -->
+<p>Якщо ми зазначимо замість додатніх чисел від’ємні, то ми отримаємо числа з індексами відносно кінця списку:</p>
+<div class="sourceCode" id="cb133"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb133-1"><a href="списки-list.html#cb133-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="op">-</span><span class="dv">3</span>:<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## [&#39;Drax&#39;, &#39;Rocket Raccoon&#39;]</code></pre>
+<p>Також, ми можемо зазначити так званий <code>step</code>, або крок. Якщо ми хочемо отримати кожен другий елемент, то це буде виглядати ось так:</p>
+<div class="sourceCode" id="cb135"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb135-1"><a href="списки-list.html#cb135-1" aria-hidden="true" tabindex="-1"></a>guardians[::<span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Drax&#39;, &#39;Groot&#39;]</code></pre>
+<p>Будь-ласка, не забувайте пройти вправи, посилання на які ви знайдете нагорі. Слайсінг можна зрозуміти та опанувати виключно на практиці, тому не забивайте на вправи.</p>
+</div>
+<div id="корисні-оператори" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Корисні оператори<a href="списки-list.html#корисні-оператори" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Для списків, так само як і для скалярних об’єктів, ми можемо використовувати оператори. Вони дещо відрізняються за своїм призначенням, але досить інтуітивні.</p>
+<div id="перевіряємо-чи-присутній-обєкт-серед-елементів-списку" class="section level3 hasAnchor" number="7.4.1">
+<h3><span class="header-section-number">7.4.1</span> Перевіряємо чи присутній об’єкт серед елементів списку<a href="списки-list.html#перевіряємо-чи-присутній-обєкт-серед-елементів-списку" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>У практиці, ви дуже часто будете користуватися опертором <code>in</code>. Він дозволяє перевірити чи міститься заданий об’єкт серед елементів списку <code>list</code>. Наприклад, чи Iron Man є одним з вартових, або іншими словами, чи міститься елемент <code>"Iron Man"</code> у списку <code>guardians</code>? Якщо так, то вираз <code>"Iron Man" in guardians</code> поверне <code>True</code>, а якщо ні – то <code>False</code>. Давайте перевіримо:</p>
+<div class="sourceCode" id="cb137"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb137-1"><a href="списки-list.html#cb137-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Iron Man&quot;</span> <span class="kw">in</span> guardians</span></code></pre></div>
+<pre><code>## False</code></pre>
+<p>А що до <code>"Gamora"</code>?</p>
+<div class="sourceCode" id="cb139"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb139-1"><a href="списки-list.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Gamora&quot;</span> <span class="kw">in</span> guardians</span></code></pre></div>
+<pre><code>## True</code></pre>
+<p>Якщо ж ми хочемо переконатися, що <code>"Iron Man"</code> не є в вартових, то замість <code>in</code> ми можемо написати <code>not in</code>. Цей вираз поверне <code>True</code>, якщо <code>"Iron Man"</code> не є в вартових, або <code>False</code>, якщо є:</p>
+<div class="sourceCode" id="cb141"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb141-1"><a href="списки-list.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Iron Man&quot;</span> <span class="kw">not</span> <span class="kw">in</span> guardians</span></code></pre></div>
+<pre><code>## True</code></pre>
+</div>
+<div id="зєднуємо-два-списка" class="section level3 hasAnchor" number="7.4.2">
+<h3><span class="header-section-number">7.4.2</span> З’єднуємо два списка<a href="списки-list.html#зєднуємо-два-списка" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Їдемо далі. Якщо ми хочемо розширити список наших вартових, тобто додати ще <code>"Yondu Udonta"</code> та <code>"Mantis"</code> до <code>guardians</code>, ми можемо загорнути їх у інший <code>list</code>, та додати до <code>guardians</code>. Ще раз нагадуємо, під загорнути, ми маємо на увазі сторити новий <code>list</code>:</p>
+<div class="sourceCode" id="cb143"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb143-1"><a href="списки-list.html#cb143-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">&quot;Yondu Udonta&quot;</span>, <span class="st">&quot;Mantis&quot;</span>]</span></code></pre></div>
+<pre><code>## [&#39;Yondu Udonta&#39;, &#39;Mantis&#39;]</code></pre>
+<p>А тепер додаємо цей список до нашого первинного списку <code>guardians</code>:</p>
+<div class="sourceCode" id="cb145"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb145-1"><a href="списки-list.html#cb145-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">+</span> [<span class="st">&quot;Yondu Udonta&quot;</span>, <span class="st">&quot;Mantis&quot;</span>]</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Yondu Udonta&#39;, &#39;Mantis&#39;]</code></pre>
+<p>У результаті оператора <code>+</code>, ми отримали новий список, елементи якого – це поєднання елементів першого операнда та елементів другого операнда.</p>
+</div>
+<div id="повторємо-список" class="section level3 hasAnchor" number="7.4.3">
+<h3><span class="header-section-number">7.4.3</span> Повторємо список<a href="списки-list.html#повторємо-список" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Інший корисний оператор – це <code>*</code>. Цей оператор повторює список стільки разів, скільки зазначено у другому операнді, який до речі повинен бути числом типу <code>int</code>. Наступний вираз повторить список <code>guardians</code> два рази:</p>
+<div class="sourceCode" id="cb147"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb147-1"><a href="списки-list.html#cb147-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;]</code></pre>
+</div>
+</div>
+<div id="корисні-функції" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Корисні функції<a href="списки-list.html#корисні-функції" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Для того щоб полічити кількість елементів є у списку, ми використовуємо фунцкію <code>len()</code>. У нас наразі п’ять вартових, тому наступна інструкція поверне саме <code>5</code>:</p>
+<div class="sourceCode" id="cb149"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb149-1"><a href="списки-list.html#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(guardians)</span></code></pre></div>
+<pre><code>## 5</code></pre>
+<p>Для списків, елементи яких є числа корисні фунцкії <code>min()</code> та <code>max()</code>, які повертають мінімальний та максимальний елемент списку:</p>
+<div class="sourceCode" id="cb151"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb151-1"><a href="списки-list.html#cb151-1" aria-hidden="true" tabindex="-1"></a>some_numbers <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">3</span>]</span>
+<span id="cb151-2"><a href="списки-list.html#cb151-2" aria-hidden="true" tabindex="-1"></a><span class="bu">min</span>(some_numbers)</span></code></pre></div>
+<pre><code>## -3</code></pre>
+<div class="sourceCode" id="cb153"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb153-1"><a href="списки-list.html#cb153-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(some_numbers)</span></code></pre></div>
+<pre><code>## 10</code></pre>
+</div>
+<div id="корисні-методи" class="section level2 hasAnchor" number="7.6">
+<h2><span class="header-section-number">7.6</span> Корисні методи<a href="списки-list.html#корисні-методи" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ми вже обговорювали чим методи відрізняються від функцій у главі <a href="vars.html#vars">4</a>. Тут така сама історія: методи будуть модифікувати списки! Тому будьте обережні, якщо ви не хочете щоб список змінювався.</p>
+<div id="додаємо-елементи-у-список" class="section level3 hasAnchor" number="7.6.1">
+<h3><span class="header-section-number">7.6.1</span> Додаємо елементи у список<a href="списки-list.html#додаємо-елементи-у-список" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Ми вже знаємо як приєднати список до списку за допомогою оператора <code>+</code>. А ось якщо нам потрібно додати елемент до нашого списку, то ми можемо використати метод <code>.append()</code>. Він додасть новий елемент у кінець списку. Давайте додамо Mantis до нашого списку:</p>
+<div class="sourceCode" id="cb155"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb155-1"><a href="списки-list.html#cb155-1" aria-hidden="true" tabindex="-1"></a>guardians.append(<span class="st">&quot;Mantis&quot;</span>)</span>
+<span id="cb155-2"><a href="списки-list.html#cb155-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;]</code></pre>
+<p>До речі, кожного разу як ви будете виконувати новий код, ви будете додавати новий елемент <code>"Mantis"</code>. Тому будьте обережні і чітко знайте скільки разів ви виконували код.</p>
+<div class="sourceCode" id="cb157"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb157-1"><a href="списки-list.html#cb157-1" aria-hidden="true" tabindex="-1"></a>guardians.append(<span class="st">&quot;Mantis&quot;</span>)</span>
+<span id="cb157-2"><a href="списки-list.html#cb157-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;, &#39;Mantis&#39;]</code></pre>
+<p>Якщо нас не влаштовує додавати новий елемент в кінец списку, ми можемо скористатися методом <code>.insert()</code>. Цей метод додає новий елемент, але ми повинні зазначити куди саме за допомогою першого агументу. Давайте додамо Yondu в перший елемент списку. Нагадуємо, індексація починається з нуля, тому перший – значить <code>0</code>:</p>
+<div class="sourceCode" id="cb159"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb159-1"><a href="списки-list.html#cb159-1" aria-hidden="true" tabindex="-1"></a>guardians.insert(<span class="dv">0</span>, <span class="st">&quot;Yondu&quot;</span>)</span>
+<span id="cb159-2"><a href="списки-list.html#cb159-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Yondu&#39;, &#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;, &#39;Mantis&#39;]</code></pre>
+</div>
+<div id="видаляємо-елементи-зі-списку" class="section level3 hasAnchor" number="7.6.2">
+<h3><span class="header-section-number">7.6.2</span> Видаляємо елементи зі списку<a href="списки-list.html#видаляємо-елементи-зі-списку" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Окей, але Yodnu у певний момент не є членом команди і нам треба його видалити зі списку <code>guardians</code>. Для цього, ми будемо використовувати метод <code>.remove()</code>. Він видаляє усі елементи, які дорівнюють елементу зазначеному між дужками. Тобто якщо б ми зазначили <code>"Mantis"</code>, то <code>.remove()</code> видалив би усі елементи які дорівнюють <code>"Mantis"</code>. Але давайте спершу видалемо Yondu:</p>
+<div class="sourceCode" id="cb161"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb161-1"><a href="списки-list.html#cb161-1" aria-hidden="true" tabindex="-1"></a>guardians.remove(<span class="st">&quot;Yondu&quot;</span>)</span>
+<span id="cb161-2"><a href="списки-list.html#cb161-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;, &#39;Mantis&#39;]</code></pre>
+<p>Окей, але у нас у команді все ще дві Mantis і ми хочемо видалити тільки один елемент. Якщо ми використаємо <code>.remove()</code>, то видалемо усі <code>"Mantis"</code>. Добре що є метод <code>.pop()</code>, який видаляє елемент за його індексом. Давайте видалемо останній елемент. Який індекс відповідає останньому елементу? Мабуть ми вже й не пам’ятаємо. Але ми можемо знайти цей індекс, порахувавши за допомогою функції <code>len()</code> кількість елементів, і потім відняти один (тому що індексація починається з нуля):</p>
+<div class="sourceCode" id="cb163"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb163-1"><a href="списки-list.html#cb163-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(guardians)</span></code></pre></div>
+<pre><code>## 7</code></pre>
+<p>Цей список має сім елементів, тому останній елемент має індекс <code>7 - 1 = 6</code>:</p>
+<div class="sourceCode" id="cb165"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb165-1"><a href="списки-list.html#cb165-1" aria-hidden="true" tabindex="-1"></a>guardians.pop(<span class="dv">6</span>)</span></code></pre></div>
+<pre><code>## &#39;Mantis&#39;</code></pre>
+<div class="sourceCode" id="cb167"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb167-1"><a href="списки-list.html#cb167-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;]</code></pre>
+<p>Є ще третій спосіб видалити елемент, використовуючи ключове слово <code>del</code>. Цей метод рідко використовується, тому ми його не розглядатемемо.</p>
+</div>
+<div id="змінюємо-порядок-елементів-на-зворотній" class="section level3 hasAnchor" number="7.6.3">
+<h3><span class="header-section-number">7.6.3</span> Змінюємо порядок елементів на зворотній<a href="списки-list.html#змінюємо-порядок-елементів-на-зворотній" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Іноді нам треба буде змінити порядок об’єктів, і для цього у нас є два важливих методи. Перший – <code>.reverse()</code>, який змінює порядок елементів на зворотній:</p>
+<div class="sourceCode" id="cb169"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb169-1"><a href="списки-list.html#cb169-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;]</code></pre>
+<div class="sourceCode" id="cb171"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb171-1"><a href="списки-list.html#cb171-1" aria-hidden="true" tabindex="-1"></a>guardians.reverse()</span>
+<span id="cb171-2"><a href="списки-list.html#cb171-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Mantis&#39;, &#39;Groot&#39;, &#39;Rocket Raccoon&#39;, &#39;Drax&#39;, &#39;Gamora&#39;, &#39;Star Lord&#39;]</code></pre>
+<p>Зверніть увагу не те, що тепер <code>"Star Lord"</code> став останнім елементом, <code>'Gamora'</code> передостаннім, і так далі.</p>
+</div>
+<div id="сортуємо-списки" class="section level3 hasAnchor" number="7.6.4">
+<h3><span class="header-section-number">7.6.4</span> Сортуємо списки<a href="списки-list.html#сортуємо-списки" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Останній корисний метод, який ми розглянемо – <code>.sort()</code>. Він сортує список в лексикографічному порядку<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> (якщо елементи є об’єктами типу <code>str</code>) або у порядку зростання (якщо елементи є числовими скалярами). Давайте відсортуємо наших героїв у списку <code>guardians</code>:</p>
+<div class="sourceCode" id="cb173"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb173-1"><a href="списки-list.html#cb173-1" aria-hidden="true" tabindex="-1"></a>guardians.sort()</span>
+<span id="cb173-2"><a href="списки-list.html#cb173-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<pre><code>## [&#39;Drax&#39;, &#39;Gamora&#39;, &#39;Groot&#39;, &#39;Mantis&#39;, &#39;Rocket Raccoon&#39;, &#39;Star Lord&#39;]</code></pre>
+<p><code>"Drax"</code> на першому місці, тому що <code>D</code> – це найперша літера абетки яка є в іменах героїв. На другому місці <code>'Gamora'</code> та на третьому <code>'Groot'</code>. Чому саме так? По-перше, ім’я обої героїв починається на <code>"G"</code>, тобто друга літера абетки, яка зустрічається в іменах. Щоб вирішити, хто буде на другій позиції – ми дивимось на другу літеру імен: у <code>"Gamora"</code> – це <code>a</code>, яка йде перед <code>0</code> у <code>"Groot"</code>.</p>
+<p>Тепер давайте швиденько створимо новий список з чисел:</p>
+<div class="sourceCode" id="cb175"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb175-1"><a href="списки-list.html#cb175-1" aria-hidden="true" tabindex="-1"></a>weather <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>]</span>
+<span id="cb175-2"><a href="списки-list.html#cb175-2" aria-hidden="true" tabindex="-1"></a>weather</span></code></pre></div>
+<pre><code>## [10, 12, 9, 9, 10, 11]</code></pre>
+<p>А тепер відсортуємо його:</p>
+<div class="sourceCode" id="cb177"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb177-1"><a href="списки-list.html#cb177-1" aria-hidden="true" tabindex="-1"></a>weather.sort()</span>
+<span id="cb177-2"><a href="списки-list.html#cb177-2" aria-hidden="true" tabindex="-1"></a>weather</span></code></pre></div>
+<pre><code>## [9, 9, 10, 10, 11, 12]</code></pre>
+<p>До речі, якщо ми спробуємо відсортувати елементи в списку <code>star_lord</code>, то ми отримаємо помилку, тому що <code>.sort()</code> працює зі списками, елементи якого можуть бути просортовані. Ну от скажість, хто більший <code>'Peter Jason Quill'</code> чи <code>1976</code>? Не знаєте? Ось і Python не знає теж:</p>
+<div class="sourceCode" id="cb179"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb179-1"><a href="списки-list.html#cb179-1" aria-hidden="true" tabindex="-1"></a>star_lord.sort()</span></code></pre></div>
+<pre><code>## Error: TypeError: &#39;&lt;&#39; not supported between instances of &#39;int&#39; and &#39;str&#39;</code></pre>
+
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="6">
+<li id="fn6"><p>Лексикографічний порядок дуже схожий на алфавітний порядок, який використовується в словниках.<a href="списки-list.html#fnref6" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="типи-скалярних-даних.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="вбудованні-структури-даних.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/07-list.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
