@@ -48,6 +48,7 @@ operators
 видаляємо-елементи-зі-списку
 змінюємо-порядок-елементів-на-зворотній
 сортуємо-списки
+кортежі-tuple
 вбудованні-структури-даних
 tuples
 list
@@ -58,16 +59,11 @@ tuples-1
 list-1
 dict-1
 set-1
-вбудованні-структури-даних-2
-tuples-2
-list-2
-dict-2
-set-2
 control
 умовні-переходи-ifelse
 for-цикли-loop
 range
-функції-1
+functions
 do-not-repeat-yourself
 style
 пробіли
