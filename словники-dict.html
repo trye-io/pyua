@@ -23,7 +23,7 @@
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-04-26" />
+<meta name="date" content="2023-04-27" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -231,7 +231,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.3" data-path="словники-dict.html"><a href="словники-dict.html#додаємо-новий-елемент-з-ключем"><i class="fa fa-check"></i><b>9.2.3</b> Додаємо новий елемент з ключем</a></li>
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="словники-dict.html"><a href="словники-dict.html#корисні-оператори-1"><i class="fa fa-check"></i><b>9.3</b> Корисні оператори</a></li>
-<li class="chapter" data-level="9.4" data-path="словники-dict.html"><a href="словники-dict.html#корисні-методи-1"><i class="fa fa-check"></i><b>9.4</b> Корисні методи</a></li>
+<li class="chapter" data-level="9.4" data-path="словники-dict.html"><a href="словники-dict.html#корисні-методи-1"><i class="fa fa-check"></i><b>9.4</b> Корисні методи</a>
+<ul>
+<li class="chapter" data-level="9.4.1" data-path="словники-dict.html"><a href="словники-dict.html#видаляємо-елемент"><i class="fa fa-check"></i><b>9.4.1</b> Видаляємо елемент</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="вбудованні-структури-даних.html"><a href="вбудованні-структури-даних.html"><i class="fa fa-check"></i><b>10</b> Вбудованні структури даних</a>
 <ul>
@@ -406,16 +409,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="корисні-методи-1" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> Корисні методи<a href="словники-dict.html#корисні-методи-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Словники мають одинадцять методів, але ми подивимось тільки на ті, що найчастіше використовуються.</p>
+<div id="видаляємо-елемент" class="section level3 hasAnchor" number="9.4.1">
+<h3><span class="header-section-number">9.4.1</span> Видаляємо елемент<a href="словники-dict.html#видаляємо-елемент" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Все ж таки Польща не важається Балтійскою державою і нам треба видалити елемент з ключем <code>"Poland"</code> з нашого списку. Для цього існує метод <code>.pop()</code>, для використання якого нам треба зазначити ключ в дужках:</p>
 <div class="sourceCode" id="cb210"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb210-1"><a href="словники-dict.html#cb210-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.pop(<span class="st">&quot;Poland&quot;</span>)</span></code></pre></div>
 <pre><code>## &#39;Warsaw&#39;</code></pre>
 <div class="sourceCode" id="cb212"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb212-1"><a href="словники-dict.html#cb212-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals</span></code></pre></div>
 <pre><code>## {&#39;Estonia&#39;: &#39;Tallinn&#39;, &#39;Latvia&#39;: &#39;Riga&#39;, &#39;Lithuania&#39;: &#39;Vilnius&#39;}</code></pre>
+<p>Це не буде працювати з значеннями (тобто <code>"Warsaw"</code> в попередньому випадку).</p>
+<p>Інший корисний метод – це <code>.keys()</code>. Він повертає усі існуючі в списку ключі:</p>
 <div class="sourceCode" id="cb214"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb214-1"><a href="словники-dict.html#cb214-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.keys()</span></code></pre></div>
 <pre><code>## dict_keys([&#39;Estonia&#39;, &#39;Latvia&#39;, &#39;Lithuania&#39;])</code></pre>
+<p>І дзеркальний метод існує також і для значень – <code>.values()</code>:</p>
 <div class="sourceCode" id="cb216"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb216-1"><a href="словники-dict.html#cb216-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.values()</span></code></pre></div>
 <pre><code>## dict_values([&#39;Tallinn&#39;, &#39;Riga&#39;, &#39;Vilnius&#39;])</code></pre>
+<p>Якщо ви хочете використати ключі або значення як послідовності, не забудьте загорнути їх у функцію <code>list()</code>, наприклад <code>list(baltic_capitals.keys())</code>. Тому що обидва методи повертають дещо спеціальний об’єкт, який нам треба трансформувати у <code>list</code>.</p>
 <hr />
 
+</div>
 </div>
 </div>
             </section>
