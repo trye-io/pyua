@@ -1,7 +1,1 @@
-# Керівні конструкції (control structures) {#control}
-
-## Умовні переходи if/else
-
-## for цикли (loop)
-
-### `range()` 
+# Умовний перехід `if/elif/else` {#ifelse}
