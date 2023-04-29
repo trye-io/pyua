@@ -1,3 +1,5 @@
+# (PART\*) Функції {-}
+
 # Функції {#functions}
 
 ## Do not repeat yourself 
