@@ -70,10 +70,10 @@ operators
 додаємо-елементи-до-множини
 видаляємо-елементи-із-множини
 методи-які-еквівалентні-операторам
-control
-умовні-переходи-ifelse
-for-цикли-loop
+ifelse
+цикл-for
 range
+цикл-while
 functions
 do-not-repeat-yourself
 що-таке-бібліотека-library-для-python
