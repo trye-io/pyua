@@ -24,6 +24,7 @@ vars
 operators
 синтаксис-правила-написання-коду-у-python
 одна-інструкція-один-рядок
+пробіли
 коментарі
 імена-змінних
 типи-скалярних-даних
@@ -75,8 +76,6 @@ for-цикли-loop
 range
 functions
 do-not-repeat-yourself
-style
-пробіли
 що-таке-бібліотека-library-для-python
 numpy
 початки-візуалізації-з-seaborn
@@ -88,6 +87,8 @@ numpy
 як-використати-chatgpt
 google-account
 markdown
+style
+пробіли-1
 string
 багаторядкові-текстові-стрічки
 спеціальні-та-керуючі-символи
