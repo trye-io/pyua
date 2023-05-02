@@ -23,7 +23,7 @@
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-04-29" />
+<meta name="date" content="2023-05-02" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -257,7 +257,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 </ul></li>
 <li class="part"><span><b>Потоки керування</b></span></li>
-<li class="chapter" data-level="11" data-path="ifelse.html"><a href="ifelse.html"><i class="fa fa-check"></i><b>11</b> Умовний перехід <code>if/elif/else</code></a></li>
+<li class="chapter" data-level="11" data-path="ifelse.html"><a href="ifelse.html"><i class="fa fa-check"></i><b>11</b> Умовний перехід <code>if/elif/else</code></a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="ifelse.html"><a href="ifelse.html#блок-схема"><i class="fa fa-check"></i><b>11.1</b> Блок-схема</a></li>
+<li class="chapter" data-level="11.2" data-path="ifelse.html"><a href="ifelse.html#конструкція-ifelse"><i class="fa fa-check"></i><b>11.2</b> Конструкція <code>if/else</code></a></li>
+<li class="chapter" data-level="11.3" data-path="ifelse.html"><a href="ifelse.html#використовуємо-поодинокий-if"><i class="fa fa-check"></i><b>11.3</b> Використовуємо поодинокий <code>if</code></a></li>
+<li class="chapter" data-level="11.4" data-path="ifelse.html"><a href="ifelse.html#більше-випадків-за-допомогою-elif"><i class="fa fa-check"></i><b>11.4</b> Більше випадків за допомогою <code>elif</code></a></li>
+<li class="chapter" data-level="11.5" data-path="ifelse.html"><a href="ifelse.html#розбираємось-з-умовами-та-операторами"><i class="fa fa-check"></i><b>11.5</b> Розбираємось з умовами та операторами</a>
+<ul>
+<li class="chapter" data-level="11.5.1" data-path="ifelse.html"><a href="ifelse.html#оператори-порівнювання"><i class="fa fa-check"></i><b>11.5.1</b> Оператори порівнювання</a></li>
+<li class="chapter" data-level="11.5.2" data-path="ifelse.html"><a href="ifelse.html#логічні-опрератори"><i class="fa fa-check"></i><b>11.5.2</b> Логічні опрератори</a></li>
+</ul></li>
+</ul></li>
 <li class="chapter" data-level="12" data-path="цикл-for.html"><a href="цикл-for.html"><i class="fa fa-check"></i><b>12</b> Цикл <code>for</code></a>
 <ul>
 <li class="chapter" data-level="12.0.1" data-path="цикл-for.html"><a href="цикл-for.html#range"><i class="fa fa-check"></i><b>12.0.1</b> <code>range()</code></a></li>
@@ -320,7 +331,340 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="ifelse" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">Глава 11</span> Умовний перехід <code>if/elif/else</code><a href="ifelse.html#ifelse" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<table>
+<thead>
+<tr class="header">
+<th>Назва</th>
+<th>Посилання</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Лекція в YouTube</td>
+<td><a href="https://" class="uri">https://</a></td>
+</tr>
+<tr class="even">
+<td>Подкаст-лекція</td>
+<td><a href="https://" class="uri">https://</a></td>
+</tr>
+<tr class="odd">
+<td>Код в Google Colab</td>
+<td><a href="https://" class="uri">https://</a></td>
+</tr>
+<tr class="even">
+<td>Вправи в Google Forms</td>
+<td><a href="https://" class="uri">https://</a></td>
+</tr>
+</tbody>
+</table>
+<p>Слухати:</p>
+<p>Приблизний час на опанування теми: 15 хвилин</p>
+<p>Для чого ми це вивчаємо:</p>
+<p>Результати навчання:</p>
+<ul>
+<li>Розуміння що таке програма, додаток та програмне забезпечення</li>
+<li>Розуміння що таке алгоритм, кодування та програмування</li>
+</ul>
+<p>Шпаргалка: summarized.pdf</p>
+<hr />
+<p>У цій главі ми познайомимось з…</p>
+<hr />
+<div id="блок-схема" class="section level2 hasAnchor" number="11.1">
+<h2><span class="header-section-number">11.1</span> Блок-схема<a href="ifelse.html#блок-схема" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>До сих пір, ми розглядали інструцкії які йдуть одна за одною, або іншими словами – послідовність інструкцій. Давайте подивимось на набір інструцкій унизу:</p>
+<div class="sourceCode" id="cb242"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb242-1"><a href="ifelse.html#cb242-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb242-2"><a href="ifelse.html#cb242-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">43</span></span>
+<span id="cb242-3"><a href="ifelse.html#cb242-3" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> y <span class="op">-</span> x</span>
+<span id="cb242-4"><a href="ifelse.html#cb242-4" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> <span class="bu">str</span>(distance)</span>
+<span id="cb242-5"><a href="ifelse.html#cb242-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Відстань між x та y: &quot;</span> <span class="op">+</span> distance)</span></code></pre></div>
+<pre><code>## Відстань між x та y: 31</code></pre>
+<p>Спочатку ми присвоїли <code>12</code> до <code>x</code>; потім ми присвоїли <code>43</code> до <code>y</code>; порахували різницю між <code>x</code> та <code>y</code> і присвоїли результат до змінної <code>distnace</code>; далі ми перетворили <code>distance</code> на тип <code>str</code>; і нарешті роздрукували наш результат з коментарями. Іншими словами, це маленький уривок коду рахує відстань між <code>x</code> та <code>y</code> та друкує його на екран. Давайте спробуємо зобразити це у вигляді блок-схеми:</p>
+<!-- XXX: flowchart of instructions -->
+<p>Нам вдалося досить легко це зобразити, а ми ще навіть не знаємо що таке блок-схема. Блок-схема – це діаграма або візуалізація якогось алгоритму. В цій блок-схемі, інструкція позначається прямокутником, а початок та кінець алгорітму за допомогою прямокутника із закругленими кутами. Як ви вже зрозуміли, самі інструкції ми будемо писати всередині фігур. Прямокутники з’єднані стрілками, які вказують на послідновність виконання. Зазвичай, блок-схема читається зверху вниз.</p>
+</div>
+<div id="конструкція-ifelse" class="section level2 hasAnchor" number="11.2">
+<h2><span class="header-section-number">11.2</span> Конструкція <code>if/else</code><a href="ifelse.html#конструкція-ifelse" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ось проблема: якщо наш <code>x</code> дорівнює <code>52</code>, то замість <code>y - x</code>, нам треба порахувати <code>x - y</code>. Тому що <code>x</code> в цьому випадку буде більший за <code>y</code>, а відстань – це невід’ємне число. Тому нам треба трохи переписати программу:</p>
+<div class="sourceCode" id="cb244"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb244-1"><a href="ifelse.html#cb244-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">52</span></span>
+<span id="cb244-2"><a href="ifelse.html#cb244-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">43</span></span>
+<span id="cb244-3"><a href="ifelse.html#cb244-3" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> x <span class="op">-</span> y <span class="co"># Зверніть увагу, що замість y - x ми використали x - y</span></span>
+<span id="cb244-4"><a href="ifelse.html#cb244-4" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> <span class="bu">str</span>(distance)</span>
+<span id="cb244-5"><a href="ifelse.html#cb244-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Відстань між x та y: &quot;</span> <span class="op">+</span> distance)</span></code></pre></div>
+<pre><code>## Відстань між x та y: 9</code></pre>
+<p>Але ж ми не будемо щоразу змінювати программу відповідно до того чи більший <code>x</code> за <code>y</code>. Тим більше, якщо <code>x</code> задається користувачем програми. Ми можемо звичайно загорнути <code>y - x</code> у фунцкію <code>abs()</code>, яка знаходить модуль числа. Замість цього, ми спробуємо реалізувати цей алгорітм власноруч.</p>
+<p>Для цього ми спершу познайомимось з новим елементом блок-схеми – умовою, яка позначається ромбом. В середині цього ромба ми запишемо умову, яка в нашому випадку буде <code>x &lt; y</code>. Далі, з цього ромба виходять дві стрілочки, які позначенні <code>Так</code> та <code>Ні</code> та з’єднують його з наступними інструкціями. Залежно від істинності чи хибності цієї умови, програма почне виконувати одну з наступних команд. Так би мовити піде по тому чи іншому “сценарію”. Ці “сценарії” можуть бути повністю незалежними до самого кінця програми або в певний момент об’єднуватись в один потік (як у нашому випадку).</p>
+<!-- XXX: flowchart with if/else of instructions -->
+<!-- XXX: flowchart with if/else: independent vs joined scenarios -->
+<p>Тепер давайте подивимос, як це робиться у Python. Це буде спеціальна конструкція з ключовимв словами <code>if</code> та <code>else</code><a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a>. Слово <code>if</code> перекладається як <code>якщо</code>, а <code>else</code>, як <code>інашке</code>, що дуже природьно читається у коді. Умова повинна бути обгорнута у дужки, та не забувайте поставити двокрапки. Кількість інструкцій в обох потоках не обмежанна. Усі інструкції які повинні виконатись якщо умова є істинною розташовуються з нового рядку після <code>if</code>. І так само, усі інтрукції які повинні виконатись якщо умова є недійсою розташовуються з нового рядку після <code>else</code>. До речі, інструкції які виконуються за певних умов об’єднуються в так звані блоки коду, і ці блоки коду повинні починатись не з початку рядка, а післня чотирьох пробілів, які називається відступ.</p>
+<!-- XXX: diagram of if/else of construction -->
+<p>Умова може бути будь яким виразом чи змінною, які повертають бульове значення – <code>True</code> або <code>False</code>. Якщо значення <code>True</code>, то виконається блок коду під <code>if</code>, інакше – блок коду що під <code>else</code>. Коли ми бачимо щось накшталт <code>if (x &gt; 5):</code>, ми читаємо це як “if x is greater than five is true, then…”, що перекладається на українську як: “якщо x більший за п’ять є істинною, тоді…”.</p>
+<p>Якщо в певний момент ці потоки об’єднуться, то спільні інструкції можуть бути записані після блоку коду для <code>else</code>. Це буде виглядати приблизно ось так:</p>
+<div class="sourceCode" id="cb246"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb246-1"><a href="ifelse.html#cb246-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> умова: </span>
+<span id="cb246-2"><a href="ifelse.html#cb246-2" aria-hidden="true" tabindex="-1"></a>    інструкції якщо умова істинна</span>
+<span id="cb246-3"><a href="ifelse.html#cb246-3" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: </span>
+<span id="cb246-4"><a href="ifelse.html#cb246-4" aria-hidden="true" tabindex="-1"></a>    інструкції якщо умова хибна</span>
+<span id="cb246-5"><a href="ifelse.html#cb246-5" aria-hidden="true" tabindex="-1"></a>спільні інструкції</span></code></pre></div>
+<p>Давайте тепер перепишемо наш код використовуючи цю конструкцію який буде враховувати умову <code>x &gt; y</code>:</p>
+<div class="sourceCode" id="cb247"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb247-1"><a href="ifelse.html#cb247-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">52</span></span>
+<span id="cb247-2"><a href="ifelse.html#cb247-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">43</span></span>
+<span id="cb247-3"><a href="ifelse.html#cb247-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> y:</span>
+<span id="cb247-4"><a href="ifelse.html#cb247-4" aria-hidden="true" tabindex="-1"></a>    distance <span class="op">=</span> x <span class="op">-</span> y </span>
+<span id="cb247-5"><a href="ifelse.html#cb247-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: </span>
+<span id="cb247-6"><a href="ifelse.html#cb247-6" aria-hidden="true" tabindex="-1"></a>    distance <span class="op">=</span> y <span class="op">-</span> x</span>
+<span id="cb247-7"><a href="ifelse.html#cb247-7" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> <span class="bu">str</span>(distance)</span>
+<span id="cb247-8"><a href="ifelse.html#cb247-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Відстань між x та y: &quot;</span> <span class="op">+</span> distance)</span></code></pre></div>
+<pre><code>## Відстань між x та y: 9</code></pre>
+<p>Так як наш <code>x</code> більший за <code>y</code>, то виконається команда <code>distance = x - y</code>. Якщо ми змінемо <code>x</code> назад на <code>12</code>, то код все одно роздрукую правильну відстань:</p>
+<div class="sourceCode" id="cb249"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb249-1"><a href="ifelse.html#cb249-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">12</span></span>
+<span id="cb249-2"><a href="ifelse.html#cb249-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">43</span></span>
+<span id="cb249-3"><a href="ifelse.html#cb249-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&gt;</span> y:</span>
+<span id="cb249-4"><a href="ifelse.html#cb249-4" aria-hidden="true" tabindex="-1"></a>    distance <span class="op">=</span> x <span class="op">-</span> y </span>
+<span id="cb249-5"><a href="ifelse.html#cb249-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>: </span>
+<span id="cb249-6"><a href="ifelse.html#cb249-6" aria-hidden="true" tabindex="-1"></a>    distance <span class="op">=</span> y <span class="op">-</span> x</span>
+<span id="cb249-7"><a href="ifelse.html#cb249-7" aria-hidden="true" tabindex="-1"></a>distance <span class="op">=</span> <span class="bu">str</span>(distance)</span>
+<span id="cb249-8"><a href="ifelse.html#cb249-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Відстань між x та y: &quot;</span> <span class="op">+</span> distance)</span></code></pre></div>
+<pre><code>## Відстань між x та y: 31</code></pre>
+<p>У цьому випадку, так як <code>x</code> не більший за <code>y</code>, то ми потрапили до випадку <code>else</code> і Python виконав код <code>distance = y - x</code>.</p>
+</div>
+<div id="використовуємо-поодинокий-if" class="section level2 hasAnchor" number="11.3">
+<h2><span class="header-section-number">11.3</span> Використовуємо поодинокий <code>if</code><a href="ifelse.html#використовуємо-поодинокий-if" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Не завжди нам потрібен потік <code>else</code>. Бувають випадки коли нам достатньо використати тільки частину <code>if</code>. На блок-схемі це буде виглядати ось так:</p>
+<!-- XXX: diagram of if of construction -->
+<p>Зверніть увагу, що стрілка після інструкції <code>Так</code> входить в інструкцію після <code>Ні</code>. Тобто блок коду піля <code>if</code> буде виконаний якщо умова істина. В іншому випадку, Python просто пропустить її. Ця конструкція у Python виглядатиме ось так:</p>
+<div class="sourceCode" id="cb251"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb251-1"><a href="ifelse.html#cb251-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> умова: </span>
+<span id="cb251-2"><a href="ifelse.html#cb251-2" aria-hidden="true" tabindex="-1"></a>    інструкції якщо умова істинна</span>
+<span id="cb251-3"><a href="ifelse.html#cb251-3" aria-hidden="true" tabindex="-1"></a>подальші інструкції</span></code></pre></div>
+<p>Наприклад, в Україні ми вимірюємо швидкість у кілометрах на годину. Автівки в США ж використовють милі на годину. Якщо у нас саме така автівка, нам треба перевести милі на годину у кілометри на годину:</p>
+<div class="sourceCode" id="cb252"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb252-1"><a href="ifelse.html#cb252-1" aria-hidden="true" tabindex="-1"></a>country <span class="op">=</span> <span class="st">&quot;USA&quot;</span></span>
+<span id="cb252-2"><a href="ifelse.html#cb252-2" aria-hidden="true" tabindex="-1"></a>speed <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb252-3"><a href="ifelse.html#cb252-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb252-4"><a href="ifelse.html#cb252-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (country <span class="op">==</span> <span class="st">&quot;USA&quot;</span>): <span class="co"># ми вивчимо що саме означає == за декілька хвилин</span></span>
+<span id="cb252-5"><a href="ifelse.html#cb252-5" aria-hidden="true" tabindex="-1"></a>    speed <span class="op">=</span> speed <span class="op">*</span> <span class="fl">1.6</span></span>
+<span id="cb252-6"><a href="ifelse.html#cb252-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb252-7"><a href="ifelse.html#cb252-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Ваша швидкість зараз &quot;</span> <span class="op">+</span> <span class="bu">str</span>(speed) <span class="op">+</span> <span class="st">&quot; км/год&quot;</span>)</span></code></pre></div>
+<p>Якщо ж країна у нас дорівнє <code>"Ukraine"</code>, тоді Python пропустить конструкцію <code>if</code> і просто роздрукує швидкість:</p>
+<div class="sourceCode" id="cb253"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb253-1"><a href="ifelse.html#cb253-1" aria-hidden="true" tabindex="-1"></a>country <span class="op">=</span> <span class="st">&quot;Ukraine&quot;</span></span>
+<span id="cb253-2"><a href="ifelse.html#cb253-2" aria-hidden="true" tabindex="-1"></a>speed <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb253-3"><a href="ifelse.html#cb253-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb253-4"><a href="ifelse.html#cb253-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (country <span class="op">==</span> <span class="st">&quot;USA&quot;</span>):</span>
+<span id="cb253-5"><a href="ifelse.html#cb253-5" aria-hidden="true" tabindex="-1"></a>    speed <span class="op">=</span> speed <span class="op">*</span> <span class="fl">1.6</span> <span class="co"># ця комадна не буде виконана, так як country не є &quot;USA&quot;</span></span>
+<span id="cb253-6"><a href="ifelse.html#cb253-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb253-7"><a href="ifelse.html#cb253-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Ваша швидкість зараз &quot;</span> <span class="op">+</span> <span class="bu">str</span>(speed) <span class="op">+</span> <span class="st">&quot; км/год&quot;</span>)</span></code></pre></div>
+<pre><code>## Ваша швидкість зараз 25 км/год</code></pre>
+</div>
+<div id="більше-випадків-за-допомогою-elif" class="section level2 hasAnchor" number="11.4">
+<h2><span class="header-section-number">11.4</span> Більше випадків за допомогою <code>elif</code><a href="ifelse.html#більше-випадків-за-допомогою-elif" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Давайте повернемось до порівняння двох чисел. Нам треба роздрукувати на екран фразу, яка залежіть від того який у нас випадок:</p>
+<ul>
+<li><code>x</code> більший <code>y</code></li>
+<li><code>x</code> меньший <code>y</code></li>
+<li><code>x</code> дорівнює <code>y</code></li>
+</ul>
+<p>Ми звичайно можемо його реалізувати за допомогою трьох <code>if</code>, але є ще один спосіб – за допомогою <code>elif</code>. Ключове слово <code>elif</code> – скорочення від “else if”, що перекладаєтсья як “інакше якщо” і використовується у зв’зці з <code>if</code>. По суті своїй, конструкції з <code>elif</code> – це ієрархія або кілька вкладених умов. Давайте подивимось спершу на код, а потім на блок-схему:</p>
+<div class="sourceCode" id="cb255"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb255-1"><a href="ifelse.html#cb255-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb255-2"><a href="ifelse.html#cb255-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb255-3"><a href="ifelse.html#cb255-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb255-4"><a href="ifelse.html#cb255-4" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="op">&gt;</span> y):</span>
+<span id="cb255-5"><a href="ifelse.html#cb255-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x більший y&quot;</span>)</span>
+<span id="cb255-6"><a href="ifelse.html#cb255-6" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> (x <span class="op">&lt;</span> y): </span>
+<span id="cb255-7"><a href="ifelse.html#cb255-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x меньший y&quot;</span>)</span>
+<span id="cb255-8"><a href="ifelse.html#cb255-8" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb255-9"><a href="ifelse.html#cb255-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x дорівнює y&quot;</span>)</span></code></pre></div>
+<pre><code>## x меньший y</code></pre>
+<!-- XXX: flow chart of elif of construction -->
+<p>На цій блок-схемі, сценарій <strong>Ні</strong> умови <code>x &gt; y</code> переходить в наступне розгалудження <code>x &lt; y</code>. Таких <code>elif</code> випадків може бути скільки завгодно.</p>
+</div>
+<div id="розбираємось-з-умовами-та-операторами" class="section level2 hasAnchor" number="11.5">
+<h2><span class="header-section-number">11.5</span> Розбираємось з умовами та операторами<a href="ifelse.html#розбираємось-з-умовами-та-операторами" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>В умвоних переходах неможливо переоцінити важлиість операторів. Ми розглянемо два типи операторів – оператори порівняння та логічні оператори. Обидва типи, як і математичні оператори які ми розглянули у Главі <a href="vars.html#vars">4</a>, натхненні саме операторами з математики.</p>
+<div id="оператори-порівнювання" class="section level3 hasAnchor" number="11.5.1">
+<h3><span class="header-section-number">11.5.1</span> Оператори порівнювання<a href="ifelse.html#оператори-порівнювання" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Оператори порівнювання порівнюють лівий та правий операнд та повертають бульове значення <code>True</code> або <code>False</code>, залежно від істинності твердження. Наприклад:</p>
+<div class="sourceCode" id="cb257"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb257-1"><a href="ifelse.html#cb257-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">&lt;</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## True</code></pre>
+<p>А хибне твердження поверне <code>False</code>:</p>
+<div class="sourceCode" id="cb259"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb259-1"><a href="ifelse.html#cb259-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">&gt;</span> <span class="dv">5</span></span></code></pre></div>
+<pre><code>## False</code></pre>
+<p>Дуже важливим є оператор <code>==</code>. Він перевіряє чи дорівнює лівий операнд правому. Як і в випадку математичних операторів, операнди можуть бути будь-чим: змінними, значеннями, виразами тощо. Будьте обережні, тому що використання <code>=</code> замість <code>==</code> дуже поширенна помилка. Ще раз:</p>
+<ul>
+<li><code>=</code>: це оператор присвоєнная, наприклад <code>x = 4</code></li>
+<li><code>==</code>: це оператор порівнювання, наприклад <code>x == y</code></li>
+</ul>
+<p>Давайте спробуємо його використати:</p>
+<div class="sourceCode" id="cb261"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb261-1"><a href="ifelse.html#cb261-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb261-2"><a href="ifelse.html#cb261-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb261-3"><a href="ifelse.html#cb261-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="op">==</span> y): </span>
+<span id="cb261-4"><a href="ifelse.html#cb261-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x дорівнює y&quot;</span>)</span></code></pre></div>
+<pre><code>## x дорівнює y</code></pre>
+<p>А тепер навмисно зробити помилку:</p>
+<div class="sourceCode" id="cb263"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb263-1"><a href="ifelse.html#cb263-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb263-2"><a href="ifelse.html#cb263-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb263-3"><a href="ifelse.html#cb263-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (x <span class="op">=</span> y): </span>
+<span id="cb263-4"><a href="ifelse.html#cb263-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x дорівнює y&quot;</span>)</span></code></pre></div>
+<pre><code>## invalid syntax. Maybe you meant &#39;==&#39; or &#39;:=&#39; instead of &#39;=&#39;? (&lt;string&gt;, line 3)</code></pre>
+<p>Нижче ви знайдете таблицю усіх операторів порівняння:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Оператор</th>
+<th>Зміст</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>x &gt; y</code></td>
+<td><code>x</code> більший <code>y</code></td>
+</tr>
+<tr class="even">
+<td><code>x &gt;= y</code></td>
+<td><code>x</code> більший або дорівнює <code>y</code></td>
+</tr>
+<tr class="odd">
+<td><code>x &lt; y</code></td>
+<td><code>x</code> меньший <code>y</code></td>
+</tr>
+<tr class="even">
+<td><code>x &lt;= y</code></td>
+<td><code>x</code> меньший або дорівнює <code>y</code></td>
+</tr>
+<tr class="odd">
+<td><code>x == y</code></td>
+<td><code>x</code> дорівнює <code>y</code></td>
+</tr>
+<tr class="even">
+<td><code>x != y</code></td>
+<td><code>x</code> не дорівнює <code>y</code></td>
+</tr>
+</tbody>
+</table>
+<p>Ці оператори працюють не тільки з числовими об’єктами, а ще й з <code>str</code>. У випадку <code>str</code> операнди будуть порівнюватись за допомогою лексикографічних порядку. Наприклад, <code>"a"</code> меньша ніж <code>"b"</code>, тому що літера <code>"a"</code> йде перед літерою <code>"b"</code>:</p>
+<div class="sourceCode" id="cb265"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb265-1"><a href="ifelse.html#cb265-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;a&quot;</span> <span class="op">&lt;</span> <span class="st">&quot;b&quot;</span></span></code></pre></div>
+<pre><code>## True</code></pre>
+</div>
+<div id="логічні-опрератори" class="section level3 hasAnchor" number="11.5.2">
+<h3><span class="header-section-number">11.5.2</span> Логічні опрератори<a href="ifelse.html#логічні-опрератори" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Нам ще знадобляться логічні опрератори. Вони дозволяють комбінувати умови. Таких операторів у нас три: <code>not</code>, <code>and</code> та <code>or</code>, і вони відповідають українським словам “не”, “та” та “або”.</p>
+<p>Оператор <code>not</code> використовується коли нам треба змінити результат умови на протилежну. Тобто якщо у нас умова повертає <code>True</code>, то в поєднанні з <code>not</code> вона поверне <code>False</code>, і навпаки, коли умова поверне <code>False</code>, поєднання з <code>not</code> поверне <code>True</code>. Цей оператор називається логічним запереченням.</p>
+<p>Наприклад:</p>
+<div class="sourceCode" id="cb267"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb267-1"><a href="ifelse.html#cb267-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb267-2"><a href="ifelse.html#cb267-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (<span class="kw">not</span> x <span class="op">&gt;</span> <span class="dv">3</span>):</span>
+<span id="cb267-3"><a href="ifelse.html#cb267-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x меньший або дорівнює 3&quot;</span>)</span></code></pre></div>
+<pre><code>## x меньший або дорівнює 3</code></pre>
+<p>Давайте складемо таблицю результатів цього оператора:</p>
+<table>
+<thead>
+<tr class="header">
+<th><code>x</code></th>
+<th><code>not x</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>True</code></td>
+<td><code>False</code></td>
+</tr>
+<tr class="even">
+<td><code>False</code></td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p>Оператор <code>and</code> повертає <code>True</code> якщо обидва операнди (ліворуч і праворуч) є <code>True</code>. Інакше, він поверне <code>False</code>. Наприклад, нам треба впевнитись що дощь не йде (сонячна погода) і тротуар вже сухий, і тільки тоді ми можемо вдягти наше улюбленне взуття:</p>
+<div class="sourceCode" id="cb269"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb269-1"><a href="ifelse.html#cb269-1" aria-hidden="true" tabindex="-1"></a>sidewalk <span class="op">=</span> <span class="st">&quot;dry&quot;</span></span>
+<span id="cb269-2"><a href="ifelse.html#cb269-2" aria-hidden="true" tabindex="-1"></a>weather <span class="op">=</span> <span class="st">&quot;sunny&quot;</span></span>
+<span id="cb269-3"><a href="ifelse.html#cb269-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (sidewalk <span class="op">==</span> <span class="st">&quot;dry&quot;</span> <span class="kw">and</span> weather <span class="op">==</span> <span class="st">&quot;sunny&quot;</span>):</span>
+<span id="cb269-4"><a href="ifelse.html#cb269-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Вдягай улюбленне взуття!&quot;</span>)</span></code></pre></div>
+<pre><code>## Вдягай улюбленне взуття!</code></pre>
+<p>У цьому прикладі, якщо одна з умов не є <code>True</code>, тоді уся умова є <code>False</code>, і Python не виконає інструкції що під <code>if</code>:</p>
+<div class="sourceCode" id="cb271"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb271-1"><a href="ifelse.html#cb271-1" aria-hidden="true" tabindex="-1"></a>sidewalk <span class="op">=</span> <span class="st">&quot;dry&quot;</span></span>
+<span id="cb271-2"><a href="ifelse.html#cb271-2" aria-hidden="true" tabindex="-1"></a>weather <span class="op">=</span> <span class="st">&quot;rain&quot;</span></span>
+<span id="cb271-3"><a href="ifelse.html#cb271-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (sidewalk <span class="op">==</span> <span class="st">&quot;dry&quot;</span> <span class="kw">and</span> weather <span class="op">==</span> <span class="st">&quot;sunny&quot;</span>):</span>
+<span id="cb271-4"><a href="ifelse.html#cb271-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Вдягай улюбленне взуття!&quot;</span>)</span></code></pre></div>
+<p>А ось таблиця результатів цього оператора:</p>
+<table>
+<thead>
+<tr class="header">
+<th><code>x</code></th>
+<th><code>y</code></th>
+<th><code>x and y</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>True</code></td>
+<td><code>True</code></td>
+<td><code>True</code></td>
+</tr>
+<tr class="even">
+<td><code>True</code></td>
+<td><code>False</code></td>
+<td><code>False</code></td>
+</tr>
+<tr class="odd">
+<td><code>False</code></td>
+<td><code>True</code></td>
+<td><code>False</code></td>
+</tr>
+<tr class="even">
+<td><code>False</code></td>
+<td><code>False</code></td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<p>Оператор <code>or</code> повертає <code>True</code>, якщо принаймні один із операторів є <code>True</code>, і <code>False</code> інакше. Наприклад, нам треба переконатися що або погода соняшна (<code>weather == "sunny"</code>) або зараз день (<code>time == "day"</code>), і тільки тоді ми підемо на прогулянку:</p>
+<div class="sourceCode" id="cb272"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb272-1"><a href="ifelse.html#cb272-1" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> <span class="st">&quot;day&quot;</span></span>
+<span id="cb272-2"><a href="ifelse.html#cb272-2" aria-hidden="true" tabindex="-1"></a>weather <span class="op">=</span> <span class="st">&quot;rain&quot;</span></span>
+<span id="cb272-3"><a href="ifelse.html#cb272-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (time <span class="op">==</span> <span class="st">&quot;day&quot;</span> <span class="kw">or</span> weather <span class="op">==</span> <span class="st">&quot;sunny&quot;</span>):</span>
+<span id="cb272-4"><a href="ifelse.html#cb272-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Йдемо на прогулянку!&quot;</span>)</span></code></pre></div>
+<pre><code>## Йдемо на прогулянку!</code></pre>
+<p>Якщо ж зараз ніч та ще і йде дощь, то ніякого сенсу йти на вулицю немає:</p>
+<div class="sourceCode" id="cb274"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb274-1"><a href="ifelse.html#cb274-1" aria-hidden="true" tabindex="-1"></a>time <span class="op">=</span> <span class="st">&quot;night&quot;</span></span>
+<span id="cb274-2"><a href="ifelse.html#cb274-2" aria-hidden="true" tabindex="-1"></a>weather <span class="op">=</span> <span class="st">&quot;rain&quot;</span></span>
+<span id="cb274-3"><a href="ifelse.html#cb274-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> (time <span class="op">==</span> <span class="st">&quot;day&quot;</span> <span class="kw">or</span> weather <span class="op">==</span> <span class="st">&quot;sunny&quot;</span>):</span>
+<span id="cb274-4"><a href="ifelse.html#cb274-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Йдемо на прогулянку!&quot;</span>)</span></code></pre></div>
+<p>І традиційно ми покажемо таблицю результатів цього оператора:</p>
+<table>
+<thead>
+<tr class="header">
+<th><code>x</code></th>
+<th><code>y</code></th>
+<th><code>x or y</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>True</code></td>
+<td><code>True</code></td>
+<td><code>True</code></td>
+</tr>
+<tr class="even">
+<td><code>True</code></td>
+<td><code>False</code></td>
+<td><code>True</code></td>
+</tr>
+<tr class="odd">
+<td><code>False</code></td>
+<td><code>True</code></td>
+<td><code>True</code></td>
+</tr>
+<tr class="even">
+<td><code>False</code></td>
+<td><code>False</code></td>
+<td><code>False</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
 
+</div>
+</div>
+</div>
+<div class="footnotes">
+<hr />
+<ol start="8">
+<li id="fn8"><p>Це не унікальна для Python конструкція, і використовується в багатьох мовах програмування.<a href="ifelse.html#fnref8" class="footnote-back">↩︎</a></p></li>
+</ol>
 </div>
             </section>
 
