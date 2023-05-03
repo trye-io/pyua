@@ -83,7 +83,7 @@ ifelse
 використовуємо-цикл-for-на-кортежах-словниках-та-множинах
 використовуємо-range-та-enumerate-для-зміни-елементів-списків
 вкладені-цикли-for
-цикл-while
+while
 functions
 do-not-repeat-yourself
 що-таке-бібліотека-library-для-python
@@ -107,3 +107,6 @@ string
 індексація-та-слайсінг
 string-methods
 семантіка-python
+sugar
+ternary-expressions
+comprehensions-включення

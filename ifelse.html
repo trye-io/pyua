@@ -276,7 +276,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="12.3" data-path="цикл-for.html"><a href="цикл-for.html#використовуємо-range-та-enumerate-для-зміни-елементів-списків"><i class="fa fa-check"></i><b>12.3</b> Використовуємо <code>range()</code> та <code>enumerate()</code> для зміни елементів списків</a></li>
 <li class="chapter" data-level="12.4" data-path="цикл-for.html"><a href="цикл-for.html#вкладені-цикли-for"><i class="fa fa-check"></i><b>12.4</b> Вкладені цикли <code>for</code></a></li>
 </ul></li>
-<li class="chapter" data-level="13" data-path="цикл-while.html"><a href="цикл-while.html"><i class="fa fa-check"></i><b>13</b> Цикл <code>while</code></a></li>
+<li class="chapter" data-level="13" data-path="while.html"><a href="while.html"><i class="fa fa-check"></i><b>13</b> Цикл <code>while</code></a></li>
 <li class="part"><span><b>Функції</b></span></li>
 <li class="chapter" data-level="14" data-path="functions.html"><a href="functions.html"><i class="fa fa-check"></i><b>14</b> Функції</a>
 <ul>
@@ -312,6 +312,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="D.6" data-path="string.html"><a href="string.html#string-methods"><i class="fa fa-check"></i><b>D.6</b> Корисні методи стрічок</a></li>
 </ul></li>
 <li class="chapter" data-level="E" data-path="семантіка-python.html"><a href="семантіка-python.html"><i class="fa fa-check"></i><b>E</b> Семантіка Python</a></li>
+<li class="chapter" data-level="F" data-path="sugar.html"><a href="sugar.html"><i class="fa fa-check"></i><b>F</b> Синтаксичний цукор</a>
+<ul>
+<li class="chapter" data-level="F.1" data-path="sugar.html"><a href="sugar.html#ternary-expressions"><i class="fa fa-check"></i><b>F.1</b> Ternary expressions</a></li>
+<li class="chapter" data-level="F.2" data-path="sugar.html"><a href="sugar.html#comprehensions-включення"><i class="fa fa-check"></i><b>F.2</b> Comprehensions (Включення)</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://trye.io" target="blank">Зробленно trye з ❤️ до України</a></li>
 
@@ -428,6 +433,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb249-8"><a href="ifelse.html#cb249-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Відстань між x та y: &quot;</span> <span class="op">+</span> distance)</span></code></pre></div>
 <pre><code>## Відстань між x та y: 31</code></pre>
 <p>У цьому випадку, так як <code>x</code> не більший за <code>y</code>, то ми потрапили до випадку <code>else</code> і Python виконав код <code>distance = y - x</code>.</p>
+<p>Якщо інструкції в умвному переході невелчкі, ми можемо скористатись скороченням. Це так не впливає на фунцкіональність умовного переходу, а тільки спрощує код. Це не найважливіше, що нам зараз треба навчитись, тому ми залишимо це у Додатку <a href="sugar.html#sugar">F</a>.</p>
 </div>
 <div id="використовуємо-поодинокий-if" class="section level2 hasAnchor" number="11.3">
 <h2><span class="header-section-number">11.3</span> Використовуємо поодинокий <code>if</code><a href="ifelse.html#використовуємо-поодинокий-if" class="anchor-section" aria-label="Anchor link to header"></a></h2>
