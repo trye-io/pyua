@@ -1,0 +1,12 @@
+# Синтаксичний цукор {#sugar}
+
+## Ternary expressions
+
+```{python}
+x = 2 # -2
+y = "Non-negative" if x >= 0 else "Negative"
+print(y)
+```
+
+## Comprehensions (Включення)
+
