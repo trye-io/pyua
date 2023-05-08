@@ -23,3 +23,17 @@ data = [1, 2, 3]
 append_element(data, 4)
 data
 ```
+
+```{python}
+
+def f(x):
+    x.append(3)
+    return(x)
+
+a = [1, 2]
+
+
+f(a)
+
+print(a)
+```
