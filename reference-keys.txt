@@ -125,11 +125,11 @@ string
 індексація-та-слайсінг
 string-methods
 семантіка-python
+sugar
+ternary-expressions
+comprehensions-включення
 adv-funcs
 аргументи-та
 анонімні-lambda-фунцкії
 розгортаємо-повернений-кортеж
 розділення-простору-імен
-sugar
-ternary-expressions
-comprehensions-включення
