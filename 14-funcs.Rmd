@@ -224,4 +224,6 @@ print(returned_value)
 
 ---
 
+<!-- XXX: example of exercise: turn this code into function -->
+
 У цій главі...
