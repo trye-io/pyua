@@ -1,4 +1,4 @@
-# Обчислюємо з NumPy
+# Обчислюємо з NumPy {#numpy}
 
 <div class="btn-group" style="width:100%">
   <button style="width:20%; background-color: #ed6a5d">🎥 Лекція</button>
