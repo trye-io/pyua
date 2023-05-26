@@ -51,3 +51,10 @@ pre code {
   /* background-color: #3987c6;*/
   color: white;
 }
+
+.warning {
+  border-radius: 15px;
+  background: #d7effd;
+  color: #222222;
+  padding: 1em 1em 1em 1em;
+}
