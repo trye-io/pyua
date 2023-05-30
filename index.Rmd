@@ -77,12 +77,12 @@ library(reticulate)
 
 Усі ці матеріали ви можете знайти на початку кожної глави натиснувши на відповідну кнопку. Вони виглядають приблизно так: 
 
-<div class="btn-group">
-  <button style="background-color: #ed6a5d">🎥 Лекція</button>
-  <button style="background-color: #f5be4f">🎙️ Подкаст</button>
-  <button style="background-color: #61c554">📓 Записник</button>
-  <button style="background-color: #6db2d6">🤸 Вправи</button>
-  <button style="background-color: #a38ebd">📝 Шпора</button>
+<div class="btn-group" style="">
+  <button class="lecture">🎥 Лекція</button>
+  <button class="podcast">🎙️ Подкаст</button>
+  <button class="notebook">📓 Записник</button>
+  <button class="exercises">🤸 Вправи</button>
+  <button class="cheat">📝 Шпора</button>
 </div>
 
 Кожна глава також є самостійним та самодостатнім навчальним матеріалом, який мінімально залежить від попередніх глав. Іншими словами, якщо вам треба опанувати NumPy, вам необов'язково читати усі попередні глави. 
@@ -99,6 +99,8 @@ library(reticulate)
 - викладання комп'ютерних наук англійською вже є світовим стандартом
 - усі дослідження в нашій галузі описані англійською
 - ви зможете поспілкуватися зі спеціалістом з будь-якої точки на планеті, використовючи одні й ті самі поняття
+
+Ось наприклад є слово <span class="highlight-container"><span class="highlight">list<span class="tooltiptext">🇺🇦 лист</span></span></span>.
 
 ## 🧑‍🏫 Хто є автором {-} 
 
@@ -123,12 +125,6 @@ knitr::include_graphics("images/0-map.png")
 
 ## 🙏 Подяка {-}
 
-Авто цієї книги хоче подякувати <span class="highlight-container"><span class="highlight">наступним<span class="tooltiptext">Tooltip text</span></span></span> людям: 
+Авто цієї книги хоче подякувати наступним людям: 
 
-<div class="flex-container">
-  <div class="flex-item"><button style="background-color: #ed6a5d">🎥 Лекція</button></div>
-  <div class="flex-item"><button style="background-color: #f5be4f">🎙️ Подкаст</button></div>
-  <div class="flex-item"><button style="background-color: #61c554">📓 Записник</button></div>
-  <div class="flex-item"><button style="background-color: #6db2d6">🤸 Вправи</button></div>
-  <div class="flex-item"><button style="background-color: #a38ebd">📝 Шпора</button></div>
-</div>
+* 

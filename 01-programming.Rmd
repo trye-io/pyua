@@ -2,12 +2,12 @@
 
 # Що таке програмування? {#programming}
 
-<div class="btn-group">
-  <button style="background-color: #ed6a5d">🎥 Лекція</button>
-  <button style="background-color: #f5be4f">🎙️ Подкаст</button>
-  <button style="background-color: #61c554">📓 Записник</button>
-  <button style="background-color: #6db2d6">🤸 Вправи</button>
-  <button style="background-color: #a38ebd">📝 Шпора</button>
+<div class="btn-group" style="">
+  <button class="lecture">🎥 Лекція</button>
+  <button class="podcast">🎙️ Подкаст</button>
+  <button class="notebook">📓 Записник</button>
+  <button class="exercises">🤸 Вправи</button>
+  <button class="cheat">📝 Шпора</button>
 </div>
 
 **⏱️ Час на опанування теми:** 15 хвилин
