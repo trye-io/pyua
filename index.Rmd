@@ -123,7 +123,7 @@ knitr::include_graphics("images/0-map.png")
 
 ## 🙏 Подяка {-}
 
-Авто цієї книги хоче подякувати наступним людям: 
+Авто цієї книги хоче подякувати <span class="highlight-container"><span class="highlight">наступним<span class="tooltiptext">Tooltip text</span></span></span> людям: 
 
 * 
 
