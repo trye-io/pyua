@@ -13,32 +13,37 @@ pre code {
   white-space: inherit;
 }
 
-
 /* Groups of buttons */
 .btn-group {
-  padding: 1em 0 2.5em 0; 
+  padding: 1em 0 2.5em 0;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .btn-group button {
-  border: 1px solid #e6e6e6; 
-  color: black; 
-  padding: 10px 24px; 
+  border: 1px solid #e6e6e6;
+  color: black;
+  padding: 10px 24px;
   cursor: pointer;
-  float: left; 
+  margin-right: 10px;
+  margin-bottom: 10px;
+  flex: 0 0 200px;
+  box-sizing: border-box;
 }
 
 .btn-group button:first-child {
-  border-top-left-radius: 8px; 
-  border-bottom-left-radius: 8px; 
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
 }
 
 .btn-group button:last-child {
-  border-top-right-radius: 8px; 
-  border-bottom-right-radius: 8px; 
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
 }
 
 .btn-group button:not(:last-child) {
-  border-right: none; 
+  border-right: none;
 }
 
 .btn-group:after {
@@ -48,8 +53,20 @@ pre code {
 }
 
 .btn-group button:hover {
-  /* background-color: #3987c6;*/
   color: white;
+}
+
+/* Media query for screens smaller than 600px */
+@media (max-width: 600px) {
+  .btn-group {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: stretch; /* Expand buttons to fill width */
+  }
+
+  .btn-group button {
+    flex-basis: auto; /* Reset flex-basis to auto for full width */
+    margin-right: 0;
+  }
 }
 
 /* Warning */
@@ -114,5 +131,29 @@ pre code {
 }
 
 .highlight:hover .tooltiptext {
-  visibility: visible;
+    visibility: visible;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap items to next row when there's not enough space */
+}
+
+.flex-item {
+    padding: 1em 0 1em 0; 
+    flex: 1 0 20%; /* Grow, shrink, and basis values */
+    /* You can adjust the percentage value to determine the width of each column */
+  
+    /* Optional styling for the flex items */
+    box-sizing: border-box;
+}
+
+.flex-item button {
+    padding: 10px 24px; 
+    border: 1px solid #e6e6e6; 
+    color: black; 
+    width: 150px;
+    cursor: pointer;
+    float: left; 
+    border-radius: 8px; 
 }
