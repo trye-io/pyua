@@ -1,6 +1,6 @@
 # Python як мова програмування
 
-<div class="btn-group" style="">
+<div class="btn-group">
   <button class="lecture">🎥 Лекція</button>
   <button class="podcast">🎙️ Подкаст</button>
   <button class="notebook">📓 Записник</button>
