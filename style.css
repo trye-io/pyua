@@ -26,10 +26,10 @@ pre code {
   color: black;
   padding: 10px 24px;
   cursor: pointer;
-  margin-right: 10px;
   margin-bottom: 10px;
   flex: 0 0 200px;
   box-sizing: border-box;
+  float: left; 
 }
 
 .btn-group button:first-child {
