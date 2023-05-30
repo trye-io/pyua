@@ -24,7 +24,7 @@ window.addEventListener('DOMContentLoaded', function() {
             if (button.offsetWidth < maxWidth) {
                 button.textContent = '🎙';
             } else {
-                button.textContent = '🎙️ Подкас';
+                button.textContent = '🎙️ Подкаст';
             }
         }
         
