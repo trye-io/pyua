@@ -10,8 +10,10 @@ bookdown::gitbook:
         <li><a href="./">🐍 Python програмування</a></li>
       after: |
         <li><a href="https://trye.io" target="blank">Зробленно trye з ❤️ до України</a></li>
-    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
-    download: ["pdf", "epub"]
+    edit: null
+    info: false
+    download: null
+    sharing: null
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex
