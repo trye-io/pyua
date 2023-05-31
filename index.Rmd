@@ -89,11 +89,11 @@ library(reticulate)
 
 де:
 
-* <img src = "images/0-lecture.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на відеолекцію у YouTube
-* <img src = "images/0-podcast.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на подкаст-лекцію у Spotify
-* <img src = "images/0-notebook.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на записник Google Colaboratory
-* <img src = "images/0-exercises.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на вправи та завдання у Google Forms
-* <img src = "images/0-cheat.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на "шпору"
+* <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-lecture.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на відеолекцію у YouTube
+* <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-podcast.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на подкаст-лекцію у Spotify
+* <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-notebook.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на записник Google Colaboratory
+* <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-exercises.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на вправи та завдання у Google Forms
+* <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-cheat.png" style="vertical-align:middle; height: 1.5em;"/> -- посилання на "шпору"
 
 Як вже було зазначено, кожна глава є **самостійним** та **самодостатнім** навчальним матеріалом, який мінімально залежить від попередніх глав. Іншими словами, якщо вам треба опанувати NumPy, вам необов'язково читати усі попередні глави. 
 
@@ -135,10 +135,3 @@ knitr::include_graphics("images/0-map.png")
 
 * 
 
-```{r, results='hide', echo=FALSE}
-knitr::include_graphics("images/0-lecture.png")
-knitr::include_graphics("images/0-podcast.png")
-knitr::include_graphics("images/0-notebook.png")
-knitr::include_graphics("images/0-exercises.png")
-knitr::include_graphics("images/0-cheat.png")
-```
