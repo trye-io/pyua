@@ -134,3 +134,7 @@ knitr::include_graphics("images/0-map.png")
 Авто цієї книги хоче подякувати наступним людям: 
 
 * 
+
+```{r, echo=FALSE}
+knitr::include_graphics("images/0-cheat.png")
+```
