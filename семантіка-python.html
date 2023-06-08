@@ -183,9 +183,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul></li>
 <li class="chapter" data-level="4" data-path="vars.html"><a href="vars.html"><i class="fa fa-check"></i><b>4</b> Змінні, функції та оператори</a>
 <ul>
-<li class="chapter" data-level="4.1" data-path="vars.html"><a href="vars.html#змінні"><i class="fa fa-check"></i><b>4.1</b> Змінні</a></li>
-<li class="chapter" data-level="4.2" data-path="vars.html"><a href="vars.html#оператори"><i class="fa fa-check"></i><b>4.2</b> Оператори</a></li>
-<li class="chapter" data-level="4.3" data-path="vars.html"><a href="vars.html#функції"><i class="fa fa-check"></i><b>4.3</b> Функції</a></li>
+<li class="chapter" data-level="4.1" data-path="vars.html"><a href="vars.html#створюємо-використовуємо-та-змінюємо-змінні"><i class="fa fa-check"></i><b>4.1</b> ❎ Створюємо, використовуємо та змінюємо змінні</a></li>
+<li class="chapter" data-level="4.2" data-path="vars.html"><a href="vars.html#рахуємо-за-допомогою-операторів"><i class="fa fa-check"></i><b>4.2</b> ➕ Рахуємо за допомогою операторів</a></li>
+<li class="chapter" data-level="4.3" data-path="vars.html"><a href="vars.html#викликаємо-функції"><i class="fa fa-check"></i><b>4.3</b> 🔡 Викликаємо функції</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html"><i class="fa fa-check"></i><b>5</b> Синтаксис (правила написання) коду у Python</a>
 <ul>
@@ -368,7 +368,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="D.1" data-path="string.html"><a href="string.html#багаторядкові-текстові-стрічки"><i class="fa fa-check"></i><b>D.1</b> Багаторядкові текстові стрічки</a></li>
 <li class="chapter" data-level="D.2" data-path="string.html"><a href="string.html#спеціальні-та-керуючі-символи"><i class="fa fa-check"></i><b>D.2</b> Спеціальні та керуючі символи</a></li>
-<li class="chapter" data-level="D.3" data-path="string.html"><a href="string.html#оператори-1"><i class="fa fa-check"></i><b>D.3</b> Оператори</a></li>
+<li class="chapter" data-level="D.3" data-path="string.html"><a href="string.html#оператори"><i class="fa fa-check"></i><b>D.3</b> Оператори</a></li>
 <li class="chapter" data-level="D.4" data-path="string.html"><a href="string.html#довжина-текстової-стрічки"><i class="fa fa-check"></i><b>D.4</b> Довжина текстової стрічки</a></li>
 <li class="chapter" data-level="D.5" data-path="string.html"><a href="string.html#індексація-та-слайсінг"><i class="fa fa-check"></i><b>D.5</b> Індексація та слайсінг</a></li>
 <li class="chapter" data-level="D.6" data-path="string.html"><a href="string.html#string-methods"><i class="fa fa-check"></i><b>D.6</b> Корисні методи стрічок</a></li>
@@ -408,30 +408,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="семантіка-python" class="section level1 hasAnchor" number="26">
 <h1><span class="header-section-number">E</span> Семантіка Python<a href="семантіка-python.html#семантіка-python" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb586"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb586-1"><a href="семантіка-python.html#cb586-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb586-2"><a href="семантіка-python.html#cb586-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
-<span id="cb586-3"><a href="семантіка-python.html#cb586-3" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb588"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb588-1"><a href="семантіка-python.html#cb588-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb588-2"><a href="семантіка-python.html#cb588-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
+<span id="cb588-3"><a href="семантіка-python.html#cb588-3" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## 2</code></pre>
-<div class="sourceCode" id="cb588"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb588-1"><a href="семантіка-python.html#cb588-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb588-2"><a href="семантіка-python.html#cb588-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb590"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb590-1"><a href="семантіка-python.html#cb590-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb590-2"><a href="семантіка-python.html#cb590-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## 2</code></pre>
-<div class="sourceCode" id="cb590"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb590-1"><a href="семантіка-python.html#cb590-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> append_element(x, element):</span>
-<span id="cb590-2"><a href="семантіка-python.html#cb590-2" aria-hidden="true" tabindex="-1"></a>    x.append(element)</span></code></pre></div>
-<div class="sourceCode" id="cb591"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb591-1"><a href="семантіка-python.html#cb591-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb591-2"><a href="семантіка-python.html#cb591-2" aria-hidden="true" tabindex="-1"></a>append_element(data, <span class="dv">4</span>)</span>
-<span id="cb591-3"><a href="семантіка-python.html#cb591-3" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
+<div class="sourceCode" id="cb592"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb592-1"><a href="семантіка-python.html#cb592-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> append_element(x, element):</span>
+<span id="cb592-2"><a href="семантіка-python.html#cb592-2" aria-hidden="true" tabindex="-1"></a>    x.append(element)</span></code></pre></div>
+<div class="sourceCode" id="cb593"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb593-1"><a href="семантіка-python.html#cb593-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb593-2"><a href="семантіка-python.html#cb593-2" aria-hidden="true" tabindex="-1"></a>append_element(data, <span class="dv">4</span>)</span>
+<span id="cb593-3"><a href="семантіка-python.html#cb593-3" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
 <pre><code>## [1, 2, 3, 4]</code></pre>
-<div class="sourceCode" id="cb593"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb593-1"><a href="семантіка-python.html#cb593-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb593-2"><a href="семантіка-python.html#cb593-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
-<span id="cb593-3"><a href="семантіка-python.html#cb593-3" aria-hidden="true" tabindex="-1"></a>    x.append(<span class="dv">3</span>)</span>
-<span id="cb593-4"><a href="семантіка-python.html#cb593-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(x)</span>
-<span id="cb593-5"><a href="семантіка-python.html#cb593-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb593-6"><a href="семантіка-python.html#cb593-6" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
-<span id="cb593-7"><a href="семантіка-python.html#cb593-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb593-8"><a href="семантіка-python.html#cb593-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb593-9"><a href="семантіка-python.html#cb593-9" aria-hidden="true" tabindex="-1"></a>f(a)</span></code></pre></div>
+<div class="sourceCode" id="cb595"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb595-1"><a href="семантіка-python.html#cb595-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb595-2"><a href="семантіка-python.html#cb595-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb595-3"><a href="семантіка-python.html#cb595-3" aria-hidden="true" tabindex="-1"></a>    x.append(<span class="dv">3</span>)</span>
+<span id="cb595-4"><a href="семантіка-python.html#cb595-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(x)</span>
+<span id="cb595-5"><a href="семантіка-python.html#cb595-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb595-6"><a href="семантіка-python.html#cb595-6" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb595-7"><a href="семантіка-python.html#cb595-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb595-8"><a href="семантіка-python.html#cb595-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb595-9"><a href="семантіка-python.html#cb595-9" aria-hidden="true" tabindex="-1"></a>f(a)</span></code></pre></div>
 <pre><code>## [1, 2, 3]</code></pre>
-<div class="sourceCode" id="cb595"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb595-1"><a href="семантіка-python.html#cb595-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb597"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb597-1"><a href="семантіка-python.html#cb597-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
 <pre><code>## [1, 2, 3]</code></pre>
 
 </div>
