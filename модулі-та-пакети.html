@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-07" />
+<meta name="date" content="2023-06-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -437,17 +437,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="встановлюємо-модулі-та-пакети" class="section level2 hasAnchor" number="17.2">
 <h2><span class="header-section-number">17.2</span> Встановлюємо модулі та пакети<a href="модулі-та-пакети.html#встановлюємо-модулі-та-пакети" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Деякі модулі є вбудованними у Python і це означає що нам не треба їх встановлювати. Багато пакетів та модулів не йдуть разом із Python і перед тим як використати їх, необхідно їх встановити. Процесс встановлення не є складним, але залежить від системи управління пакетів. Наприклад, такі системи управління пакетів, як <code>pip</code> чи <code>conda</code>, якщо ви використовуєте локальний Python на вашому комп’ютері. Ми не будемо поглиблюватись у цю тему, тому що ми у рамках цих начальних матеріалів ми використовуємо Google Colab, а багато пакетів які нам знадобляться є вже попередньо встановленними. Проте, якщо ж пакет не був попередньо встановленним у Google Colab, ми можемо використати наступну інструкцію в окремій клітинці для встановлення модулю чи пакета:</p>
-<div class="sourceCode" id="cb402"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb402-1"><a href="модулі-та-пакети.html#cb402-1" aria-hidden="true" tabindex="-1"></a><span class="ex">!pip</span> install package_name</span></code></pre></div>
+<div class="sourceCode" id="cb394"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb394-1"><a href="модулі-та-пакети.html#cb394-1" aria-hidden="true" tabindex="-1"></a><span class="ex">!pip</span> install package_name</span></code></pre></div>
 <p>де <code>name_of_package</code> – це ім’я пакета, наприклад <code>torch</code>.</p>
 </div>
 <div id="імпортуємо-модуль-або-пакет" class="section level2 hasAnchor" number="17.3">
 <h2><span class="header-section-number">17.3</span> Імпортуємо модуль або пакет<a href="модулі-та-пакети.html#імпортуємо-модуль-або-пакет" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Коли пакет або модуль вже встановленно, перед тим як його використовувати, нам треба його завантажити або на жаргоні Python – імпортувати. Що це означає? Пам’ятаєте, ми казали що пакети – це як додатки у телефоні? Так ось, щоб використати додаток на телефоні, вам мало його встановити, вам треба його ще відрити. Теж саме і з пакетами, перед тим як його використати, треба його “відкрити”.</p>
 <p>Це можна зробити за допомогою ключового слова <code>import</code>:</p>
-<div class="sourceCode" id="cb403"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb403-1"><a href="модулі-та-пакети.html#cb403-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> package_name</span></code></pre></div>
+<div class="sourceCode" id="cb395"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb395-1"><a href="модулі-та-пакети.html#cb395-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> package_name</span></code></pre></div>
 <p>де <code>name_of_package</code> – це ім’я пакета.</p>
 <p>Часто ви також можете побачити що ми будемо надавати псевдонім до пакету, коли імпортуємо його. Ось наприклад, програмісти домовились, що пакет NumPy буде мати псевдонім <code>np</code>, і тоді наша інструкція виглядатиме наступним чином:</p>
-<div class="sourceCode" id="cb404"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb404-1"><a href="модулі-та-пакети.html#cb404-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># зверніть увагу на синтаксис надання псевдоніму -- as</span></span></code></pre></div>
+<div class="sourceCode" id="cb396"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb396-1"><a href="модулі-та-пакети.html#cb396-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># зверніть увагу на синтаксис надання псевдоніму -- as</span></span></code></pre></div>
 <p>Взагалі то кажучи, ми можемо надати будь-який псевдонім замість <code>np</code>. Але краще дотримуватись цієї негласної угоди (вона називається конвенцією), щоб код було простіше читати потім – якщо ми будемо використовувати <code>np</code> для NumPy усюди, то нам не треба буде шукати <code>import</code> та згадувати який саме псевдонім ми дали NumPy.</p>
 <!-- XXX: two ways to load -->
 <p>А навіщо нам взагалі псевдонім?</p>
@@ -455,26 +455,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="використовуємо-модуль-або-пакет" class="section level2 hasAnchor" number="17.4">
 <h2><span class="header-section-number">17.4</span> Використовуємо модуль або пакет<a href="модулі-та-пакети.html#використовуємо-модуль-або-пакет" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Упс, так і не встигли пропрацювати питання у попередній секції. Тому ми це зробимо зараз. Якщо ми імпортували пакет без псевдоніма, то для того щоб викликати функцію з цього пакета, нам треба прописати ім’я пакета, крапка, і ім’я функції: <code>package_name.function_name()</code>. Давайте викличемо фунцкію <code>arange()</code> з пакета NumPy:</p>
-<div class="sourceCode" id="cb405"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb405-1"><a href="модулі-та-пакети.html#cb405-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy </span>
-<span id="cb405-2"><a href="модулі-та-пакети.html#cb405-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb405-3"><a href="модулі-та-пакети.html#cb405-3" aria-hidden="true" tabindex="-1"></a>numpy.arange(<span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb397"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb397-1"><a href="модулі-та-пакети.html#cb397-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy </span>
+<span id="cb397-2"><a href="модулі-та-пакети.html#cb397-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb397-3"><a href="модулі-та-пакети.html#cb397-3" aria-hidden="true" tabindex="-1"></a>numpy.arange(<span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## array([0, 1, 2, 3, 4])</code></pre>
 <p>До кожної функції з NumPy нам треба буде додавати п’ять літер <code>numpy</code> і це в рази збільшить довжину нашого коду. Використання більш короткого псевдоніму <code>np</code> дозволяє користуватись саме ним замість повного ім’я пакету, коли ми викликаємо функції:</p>
-<div class="sourceCode" id="cb407"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb407-1"><a href="модулі-та-пакети.html#cb407-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb407-2"><a href="модулі-та-пакети.html#cb407-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb407-3"><a href="модулі-та-пакети.html#cb407-3" aria-hidden="true" tabindex="-1"></a>np.arange(<span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb399"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb399-1"><a href="модулі-та-пакети.html#cb399-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb399-2"><a href="модулі-та-пакети.html#cb399-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb399-3"><a href="модулі-та-пакети.html#cb399-3" aria-hidden="true" tabindex="-1"></a>np.arange(<span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## array([0, 1, 2, 3, 4])</code></pre>
 <!-- XXX: use of objects from the package -->
 <p>Якщо ж нам зовсім ліньки писати ім’я і є фунцкії які ви будете використовувати ну дуже часто у коді, тоді ви можете використати ось таку конструкцію:</p>
-<div class="sourceCode" id="cb409"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb409-1"><a href="модулі-та-пакети.html#cb409-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> arange</span>
-<span id="cb409-2"><a href="модулі-та-пакети.html#cb409-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb409-3"><a href="модулі-та-пакети.html#cb409-3" aria-hidden="true" tabindex="-1"></a>arange(<span class="dv">5</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb401"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb401-1"><a href="модулі-та-пакети.html#cb401-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> numpy <span class="im">import</span> arange</span>
+<span id="cb401-2"><a href="модулі-та-пакети.html#cb401-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb401-3"><a href="модулі-та-пакети.html#cb401-3" aria-hidden="true" tabindex="-1"></a>arange(<span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## array([0, 1, 2, 3, 4])</code></pre>
 <p>Це робити треба тільи у тому випадку, якщо фунцкія дійсно використовується багато разів. До речі, є один нюанс – треба бути обережним, щоб імя функції котру ви імпортуєте не збігалась з іменами об’єктів, які ви створили. Наприклад, якщо у вас вже є об’єкт <code>arange</code>, то може статися конфлікт між імпортованою функцією та вашим об’єктом. Тому нам зазвичай достатньо імпортувати пакет псевдонімом.</p>
 <p>Зазвичай ми будемо імпортувати усі необхідні пакети та модулі в самому початку Google Colab записнику. Виглядатиме ця перша клітинка приблизно ось так:</p>
-<div class="sourceCode" id="cb411"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb411-1"><a href="модулі-та-пакети.html#cb411-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb411-2"><a href="модулі-та-пакети.html#cb411-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb411-3"><a href="модулі-та-пакети.html#cb411-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span></code></pre></div>
+<div class="sourceCode" id="cb403"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb403-1"><a href="модулі-та-пакети.html#cb403-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb403-2"><a href="модулі-та-пакети.html#cb403-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb403-3"><a href="модулі-та-пакети.html#cb403-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib <span class="im">as</span> mpl</span></code></pre></div>
 <hr />
 <p>Далі, ми розглянемо дві бібліотеки, без яких нікуди. Це NumPy та matplotlib.</p>
 

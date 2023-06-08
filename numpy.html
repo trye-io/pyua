@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-07" />
+<meta name="date" content="2023-06-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -447,39 +447,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="завантажуємо-бібліотеку-numpy" class="section level2 hasAnchor" number="18.2">
 <h2><span class="header-section-number">18.2</span> Завантажуємо бібліотеку NumPy<a href="numpy.html#завантажуємо-бібліотеку-numpy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Так як ми працюємо у Google Colab, то NumPy вже встановленно і нам не треба нічого робити. Перед тим як використовувати пакет NumPy у Google Colab записнику, нам треба його завантажити. Це можна зробити використовуючи інструкцію <code>import</code>. За конвенцією NumPy, ми переіменуємо її до <code>np</code>. Це дозволить нам не писати кожного разу п’ять літер <code>numpy</code>, а тільки дві <code>np</code>:</p>
-<div class="sourceCode" id="cb412"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb412-1"><a href="numpy.html#cb412-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
+<div class="sourceCode" id="cb404"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb404-1"><a href="numpy.html#cb404-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
 </div>
 <div id="створюємо-масив-ndarray" class="section level2 hasAnchor" number="18.3">
 <h2><span class="header-section-number">18.3</span> Створюємо масив <code>ndarray</code><a href="numpy.html#створюємо-масив-ndarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Найчастіше ми будемо створювати ndarray за допомогою функції <code>np.array()</code>. Аргументом цієї функції можуть бути об’єкти різних типів, але найчастіше ми будемо використовувати наш улюблений список <code>list</code>.</p>
 <p>Якщо ви ще пам’ятаєте як створювати <code>list</code> в Python (Глава <a href="list.html#list">7</a>), вважайте що ви вже вмієте створювати <code>ndarray</code>. Якщо ви не пам’ятаєте або не знаєте що це таке, це не проблема, тому що синтаксис дуже простий, зрозумілий та природній. Щоб створити <code>list</code>, нам просто треба “загорнути” значення у квадратні дужки.</p>
 <p>Давайте зараз створемо <code>list</code>, який буде містити оцінки у школі і потім використаємо як аргумент до нашої функції <code>np.array()</code>:</p>
-<div class="sourceCode" id="cb413"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb413-1"><a href="numpy.html#cb413-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span>
-<span id="cb413-2"><a href="numpy.html#cb413-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb413-3"><a href="numpy.html#cb413-3" aria-hidden="true" tabindex="-1"></a>inna</span></code></pre></div>
+<div class="sourceCode" id="cb405"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb405-1"><a href="numpy.html#cb405-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span>
+<span id="cb405-2"><a href="numpy.html#cb405-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb405-3"><a href="numpy.html#cb405-3" aria-hidden="true" tabindex="-1"></a>inna</span></code></pre></div>
 <pre><code>## array([ 9,  8, 10])</code></pre>
 <p>Увага: клас об’єкту називається <code>ndarray</code>, a функція щоб його створити просто <code>np.array()</code>.</p>
 <p>Фунцкію <code>np.array()</code> ми також використовуємо для створення двовимірних масивів. Так само ми будемо створювати використовуючи list. Але цього разу, кожен елемент цього list буде також list. Знов ж таки, якщо ви не пам’ятаєте що таке <code>list</code>, просто загорніть значення кожного рядку в квадратні дужки, а потім і самі рядки:</p>
-<div class="sourceCode" id="cb415"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb415-1"><a href="numpy.html#cb415-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">=</span> np.array([[<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>], [<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">9</span>], [<span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">11</span>], [<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>]])</span>
-<span id="cb415-2"><a href="numpy.html#cb415-2" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb407"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb407-1"><a href="numpy.html#cb407-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">=</span> np.array([[<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>], [<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">9</span>], [<span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">11</span>], [<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>]])</span>
+<span id="cb407-2"><a href="numpy.html#cb407-2" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
 <p>Також існує більше сорока допоміжних функцій, які дозволяють створити різні ndarray. Ми не будемо розглядати кожну з них, а розглянемо тільки кілька корисних функцій. Наприклад, <code>np.arange()</code>. Вона створює ndarray з рівномірно розподілениими значеннями в заданому інтервалі. Якщо ви пам’ятаєте функцію <code>range()</code> (Глава <a href="#for"><strong>??</strong></a>), то це її NumPy еквівалент.</p>
 <p>Скажімо я хочу створити ndarray який міститеме числа від нуля до дев’яти:</p>
-<div class="sourceCode" id="cb417"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb417-1"><a href="numpy.html#cb417-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
-<span id="cb417-2"><a href="numpy.html#cb417-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
+<div class="sourceCode" id="cb409"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb409-1"><a href="numpy.html#cb409-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb409-2"><a href="numpy.html#cb409-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
 <pre><code>## array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre>
 <p>Далі, дуже корисні функції <code>np.zeros()</code> та <code>np.ones()</code>. Вони створюють ndarray, усі елементи яких нулі або одиниці, відповідно. Нам треба зазначити тільки розмір, тобто якщо це двовимірний масив, то кількість рядків та стовпчиків.</p>
-<div class="sourceCode" id="cb419"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb419-1"><a href="numpy.html#cb419-1" aria-hidden="true" tabindex="-1"></a>ones <span class="op">=</span> np.ones(shape<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
-<span id="cb419-2"><a href="numpy.html#cb419-2" aria-hidden="true" tabindex="-1"></a>ones</span></code></pre></div>
+<div class="sourceCode" id="cb411"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb411-1"><a href="numpy.html#cb411-1" aria-hidden="true" tabindex="-1"></a>ones <span class="op">=</span> np.ones(shape<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
+<span id="cb411-2"><a href="numpy.html#cb411-2" aria-hidden="true" tabindex="-1"></a>ones</span></code></pre></div>
 <pre><code>## array([[1., 1., 1.],
 ##        [1., 1., 1.],
 ##        [1., 1., 1.],
 ##        [1., 1., 1.]])</code></pre>
-<div class="sourceCode" id="cb421"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb421-1"><a href="numpy.html#cb421-1" aria-hidden="true" tabindex="-1"></a>zero <span class="op">=</span> np.zeros(shape<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
-<span id="cb421-2"><a href="numpy.html#cb421-2" aria-hidden="true" tabindex="-1"></a>zero</span></code></pre></div>
+<div class="sourceCode" id="cb413"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb413-1"><a href="numpy.html#cb413-1" aria-hidden="true" tabindex="-1"></a>zero <span class="op">=</span> np.zeros(shape<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
+<span id="cb413-2"><a href="numpy.html#cb413-2" aria-hidden="true" tabindex="-1"></a>zero</span></code></pre></div>
 <pre><code>## array([[0., 0., 0.],
 ##        [0., 0., 0.],
 ##        [0., 0., 0.],
@@ -488,27 +488,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="працюємо-з-атребутами-ndarray" class="section level2 hasAnchor" number="18.4">
 <h2><span class="header-section-number">18.4</span> Працюємо з атребутами <code>ndarray</code><a href="numpy.html#працюємо-з-атребутами-ndarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Коли ми будемо більш конкретно працювати з <code>ndarray</code>, рано чи пізно нам знадобиться інформація про нього. Ну наприклад, який це <code>ndarray</code>, одновимірний чи двовимірний? Щоб дізнатись кількість вимірів, ми можемо подивитись на значення атрібуту <code>ndim</code>:</p>
-<div class="sourceCode" id="cb423"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb423-1"><a href="numpy.html#cb423-1" aria-hidden="true" tabindex="-1"></a>inna.ndim</span></code></pre></div>
+<div class="sourceCode" id="cb415"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb415-1"><a href="numpy.html#cb415-1" aria-hidden="true" tabindex="-1"></a>inna.ndim</span></code></pre></div>
 <pre><code>## 1</code></pre>
 <p>Змінна <code>inna</code> дійсно є одновимірним <code>ndarray</code>. Давайте переконаємось, що <code>class10b</code> є двовимірним масивом:</p>
-<div class="sourceCode" id="cb425"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb425-1"><a href="numpy.html#cb425-1" aria-hidden="true" tabindex="-1"></a>class10b.ndim</span></code></pre></div>
+<div class="sourceCode" id="cb417"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb417-1"><a href="numpy.html#cb417-1" aria-hidden="true" tabindex="-1"></a>class10b.ndim</span></code></pre></div>
 <pre><code>## 2</code></pre>
 <p>Йдемо далі. В нашому <code>ndarray</code> <code>inna</code> ми маємо три значення. Іншими словами, довжина цього одновимірного масива дорівню трьом. Щоб отримати це значення, ми роздрукуємо занчення атрибуту <code>shape</code>:</p>
-<div class="sourceCode" id="cb427"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb427-1"><a href="numpy.html#cb427-1" aria-hidden="true" tabindex="-1"></a>inna.shape</span></code></pre></div>
+<div class="sourceCode" id="cb419"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb419-1"><a href="numpy.html#cb419-1" aria-hidden="true" tabindex="-1"></a>inna.shape</span></code></pre></div>
 <pre><code>## (3,)</code></pre>
 <p><code>Ndarray</code> <code>class10b</code> має три стовпчики та чотири рядки. Кількість рядків та стовпчиків теж знаходиться в атрибуті <code>shape</code>:</p>
-<div class="sourceCode" id="cb429"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb429-1"><a href="numpy.html#cb429-1" aria-hidden="true" tabindex="-1"></a>class10b.shape</span></code></pre></div>
+<div class="sourceCode" id="cb421"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb421-1"><a href="numpy.html#cb421-1" aria-hidden="true" tabindex="-1"></a>class10b.shape</span></code></pre></div>
 <pre><code>## (4, 3)</code></pre>
 <p>Останній атрибут який ми розглянемо – це тип даних. Як і скаляр, NumPy <code>ndarray</code> має свій тип даних, який до речі, нагадую, один і той самий для усіх елементів масиву. Значення цього атрібуту можна отримати, якщо зазначити атрибут <code>dtype</code> після крапки. Давайте подивимось на тип даних нашої змінної <code>inna</code>:</p>
-<div class="sourceCode" id="cb431"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb431-1"><a href="numpy.html#cb431-1" aria-hidden="true" tabindex="-1"></a>inna.dtype</span></code></pre></div>
+<div class="sourceCode" id="cb423"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb423-1"><a href="numpy.html#cb423-1" aria-hidden="true" tabindex="-1"></a>inna.dtype</span></code></pre></div>
 <pre><code>## dtype(&#39;int64&#39;)</code></pre>
 <p>Тип даних <code>inna</code> – <code>int</code>, тобто ціле число. Також у нас є <code>float</code> для дійсних чисел. Давайте швиденько подивимось:</p>
-<div class="sourceCode" id="cb433"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb433-1"><a href="numpy.html#cb433-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> np.array([<span class="fl">36.6</span>])</span>
-<span id="cb433-2"><a href="numpy.html#cb433-2" aria-hidden="true" tabindex="-1"></a>temp.dtype</span></code></pre></div>
+<div class="sourceCode" id="cb425"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb425-1"><a href="numpy.html#cb425-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> np.array([<span class="fl">36.6</span>])</span>
+<span id="cb425-2"><a href="numpy.html#cb425-2" aria-hidden="true" tabindex="-1"></a>temp.dtype</span></code></pre></div>
 <pre><code>## dtype(&#39;float64&#39;)</code></pre>
 <p>Так само як і у скалярів, у нас ще є тип <code>bool</code>, який приймає або <code>True</code> або <code>False</code> значення:</p>
-<div class="sourceCode" id="cb435"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb435-1"><a href="numpy.html#cb435-1" aria-hidden="true" tabindex="-1"></a>good_student <span class="op">=</span> np.array([<span class="va">True</span>])</span>
-<span id="cb435-2"><a href="numpy.html#cb435-2" aria-hidden="true" tabindex="-1"></a>good_student.dtype</span></code></pre></div>
+<div class="sourceCode" id="cb427"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb427-1"><a href="numpy.html#cb427-1" aria-hidden="true" tabindex="-1"></a>good_student <span class="op">=</span> np.array([<span class="va">True</span>])</span>
+<span id="cb427-2"><a href="numpy.html#cb427-2" aria-hidden="true" tabindex="-1"></a>good_student.dtype</span></code></pre></div>
 <pre><code>## dtype(&#39;bool&#39;)</code></pre>
 <p>Ми також можемо зберігати тексти та символи у <code>ndarray</code>, елементи якого будуть мати тип <code>str</code>. Але це досить рідкісний випадок, тому ми не будемо його розглядати.</p>
 </div>
@@ -516,32 +516,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">18.5</span> Використовуємо оператори для <code>ndarray</code><a href="numpy.html#використовуємо-оператори-для-ndarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>NumPy дуже зручний коли йдеться про арефметичні операції. Під арефметичними операціями, ми маємо на увазі додавання, віднімання, множення і ділення. Ці операції виконуються поелементно. Наприклад, якщо ми додамо два ndarray поелементно, це означає що ми додамо перший елемент до першого, другий - до другого, і так далі.</p>
 <p>Давайте порахуємо скільки Інна та Андрій отримали балів разом з кожного предмету:</p>
-<div class="sourceCode" id="cb437"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb437-1"><a href="numpy.html#cb437-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span>
-<span id="cb437-2"><a href="numpy.html#cb437-2" aria-hidden="true" tabindex="-1"></a>andrii <span class="op">=</span> np.array([<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">9</span>])</span>
-<span id="cb437-3"><a href="numpy.html#cb437-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb437-4"><a href="numpy.html#cb437-4" aria-hidden="true" tabindex="-1"></a>inna <span class="op">+</span> andrii</span></code></pre></div>
+<div class="sourceCode" id="cb429"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb429-1"><a href="numpy.html#cb429-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span>
+<span id="cb429-2"><a href="numpy.html#cb429-2" aria-hidden="true" tabindex="-1"></a>andrii <span class="op">=</span> np.array([<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">9</span>])</span>
+<span id="cb429-3"><a href="numpy.html#cb429-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb429-4"><a href="numpy.html#cb429-4" aria-hidden="true" tabindex="-1"></a>inna <span class="op">+</span> andrii</span></code></pre></div>
 <pre><code>## array([16, 20, 19])</code></pre>
 <p>Такм же чином, ми можемо помножити ці ndarray. Це не буде мати фізичного сенсу, проте продемонструє як працює арифметика:</p>
-<div class="sourceCode" id="cb439"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb439-1"><a href="numpy.html#cb439-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">*</span> andrii</span></code></pre></div>
+<div class="sourceCode" id="cb431"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb431-1"><a href="numpy.html#cb431-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">*</span> andrii</span></code></pre></div>
 <pre><code>## array([63, 96, 90])</code></pre>
 <p>Це правило також поширюється і на масиви з більшою кількістю вимірів:</p>
-<div class="sourceCode" id="cb441"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb441-1"><a href="numpy.html#cb441-1" aria-hidden="true" tabindex="-1"></a>class10b </span></code></pre></div>
+<div class="sourceCode" id="cb433"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb433-1"><a href="numpy.html#cb433-1" aria-hidden="true" tabindex="-1"></a>class10b </span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb443"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb443-1"><a href="numpy.html#cb443-1" aria-hidden="true" tabindex="-1"></a>ones</span></code></pre></div>
+<div class="sourceCode" id="cb435"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb435-1"><a href="numpy.html#cb435-1" aria-hidden="true" tabindex="-1"></a>ones</span></code></pre></div>
 <pre><code>## array([[1., 1., 1.],
 ##        [1., 1., 1.],
 ##        [1., 1., 1.],
 ##        [1., 1., 1.]])</code></pre>
-<div class="sourceCode" id="cb445"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb445-1"><a href="numpy.html#cb445-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">+</span> ones</span></code></pre></div>
+<div class="sourceCode" id="cb437"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb437-1"><a href="numpy.html#cb437-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">+</span> ones</span></code></pre></div>
 <pre><code>## array([[10.,  9., 11.],
 ##        [ 8., 13., 10.],
 ##        [13., 12., 12.],
 ##        [11., 13., 10.]])</code></pre>
 <p>Якщо ми замість другого або першого ndarray підставимо скаляр, то кожний елемент з цього ndarray буде, наприклад, помноженно на цей скаляр:</p>
-<div class="sourceCode" id="cb447"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb447-1"><a href="numpy.html#cb447-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb439"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb439-1"><a href="numpy.html#cb439-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## array([[18, 16, 20],
 ##        [14, 24, 18],
 ##        [24, 22, 22],
@@ -551,16 +551,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="використовуємо-універсальні-функції-ufunc" class="section level2 hasAnchor" number="18.6">
 <h2><span class="header-section-number">18.6</span> Використовуємо універсальні функції ufunc<a href="numpy.html#використовуємо-універсальні-функції-ufunc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Також NumPy має великий набір корисних функцій, які застосовуються до кожного елементу. Давайте подивимось на декілька з них:</p>
-<div class="sourceCode" id="cb449"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb449-1"><a href="numpy.html#cb449-1" aria-hidden="true" tabindex="-1"></a>inna</span></code></pre></div>
+<div class="sourceCode" id="cb441"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb441-1"><a href="numpy.html#cb441-1" aria-hidden="true" tabindex="-1"></a>inna</span></code></pre></div>
 <pre><code>## array([ 9,  8, 10])</code></pre>
-<div class="sourceCode" id="cb451"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb451-1"><a href="numpy.html#cb451-1" aria-hidden="true" tabindex="-1"></a>np.sqrt(inna)</span></code></pre></div>
+<div class="sourceCode" id="cb443"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb443-1"><a href="numpy.html#cb443-1" aria-hidden="true" tabindex="-1"></a>np.sqrt(inna)</span></code></pre></div>
 <pre><code>## array([3.        , 2.82842712, 3.16227766])</code></pre>
-<div class="sourceCode" id="cb453"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb453-1"><a href="numpy.html#cb453-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb445"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb445-1"><a href="numpy.html#cb445-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb455"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb455-1"><a href="numpy.html#cb455-1" aria-hidden="true" tabindex="-1"></a>np.log(class10b)</span></code></pre></div>
+<div class="sourceCode" id="cb447"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb447-1"><a href="numpy.html#cb447-1" aria-hidden="true" tabindex="-1"></a>np.log(class10b)</span></code></pre></div>
 <pre><code>## array([[2.19722458, 2.07944154, 2.30258509],
 ##        [1.94591015, 2.48490665, 2.19722458],
 ##        [2.48490665, 2.39789527, 2.39789527],
@@ -571,63 +571,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">18.7</span> Узагалнюємо із статистичними методами<a href="numpy.html#узагалнюємо-із-статистичними-методами" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Дуже часто нам буде цікаво подивитись на узагальнення наших даних. Наприклад, на середній бал, мінімальну оцінку, максимальну оцінку тощо. Такі значення називаються статичтичними показниками, і NumPy має цілу ниску цих фунцкій. Давайте подивимось на показники, які ви зразу ж можете зрозуміти та використовувати.</p>
 <p>Наприклад, щоб знайти середній бал Інни, нам достатньо прописати настпну інструкцію:</p>
-<div class="sourceCode" id="cb457"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb457-1"><a href="numpy.html#cb457-1" aria-hidden="true" tabindex="-1"></a>np.mean(class10b)</span></code></pre></div>
+<div class="sourceCode" id="cb449"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb449-1"><a href="numpy.html#cb449-1" aria-hidden="true" tabindex="-1"></a>np.mean(class10b)</span></code></pre></div>
 <pre><code>## 10.0</code></pre>
 <p>Мінімальний та максимальний бали, відповідно:</p>
-<div class="sourceCode" id="cb459"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb459-1"><a href="numpy.html#cb459-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">min</span>(class10b)</span></code></pre></div>
+<div class="sourceCode" id="cb451"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb451-1"><a href="numpy.html#cb451-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">min</span>(class10b)</span></code></pre></div>
 <pre><code>## 7</code></pre>
-<div class="sourceCode" id="cb461"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb461-1"><a href="numpy.html#cb461-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">max</span>(class10b)</span></code></pre></div>
+<div class="sourceCode" id="cb453"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb453-1"><a href="numpy.html#cb453-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">max</span>(class10b)</span></code></pre></div>
 <pre><code>## 12</code></pre>
 </div>
 <div id="звертаємось-до-елементів" class="section level2 hasAnchor" number="18.8">
 <h2><span class="header-section-number">18.8</span> Звертаємось до елементів<a href="numpy.html#звертаємось-до-елементів" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>В багатьох випадках нам буде необхідно отримати значення якогось елементу або елементів з <code>ndarray</code>. Наприклад, нас цікавить оцінка Інни з біології – то нам треба отримати елемент з індексом два. Індексація в <code>ndarray</code> починається з нуля, так само як і у списка <code>list</code>. Щоб отримати елемент одновимірного масиву за заданим ідексом, нам достатьно написати ім’я змінної і індекс загорнутий в квадратні дужки. Давайте спробуємо:</p>
-<div class="sourceCode" id="cb463"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb463-1"><a href="numpy.html#cb463-1" aria-hidden="true" tabindex="-1"></a>inna[<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb455"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb455-1"><a href="numpy.html#cb455-1" aria-hidden="true" tabindex="-1"></a>inna[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## 10</code></pre>
-<div class="sourceCode" id="cb465"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb465-1"><a href="numpy.html#cb465-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb457"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb457-1"><a href="numpy.html#cb457-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">4</span>]</span></code></pre></div>
 <pre><code>## 4</code></pre>
 <p>У NumPy теж реалізован слайсінг. Як ми вже казали у Главі <a href="list.html#list">7</a>, слайсінг дозволяє отримати декілька елементів (тобто зріз) однією командою. Для цього треба зазначити початковий індекс, двокрапку і останній індекс.</p>
 <p>Використаємо слайсінг на <code>zero_to_nine</code>:</p>
-<div class="sourceCode" id="cb467"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb467-1"><a href="numpy.html#cb467-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
+<div class="sourceCode" id="cb459"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb459-1"><a href="numpy.html#cb459-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
 <pre><code>## array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre>
-<div class="sourceCode" id="cb469"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb469-1"><a href="numpy.html#cb469-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">1</span>:<span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb461"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb461-1"><a href="numpy.html#cb461-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">1</span>:<span class="dv">5</span>]</span></code></pre></div>
 <pre><code>## array([1, 2, 3, 4])</code></pre>
 <p>Як бачимо, у результаті цієї команди ми отримали елементи із індексами 1, 2, 3 та 4. Тобто усі числа з індексу один включно і до самої п’ятірки. При чому елемент з індексом 5 ми не включили.</p>
 <p>Давайте ще раз спробуємо отримати елементи з індексами 3, 4 та 5. Треба зазначити спочатку 3, тому що перший елемент до двокрапок ми включаємо, далі двокрапку, і шість – тому що шість ми вже не включимо</p>
-<div class="sourceCode" id="cb471"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb471-1"><a href="numpy.html#cb471-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">3</span>:<span class="dv">6</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb463"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb463-1"><a href="numpy.html#cb463-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">3</span>:<span class="dv">6</span>]</span></code></pre></div>
 <pre><code>## array([3, 4, 5])</code></pre>
 <p>До речі, усі трюки які ми бачили коли дивились на слайсігу списків, як наприклад від’ємні індекси або дві двокрапки, можна використати і з <code>ndarray</code>.</p>
 <p>Якщо ми хочемо прикзначити нове значення якомусь елементу в <code>ndarray</code>, ми також можемо використати індексацію та слайсінг:</p>
-<div class="sourceCode" id="cb473"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb473-1"><a href="numpy.html#cb473-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb473-2"><a href="numpy.html#cb473-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
+<div class="sourceCode" id="cb465"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb465-1"><a href="numpy.html#cb465-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb465-2"><a href="numpy.html#cb465-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
 <pre><code>## array([0, 1, 5, 3, 4, 5, 6, 7, 8, 9])</code></pre>
-<div class="sourceCode" id="cb475"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb475-1"><a href="numpy.html#cb475-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">4</span>:<span class="dv">6</span>] <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb475-2"><a href="numpy.html#cb475-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
+<div class="sourceCode" id="cb467"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb467-1"><a href="numpy.html#cb467-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">4</span>:<span class="dv">6</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb467-2"><a href="numpy.html#cb467-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
 <pre><code>## array([0, 1, 5, 3, 5, 5, 6, 7, 8, 9])</code></pre>
 <p>В двовимірних масивах, кожен елемент має два індекси. Щоб отримати значення елементу за індексами, треба написати і’мя змінної, потім викдрити квадратні дужки, зазначити перший індекс, кома, другий індекс, та зачинити квадратну дужку. Давайте спробуємо на <code>class10b</code>:</p>
+<div class="sourceCode" id="cb469"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb469-1"><a href="numpy.html#cb469-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<pre><code>## array([[ 9,  8, 10],
+##        [ 7, 12,  9],
+##        [12, 11, 11],
+##        [10, 12,  9]])</code></pre>
+<div class="sourceCode" id="cb471"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb471-1"><a href="numpy.html#cb471-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
+<pre><code>## 9</code></pre>
+<p>Ми також можемо використати slicing для першого або другого індексу. Я хочу отримати оцінки з української для Андрія та Оксани:</p>
+<div class="sourceCode" id="cb473"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb473-1"><a href="numpy.html#cb473-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<pre><code>## array([[ 9,  8, 10],
+##        [ 7, 12,  9],
+##        [12, 11, 11],
+##        [10, 12,  9]])</code></pre>
+<div class="sourceCode" id="cb475"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb475-1"><a href="numpy.html#cb475-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">1</span>]</span></code></pre></div>
+<pre><code>## array([ 8, 12])</code></pre>
+<p>Аналогічно до одновимірного масиву, ми можемо змінити елементи <code>ndarray</code>. Наприклад, ми зробили помилку, і Інна отримала одинадцять з математики. Щоб скорегувати цю оцінку, достатньо призначити елементу з індексами нуль та нуль оцінку в одинадцять балів.</p>
 <div class="sourceCode" id="cb477"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb477-1"><a href="numpy.html#cb477-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb479"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb479-1"><a href="numpy.html#cb479-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
-<pre><code>## 9</code></pre>
-<p>Ми також можемо використати slicing для першого або другого індексу. Я хочу отримати оцінки з української для Андрія та Оксани:</p>
-<div class="sourceCode" id="cb481"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb481-1"><a href="numpy.html#cb481-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
-<pre><code>## array([[ 9,  8, 10],
-##        [ 7, 12,  9],
-##        [12, 11, 11],
-##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb483"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb483-1"><a href="numpy.html#cb483-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">1</span>]</span></code></pre></div>
-<pre><code>## array([ 8, 12])</code></pre>
-<p>Аналогічно до одновимірного масиву, ми можемо змінити елементи <code>ndarray</code>. Наприклад, ми зробили помилку, і Інна отримала одинадцять з математики. Щоб скорегувати цю оцінку, достатньо призначити елементу з індексами нуль та нуль оцінку в одинадцять балів.</p>
-<div class="sourceCode" id="cb485"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb485-1"><a href="numpy.html#cb485-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
-<pre><code>## array([[ 9,  8, 10],
-##        [ 7, 12,  9],
-##        [12, 11, 11],
-##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb487"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb487-1"><a href="numpy.html#cb487-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="dv">11</span></span>
-<span id="cb487-2"><a href="numpy.html#cb487-2" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb479"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb479-1"><a href="numpy.html#cb479-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="dv">11</span></span>
+<span id="cb479-2"><a href="numpy.html#cb479-2" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[11,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
@@ -639,10 +639,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Тривимірні масиви нам знадобляться для збереження зображень. Коли цих зображень буде декілька і нам треба буде помістити їх в один об’єкт, тоді ми використаємо чотиривимірні масиви. Взагалі, якщо не брати до уваги відео дані, то чотирьох вимірів нам як правило буде достатньо. Але все одно ви вже знаєте як утворити масиви з більшою кількістю вимірів. А ще в deep learning, масиви прийнято називати тензорами.</p>
 <p>Давайте шивденько подивимось, як працювати з тривимірними та чотиривимірними масивами.</p>
 <p>Наприклад, давайте створимо один трьохвимірний і один чотиривимірний масив:</p>
-<div class="sourceCode" id="cb489"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb489-1"><a href="numpy.html#cb489-1" aria-hidden="true" tabindex="-1"></a>array3d <span class="op">=</span> np.arange(<span class="dv">27</span>)</span>
-<span id="cb489-2"><a href="numpy.html#cb489-2" aria-hidden="true" tabindex="-1"></a>array3d.shape <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span>
-<span id="cb489-3"><a href="numpy.html#cb489-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb489-4"><a href="numpy.html#cb489-4" aria-hidden="true" tabindex="-1"></a>array3d</span></code></pre></div>
+<div class="sourceCode" id="cb481"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb481-1"><a href="numpy.html#cb481-1" aria-hidden="true" tabindex="-1"></a>array3d <span class="op">=</span> np.arange(<span class="dv">27</span>)</span>
+<span id="cb481-2"><a href="numpy.html#cb481-2" aria-hidden="true" tabindex="-1"></a>array3d.shape <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb481-3"><a href="numpy.html#cb481-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb481-4"><a href="numpy.html#cb481-4" aria-hidden="true" tabindex="-1"></a>array3d</span></code></pre></div>
 <pre><code>## array([[[ 0,  1,  2],
 ##         [ 3,  4,  5],
 ##         [ 6,  7,  8]],
@@ -654,11 +654,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##        [[18, 19, 20],
 ##         [21, 22, 23],
 ##         [24, 25, 26]]])</code></pre>
-<div class="sourceCode" id="cb491"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb491-1"><a href="numpy.html#cb491-1" aria-hidden="true" tabindex="-1"></a>array3d[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb483"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb483-1"><a href="numpy.html#cb483-1" aria-hidden="true" tabindex="-1"></a>array3d[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## 5</code></pre>
-<div class="sourceCode" id="cb493"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb493-1"><a href="numpy.html#cb493-1" aria-hidden="true" tabindex="-1"></a>array4d <span class="op">=</span> np.arange(<span class="dv">81</span>)</span>
-<span id="cb493-2"><a href="numpy.html#cb493-2" aria-hidden="true" tabindex="-1"></a>array4d.shape <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb494"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb494-1"><a href="numpy.html#cb494-1" aria-hidden="true" tabindex="-1"></a>array4d[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb485"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb485-1"><a href="numpy.html#cb485-1" aria-hidden="true" tabindex="-1"></a>array4d <span class="op">=</span> np.arange(<span class="dv">81</span>)</span>
+<span id="cb485-2"><a href="numpy.html#cb485-2" aria-hidden="true" tabindex="-1"></a>array4d.shape <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb486"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb486-1"><a href="numpy.html#cb486-1" aria-hidden="true" tabindex="-1"></a>array4d[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## 2</code></pre>
 
 </div>

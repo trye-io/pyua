@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-07" />
+<meta name="date" content="2023-06-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -428,21 +428,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>У цій главі, ми будемо вивчати чи не найважливіший контейнер. Він дуже універсальний та зручний.</p>
 <hr />
 <p>Ви пам’ятаєте хто входив у склад Guardians of the Galaxy (Вартові Галактики)? Це були Star-Lord, Gamora, Drax, Rocket та Groot. Ми вже знаємо як створювати змінні текстових стрічок <code>str</code>, і якщо нам знадобиться використати імена героїв у коді, ми можемо створити окремі змінні для кожного з них:</p>
-<div class="sourceCode" id="cb105"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb105-1"><a href="list.html#cb105-1" aria-hidden="true" tabindex="-1"></a>guardian1 <span class="op">=</span> <span class="st">&quot;Star Lord&quot;</span></span>
-<span id="cb105-2"><a href="list.html#cb105-2" aria-hidden="true" tabindex="-1"></a>guardian2 <span class="op">=</span> <span class="st">&quot;Gamora&quot;</span></span>
-<span id="cb105-3"><a href="list.html#cb105-3" aria-hidden="true" tabindex="-1"></a>guardian3 <span class="op">=</span> <span class="st">&quot;Drax&quot;</span></span>
-<span id="cb105-4"><a href="list.html#cb105-4" aria-hidden="true" tabindex="-1"></a>guardian4 <span class="op">=</span> <span class="st">&quot;Rocket&quot;</span></span>
-<span id="cb105-5"><a href="list.html#cb105-5" aria-hidden="true" tabindex="-1"></a>guardian5 <span class="op">=</span> <span class="st">&quot;Groot&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb97"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb97-1"><a href="list.html#cb97-1" aria-hidden="true" tabindex="-1"></a>guardian1 <span class="op">=</span> <span class="st">&quot;Star Lord&quot;</span></span>
+<span id="cb97-2"><a href="list.html#cb97-2" aria-hidden="true" tabindex="-1"></a>guardian2 <span class="op">=</span> <span class="st">&quot;Gamora&quot;</span></span>
+<span id="cb97-3"><a href="list.html#cb97-3" aria-hidden="true" tabindex="-1"></a>guardian3 <span class="op">=</span> <span class="st">&quot;Drax&quot;</span></span>
+<span id="cb97-4"><a href="list.html#cb97-4" aria-hidden="true" tabindex="-1"></a>guardian4 <span class="op">=</span> <span class="st">&quot;Rocket&quot;</span></span>
+<span id="cb97-5"><a href="list.html#cb97-5" aria-hidden="true" tabindex="-1"></a>guardian5 <span class="op">=</span> <span class="st">&quot;Groot&quot;</span></span></code></pre></div>
 <p>Якщо нам треба буде вивести на екран імена усіх вартових, то нам потрібно буде прописати кожну змінну:</p>
-<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="list.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian1)</span></code></pre></div>
+<div class="sourceCode" id="cb98"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb98-1"><a href="list.html#cb98-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian1)</span></code></pre></div>
 <pre><code>## Star Lord</code></pre>
-<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="list.html#cb108-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian2)</span></code></pre></div>
+<div class="sourceCode" id="cb100"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb100-1"><a href="list.html#cb100-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian2)</span></code></pre></div>
 <pre><code>## Gamora</code></pre>
-<div class="sourceCode" id="cb110"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb110-1"><a href="list.html#cb110-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian3)</span></code></pre></div>
+<div class="sourceCode" id="cb102"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb102-1"><a href="list.html#cb102-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian3)</span></code></pre></div>
 <pre><code>## Drax</code></pre>
-<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="list.html#cb112-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian3)</span></code></pre></div>
+<div class="sourceCode" id="cb104"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb104-1"><a href="list.html#cb104-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian3)</span></code></pre></div>
 <pre><code>## Drax</code></pre>
-<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="list.html#cb114-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian5)</span></code></pre></div>
+<div class="sourceCode" id="cb106"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb106-1"><a href="list.html#cb106-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(guardian5)</span></code></pre></div>
 <pre><code>## Groot</code></pre>
 <p>Це не дуже зручно, тим паче що ми зробили помилку і два рази вивели Drax замість Rocket. Тобто ми написали другий раз <code>print(guardian3)</code>, замість <code>print(guardian4)</code>. Ракеті це точно б не сподобалось. А уявіть скільки треба буде писати, коли до вартових ще приєднати Yondu, Mantis, Nebula, Thor та Kraglin Obfonteri? Це вже десять членів, і нам треба буде писати щоразу десять рядків коду, якщо захочемо вивести їх імена на екран.</p>
 <p>На щястя, у Python існує тип об’єкту, який називається <code>list</code>, або українською <strong>список</strong>. Під списком ми розуміємо впорядковану послідовність якихось об’єктів, які ми будемо називати елементами. Простими словами, список – це ланцюжок із елементів. Такі елементи можуть бути будь чим – числами <code>int</code>, стрічками <code>int</code> або навіть іншими списками <code>list</code>. І також <code>list</code> дозволяє зберігати скільки завгодно однакових елементів.</p>
@@ -452,21 +452,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="створюємо-list" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Створюємо <code>list</code><a href="list.html#створюємо-list" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Найпростіший спосіб створення <code>list</code> – це прописати його елементи через кому <code>,</code> і “загорнути” у квадратні дужки <code>[</code> та <code>]</code>. Давайте створемо новий <code>list</code> з ім’ям <code>guardians</code>:</p>
-<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="list.html#cb116-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">=</span> [<span class="st">&quot;Star Lord&quot;</span>, <span class="st">&quot;Gamora&quot;</span>, <span class="st">&quot;Drax&quot;</span>, <span class="st">&quot;Rocket&quot;</span>, <span class="st">&quot;Groot&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb108"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb108-1"><a href="list.html#cb108-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">=</span> [<span class="st">&quot;Star Lord&quot;</span>, <span class="st">&quot;Gamora&quot;</span>, <span class="st">&quot;Drax&quot;</span>, <span class="st">&quot;Rocket&quot;</span>, <span class="st">&quot;Groot&quot;</span>]</span></code></pre></div>
 <!-- XXX: draw a diagram of creating a list-->
 <p>Тепер нам буде набагато простіше вивести імена на екран:</p>
-<div class="sourceCode" id="cb117"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb117-1"><a href="list.html#cb117-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb109"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb109-1"><a href="list.html#cb109-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket&#39;, &#39;Groot&#39;]</code></pre>
 <p>Не забувайте, що ми також можемо замість конкретних значень зазначити також змінні або вирази:</p>
-<div class="sourceCode" id="cb119"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb119-1"><a href="list.html#cb119-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">=</span> [guardian1, guardian2, guardian3, guardian4, guardian5]</span></code></pre></div>
+<div class="sourceCode" id="cb111"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb111-1"><a href="list.html#cb111-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">=</span> [guardian1, guardian2, guardian3, guardian4, guardian5]</span></code></pre></div>
 <p>Давайте ще створимо <code>list</code>, який буде містити абсолютно довільні значення:</p>
-<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="list.html#cb120-1" aria-hidden="true" tabindex="-1"></a>star_lord <span class="op">=</span> [<span class="st">&quot;Peter Jason Quill&quot;</span>, <span class="dv">1976</span>, <span class="dv">2023</span> <span class="op">-</span> <span class="dv">1976</span>, <span class="fl">1.88</span>, <span class="va">True</span>]</span>
-<span id="cb120-2"><a href="list.html#cb120-2" aria-hidden="true" tabindex="-1"></a>star_lord</span></code></pre></div>
+<div class="sourceCode" id="cb112"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb112-1"><a href="list.html#cb112-1" aria-hidden="true" tabindex="-1"></a>star_lord <span class="op">=</span> [<span class="st">&quot;Peter Jason Quill&quot;</span>, <span class="dv">1976</span>, <span class="dv">2023</span> <span class="op">-</span> <span class="dv">1976</span>, <span class="fl">1.88</span>, <span class="va">True</span>]</span>
+<span id="cb112-2"><a href="list.html#cb112-2" aria-hidden="true" tabindex="-1"></a>star_lord</span></code></pre></div>
 <pre><code>## [&#39;Peter Jason Quill&#39;, 1976, 47, 1.88, True]</code></pre>
 <p>Список <code>star_lord</code> містить елемент типу <code>str</code> зі значенням <code>"Peter Jason Quill"</code>, елемент типу <code>int</code> зі значенням <code>1976</code>, вираз <code>2023 - 1976</code> який поверне об’єкт з типом <code>int</code>, елемент типу <code>float</code> зі значенням <code>1.88</code> та елемент типу <code>bool</code> зі значенням <code>True</code>.</p>
 <p>А ще ми казали, що елементами списків, можуть бути інші списки. Давайте створимо список, перший елемент якого буде також список:</p>
-<div class="sourceCode" id="cb122"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb122-1"><a href="list.html#cb122-1" aria-hidden="true" tabindex="-1"></a>gamora <span class="op">=</span> [[<span class="st">&quot;Gamora&quot;</span>, <span class="st">&quot;Zen&quot;</span>, <span class="st">&quot;Whoberi&quot;</span>, <span class="st">&quot;Ben&quot;</span>, <span class="st">&quot;Titan&quot;</span>], <span class="dv">1975</span>]</span>
-<span id="cb122-2"><a href="list.html#cb122-2" aria-hidden="true" tabindex="-1"></a>gamora</span></code></pre></div>
+<div class="sourceCode" id="cb114"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb114-1"><a href="list.html#cb114-1" aria-hidden="true" tabindex="-1"></a>gamora <span class="op">=</span> [[<span class="st">&quot;Gamora&quot;</span>, <span class="st">&quot;Zen&quot;</span>, <span class="st">&quot;Whoberi&quot;</span>, <span class="st">&quot;Ben&quot;</span>, <span class="st">&quot;Titan&quot;</span>], <span class="dv">1975</span>]</span>
+<span id="cb114-2"><a href="list.html#cb114-2" aria-hidden="true" tabindex="-1"></a>gamora</span></code></pre></div>
 <pre><code>## [[&#39;Gamora&#39;, &#39;Zen&#39;, &#39;Whoberi&#39;, &#39;Ben&#39;, &#39;Titan&#39;], 1975]</code></pre>
 </div>
 <div id="індексація" class="section level2 hasAnchor" number="7.2">
@@ -478,17 +478,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="отримуємо-елемент-за-його-індексом" class="section level3 hasAnchor" number="7.2.1">
 <h3><span class="header-section-number">7.2.1</span> Отримуємо елемент за його індексом<a href="list.html#отримуємо-елемент-за-його-індексом" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Для того, щоб отримати значення якогось елемента у списку, нам треба спершу написати ім’я цього списку, а потім його індекс у дужках. Давайте отримаємо значення найпершого елементу (індекс <code>0</code>):</p>
-<div class="sourceCode" id="cb124"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb124-1"><a href="list.html#cb124-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">0</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb116"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb116-1"><a href="list.html#cb116-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">0</span>]</span></code></pre></div>
 <pre><code>## &#39;Star Lord&#39;</code></pre>
 <!-- XXX: how to get an element -->
 <p>А тепер давайте отримаємо четвертий елемент (індекс <code>3</code>):</p>
-<div class="sourceCode" id="cb126"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb126-1"><a href="list.html#cb126-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb118"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb118-1"><a href="list.html#cb118-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">3</span>]</span></code></pre></div>
 <pre><code>## &#39;Rocket&#39;</code></pre>
 </div>
 <div id="змінюємо-елемент-за-його-індексом" class="section level3 hasAnchor" number="7.2.2">
 <h3><span class="header-section-number">7.2.2</span> Змінюємо елемент за його індексом<a href="list.html#змінюємо-елемент-за-його-індексом" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ми також можемо змінювати елементи у списку. Для цього нам треба зазначити ім’я списка, індекс загорнутий у квадратні дужки, знак присвоєння і саме значення чи вираз:</p>
-<div class="sourceCode" id="cb128"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb128-1"><a href="list.html#cb128-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">3</span>] <span class="op">=</span> <span class="st">&quot;Rocket Raccoon&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb120"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb120-1"><a href="list.html#cb120-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">3</span>] <span class="op">=</span> <span class="st">&quot;Rocket Raccoon&quot;</span></span></code></pre></div>
 <!-- XXX: how to change an element -->
 </div>
 </div>
@@ -496,21 +496,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">7.3</span> Слайсінг (зріз)<a href="list.html#слайсінг-зріз" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>На цьому наші пригоди з індексами не закінчуються. Будуть часи, коли вам знадобиться отримати не один елемент зі списку, а декілька. Наприклад, перші три елементи чи кожен другий елемент. Ми можемо це зробити отримаючи кожен елемент індивідуально, але у Python реалізована така крута річ, як слайсінг.</p>
 <p>Ідея проста – ми записуємо ім’я змінної, і далі вираз у формі <code>start:stop</code> загорнутий у квадратні дужки. Python поверне усі елементи між індексами <code>start</code> (включно) і <code>stop</code> (виключно). Давайте отримаємо другий, третій та четветий елемент:</p>
-<div class="sourceCode" id="cb129"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb129-1"><a href="list.html#cb129-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">1</span>:<span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb121"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb121-1"><a href="list.html#cb121-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">1</span>:<span class="dv">4</span>]</span></code></pre></div>
 <pre><code>## [&#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;]</code></pre>
 <!-- XXX: show how slicing works -->
 <p>Якщо ми пропутсимо <code>start</code> і зазначимо тільки <code>:stop</code>, то по замовченню Python поверне елементи починаючи з першого і до <code>stop</code>:</p>
-<div class="sourceCode" id="cb131"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb131-1"><a href="list.html#cb131-1" aria-hidden="true" tabindex="-1"></a>guardians[:<span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb123"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb123-1"><a href="list.html#cb123-1" aria-hidden="true" tabindex="-1"></a>guardians[:<span class="dv">4</span>]</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;]</code></pre>
 <p>І навпаки, якщо ми тільки зазначимо <code>start:</code> без <code>stop</code>, то Python поверне елементи починаючи з <code>start</code> і до кінця.</p>
-<div class="sourceCode" id="cb133"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb133-1"><a href="list.html#cb133-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">1</span>:]</span></code></pre></div>
+<div class="sourceCode" id="cb125"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb125-1"><a href="list.html#cb125-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="dv">1</span>:]</span></code></pre></div>
 <pre><code>## [&#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;]</code></pre>
 <!-- XXX: show how slicing works when omitting/skipping start and stop -->
 <p>Якщо ми зазначимо замість додатніх чисел від’ємні, то ми отримаємо числа з індексами відносно кінця списку:</p>
-<div class="sourceCode" id="cb135"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb135-1"><a href="list.html#cb135-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="op">-</span><span class="dv">3</span>:<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb127"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb127-1"><a href="list.html#cb127-1" aria-hidden="true" tabindex="-1"></a>guardians[<span class="op">-</span><span class="dv">3</span>:<span class="op">-</span><span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## [&#39;Drax&#39;, &#39;Rocket Raccoon&#39;]</code></pre>
 <p>Також, ми можемо зазначити так званий <code>step</code>, або крок. Якщо ми хочемо отримати кожен другий елемент, то це буде виглядати ось так:</p>
-<div class="sourceCode" id="cb137"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb137-1"><a href="list.html#cb137-1" aria-hidden="true" tabindex="-1"></a>guardians[::<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb129"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb129-1"><a href="list.html#cb129-1" aria-hidden="true" tabindex="-1"></a>guardians[::<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Drax&#39;, &#39;Groot&#39;]</code></pre>
 <p>Будь-ласка, не забувайте пройти вправи, посилання на які ви знайдете нагорі. Слайсінг можна зрозуміти та опанувати виключно на практиці, тому не забивайте на вправи.</p>
 </div>
@@ -520,42 +520,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="перевіряємо-чи-присутній-обєкт-серед-елементів-списку" class="section level3 hasAnchor" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> Перевіряємо чи присутній об’єкт серед елементів списку<a href="list.html#перевіряємо-чи-присутній-обєкт-серед-елементів-списку" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>У практиці, ви дуже часто будете користуватися опертором <code>in</code>. Він дозволяє перевірити чи міститься заданий об’єкт серед елементів списку <code>list</code>. Наприклад, чи Iron Man є одним з вартових, або іншими словами, чи міститься елемент <code>"Iron Man"</code> у списку <code>guardians</code>? Якщо так, то вираз <code>"Iron Man" in guardians</code> поверне <code>True</code>, а якщо ні – то <code>False</code>. Давайте перевіримо:</p>
-<div class="sourceCode" id="cb139"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb139-1"><a href="list.html#cb139-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Iron Man&quot;</span> <span class="kw">in</span> guardians</span></code></pre></div>
+<div class="sourceCode" id="cb131"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb131-1"><a href="list.html#cb131-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Iron Man&quot;</span> <span class="kw">in</span> guardians</span></code></pre></div>
 <pre><code>## False</code></pre>
 <p>А що до <code>"Gamora"</code>?</p>
-<div class="sourceCode" id="cb141"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb141-1"><a href="list.html#cb141-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Gamora&quot;</span> <span class="kw">in</span> guardians</span></code></pre></div>
+<div class="sourceCode" id="cb133"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb133-1"><a href="list.html#cb133-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Gamora&quot;</span> <span class="kw">in</span> guardians</span></code></pre></div>
 <pre><code>## True</code></pre>
 <p>Якщо ж ми хочемо переконатися, що <code>"Iron Man"</code> не є в вартових, то замість <code>in</code> ми можемо написати <code>not in</code>. Цей вираз поверне <code>True</code>, якщо <code>"Iron Man"</code> не є в вартових, або <code>False</code>, якщо є:</p>
-<div class="sourceCode" id="cb143"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb143-1"><a href="list.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Iron Man&quot;</span> <span class="kw">not</span> <span class="kw">in</span> guardians</span></code></pre></div>
+<div class="sourceCode" id="cb135"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb135-1"><a href="list.html#cb135-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Iron Man&quot;</span> <span class="kw">not</span> <span class="kw">in</span> guardians</span></code></pre></div>
 <pre><code>## True</code></pre>
 </div>
 <div id="зєднуємо-два-списка" class="section level3 hasAnchor" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> З’єднуємо два списка<a href="list.html#зєднуємо-два-списка" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Їдемо далі. Якщо ми хочемо розширити список наших вартових, тобто додати ще <code>"Yondu Udonta"</code> та <code>"Mantis"</code> до <code>guardians</code>, ми можемо загорнути їх у інший <code>list</code>, та додати до <code>guardians</code>. Ще раз нагадуємо, під загорнути, ми маємо на увазі сторити новий <code>list</code>:</p>
-<div class="sourceCode" id="cb145"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb145-1"><a href="list.html#cb145-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">&quot;Yondu Udonta&quot;</span>, <span class="st">&quot;Mantis&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb137"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb137-1"><a href="list.html#cb137-1" aria-hidden="true" tabindex="-1"></a>[<span class="st">&quot;Yondu Udonta&quot;</span>, <span class="st">&quot;Mantis&quot;</span>]</span></code></pre></div>
 <pre><code>## [&#39;Yondu Udonta&#39;, &#39;Mantis&#39;]</code></pre>
 <p>А тепер додаємо цей список до нашого первинного списку <code>guardians</code>:</p>
-<div class="sourceCode" id="cb147"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb147-1"><a href="list.html#cb147-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">+</span> [<span class="st">&quot;Yondu Udonta&quot;</span>, <span class="st">&quot;Mantis&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb139"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb139-1"><a href="list.html#cb139-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">+</span> [<span class="st">&quot;Yondu Udonta&quot;</span>, <span class="st">&quot;Mantis&quot;</span>]</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Yondu Udonta&#39;, &#39;Mantis&#39;]</code></pre>
 <p>У результаті оператора <code>+</code>, ми отримали новий список, елементи якого – це поєднання елементів першого операнда та елементів другого операнда.</p>
 </div>
 <div id="повторємо-список" class="section level3 hasAnchor" number="7.4.3">
 <h3><span class="header-section-number">7.4.3</span> Повторємо список<a href="list.html#повторємо-список" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Інший корисний оператор – це <code>*</code>. Цей оператор повторює список стільки разів, скільки зазначено у другому операнді, який до речі повинен бути числом типу <code>int</code>. Наступний вираз повторить список <code>guardians</code> два рази:</p>
-<div class="sourceCode" id="cb149"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb149-1"><a href="list.html#cb149-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb141"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb141-1"><a href="list.html#cb141-1" aria-hidden="true" tabindex="-1"></a>guardians <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;]</code></pre>
 </div>
 </div>
 <div id="корисні-функції" class="section level2 hasAnchor" number="7.5">
 <h2><span class="header-section-number">7.5</span> Корисні функції<a href="list.html#корисні-функції" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Для того щоб полічити кількість елементів є у списку, ми використовуємо фунцкію <code>len()</code>. У нас наразі п’ять вартових, тому наступна інструкція поверне саме <code>5</code>:</p>
-<div class="sourceCode" id="cb151"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb151-1"><a href="list.html#cb151-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(guardians)</span></code></pre></div>
+<div class="sourceCode" id="cb143"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb143-1"><a href="list.html#cb143-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(guardians)</span></code></pre></div>
 <pre><code>## 5</code></pre>
 <p>Для списків, елементи яких є числа корисні фунцкії <code>min()</code> та <code>max()</code>, які повертають мінімальний та максимальний елемент списку:</p>
-<div class="sourceCode" id="cb153"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb153-1"><a href="list.html#cb153-1" aria-hidden="true" tabindex="-1"></a>some_numbers <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">3</span>]</span>
-<span id="cb153-2"><a href="list.html#cb153-2" aria-hidden="true" tabindex="-1"></a><span class="bu">min</span>(some_numbers)</span></code></pre></div>
+<div class="sourceCode" id="cb145"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb145-1"><a href="list.html#cb145-1" aria-hidden="true" tabindex="-1"></a>some_numbers <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">3</span>]</span>
+<span id="cb145-2"><a href="list.html#cb145-2" aria-hidden="true" tabindex="-1"></a><span class="bu">min</span>(some_numbers)</span></code></pre></div>
 <pre><code>## -3</code></pre>
-<div class="sourceCode" id="cb155"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb155-1"><a href="list.html#cb155-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(some_numbers)</span></code></pre></div>
+<div class="sourceCode" id="cb147"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb147-1"><a href="list.html#cb147-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(some_numbers)</span></code></pre></div>
 <pre><code>## 10</code></pre>
 </div>
 <div id="корисні-методи" class="section level2 hasAnchor" number="7.6">
@@ -564,61 +564,61 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="додаємо-елементи-у-список" class="section level3 hasAnchor" number="7.6.1">
 <h3><span class="header-section-number">7.6.1</span> Додаємо елементи у список<a href="list.html#додаємо-елементи-у-список" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Ми вже знаємо як приєднати список до списку за допомогою оператора <code>+</code>. А ось якщо нам потрібно додати елемент до нашого списку, то ми можемо використати метод <code>.append()</code>. Він додасть новий елемент у кінець списку. Давайте додамо Mantis до нашого списку:</p>
-<div class="sourceCode" id="cb157"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb157-1"><a href="list.html#cb157-1" aria-hidden="true" tabindex="-1"></a>guardians.append(<span class="st">&quot;Mantis&quot;</span>)</span>
-<span id="cb157-2"><a href="list.html#cb157-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb149"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb149-1"><a href="list.html#cb149-1" aria-hidden="true" tabindex="-1"></a>guardians.append(<span class="st">&quot;Mantis&quot;</span>)</span>
+<span id="cb149-2"><a href="list.html#cb149-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;]</code></pre>
 <p>До речі, кожного разу як ви будете виконувати новий код, ви будете додавати новий елемент <code>"Mantis"</code>. Тому будьте обережні і чітко знайте скільки разів ви виконували код.</p>
-<div class="sourceCode" id="cb159"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb159-1"><a href="list.html#cb159-1" aria-hidden="true" tabindex="-1"></a>guardians.append(<span class="st">&quot;Mantis&quot;</span>)</span>
-<span id="cb159-2"><a href="list.html#cb159-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb151"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb151-1"><a href="list.html#cb151-1" aria-hidden="true" tabindex="-1"></a>guardians.append(<span class="st">&quot;Mantis&quot;</span>)</span>
+<span id="cb151-2"><a href="list.html#cb151-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;, &#39;Mantis&#39;]</code></pre>
 <p>Якщо нас не влаштовує додавати новий елемент в кінец списку, ми можемо скористатися методом <code>.insert()</code>. Цей метод додає новий елемент, але ми повинні зазначити куди саме за допомогою першого агументу. Давайте додамо Yondu в перший елемент списку. Нагадуємо, індексація починається з нуля, тому перший – значить <code>0</code>:</p>
-<div class="sourceCode" id="cb161"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb161-1"><a href="list.html#cb161-1" aria-hidden="true" tabindex="-1"></a>guardians.insert(<span class="dv">0</span>, <span class="st">&quot;Yondu&quot;</span>)</span>
-<span id="cb161-2"><a href="list.html#cb161-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb153"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb153-1"><a href="list.html#cb153-1" aria-hidden="true" tabindex="-1"></a>guardians.insert(<span class="dv">0</span>, <span class="st">&quot;Yondu&quot;</span>)</span>
+<span id="cb153-2"><a href="list.html#cb153-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Yondu&#39;, &#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;, &#39;Mantis&#39;]</code></pre>
 </div>
 <div id="видаляємо-елементи-зі-списку" class="section level3 hasAnchor" number="7.6.2">
 <h3><span class="header-section-number">7.6.2</span> Видаляємо елементи зі списку<a href="list.html#видаляємо-елементи-зі-списку" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Окей, але Yodnu у певний момент не є членом команди і нам треба його видалити зі списку <code>guardians</code>. Для цього, ми будемо використовувати метод <code>.remove()</code>. Він видаляє усі елементи, які дорівнюють елементу зазначеному між дужками. Тобто якщо б ми зазначили <code>"Mantis"</code>, то <code>.remove()</code> видалив би усі елементи які дорівнюють <code>"Mantis"</code>. Але давайте спершу видалемо Yondu:</p>
-<div class="sourceCode" id="cb163"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb163-1"><a href="list.html#cb163-1" aria-hidden="true" tabindex="-1"></a>guardians.remove(<span class="st">&quot;Yondu&quot;</span>)</span>
-<span id="cb163-2"><a href="list.html#cb163-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb155"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb155-1"><a href="list.html#cb155-1" aria-hidden="true" tabindex="-1"></a>guardians.remove(<span class="st">&quot;Yondu&quot;</span>)</span>
+<span id="cb155-2"><a href="list.html#cb155-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;, &#39;Mantis&#39;]</code></pre>
 <p>Окей, але у нас у команді все ще дві Mantis і ми хочемо видалити тільки один елемент. Якщо ми використаємо <code>.remove()</code>, то видалемо усі <code>"Mantis"</code>. Добре що є метод <code>.pop()</code>, який видаляє елемент за його індексом. Давайте видалемо останній елемент. Який індекс відповідає останньому елементу? Мабуть ми вже й не пам’ятаємо. Але ми можемо знайти цей індекс, порахувавши за допомогою функції <code>len()</code> кількість елементів, і потім відняти один (тому що індексація починається з нуля):</p>
-<div class="sourceCode" id="cb165"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb165-1"><a href="list.html#cb165-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(guardians)</span></code></pre></div>
+<div class="sourceCode" id="cb157"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb157-1"><a href="list.html#cb157-1" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(guardians)</span></code></pre></div>
 <pre><code>## 7</code></pre>
 <p>Цей список має сім елементів, тому останній елемент має індекс <code>7 - 1 = 6</code>:</p>
-<div class="sourceCode" id="cb167"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb167-1"><a href="list.html#cb167-1" aria-hidden="true" tabindex="-1"></a>guardians.pop(<span class="dv">6</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb159"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb159-1"><a href="list.html#cb159-1" aria-hidden="true" tabindex="-1"></a>guardians.pop(<span class="dv">6</span>)</span></code></pre></div>
 <pre><code>## &#39;Mantis&#39;</code></pre>
-<div class="sourceCode" id="cb169"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb169-1"><a href="list.html#cb169-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb161"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb161-1"><a href="list.html#cb161-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;]</code></pre>
 <p>Є ще третій спосіб видалити елемент, використовуючи ключове слово <code>del</code>. Цей метод рідко використовується, тому ми його не розглядатемемо.</p>
 </div>
 <div id="змінюємо-порядок-елементів-на-зворотній" class="section level3 hasAnchor" number="7.6.3">
 <h3><span class="header-section-number">7.6.3</span> Змінюємо порядок елементів на зворотній<a href="list.html#змінюємо-порядок-елементів-на-зворотній" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Іноді нам треба буде змінити порядок об’єктів, і для цього у нас є два важливих методи. Перший – <code>.reverse()</code>, який змінює порядок елементів на зворотній:</p>
-<div class="sourceCode" id="cb171"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb171-1"><a href="list.html#cb171-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb163"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb163-1"><a href="list.html#cb163-1" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Star Lord&#39;, &#39;Gamora&#39;, &#39;Drax&#39;, &#39;Rocket Raccoon&#39;, &#39;Groot&#39;, &#39;Mantis&#39;]</code></pre>
-<div class="sourceCode" id="cb173"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb173-1"><a href="list.html#cb173-1" aria-hidden="true" tabindex="-1"></a>guardians.reverse()</span>
-<span id="cb173-2"><a href="list.html#cb173-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb165"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb165-1"><a href="list.html#cb165-1" aria-hidden="true" tabindex="-1"></a>guardians.reverse()</span>
+<span id="cb165-2"><a href="list.html#cb165-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Mantis&#39;, &#39;Groot&#39;, &#39;Rocket Raccoon&#39;, &#39;Drax&#39;, &#39;Gamora&#39;, &#39;Star Lord&#39;]</code></pre>
 <p>Зверніть увагу не те, що тепер <code>"Star Lord"</code> став останнім елементом, <code>'Gamora'</code> передостаннім, і так далі.</p>
 </div>
 <div id="сортуємо-списки" class="section level3 hasAnchor" number="7.6.4">
 <h3><span class="header-section-number">7.6.4</span> Сортуємо списки<a href="list.html#сортуємо-списки" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Останній корисний метод, який ми розглянемо – <code>.sort()</code>. Він сортує список в лексикографічному порядку<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a> (якщо елементи є об’єктами типу <code>str</code>) або у порядку зростання (якщо елементи є числовими скалярами). Давайте відсортуємо наших героїв у списку <code>guardians</code>:</p>
-<div class="sourceCode" id="cb175"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb175-1"><a href="list.html#cb175-1" aria-hidden="true" tabindex="-1"></a>guardians.sort()</span>
-<span id="cb175-2"><a href="list.html#cb175-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
+<div class="sourceCode" id="cb167"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb167-1"><a href="list.html#cb167-1" aria-hidden="true" tabindex="-1"></a>guardians.sort()</span>
+<span id="cb167-2"><a href="list.html#cb167-2" aria-hidden="true" tabindex="-1"></a>guardians</span></code></pre></div>
 <pre><code>## [&#39;Drax&#39;, &#39;Gamora&#39;, &#39;Groot&#39;, &#39;Mantis&#39;, &#39;Rocket Raccoon&#39;, &#39;Star Lord&#39;]</code></pre>
 <p><code>"Drax"</code> на першому місці, тому що <code>D</code> – це найперша літера абетки яка є в іменах героїв. На другому місці <code>'Gamora'</code> та на третьому <code>'Groot'</code>. Чому саме так? По-перше, ім’я обої героїв починається на <code>"G"</code>, тобто друга літера абетки, яка зустрічається в іменах. Щоб вирішити, хто буде на другій позиції – ми дивимось на другу літеру імен: у <code>"Gamora"</code> – це <code>a</code>, яка йде перед <code>0</code> у <code>"Groot"</code>.</p>
 <p>Тепер давайте швиденько створимо новий список з чисел:</p>
-<div class="sourceCode" id="cb177"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb177-1"><a href="list.html#cb177-1" aria-hidden="true" tabindex="-1"></a>weather <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>]</span>
-<span id="cb177-2"><a href="list.html#cb177-2" aria-hidden="true" tabindex="-1"></a>weather</span></code></pre></div>
+<div class="sourceCode" id="cb169"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb169-1"><a href="list.html#cb169-1" aria-hidden="true" tabindex="-1"></a>weather <span class="op">=</span> [<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>, <span class="dv">9</span>, <span class="dv">10</span>, <span class="dv">11</span>]</span>
+<span id="cb169-2"><a href="list.html#cb169-2" aria-hidden="true" tabindex="-1"></a>weather</span></code></pre></div>
 <pre><code>## [10, 12, 9, 9, 10, 11]</code></pre>
 <p>А тепер відсортуємо його:</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb179-1"><a href="list.html#cb179-1" aria-hidden="true" tabindex="-1"></a>weather.sort()</span>
-<span id="cb179-2"><a href="list.html#cb179-2" aria-hidden="true" tabindex="-1"></a>weather</span></code></pre></div>
+<div class="sourceCode" id="cb171"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb171-1"><a href="list.html#cb171-1" aria-hidden="true" tabindex="-1"></a>weather.sort()</span>
+<span id="cb171-2"><a href="list.html#cb171-2" aria-hidden="true" tabindex="-1"></a>weather</span></code></pre></div>
 <pre><code>## [9, 9, 10, 10, 11, 12]</code></pre>
 <p>До речі, якщо ми спробуємо відсортувати елементи в списку <code>star_lord</code>, то ми отримаємо помилку, тому що <code>.sort()</code> працює зі списками, елементи якого можуть бути просортовані. Ну от скажість, хто більший <code>'Peter Jason Quill'</code> чи <code>1976</code>? Не знаєте? Ось і Python не знає теж:</p>
-<div class="sourceCode" id="cb181"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb181-1"><a href="list.html#cb181-1" aria-hidden="true" tabindex="-1"></a>star_lord.sort()</span></code></pre></div>
+<div class="sourceCode" id="cb173"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb173-1"><a href="list.html#cb173-1" aria-hidden="true" tabindex="-1"></a>star_lord.sort()</span></code></pre></div>
 <pre><code>## Error: TypeError: &#39;&lt;&#39; not supported between instances of &#39;int&#39; and &#39;str&#39;</code></pre>
 <hr />
 

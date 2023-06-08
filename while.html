@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-07" />
+<meta name="date" content="2023-06-08" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -429,10 +429,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- XXX: flow chart of while loop -->
 <p>Ця блок-схема досить схожа на умовний перехід <code>if/else</code>. Різниця полягає в тому, що сценарій або поток <strong>Так</strong> після тіла циклу переходить назад на початок умови, тоді як поток <strong>Ні</strong> вказує на наступну після циклу інструкцію.</p>
 <p>А ось і приклад цикла <code>while</code> у Python:</p>
-<div class="sourceCode" id="cb335"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb335-1"><a href="while.html#cb335-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb335-2"><a href="while.html#cb335-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="op">&lt;</span> <span class="dv">3</span>):</span>
-<span id="cb335-3"><a href="while.html#cb335-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb335-4"><a href="while.html#cb335-4" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb327"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb327-1"><a href="while.html#cb327-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb327-2"><a href="while.html#cb327-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="op">&lt;</span> <span class="dv">3</span>):</span>
+<span id="cb327-3"><a href="while.html#cb327-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb327-4"><a href="while.html#cb327-4" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
 <pre><code>## 0
 ## 1
 ## 2</code></pre>
@@ -445,21 +445,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Як і в умовному переході <code>if/else</code> та циклі <code>for</code>, інструкції тіла цикла повинні починатись з відступу. Замість <code>i &lt; 3</code> може бути будь яка змінна чи вираз які повертають значення типу <code>bool</code>: <code>True</code> або <code>False</code>. Якщо ми підставимо замість <code>i &lt; 3</code> значення <code>True</code>, то ми потрапимо до безкінечного циклу – тіло циклу буде виконуватись потійно, в чому не так багато сенсу.</p>
 <p>Давайте “розгорнемо” наш цикл, тобто пропишемо усю послідновність інструкцій, ітерацію за ітерацією:</p>
-<div class="sourceCode" id="cb337"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb337-1"><a href="while.html#cb337-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb337-2"><a href="while.html#cb337-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb337-3"><a href="while.html#cb337-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
-<span id="cb337-4"><a href="while.html#cb337-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 0</span></span>
-<span id="cb337-5"><a href="while.html#cb337-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 1</span></span>
-<span id="cb337-6"><a href="while.html#cb337-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb337-7"><a href="while.html#cb337-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
-<span id="cb337-8"><a href="while.html#cb337-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 1</span></span>
-<span id="cb337-9"><a href="while.html#cb337-9" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 2</span></span>
-<span id="cb337-10"><a href="while.html#cb337-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb337-11"><a href="while.html#cb337-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
-<span id="cb337-12"><a href="while.html#cb337-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 2</span></span>
-<span id="cb337-13"><a href="while.html#cb337-13" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 3</span></span>
-<span id="cb337-14"><a href="while.html#cb337-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb337-15"><a href="while.html#cb337-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 &lt; 3 не є істинною, тому виконуємо пропускаємо тіло циклу і йдемо далі</span></span></code></pre></div>
+<div class="sourceCode" id="cb329"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb329-1"><a href="while.html#cb329-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb329-2"><a href="while.html#cb329-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb329-3"><a href="while.html#cb329-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
+<span id="cb329-4"><a href="while.html#cb329-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 0</span></span>
+<span id="cb329-5"><a href="while.html#cb329-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 1</span></span>
+<span id="cb329-6"><a href="while.html#cb329-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb329-7"><a href="while.html#cb329-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
+<span id="cb329-8"><a href="while.html#cb329-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 1</span></span>
+<span id="cb329-9"><a href="while.html#cb329-9" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 2</span></span>
+<span id="cb329-10"><a href="while.html#cb329-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb329-11"><a href="while.html#cb329-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
+<span id="cb329-12"><a href="while.html#cb329-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 2</span></span>
+<span id="cb329-13"><a href="while.html#cb329-13" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 3</span></span>
+<span id="cb329-14"><a href="while.html#cb329-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb329-15"><a href="while.html#cb329-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 &lt; 3 не є істинною, тому виконуємо пропускаємо тіло циклу і йдемо далі</span></span></code></pre></div>
 <p>У циклах ми можемо ще використати ключові слова <code>break</code> та <code>continue</code>. Команда <code>break</code> дозволяє вийти з циклу завчасно, а <code>continue</code> – пропустити усі інструкції в ітерації та повернутись до перевірки умови. З ними ми докладніше познайомимось у вправах, посилання на які ви знайдете нагорі.</p>
 <p>Цикл <code>while</code> не такий поширений як цикл <code>for</code> в конексті AI, ML та DS. Це тому що більшість задач які встають у цих галузях, можна вирішити за допомгою <code>for</code>. Тим паче, що використовючи цикл <code>while</code>, існує ймовірність попасти у нескінченний цикл. В цьому нічого страшного не має, але бувають моменти коли помилку в коді досить важко знайти.</p>
 <hr />
