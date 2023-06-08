@@ -184,8 +184,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4" data-path="vars.html"><a href="vars.html"><i class="fa fa-check"></i><b>4</b> Змінні, функції та оператори</a>
 <ul>
 <li class="chapter" data-level="4.1" data-path="vars.html"><a href="vars.html#змінні"><i class="fa fa-check"></i><b>4.1</b> Змінні</a></li>
-<li class="chapter" data-level="4.2" data-path="vars.html"><a href="vars.html#функції"><i class="fa fa-check"></i><b>4.2</b> Функції</a></li>
-<li class="chapter" data-level="4.3" data-path="vars.html"><a href="vars.html#operators"><i class="fa fa-check"></i><b>4.3</b> Оператори</a></li>
+<li class="chapter" data-level="4.2" data-path="vars.html"><a href="vars.html#оператори"><i class="fa fa-check"></i><b>4.2</b> Оператори</a></li>
+<li class="chapter" data-level="4.3" data-path="vars.html"><a href="vars.html#функції"><i class="fa fa-check"></i><b>4.3</b> Функції</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="синтаксис-правила-написання-коду-у-python.html"><a href="синтаксис-правила-написання-коду-у-python.html"><i class="fa fa-check"></i><b>5</b> Синтаксис (правила написання) коду у Python</a>
 <ul>
@@ -368,7 +368,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="D.1" data-path="string.html"><a href="string.html#багаторядкові-текстові-стрічки"><i class="fa fa-check"></i><b>D.1</b> Багаторядкові текстові стрічки</a></li>
 <li class="chapter" data-level="D.2" data-path="string.html"><a href="string.html#спеціальні-та-керуючі-символи"><i class="fa fa-check"></i><b>D.2</b> Спеціальні та керуючі символи</a></li>
-<li class="chapter" data-level="D.3" data-path="string.html"><a href="string.html#оператори"><i class="fa fa-check"></i><b>D.3</b> Оператори</a></li>
+<li class="chapter" data-level="D.3" data-path="string.html"><a href="string.html#оператори-1"><i class="fa fa-check"></i><b>D.3</b> Оператори</a></li>
 <li class="chapter" data-level="D.4" data-path="string.html"><a href="string.html#довжина-текстової-стрічки"><i class="fa fa-check"></i><b>D.4</b> Довжина текстової стрічки</a></li>
 <li class="chapter" data-level="D.5" data-path="string.html"><a href="string.html#індексація-та-слайсінг"><i class="fa fa-check"></i><b>D.5</b> Індексація та слайсінг</a></li>
 <li class="chapter" data-level="D.6" data-path="string.html"><a href="string.html#string-methods"><i class="fa fa-check"></i><b>D.6</b> Корисні методи стрічок</a></li>
@@ -485,55 +485,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="vars.html#cb32-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 6.25</code></pre>
 </div>
-<div id="функції" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Функції<a href="vars.html#функції" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Кількість вільної пам’яті в 4 Gb відповідає 6.25% від усієї доступної пам’яті телефона (дивись попередні розрахунки). Звичайно десяткова частина 0.25% цього відсотка для нас не так суттєва. Ми все одно округляємо в голові до 6%, коли дивимось. Але ми не повинні цього робити в голові – у Python існує механізм, який дозволяє комп’ютерові округлити це число. Цей механізм – фунцкія <code>round()</code>:</p>
-<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="vars.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(<span class="fl">6.25</span>)</span></code></pre></div>
-<pre><code>## 6</code></pre>
-<p>Згодом ви побачите, що у програмуванні ми дуже часто виконуємо одні і ті самі завдання. Наприклад, завдання знайти максимальне значення серед чисел або знайти модуль числа виникають майже постійно. І щоб щоразу не писати код, який вирішує такі повторні завдання, ми можемо загорнути його у самостійну невеличку програму, яку ми назвемо <strong>функцієй</strong>. Зазвичай у функцій є ім’я за яким ми можемо її викликати – тобто виконати. Після імені фунцкції треба написати дужки, між якими ми можемо зазначити аргументи (якщо це передбачає функція).</p>
-<!-- XXX: syntax of function call -->
-<p>До речі, аргументами функції можуть бути не тільки значення, а й змінні, вирази та виклики інших функцій. Повертаючись до прикладу про вільну пам’ять, ми можемо використати вираз <code>free_space / 64 * 100</code> безпосередньо як аргумент до фунцкції (ми розберемося що таке вирази за хвилину у секції <a href="vars.html#operators">4.3</a>):</p>
-<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="vars.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span>)</span></code></pre></div>
-<pre><code>## 6</code></pre>
-<p>А ще ми можемо записати значення, яке поверне функція до змінної:</p>
-<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="vars.html#cb38-1" aria-hidden="true" tabindex="-1"></a>free_space_percentage <span class="op">=</span> <span class="bu">round</span>(free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span>)</span></code></pre></div>
-<p>І потім використати, наприклад для того, щоб порахувати кількість зайнятої пам’ті:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="vars.html#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">-</span> free_space_percentage</span></code></pre></div>
-<pre><code>## 94</code></pre>
-<p>Ось приклад функції <code>max()</code>, яка повертає максимум серед зазначенних чисел:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="vars.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(<span class="dv">3</span>, <span class="fl">3.5</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">20</span>)</span></code></pre></div>
-<pre><code>## 10</code></pre>
-<p>А ось приклад функції <code>abs()</code>, яка знаходить модуль числа:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="vars.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">abs</span>(<span class="op">-</span><span class="dv">10</span>)</span></code></pre></div>
-<pre><code>## 10</code></pre>
-</div>
-<div id="operators" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Оператори<a href="vars.html#operators" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Оператори – це спеціальні символи (наприклад, <code>*</code>, <code>/</code> тощо), які використовуються для операцій. Так, згода, це все одно, що сказата що вода мокра. Гарна новина у тому, що ми вже знайомі із дуже важливою частиною з них – математичні оператори. Вони збігаються з математичними символами:</p>
+<div id="оператори" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Оператори<a href="vars.html#оператори" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Оператори – це спеціальні символи (наприклад, <code>*</code>, <code>/</code> тощо), які використовуються для операцій. Так, згода, це все одно, що сказата що вода мокра. Гарна новина у тому, що ми вже знайомі із дуже важливою частиною з них, математичними операторами, і вже вміємо їх використовувати. Математичні оператори збігаються з математичними символами:</p>
 <ul>
 <li><code>+</code> – додавання</li>
 <li><code>-</code> – віднімання</li>
 <li><code>*</code> – множення</li>
 <li><code>/</code> – ділення</li>
 </ul>
-<p>Це не все. Ще до математичних операторів відносять також: піднесення до степіню (<code>**</code>) та отримання неповної частки (<code>//</code>) та остачи (<code>%</code>) від ділення. Якщо бути відвертим, то останні два оператори використовуються дуже і дуже рідко. Тому, якщо ви не пам’ятаєте що це таке не повна частка та остача – не біда.</p>
-<p>Розглянемо множення двох чисел з нашого прикладу <code>free_space * 1000</code>. Змінні, значення та вирази, на які ми застосовуємо оператор, називаються <strong>операндами</strong>. Тобто у випадку математичних операторів, операндами є все що стоїть ліворуч та стоїть праворуч від опрератора.</p>
-<p>У математчних операторів дуже інтуітивний синтаксис, який поділяється на три частини: перший операнд, беспосередньо сам оператор і другий операнд.</p>
+<p>Це не все. Ще до математичних операторів відносять також: піднесення до степіню (<code>**</code>) та отримання неповної частки (<code>//</code>) та остачи (<code>%</code>) від ділення. Якщо бути відвертим, то останні два оператори використовуються доволі рідко. Тому, якщо ви не пам’ятаєте що це таке не повна частка та остача – не біда.</p>
+<p>Давайте тепер трохи формалізуємо наші знання. Розглянемо множення двох чисел з нашого прикладу <code>free_space * 1000</code>. У цьому прикладі змінну <code>free_space</code> та значення <code>1000</code> ми будемо називати <strong>операндами</strong>. Тобто у випадку математичних операторів, операндами є все що стоїть ліворуч та стоїть праворуч від опрератора. Математчні оператори мають дуже інтуітивний синтаксис, який поділяється на три частини: перший операнд, беспосередньо сам оператор і другий операнд.</p>
+<p>Йдемо далі. Послідовність з операндів та операторів називається виразом. Наприклад, <code>2 + 2</code> є виразом, і наприклад <code>free_space / 64 * 100</code> також є складним, але все одно виразом. З цього слідує, що операндами можуть бути не тільки змінні та значення, а й інші вирази.</p>
 <!-- XXX: scheme of syntax of math operators -->
-<p>Послідовність з операндів та операторів називається виразом. Наприклад, <code>2 + 2</code> є виразом, і наприклад <code>free_space / 64 * 100</code> є складним, але все одно виразом.</p>
 <p>Ми вже бачили багато прикладів з операторами, коли робили наші підрахунки. Тут ми тільки глянемо на новий оператор піднесення до степіню:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="vars.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="vars.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## 9</code></pre>
-<p>Крім математичних операторів існують ще інші, як наприклад, оператори порівняння, логічні оператори тощо. Ми до них повернемось у Главі <a href="ifelse.html#ifelse">11</a>.</p>
+<p>Крім математичних операторів існують ще інші, як наприклад, оператори порівняння, логічні оператори тощо. Ми ще до них повернемось у Главі <a href="ifelse.html#ifelse">11</a>.</p>
 <p>До речі, у виразах із операторами, дужки відіграють таку ж роль, як і в математиці – вони регулюють порядок виконання дій. Наприклад, вирази <code>2 + 3 * 4</code> буде мати зовсім інший результат ніж <code>(2 + 3) * 4</code>:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="vars.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="vars.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
 <pre><code>## 14</code></pre>
-<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="vars.html#cb49-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span>) <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
+<p>Результат цього виразу не дорівнює значенню, яке поверне наступний вираз:</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="vars.html#cb38-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span>) <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
 <pre><code>## 20</code></pre>
-<!-- Подумай, може є сенс поміняти місцями оператори та функції, тоді вирішиться проблема з виразами -->
-<!-- Подумай, може є сенс додати про методи???-->
+</div>
+<div id="функції" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Функції<a href="vars.html#функції" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Повернемось до нашого прикладу з вільною пам’ятю смартфона. Кількість вільної пам’яті в <code>4</code> гігабайти відповідає <code>6.25%</code> від усієї доступної пам’яті телефона (дивись попередні розрахунки). Звичайно десяткова частина <code>0.25%</code> цього відсотка для нас не так суттєва і не відіграє важливу роль. Ми все одно округляємо в голові до <code>6%</code>, коли дивимось. Але ми не повинні цього робити в голові – у Python існує механізм, який дозволяє комп’ютерові округлити це число. Цей механізм – фунцкія <code>round()</code>:</p>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="vars.html#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(<span class="fl">6.25</span>)</span></code></pre></div>
+<pre><code>## 6</code></pre>
+<p>Згодом ви побачите, що у програмуванні ми дуже часто виконуємо одні і ті самі завдання. Наприклад, завдання знайти максимальне значення серед чисел або знайти модуль числа виникають майже постійно. І щоб щоразу не писати код, який вирішує такі повторні завдання, ми можемо створити окрему невеличку програму, яку ми назвемо <strong>функцієй</strong>. Зазвичай у функцій є ім’я за яким ми можемо її викликати – тобто виконати. Після імені фунцкції треба написати дужки, між якими ми можемо зазначити аргументи (якщо це передбачає функція).</p>
+<!-- XXX: syntax of function call -->
+<p>До речі, аргументами функції можуть бути не тільки значення, а й змінні, вирази та виклики інших функцій. Повертаючись до прикладу про вільну пам’ять, ми можемо використати вираз <code>free_space / 64 * 100</code> безпосередньо як аргумент до фунцкції:</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="vars.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span>)</span></code></pre></div>
+<pre><code>## 6</code></pre>
+<p>А ще ми можемо записати значення, яке поверне функція до змінної:</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="vars.html#cb44-1" aria-hidden="true" tabindex="-1"></a>free_space_percentage <span class="op">=</span> <span class="bu">round</span>(free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span>)</span></code></pre></div>
+<p>І потім використати, наприклад для того, щоб порахувати кількість зайнятої пам’ті:</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="vars.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">-</span> free_space_percentage</span></code></pre></div>
+<pre><code>## 94</code></pre>
+<p>Ось приклад функції <code>max()</code>, яка повертає максимум серед зазначенних чисел:</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="vars.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(<span class="dv">3</span>, <span class="fl">3.5</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">20</span>)</span></code></pre></div>
+<pre><code>## 10</code></pre>
+<p>А ось приклад функції <code>abs()</code>, яка знаходить модуль числа:</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="vars.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">abs</span>(<span class="op">-</span><span class="dv">10</span>)</span></code></pre></div>
+<pre><code>## 10</code></pre>
 <hr />
 <p>У цій главі ми дізнались для чого нам потрібні змінні і як з ними працювати. Більш того, ми навчились викликати функції та користуватись деякими операторами.</p>
+<!-- Подумай, може є сенс поміняти місцями оператори та функції, тоді вирішиться проблема з виразами -->
+<!-- Подумай, може є сенс додати про методи???-->
 
 </div>
 </div>
