@@ -144,7 +144,7 @@ string
 довжина-текстової-стрічки
 індексація-та-слайсінг
 string-methods
-семантіка-python
+semantics
 sugar
 ternary-expressions
 comprehensions-включення

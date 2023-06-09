@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-08" />
+<meta name="date" content="2023-06-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -373,7 +373,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="D.5" data-path="string.html"><a href="string.html#індексація-та-слайсінг"><i class="fa fa-check"></i><b>D.5</b> Індексація та слайсінг</a></li>
 <li class="chapter" data-level="D.6" data-path="string.html"><a href="string.html#string-methods"><i class="fa fa-check"></i><b>D.6</b> Корисні методи стрічок</a></li>
 </ul></li>
-<li class="chapter" data-level="E" data-path="семантіка-python.html"><a href="семантіка-python.html"><i class="fa fa-check"></i><b>E</b> Семантіка Python</a></li>
+<li class="chapter" data-level="E" data-path="semantics.html"><a href="semantics.html"><i class="fa fa-check"></i><b>E</b> Семантіка Python</a></li>
 <li class="chapter" data-level="F" data-path="sugar.html"><a href="sugar.html"><i class="fa fa-check"></i><b>F</b> Синтаксичний цукор</a>
 <ul>
 <li class="chapter" data-level="F.1" data-path="sugar.html"><a href="sugar.html#ternary-expressions"><i class="fa fa-check"></i><b>F.1</b> Ternary expressions</a></li>
@@ -435,7 +435,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Існують ще більш екзотичні, такі як <code>complex</code>, <code>bytes</code>, <code>NoneType</code>, але вони зараз нам не знадобляться. До одного з них ми повернемось у наступних главах, коли вони будуть використовуватись. А зараз почнемо ми саме з того, що ми вже бачили – чисел, які представлені у Python типом даних <code>int</code> та <code>float</code>.</p>
 <div id="тип-int-для-цілих-чисел" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Тип <code>int</code> для цілих чисел<a href="типи-скалярних-даних.html#тип-int-для-цілих-чисел" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Цілі числа – це ті числа, які не мають дробової частини<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a>. Наприклад: <code>0</code>, <code>-112342345</code>, <code>25</code> тощо. Для цього ми будемо використовувати тип даних <code>int</code><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>:</p>
+<p>Цілі числа – це ті числа, які не мають дробової частини<a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. Наприклад: <code>0</code>, <code>-112342345</code>, <code>25</code> тощо. Для цього ми будемо використовувати тип даних <code>int</code><a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>:</p>
 <p>Якщо ж ми хочемо зазначити від’ємне число, то нам треба поставити знак <code>-</code> на початку нашого числа:</p>
 <div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="типи-скалярних-даних.html#cb71-1" aria-hidden="true" tabindex="-1"></a>n_jumps <span class="op">=</span> <span class="dv">44</span></span>
 <span id="cb71-2"><a href="типи-скалярних-даних.html#cb71-2" aria-hidden="true" tabindex="-1"></a>n_jumps</span></code></pre></div>
@@ -464,7 +464,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="тип-str-для-текстових-стрічок" class="section level2 hasAnchor" number="6.4">
 <h2><span class="header-section-number">6.4</span> Тип <code>str</code> для текстових стрічок<a href="типи-скалярних-даних.html#тип-str-для-текстових-стрічок" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Також нам знадобиться спеціальний скаляр для зберігання тексту. Такі значення ми будемо називати текстові стрічки або просто стрічки<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a>. Під текстовою стрічкою ми розумімо послідовність символів. Наприклад, ось це <code>Hey! I am a string!</code> – стрічка. Python підтримує усі символи з Юнікоду, тому стрічка може бути написана українською <code>Я є стрічка</code>.</p>
+<p>Також нам знадобиться спеціальний скаляр для зберігання тексту. Такі значення ми будемо називати текстові стрічки або просто стрічки<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a>. Під текстовою стрічкою ми розумімо послідовність символів. Наприклад, ось це <code>Hey! I am a string!</code> – стрічка. Python підтримує усі символи з Юнікоду, тому стрічка може бути написана українською <code>Я є стрічка</code>.</p>
 <p>Щоб створити стрічку, нам треба загорнути текст цієї стрічки у подвійні (<code>"</code>) чи одинарні (<code>'</code>) лапки. Давайте створимо стрічку за допомогою подвійних лапок:</p>
 <div class="sourceCode" id="cb79"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb79-1"><a href="типи-скалярних-даних.html#cb79-1" aria-hidden="true" tabindex="-1"></a>greetings_en <span class="op">=</span> <span class="st">&quot;Hello!&quot;</span> <span class="co"># подвійні лапки</span></span>
 <span id="cb79-2"><a href="типи-скалярних-даних.html#cb79-2" aria-hidden="true" tabindex="-1"></a>greetings_en</span></code></pre></div>
@@ -522,10 +522,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div class="footnotes">
 <hr />
-<ol start="4">
-<li id="fn4"><p>Це звичайно дуже кепське визначення, проте дуже зрозуміле<a href="типи-скалярних-даних.html#fnref4" class="footnote-back">↩︎</a></p></li>
-<li id="fn5"><p><code>int</code> – це скорочення від integer, яке з англійскої перекладається як ціле число<a href="типи-скалярних-даних.html#fnref5" class="footnote-back">↩︎</a></p></li>
-<li id="fn6"><p>Англійською string. Деякі книги використовують поняття <strong>рядки</strong>, але тоді нам буде важко розрізняти a row of a table та a line of a text.<a href="типи-скалярних-даних.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<ol start="5">
+<li id="fn5"><p>Це звичайно дуже кепське визначення, проте дуже зрозуміле<a href="типи-скалярних-даних.html#fnref5" class="footnote-back">↩︎</a></p></li>
+<li id="fn6"><p><code>int</code> – це скорочення від integer, яке з англійскої перекладається як ціле число<a href="типи-скалярних-даних.html#fnref6" class="footnote-back">↩︎</a></p></li>
+<li id="fn7"><p>Англійською string. Деякі книги використовують поняття <strong>рядки</strong>, але тоді нам буде важко розрізняти a row of a table та a line of a text.<a href="типи-скалярних-даних.html#fnref7" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>

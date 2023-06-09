@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-08" />
+<meta name="date" content="2023-06-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -373,7 +373,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="D.5" data-path="string.html"><a href="string.html#індексація-та-слайсінг"><i class="fa fa-check"></i><b>D.5</b> Індексація та слайсінг</a></li>
 <li class="chapter" data-level="D.6" data-path="string.html"><a href="string.html#string-methods"><i class="fa fa-check"></i><b>D.6</b> Корисні методи стрічок</a></li>
 </ul></li>
-<li class="chapter" data-level="E" data-path="семантіка-python.html"><a href="семантіка-python.html"><i class="fa fa-check"></i><b>E</b> Семантіка Python</a></li>
+<li class="chapter" data-level="E" data-path="semantics.html"><a href="semantics.html"><i class="fa fa-check"></i><b>E</b> Семантіка Python</a></li>
 <li class="chapter" data-level="F" data-path="sugar.html"><a href="sugar.html"><i class="fa fa-check"></i><b>F</b> Синтаксичний цукор</a>
 <ul>
 <li class="chapter" data-level="F.1" data-path="sugar.html"><a href="sugar.html#ternary-expressions"><i class="fa fa-check"></i><b>F.1</b> Ternary expressions</a></li>
@@ -482,7 +482,7 @@ s = \sqrt{p(p - a)(p - b)(p - c)}
 <div class="sourceCode" id="cb337"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb337-1"><a href="functions.html#cb337-1" aria-hidden="true" tabindex="-1"></a>compute_area(a <span class="op">=</span> <span class="dv">3</span>, b <span class="op">=</span> <span class="dv">4</span>, c <span class="op">=</span> <span class="dv">5</span>)</span></code></pre></div>
 <pre><code>## 6.0</code></pre>
 <p>Коли ми заначили аргументи у <code>compute_area()</code> таким чином, ми сказали що аргумент з ім’ям <code>a</code> приймає значення <code>3</code>, <code>b</code> - <code>4</code> та <code>c</code> - <code>5</code>.</p>
-<p>До речі, порядок ключових аргументів при виклику фунцкії є довільний<a href="#fn10" class="footnote-ref" id="fnref10"><sup>10</sup></a>:</p>
+<p>До речі, порядок ключових аргументів при виклику фунцкії є довільний<a href="#fn11" class="footnote-ref" id="fnref11"><sup>11</sup></a>:</p>
 <div class="sourceCode" id="cb339"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb339-1"><a href="functions.html#cb339-1" aria-hidden="true" tabindex="-1"></a>compute_area(b <span class="op">=</span> <span class="dv">4</span>, c <span class="op">=</span> <span class="dv">5</span>, a <span class="op">=</span> <span class="dv">3</span>)</span></code></pre></div>
 <pre><code>## 6.0</code></pre>
 </div>
@@ -560,8 +560,8 @@ s = \sqrt{p(p - a)(p - b)(p - c)}
 </div>
 <div class="footnotes">
 <hr />
-<ol start="10">
-<li id="fn10"><p>Проте у випадку нашої фунцкії, порядок задання аргументів все одно не відіграє важливу роль.<a href="functions.html#fnref10" class="footnote-back">↩︎</a></p></li>
+<ol start="11">
+<li id="fn11"><p>Проте у випадку нашої фунцкії, порядок задання аргументів все одно не відіграє важливу роль.<a href="functions.html#fnref11" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>
             </section>
