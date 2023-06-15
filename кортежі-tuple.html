@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-14" />
+<meta name="date" content="2023-06-15" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -186,6 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="4.1" data-path="vars.html"><a href="vars.html#створюємо-використовуємо-та-змінюємо-змінні"><i class="fa fa-check"></i><b>4.1</b> ❎ Створюємо, використовуємо та змінюємо змінні</a></li>
 <li class="chapter" data-level="4.2" data-path="vars.html"><a href="vars.html#рахуємо-за-допомогою-операторів"><i class="fa fa-check"></i><b>4.2</b> ➕ Рахуємо за допомогою операторів</a></li>
 <li class="chapter" data-level="4.3" data-path="vars.html"><a href="vars.html#викликаємо-функції"><i class="fa fa-check"></i><b>4.3</b> 🔡 Викликаємо функції</a></li>
+<li class="chapter" data-level="4.4" data-path="vars.html"><a href="vars.html#користуємось-методами-та-атребутами-обєктів"><i class="fa fa-check"></i><b>4.4</b> 🪛 Користуємось методами та атребутами об’єктів</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="синтаксис.html"><a href="синтаксис.html"><i class="fa fa-check"></i><b>5</b> Синтаксис</a>
 <ul>
@@ -433,21 +434,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Проте є одна дуже важлива критична відмінність – тоді як списки <code>list</code> можна змінити, кортежі <strong><code>tuple</code> є незмінними</strong>. Після того як ми створили <code>tuple</code>, ми вже <strong>не можемо</strong> ані додати, ані видалити, ані змінити його елементи.</p>
 <p>Щоб створити новий кортеж, ми можемо використати звичайні дужки замість квадратних, які ми використовємо для <code>list</code>. Тобто елементи повинні бути загорнуті в ось такі дужки: <code>(</code> та <code>)</code>.</p>
 <p>Давайте створимо новий <code>tuple</code> із назвою <code>baltic_states</code>, який буде містити назви Балтійських країн:</p>
-<div class="sourceCode" id="cb179"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb179-1"><a href="кортежі-tuple.html#cb179-1" aria-hidden="true" tabindex="-1"></a>baltic_states <span class="op">=</span> (<span class="st">&quot;Estonia&quot;</span>, <span class="st">&quot;Latvia&quot;</span>, <span class="st">&quot;Lithuania&quot;</span>)</span>
-<span id="cb179-2"><a href="кортежі-tuple.html#cb179-2" aria-hidden="true" tabindex="-1"></a>baltic_states</span></code></pre></div>
+<div class="sourceCode" id="cb183"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb183-1"><a href="кортежі-tuple.html#cb183-1" aria-hidden="true" tabindex="-1"></a>baltic_states <span class="op">=</span> (<span class="st">&quot;Estonia&quot;</span>, <span class="st">&quot;Latvia&quot;</span>, <span class="st">&quot;Lithuania&quot;</span>)</span>
+<span id="cb183-2"><a href="кортежі-tuple.html#cb183-2" aria-hidden="true" tabindex="-1"></a>baltic_states</span></code></pre></div>
 <pre><code>## (&#39;Estonia&#39;, &#39;Latvia&#39;, &#39;Lithuania&#39;)</code></pre>
 <p>Це не єдиний спосіб створити <code>tuple</code> – нам не обов’язково зазначати дужки, ми можемо просто перелічити прості елементи через кому <code>,</code>:</p>
-<div class="sourceCode" id="cb181"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb181-1"><a href="кортежі-tuple.html#cb181-1" aria-hidden="true" tabindex="-1"></a>baltic_states <span class="op">=</span> <span class="st">&quot;Estonia&quot;</span>, <span class="st">&quot;Latvia&quot;</span>, <span class="st">&quot;Lithuania&quot;</span></span>
-<span id="cb181-2"><a href="кортежі-tuple.html#cb181-2" aria-hidden="true" tabindex="-1"></a>baltic_states</span></code></pre></div>
+<div class="sourceCode" id="cb185"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb185-1"><a href="кортежі-tuple.html#cb185-1" aria-hidden="true" tabindex="-1"></a>baltic_states <span class="op">=</span> <span class="st">&quot;Estonia&quot;</span>, <span class="st">&quot;Latvia&quot;</span>, <span class="st">&quot;Lithuania&quot;</span></span>
+<span id="cb185-2"><a href="кортежі-tuple.html#cb185-2" aria-hidden="true" tabindex="-1"></a>baltic_states</span></code></pre></div>
 <pre><code>## (&#39;Estonia&#39;, &#39;Latvia&#39;, &#39;Lithuania&#39;)</code></pre>
 <p>Як ми й сказали, так само як і у <code>list</code>, доступ до елементів виконується через індекси:</p>
-<div class="sourceCode" id="cb183"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb183-1"><a href="кортежі-tuple.html#cb183-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb187"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb187-1"><a href="кортежі-tuple.html#cb187-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## &#39;Lithuania&#39;</code></pre>
 <p>Слайсіг теж працює:</p>
-<div class="sourceCode" id="cb185"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb185-1"><a href="кортежі-tuple.html#cb185-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">0</span>:<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb189"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb189-1"><a href="кортежі-tuple.html#cb189-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">0</span>:<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## (&#39;Estonia&#39;, &#39;Latvia&#39;)</code></pre>
 <p>Але якщо ви спробуєте замінити який елемент, то Python викене помилку:</p>
-<div class="sourceCode" id="cb187"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb187-1"><a href="кортежі-tuple.html#cb187-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">2</span>] <span class="op">=</span> <span class="st">&quot;Vilnius&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb191-1"><a href="кортежі-tuple.html#cb191-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">2</span>] <span class="op">=</span> <span class="st">&quot;Vilnius&quot;</span></span></code></pre></div>
 <pre><code>## Error: TypeError: &#39;tuple&#39; object does not support item assignment</code></pre>
 <p>Як наслідок, багато методів які змінювали <code>list</code>, <strong>не</strong> будуть працювати з <code>tuple</code>:</p>
 <ul>
@@ -459,12 +460,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>.sort()</code>: відсортувати елементи</li>
 </ul>
 <p>До речі, у <code>tuple</code>, як і у <code>list</code> є дуже корисна властивість – їх можна <strong>розпакувати</strong>. Це означає присвоїти значення елементів послідовності до окремих змінних. Це простіше показати, ніж розказувати про це:</p>
-<div class="sourceCode" id="cb189"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb189-1"><a href="кортежі-tuple.html#cb189-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> baltic_states</span>
-<span id="cb189-2"><a href="кортежі-tuple.html#cb189-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb193-1"><a href="кортежі-tuple.html#cb193-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> baltic_states</span>
+<span id="cb193-2"><a href="кортежі-tuple.html#cb193-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
 <pre><code>## Estonia</code></pre>
-<div class="sourceCode" id="cb191"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb191-1"><a href="кортежі-tuple.html#cb191-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb195-1"><a href="кортежі-tuple.html#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code></pre></div>
 <pre><code>## Latvia</code></pre>
-<div class="sourceCode" id="cb193"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb193-1"><a href="кортежі-tuple.html#cb193-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb197-1"><a href="кортежі-tuple.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div>
 <pre><code>## Lithuania</code></pre>
 <p>Тепер ми можемо працювати зі змінними <code>a</code>, <code>b</code> та <code>c</code>, як з окремими змінними. Нам це знадобиться у Главі <a href="functions.html#functions">14</a>.</p>
 <p>Природньо спитати – а навіщо нам взагалі тоді <code>tuple</code>, якщо вони більше обмежані ніж <code>list</code>? Є три причини чому ми можемо віддати перевагу <code>tuple</code>:</p>
