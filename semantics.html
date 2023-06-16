@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-15" />
+<meta name="date" content="2023-06-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -196,14 +196,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.4" data-path="синтаксис.html"><a href="синтаксис.html#називаємо-змінні"><i class="fa fa-check"></i><b>5.4</b> 🪪 Називаємо змінні</a></li>
 </ul></li>
 <li class="part"><span><b>Типи та структури даних</b></span></li>
-<li class="chapter" data-level="6" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html"><i class="fa fa-check"></i><b>6</b> Типи скалярних даних</a>
+<li class="chapter" data-level="6" data-path="scalars.html"><a href="scalars.html"><i class="fa fa-check"></i><b>6</b> Типи скалярних даних</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#розбираємось-в-скалярах"><i class="fa fa-check"></i><b>6.1</b> ☝ Розбираємось в скалярах</a></li>
-<li class="chapter" data-level="6.2" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#використовуємо-тип-int-для-цілих-чисел"><i class="fa fa-check"></i><b>6.2</b> 🔢 Використовуємо тип <code>int</code> для цілих чисел</a></li>
-<li class="chapter" data-level="6.3" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#використовуємо-тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.3</b> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел</a></li>
-<li class="chapter" data-level="6.4" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#використовуємо-тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.4</b> 🐂 Використовуємо тип <code>bool</code> для бульових значень</a></li>
-<li class="chapter" data-level="6.5" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#використовуємо-тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.5</b> 🔤 Використовуємо тип <code>str</code> для текстових стрічок</a></li>
-<li class="chapter" data-level="6.6" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a></li>
+<li class="chapter" data-level="6.1" data-path="scalars.html"><a href="scalars.html#розбираємось-в-скалярах"><i class="fa fa-check"></i><b>6.1</b> ☝ Розбираємось в скалярах</a></li>
+<li class="chapter" data-level="6.2" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-int-для-цілих-чисел"><i class="fa fa-check"></i><b>6.2</b> 🔢 Використовуємо тип <code>int</code> для цілих чисел</a></li>
+<li class="chapter" data-level="6.3" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.3</b> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел</a></li>
+<li class="chapter" data-level="6.4" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.4</b> 🐂 Використовуємо тип <code>bool</code> для бульових значень</a></li>
+<li class="chapter" data-level="6.5" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.5</b> 🔤 Використовуємо тип <code>str</code> для текстових стрічок</a></li>
+<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>7</b> Списки <code>list</code></a>
 <ul>
@@ -411,30 +411,30 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="semantics" class="section level1 hasAnchor" number="26">
 <h1><span class="header-section-number">E</span> Семантіка Python<a href="semantics.html#semantics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb594"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb594-1"><a href="semantics.html#cb594-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb594-2"><a href="semantics.html#cb594-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
-<span id="cb594-3"><a href="semantics.html#cb594-3" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb596"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb596-1"><a href="semantics.html#cb596-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb596-2"><a href="semantics.html#cb596-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
+<span id="cb596-3"><a href="semantics.html#cb596-3" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## 2</code></pre>
-<div class="sourceCode" id="cb596"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb596-1"><a href="semantics.html#cb596-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb596-2"><a href="semantics.html#cb596-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb598"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb598-1"><a href="semantics.html#cb598-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb598-2"><a href="semantics.html#cb598-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## 2</code></pre>
-<div class="sourceCode" id="cb598"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb598-1"><a href="semantics.html#cb598-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> append_element(x, element):</span>
-<span id="cb598-2"><a href="semantics.html#cb598-2" aria-hidden="true" tabindex="-1"></a>    x.append(element)</span></code></pre></div>
-<div class="sourceCode" id="cb599"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb599-1"><a href="semantics.html#cb599-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb599-2"><a href="semantics.html#cb599-2" aria-hidden="true" tabindex="-1"></a>append_element(data, <span class="dv">4</span>)</span>
-<span id="cb599-3"><a href="semantics.html#cb599-3" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
+<div class="sourceCode" id="cb600"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb600-1"><a href="semantics.html#cb600-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> append_element(x, element):</span>
+<span id="cb600-2"><a href="semantics.html#cb600-2" aria-hidden="true" tabindex="-1"></a>    x.append(element)</span></code></pre></div>
+<div class="sourceCode" id="cb601"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb601-1"><a href="semantics.html#cb601-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb601-2"><a href="semantics.html#cb601-2" aria-hidden="true" tabindex="-1"></a>append_element(data, <span class="dv">4</span>)</span>
+<span id="cb601-3"><a href="semantics.html#cb601-3" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
 <pre><code>## [1, 2, 3, 4]</code></pre>
-<div class="sourceCode" id="cb601"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb601-1"><a href="semantics.html#cb601-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb601-2"><a href="semantics.html#cb601-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
-<span id="cb601-3"><a href="semantics.html#cb601-3" aria-hidden="true" tabindex="-1"></a>    x.append(<span class="dv">3</span>)</span>
-<span id="cb601-4"><a href="semantics.html#cb601-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(x)</span>
-<span id="cb601-5"><a href="semantics.html#cb601-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb601-6"><a href="semantics.html#cb601-6" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
-<span id="cb601-7"><a href="semantics.html#cb601-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb601-8"><a href="semantics.html#cb601-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb601-9"><a href="semantics.html#cb601-9" aria-hidden="true" tabindex="-1"></a>f(a)</span></code></pre></div>
+<div class="sourceCode" id="cb603"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb603-1"><a href="semantics.html#cb603-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb603-2"><a href="semantics.html#cb603-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb603-3"><a href="semantics.html#cb603-3" aria-hidden="true" tabindex="-1"></a>    x.append(<span class="dv">3</span>)</span>
+<span id="cb603-4"><a href="semantics.html#cb603-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(x)</span>
+<span id="cb603-5"><a href="semantics.html#cb603-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb603-6"><a href="semantics.html#cb603-6" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb603-7"><a href="semantics.html#cb603-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb603-8"><a href="semantics.html#cb603-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb603-9"><a href="semantics.html#cb603-9" aria-hidden="true" tabindex="-1"></a>f(a)</span></code></pre></div>
 <pre><code>## [1, 2, 3]</code></pre>
-<div class="sourceCode" id="cb603"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb603-1"><a href="semantics.html#cb603-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb605"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb605-1"><a href="semantics.html#cb605-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
 <pre><code>## [1, 2, 3]</code></pre>
 
 </div>

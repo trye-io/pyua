@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-15" />
+<meta name="date" content="2023-06-16" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -196,14 +196,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="5.4" data-path="синтаксис.html"><a href="синтаксис.html#називаємо-змінні"><i class="fa fa-check"></i><b>5.4</b> 🪪 Називаємо змінні</a></li>
 </ul></li>
 <li class="part"><span><b>Типи та структури даних</b></span></li>
-<li class="chapter" data-level="6" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html"><i class="fa fa-check"></i><b>6</b> Типи скалярних даних</a>
+<li class="chapter" data-level="6" data-path="scalars.html"><a href="scalars.html"><i class="fa fa-check"></i><b>6</b> Типи скалярних даних</a>
 <ul>
-<li class="chapter" data-level="6.1" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#розбираємось-в-скалярах"><i class="fa fa-check"></i><b>6.1</b> ☝ Розбираємось в скалярах</a></li>
-<li class="chapter" data-level="6.2" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#використовуємо-тип-int-для-цілих-чисел"><i class="fa fa-check"></i><b>6.2</b> 🔢 Використовуємо тип <code>int</code> для цілих чисел</a></li>
-<li class="chapter" data-level="6.3" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#використовуємо-тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.3</b> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел</a></li>
-<li class="chapter" data-level="6.4" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#використовуємо-тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.4</b> 🐂 Використовуємо тип <code>bool</code> для бульових значень</a></li>
-<li class="chapter" data-level="6.5" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#використовуємо-тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.5</b> 🔤 Використовуємо тип <code>str</code> для текстових стрічок</a></li>
-<li class="chapter" data-level="6.6" data-path="типи-скалярних-даних.html"><a href="типи-скалярних-даних.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a></li>
+<li class="chapter" data-level="6.1" data-path="scalars.html"><a href="scalars.html#розбираємось-в-скалярах"><i class="fa fa-check"></i><b>6.1</b> ☝ Розбираємось в скалярах</a></li>
+<li class="chapter" data-level="6.2" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-int-для-цілих-чисел"><i class="fa fa-check"></i><b>6.2</b> 🔢 Використовуємо тип <code>int</code> для цілих чисел</a></li>
+<li class="chapter" data-level="6.3" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.3</b> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел</a></li>
+<li class="chapter" data-level="6.4" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.4</b> 🐂 Використовуємо тип <code>bool</code> для бульових значень</a></li>
+<li class="chapter" data-level="6.5" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.5</b> 🔤 Використовуємо тип <code>str</code> для текстових стрічок</a></li>
+<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>7</b> Списки <code>list</code></a>
 <ul>
@@ -422,15 +422,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <p><strong>⏱️ Час на опанування теми:</strong> 15 хвилин</p>
 <p><strong>🤷 Для чого ми це вивчаємо:</strong></p>
+<ul>
+<li>опанувати структуру даних, в якої неможливо змінити елементи після її створення</li>
+<li>розширити знання зі структур даних</li>
+</ul>
 <p><strong>🔑 Результати навчання:</strong></p>
 <ul>
-<li>Розуміння що таке програма, додаток та програмне забезпечення</li>
-<li>Розуміння що таке алгоритм, кодування та програмування</li>
+<li>відрізняти списки <code>list</code> від кортeжей <code>tuple</code></li>
+<li>створювати кортежі <code>tuple</code></li>
+<li>використовувати корисні функції, оператори та методи, які ассоційовані з кортежами <code>tuple</code></li>
+<li>“розпаковувати” кортежі <code>tuple</code> (та списки <code>list</code>)</li>
+<li>розуміти в яких ситуаціях краще використовувати кортежі <code>tuple</code> ніж списки <code>list</code></li>
 </ul>
 <hr />
-<p>У цій главі, ми будемо вивчати чи не найважливіший контейнер.</p>
+<p>У цій главі ми обговоримо важливу структуру даних, яка має назву кортежі <code>tuple</code>. Кортежі можна назвати менш уніварсальною версією списків <code>list</code>. А чим саме вони відрізняються, ми дізнаємось нижче.</p>
 <hr />
-<p>Гарна новина у тому, що котежі <code>tuple</code> дуже і дуже схожі в роботі на списки <code>list</code>. Та що там, вони практично ідентичні і поводяться майже як списки <code>list</code>. Тому все що ми вивчили для <code>list</code> можна використати і для кортежей <code>tuple</code>.</p>
+<p>Гарна новина у тому, що котежі <code>tuple</code> дуже і дуже схожі в роботі на списки <code>list</code>. Та що там, вони практично ідентичні і поводяться майже як списки <code>list</code>. Тому <strong>майже</strong> все що ми вивчили для <code>list</code> можна використати і для кортежей <code>tuple</code>.</p>
 <p>Проте є одна дуже важлива критична відмінність – тоді як списки <code>list</code> можна змінити, кортежі <strong><code>tuple</code> є незмінними</strong>. Після того як ми створили <code>tuple</code>, ми вже <strong>не можемо</strong> ані додати, ані видалити, ані змінити його елементи.</p>
 <p>Щоб створити новий кортеж, ми можемо використати звичайні дужки замість квадратних, які ми використовємо для <code>list</code>. Тобто елементи повинні бути загорнуті в ось такі дужки: <code>(</code> та <code>)</code>.</p>
 <p>Давайте створимо новий <code>tuple</code> із назвою <code>baltic_states</code>, який буде містити назви Балтійських країн:</p>
@@ -441,14 +448,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb185"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb185-1"><a href="кортежі-tuple.html#cb185-1" aria-hidden="true" tabindex="-1"></a>baltic_states <span class="op">=</span> <span class="st">&quot;Estonia&quot;</span>, <span class="st">&quot;Latvia&quot;</span>, <span class="st">&quot;Lithuania&quot;</span></span>
 <span id="cb185-2"><a href="кортежі-tuple.html#cb185-2" aria-hidden="true" tabindex="-1"></a>baltic_states</span></code></pre></div>
 <pre><code>## (&#39;Estonia&#39;, &#39;Latvia&#39;, &#39;Lithuania&#39;)</code></pre>
-<p>Як ми й сказали, так само як і у <code>list</code>, доступ до елементів виконується через індекси:</p>
-<div class="sourceCode" id="cb187"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb187-1"><a href="кортежі-tuple.html#cb187-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">2</span>]</span></code></pre></div>
+<p>Питання: як ми можемо дізнатись до якої структури даних належить об’єкт? Все просто, ви можете використати функцію <code>type()</code>, яку ми також згадували у Главі <a href="scalars.html#scalars">6</a>:</p>
+<div class="sourceCode" id="cb187"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb187-1"><a href="кортежі-tuple.html#cb187-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(baltic_states)</span></code></pre></div>
+<pre><code>## &lt;class &#39;tuple&#39;&gt;</code></pre>
+<p>У кортежей <code>tuple</code>, як ми й сказали, доступ до елементів виконується через індекси, так само як і у <code>list</code>:</p>
+<div class="sourceCode" id="cb189"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb189-1"><a href="кортежі-tuple.html#cb189-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## &#39;Lithuania&#39;</code></pre>
 <p>Слайсіг теж працює:</p>
-<div class="sourceCode" id="cb189"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb189-1"><a href="кортежі-tuple.html#cb189-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">0</span>:<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb191"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb191-1"><a href="кортежі-tuple.html#cb191-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">0</span>:<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## (&#39;Estonia&#39;, &#39;Latvia&#39;)</code></pre>
 <p>Але якщо ви спробуєте замінити який елемент, то Python викене помилку:</p>
-<div class="sourceCode" id="cb191"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb191-1"><a href="кортежі-tuple.html#cb191-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">2</span>] <span class="op">=</span> <span class="st">&quot;Vilnius&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb193"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb193-1"><a href="кортежі-tuple.html#cb193-1" aria-hidden="true" tabindex="-1"></a>baltic_states[<span class="dv">2</span>] <span class="op">=</span> <span class="st">&quot;Vilnius&quot;</span></span></code></pre></div>
 <pre><code>## Error: TypeError: &#39;tuple&#39; object does not support item assignment</code></pre>
 <p>Як наслідок, багато методів які змінювали <code>list</code>, <strong>не</strong> будуть працювати з <code>tuple</code>:</p>
 <ul>
@@ -460,12 +470,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>.sort()</code>: відсортувати елементи</li>
 </ul>
 <p>До речі, у <code>tuple</code>, як і у <code>list</code> є дуже корисна властивість – їх можна <strong>розпакувати</strong>. Це означає присвоїти значення елементів послідовності до окремих змінних. Це простіше показати, ніж розказувати про це:</p>
-<div class="sourceCode" id="cb193"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb193-1"><a href="кортежі-tuple.html#cb193-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> baltic_states</span>
-<span id="cb193-2"><a href="кортежі-tuple.html#cb193-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb195"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb195-1"><a href="кортежі-tuple.html#cb195-1" aria-hidden="true" tabindex="-1"></a>a, b, c <span class="op">=</span> baltic_states</span>
+<span id="cb195-2"><a href="кортежі-tuple.html#cb195-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
 <pre><code>## Estonia</code></pre>
-<div class="sourceCode" id="cb195"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb195-1"><a href="кортежі-tuple.html#cb195-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code></pre></div>
+<div class="sourceCode" id="cb197"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb197-1"><a href="кортежі-tuple.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(b)</span></code></pre></div>
 <pre><code>## Latvia</code></pre>
-<div class="sourceCode" id="cb197"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb197-1"><a href="кортежі-tuple.html#cb197-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div>
+<div class="sourceCode" id="cb199"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb199-1"><a href="кортежі-tuple.html#cb199-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(c)</span></code></pre></div>
 <pre><code>## Lithuania</code></pre>
 <p>Тепер ми можемо працювати зі змінними <code>a</code>, <code>b</code> та <code>c</code>, як з окремими змінними. Нам це знадобиться у Главі <a href="functions.html#functions">14</a>.</p>
 <p>Природньо спитати – а навіщо нам взагалі тоді <code>tuple</code>, якщо вони більше обмежані ніж <code>list</code>? Є три причини чому ми можемо віддати перевагу <code>tuple</code>:</p>
@@ -476,6 +486,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Так, стоп, а що таке словники <code>dict</code>? Саме про це ми й поговоримо в наступній главі.</p>
 <hr />
+<p>Ще одна навичка у твою скарбничку 💰 вмінь з Python програмування. Ми познайомились з кортежами <code>tuple</code>, навчились їх створювати і розгортати. Але головне, ми повторили багато корисних, спільких з списками <code>list</code>, штук. Більш того, ми тепер знаємо в яких випадках краще використовувати кортежі <code>tuple</code> ніж списки <code>list</code>.</p>
 
 </div>
             </section>
