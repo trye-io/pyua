@@ -143,3 +143,71 @@ pre code {
 .highlight:hover .tooltiptext {
     visibility: visible;
 }
+
+/*----------------------------------------------------------------------------*/
+/* Exercises */
+details {
+    border: 1px solid #e6e6e6; 
+    border-radius: 15px;
+    padding: 0.5em 0.5em 0;
+    background-color: #6db2d6;
+}
+
+summary {
+    color: black; 
+    font-weight: normal;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+}
+
+details[open] {
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #e6e6e6;
+    margin-bottom: 0.5em;
+}
+
+.exs {
+  border-radius: 10px;
+  background: #ffffff;
+  color: #333333;
+  padding: 1em 1em 1em 1em;
+  margin: 1em 1em 1em 1em;
+}
+
+.check {
+    padding: 10px 24px; 
+    border: 1px solid #e6e6e6; 
+    border-radius: 8px;
+    cursor: pointer;
+    color: black; 
+    background-color: #f7f7f7;
+}
+
+.check:disabled {
+    background-color: #fcfcfc;
+    color: #969696; 
+    cursor: not-allowed;
+}
+
+input[type="radio"] {
+    width: 20px; /* Adjust the width as needed */
+}
+
+/*----------------------------------------------------------------------------*/
+/* Success */
+.success {
+  border-radius: 10px;
+  background: #61c554;
+  color: #222222;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.failure {
+  border-radius: 10px;
+  background: #ed6a5d;
+  color: #222222;
+  padding: 0.5em 0.5em 0.5em 0.5em;
+}
