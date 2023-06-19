@@ -4,7 +4,7 @@
   <button class="lecture">🎥 Лекція</button>
   <button class="podcast">🎙️ Подкаст</button>
   <button class="notebook">📓 Записник</button>
-  <button class="exercises">🤸 Вправи</button>
+  <button class="exercises" onclick="openDetailsById('set');">🤸 Вправи</button>
   <button class="cheat">📝 Шпора</button>
 </div>
 
@@ -150,3 +150,18 @@ hamburger.union(macchicken)
 ---
 
 Йой, ти взагалі розумієш, що зараз сталося? Ми не просто навчились тільки що створювати множини `set` та працювати з їх елементами. Ні! Опанувавши множини `set`, ми звершили величезний блок зі структур даних 😎 Це велика перемога 👏, і тепер головне не зупинятись! 
+
+---
+
+<details id = "set">
+<summary>🤸 Вправи</summary>
+
+<div class = "exs">
+**1. Як створити множину?**<br><br>
+<input type="radio" name="create" value="false"> `x = [1, 2, 3]` <br>
+<input type="radio" name="create" value="false"> `x = (1, 2, 3)` <br>
+<input type="radio" name="create" value="true"> `x = {1, 2, 3}`<br><br>
+<button class="check" id="check-btn" onclick="checkAnswer('check-btn', 'create');" disabled>Перевірити</button>
+</div>
+
+</details>
