@@ -157,16 +157,16 @@ hamburger.union(macchicken)
 
   <summary>🤸 Вправи</summary>
 
-  <div class="exs">
-  <div class="qst">1\. Як створити множину?</div>
+  <div class="quiz">
+  <div class="question">1\. Як створити множину?</div>
   <label><input type="radio" name="create" value="false"> `x = [1, 2, 3]` </label>
   <label><input type="radio" name="create" value="false"> `x = (1, 2, 3)` </label>
   <label><input type="radio" name="create" value="true"> `x = {1, 2, 3}`</label>
   <button class="check" id="check-btn" onclick="checkAnswer('check-btn', 'create');" disabled>Перевірити</button>
   </div>
   
-  <div class="exs">
-  <div class="qst">2\. Виберіть що вам підходе?</div>
+  <div class="quiz">
+  <div class="question">2\. Виберіть що вам підходе?</div>
   <label><input type="checkbox" name="xxx" value="true"> one </label>
   <label><input type="checkbox" name="xxx" value="false"> two </label>
   <label><input type="checkbox" name="xxx" value="true"> three </label>
