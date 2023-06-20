@@ -172,7 +172,7 @@ details[open] summary {
 /*----------------------------------------------------------------------------*/
 /* Exercises */
 
-.exs {
+.quiz {
   border-radius: 10px;
   background: #ffffff;
   color: #333333;
@@ -180,16 +180,16 @@ details[open] summary {
   margin: 1em 1em 1em 1em;
 }
 
-.exs .qst {
+.quiz .question {
     font-weight: bold;
     margin-bottom: 1em;
 }
 
-.exs label {
+.quiz label {
     display: block;
 }
 
-.exs .check {
+.quiz .check {
     margin-top: 1em;
     padding: 10px 24px; 
     border: 1px solid #e6e6e6; 
@@ -199,21 +199,21 @@ details[open] summary {
     background-color: #f7f7f7;
 }
 
-.exs .check:disabled {
+.quiz .check:disabled {
     background-color: #fcfcfc;
     color: #969696; 
     cursor: not-allowed;
 }
 
-.exs input[type="radio"] {
+.quiz input[type="radio"] {
     width: 20px;
 }
 
-.exs input[type="checkbox"] {
+.quiz input[type="checkbox"] {
     width: 20px;
 }
 
-.exs .success {
+.quiz .success {
   margin-top: 1em;
   border-radius: 10px;
   background: #61c554;
@@ -221,7 +221,7 @@ details[open] summary {
   padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
-.exs .failure {
+.quiz .failure {
   margin-top: 1em;
   border-radius: 10px;
   background: #ed6a5d;
