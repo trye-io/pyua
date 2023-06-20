@@ -257,15 +257,15 @@
       "RemoteHost": "api.github.com",
       "RemoteRepo": "jsquiz",
       "RemoteUsername": "irudnyts",
-      "RemoteRef": "HEAD",
-      "RemoteSha": "c902520e24f5557eedb009843be64d86afb56bf2",
+      "RemoteRef": "disabled",
+      "RemoteSha": "240fdac4bad8bf8ca59a184132543b4d54c332cc",
       "Requirements": [
         "htmltools",
         "purrr",
         "uuid",
         "yaml"
       ],
-      "Hash": "fb4ba4ea983886f1d8ba3e939d28a39a"
+      "Hash": "f7a6674f8e36e951c8486fbf429a2b08"
     },
     "knitr": {
       "Package": "knitr",

@@ -6,7 +6,7 @@
   <button class="lecture">🎥 Лекція</button>
   <button class="podcast">🎙️ Подкаст</button>
   <button class="notebook">📓 Записник</button>
-  <button class="exercises">🤸 Вправи</button>
+  <button class="exercises" onclick="openDetailsById('scalars_details');">🤸 Вправи</button>
   <button class="cheat">📝 Шпора</button>
 </div>
 
@@ -193,3 +193,26 @@ int(some_letters)
 ---
 
 Ми подивились на найпоширеніші типи скалярних даних та навчилися створювати змінні з такими типами. Ми також побачили що значення можуть зберігатися в об'єктах з різними типами даних та навчилися їх змінювати. 
+
+---
+
+<details id="scalars_details">
+<summary>🤸 Вправи</summary>
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+jsquiz::generate_mcq(
+    question = "1. Вкажіть скаляр з типом даних <code>float</code>:",
+    answers = c(
+        "<code>2.37</code>" = TRUE,
+        "<code>2,37</code>" = FALSE,
+        "<code>2. 37</code>" = FALSE,
+        "Усі перелічені опції" = FALSE
+    ),
+    allow_multiple_answers = FALSE,
+    button_label = "Перевірити",
+    button_id = "check_scalars_1",
+    radio_buttons_id = "mcq_scalars_2"
+)
+```
+
+</details>
