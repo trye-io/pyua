@@ -145,7 +145,7 @@ pre code {
 }
 
 /*----------------------------------------------------------------------------*/
-/* Exercises */
+/* Details */
 details {
     border: 1px solid #e6e6e6; 
     border-radius: 15px;
@@ -169,6 +169,9 @@ details[open] summary {
     margin-bottom: 0.5em;
 }
 
+/*----------------------------------------------------------------------------*/
+/* Exercises */
+
 .exs {
   border-radius: 10px;
   background: #ffffff;
@@ -177,7 +180,17 @@ details[open] summary {
   margin: 1em 1em 1em 1em;
 }
 
-.check {
+.exs .qst {
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.exs label {
+    display: block;
+}
+
+.exs .check {
+    margin-top: 1em;
     padding: 10px 24px; 
     border: 1px solid #e6e6e6; 
     border-radius: 8px;
@@ -186,26 +199,30 @@ details[open] summary {
     background-color: #f7f7f7;
 }
 
-.check:disabled {
+.exs .check:disabled {
     background-color: #fcfcfc;
     color: #969696; 
     cursor: not-allowed;
 }
 
-input[type="radio"] {
-    width: 20px; /* Adjust the width as needed */
+.exs input[type="radio"] {
+    width: 20px;
 }
 
-/*----------------------------------------------------------------------------*/
-/* Success */
-.success {
+.exs input[type="checkbox"] {
+    width: 20px;
+}
+
+.exs .success {
+  margin-top: 1em;
   border-radius: 10px;
   background: #61c554;
   color: #222222;
   padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
-.failure {
+.exs .failure {
+  margin-top: 1em;
   border-radius: 10px;
   background: #ed6a5d;
   color: #222222;

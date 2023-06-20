@@ -17,22 +17,10 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-/* function checkAnswer(name) {
-    const radioButtons = document.getElementsByName(name);
-    
-    radioButtons.forEach(function(radioButton) {
-        const text = radioButton.value === 'true' ? '✅' : '❌';
-        const textElement = document.createElement('span');
-        textElement.textContent = text;
-        radioButton.parentNode.replaceChild(textElement, radioButton);
-  });
-    
-} */
-
 function checkAnswer(button_name, radio_name) {
     
   const radioButtons = document.getElementsByName(radio_name);
-  let hasTrueValue = false;
+  let hasTrueValue = true;
   
   for (var i = radioButtons.length - 1; i >= 0; i--) {
     const radioButton = radioButtons[i];
@@ -42,8 +30,8 @@ function checkAnswer(button_name, radio_name) {
     textElement.style.width = '20px';
     radioButton.parentNode.replaceChild(textElement, radioButton);
     
-    if (radioButton.checked && radioButton.value === 'true') {
-      hasTrueValue = true;
+    if ((radioButton.checked && radioButton.value != 'true') || (!radioButton.checked && radioButton.value != 'false')) {
+      hasTrueValue = false;
     }
     
   }
