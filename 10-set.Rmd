@@ -164,4 +164,12 @@ hamburger.union(macchicken)
 <button class="check" id="check-btn" onclick="checkAnswer('check-btn', 'create');" disabled>Перевірити</button>
 </div>
 
+<div class = "exs">
+**2. Виберіть що вам підходе?**<br><br>
+<input type="checkbox" name="xxx" value="true"> one <br>
+<input type="checkbox" name="xxx" value="false"> two <br>
+<input type="checkbox" name="xxx" value="true"> three <br><br>
+<button class="check" id="check-btn2" onclick="checkAnswer('check-btn2', 'xxx');">Перевірити</button>
+</div>
+
 </details>

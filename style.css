@@ -145,7 +145,7 @@ pre code {
 }
 
 /*----------------------------------------------------------------------------*/
-/* Exercises */
+/* Details */
 details {
     border: 1px solid #e6e6e6; 
     border-radius: 15px;
@@ -168,6 +168,9 @@ details[open] summary {
     border-bottom: 1px solid #e6e6e6;
     margin-bottom: 0.5em;
 }
+
+/*----------------------------------------------------------------------------*/
+/* Exercise */
 
 .exs {
   border-radius: 10px;
@@ -196,8 +199,10 @@ input[type="radio"] {
     width: 20px; /* Adjust the width as needed */
 }
 
-/*----------------------------------------------------------------------------*/
-/* Success */
+input[type="checkbox"] {
+    width: 20px; /* Adjust the width as needed */
+}
+
 .success {
   border-radius: 10px;
   background: #61c554;
