@@ -17,6 +17,17 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_scalars_2');
+    const submitButton = document.getElementById('check_scalars_1');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
 function checkAnswer(button_name, radio_name) {
     
   const radioButtons = document.getElementsByName(radio_name);
