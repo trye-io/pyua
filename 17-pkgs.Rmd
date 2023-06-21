@@ -6,7 +6,7 @@
   <button class="lecture">🎥 Лекція</button>
   <button class="podcast">🎙️ Подкаст</button>
   <button class="notebook">📓 Записник</button>
-  <button class="exercises">🤸 Вправи</button>
+  <button class="exercises" onclick="openDetailsById('pkgs_exercises');">🤸 Вправи</button>
   <button class="cheat">📝 Шпора</button>
 </div>
 
@@ -114,3 +114,10 @@ import matplotlib as mpl
 ---
 
 Далі, ми розглянемо дві бібліотеки, без яких нікуди. Це NumPy та matplotlib. 
+
+---
+
+<details id="pkgs_exercises">
+<summary>🤸 Вправи</summary>
+
+</details>

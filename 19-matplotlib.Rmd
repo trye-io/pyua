@@ -4,7 +4,7 @@
   <button class="lecture">🎥 Лекція</button>
   <button class="podcast">🎙️ Подкаст</button>
   <button class="notebook">📓 Записник</button>
-  <button class="exercises">🤸 Вправи</button>
+  <button class="exercises" onclick="openDetailsById('matplotlib_exercises');">🤸 Вправи</button>
   <button class="cheat">📝 Шпора</button>
 </div>
 
@@ -180,3 +180,12 @@ y = [101, 89, 169]
 plt.bar(x, y)
 plt.show()
 ```
+
+---
+
+---
+
+<details id="matplotlib_exercises">
+<summary>🤸 Вправи</summary>
+
+</details>

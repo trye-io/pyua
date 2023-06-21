@@ -4,7 +4,7 @@
   <button class="lecture">🎥 Лекція</button>
   <button class="podcast">🎙️ Подкаст</button>
   <button class="notebook">📓 Записник</button>
-  <button class="exercises" onclick="openDetailsById('set');">🤸 Вправи</button>
+  <button class="exercises" onclick="openDetailsById('set_exercises');">🤸 Вправи</button>
   <button class="cheat">📝 Шпора</button>
 </div>
 
@@ -153,9 +153,8 @@ hamburger.union(macchicken)
 
 ---
 
-<details id="set">
-
-  <summary>🤸 Вправи</summary>
+<details id="set_exercises">
+<summary>🤸 Вправи</summary>
 
   <div class="quiz">
   <div class="question">1\. Як створити множину?</div>
@@ -165,12 +164,19 @@ hamburger.union(macchicken)
   <button class="check" id="check-btn" onclick="checkAnswer('check-btn', 'create');" disabled>Перевірити</button>
   </div>
   
-  <div class="quiz">
-  <div class="question">2\. Виберіть що вам підходе?</div>
-  <label><input type="checkbox" name="xxx" value="true"> one </label>
-  <label><input type="checkbox" name="xxx" value="false"> two </label>
-  <label><input type="checkbox" name="xxx" value="true"> three </label>
-  <button class="check" id="check-btn2" onclick="checkAnswer('check-btn2', 'xxx');">Перевірити</button>
-  </div>
+```{r, results='asis', message=FALSE, echo=FALSE}
+jsquiz::generate_mcq(
+    question = "2. Виберіть мову програмування:",
+    answers = c(
+        "Python" = TRUE,
+        "C++" = TRUE,
+        "RStudio" = FALSE
+    ),
+    button_label = "Перевірити",
+    allow_multiple_answers = TRUE,
+    button_id = "check_set_2",
+    radio_buttons_id = "mcq_set_2"
+)
+```
 
 </details>
