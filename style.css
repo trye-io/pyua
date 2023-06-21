@@ -77,6 +77,11 @@ pre code {
   color: white;
 }
 
+#pseudo1:hover, #pseudo2:hover, #pseudo3:hover, #pseudo4:hover, #pseudo5:hover {
+  cursor: default;
+  color: black;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Warning */
 .warning {

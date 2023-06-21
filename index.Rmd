@@ -23,7 +23,7 @@ library(reticulate)
 # Вступ {-} 
 
 <div class = "warning">
-🎈 **Увага**: Наразі книга знаходиться у стані розробки, усі глави постійно змінюються та доповнюються!
+🎈 **Увага**: Наразі книга знаходиться у стані активної розробки, усі глави постійно змінюються та доповнюються!
 </div>
 
 ## 🎯 Яка мета цієї книги {-} 
@@ -81,11 +81,11 @@ library(reticulate)
 Усі ці матеріали ви можете знайти на початку кожної глави натиснувши на відповідну кнопку. Вони виглядають ось так: 
 
 <div class="btn-group">
-  <button class="lecture" onclick="location.href='http://www.google.com'">🎥 Лекція</button>
-  <button class="podcast">🎙️ Подкаст</button>
-  <button class="notebook">📓 Записник</button>
-  <button class="exercises">🤸 Вправи</button>
-  <button class="cheat">📝 Шпора</button>
+  <button class="lecture" id="pseudo1" disabled>🎥 Лекція</button>
+  <button class="podcast" id="pseudo2" disabled>🎙️ Подкаст</button>
+  <button class="notebook" id="pseudo3" disabled>📓 Записник</button>
+  <button class="exercises" id="pseudo4" disabled>🤸 Вправи</button>
+  <button class="cheat" id="pseudo5" disabled>📝 Шпора</button>
 </div>
 
 де:
