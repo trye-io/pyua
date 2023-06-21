@@ -94,6 +94,116 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_1');
+    const submitButton = document.getElementById('check_list_1');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_2');
+    const submitButton = document.getElementById('check_list_2');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_3');
+    const submitButton = document.getElementById('check_list_3');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_4');
+    const submitButton = document.getElementById('check_list_4');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_5');
+    const submitButton = document.getElementById('check_list_5');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_6');
+    const submitButton = document.getElementById('check_list_6');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_7');
+    const submitButton = document.getElementById('check_list_7');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_8');
+    const submitButton = document.getElementById('check_list_8');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_9');
+    const submitButton = document.getElementById('check_list_9');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_list_10');
+    const submitButton = document.getElementById('check_list_10');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
 
 function checkAnswer(button_name, radio_name) {
     

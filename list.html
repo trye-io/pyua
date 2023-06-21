@@ -647,6 +647,147 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 🤸 Вправи
 </summary>
+<div class="quiz">
+<div class="question">1. Що може бути елементами списку?</div>
+<label>
+<input type="radio" name="mcq_list_1" value="false">Об'єкти <code>int</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_1" value="false">Об'єкти <code>str</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_1" value="false">Списки <code>list</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_1" value="true">Усі перелічені опції</input>
+</label>
+<button class="check" id="check_list_1" onclick="checkAnswer(&#39;check_list_1&#39;, &#39;mcq_list_1&#39;);" disabled="disabled">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">2. Скільки елементів у списку <code>[4, 5, 10, 4, 1]</code>?</div>
+<label>
+<input type="radio" name="mcq_list_2" value="false">4</input>
+</label>
+<label>
+<input type="radio" name="mcq_list_2" value="true">5</input>
+</label>
+<label>
+<input type="radio" name="mcq_list_2" value="false">1</input>
+</label>
+<label>
+<input type="radio" name="mcq_list_2" value="false">0</input>
+</label>
+<button class="check" id="check_list_2" onclick="checkAnswer(&#39;check_list_2&#39;, &#39;mcq_list_2&#39;);" disabled="disabled">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">3. Яку функцію нам потрібно використати, щоб порахувати кількість елементів у списку?</div>
+<label>
+<input type="radio" name="mcq_list_3" value="false"><code>max()</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_3" value="false"><code>length()</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_3" value="true"><code>len()</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_3" value="false"><code>size()</code></input>
+</label>
+<button class="check" id="check_list_3" onclick="checkAnswer(&#39;check_list_3&#39;, &#39;mcq_list_3&#39;);" disabled="disabled">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">4. Який рядок коду створить список <code>duration</code>?</div>
+<label>
+<input type="radio" name="mcq_list_4" value="false"><code>duration = 31, 42, 12</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_4" value="false"><code>duration = (31, 42, 12)</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_4" value="true"><code>duration = [31, 42, 12]</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_4" value="false"><code>[31, 42, 12] = duration</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_4" value="false"><code>duration <- [31, 42, 12]</code></input>
+</label>
+<button class="check" id="check_list_4" onclick="checkAnswer(&#39;check_list_4&#39;, &#39;mcq_list_4&#39;);" disabled="disabled">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">5. На який об'єкт буде вказувати змінна <code>x</code>, після виконання <code>x = [12]</code>?</div>
+<label>
+<input type="radio" name="mcq_list_5" value="true">На об'єкт типу <code>list</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_5" value="false">На об'єкт типу <code>int</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_5" value="false">На об'єкт типу <code>str</code></input>
+</label>
+<button class="check" id="check_list_5" onclick="checkAnswer(&#39;check_list_5&#39;, &#39;mcq_list_5&#39;);" disabled="disabled">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">6. Для чого ми можемо використати списки?</div>
+<label>
+<input type="radio" name="mcq_list_6" value="false">Для зберігання імен учнів в класі</input>
+</label>
+<label>
+<input type="radio" name="mcq_list_6" value="false">Для зберігання оцінок з фізики</input>
+</label>
+<label>
+<input type="radio" name="mcq_list_6" value="true">Усі перелічені опції</input>
+</label>
+<button class="check" id="check_list_6" onclick="checkAnswer(&#39;check_list_6&#39;, &#39;mcq_list_6&#39;);" disabled="disabled">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">
+7. Наступний рядок створить новий список:
+</div>
+<pre><code>flowers = [&quot;lily&quot;, &quot;rose&quot;, &quot;daisy&quot;, &quot;tulip&quot;]</code></pre>
+<div class="question">
+Як отримати назву квітки, яка знаходиться на другому місці у списку (тобто <code>"rose"</code>)?
+</div>
+<p><label><input type="radio" name="mcq_list_7" value="false"><code>flowers(2)</code></label>
+<label><input type="radio" name="mcq_list_7" value="false"><code>flowers(1)</code></label>
+<label><input type="radio" name="mcq_list_7" value="false"><code>flowers[1]</code></label>
+<label><input type="radio" name="mcq_list_7" value="true"><code>flowers[2]</code></label>
+<button class="check" id="check_list_7" onclick="checkAnswer('check_list_7', 'mcq_list_7');" disabled>Перевірити</button></p>
+</div>
+<div class="quiz">
+<div class="question">8. Чи можемо ми створити список з одним елементом?</div>
+<label>
+<input type="radio" name="mcq_list_8" value="true">Так!</input>
+</label>
+<label>
+<input type="radio" name="mcq_list_8" value="false">Ні!</input>
+</label>
+<button class="check" id="check_list_8" onclick="checkAnswer(&#39;check_list_8&#39;, &#39;mcq_list_8&#39;);" disabled="disabled">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">9. Який індекс має перший елемент у списку?</div>
+<label>
+<input type="radio" name="mcq_list_9" value="true"><code>0</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_9" value="false"><code>1</code></input>
+</label>
+<label>
+<input type="radio" name="mcq_list_9" value="false"><code>'first'</code></input>
+</label>
+<button class="check" id="check_list_9" onclick="checkAnswer(&#39;check_list_9&#39;, &#39;mcq_list_9&#39;);" disabled="disabled">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">
+10. Що поверне наступний код:
+</div>
+<pre><code>clothes = [&quot;t-shirt&quot;, &quot;pants&quot;, &quot;tie&quot;, &quot;suit&quot;, &quot;dress&quot;]
+clothes[5]</code></pre>
+<p><label><input type="radio" name="mcq_list_10" value="true">Помилку</label>
+<label><input type="radio" name="mcq_list_10" value="false"><code>"dress"</code></label>
+<label><input type="radio" name="mcq_list_10" value="false"><code>"t-shirt"</code></label>
+<button class="check" id="check_list_10" onclick="checkAnswer('check_list_10', 'mcq_list_10');" disabled>Перевірити</button></p>
+</div>
 </details>
 
 </div>
