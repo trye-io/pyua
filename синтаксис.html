@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-20" />
+<meta name="date" content="2023-06-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -440,27 +440,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Під <span class="highlight-container"><span class="highlight">інструкцією<span class="tooltiptext">🇬🇧 statement</span></span></span> ми будемо розуміти синтаксичну одиницю яка виражає певну дію. Наприклад, коли ми створюємо нову змінну або присвоюємо нове значення вважається однією інструкцією. Також інструкцією є будь-який вираз, виклик функцій тощо. Тобто все що ми робили до цього є інструкціями.</p>
 <!-- XXX: example of the script  -->
 <p>У Python зазвичай кожну інструкцію ми пишемо в окремому рядку. Наприклад:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="синтаксис.html#cb57-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">9</span></span>
-<span id="cb57-2"><a href="синтаксис.html#cb57-2" aria-hidden="true" tabindex="-1"></a>(grade <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">11</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="синтаксис.html#cb59-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb59-2"><a href="синтаксис.html#cb59-2" aria-hidden="true" tabindex="-1"></a>(grade <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">11</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 72.72727272727273</code></pre>
 <p>У Python інструкції можна також записати в один рядок і відокремити крапкою з комою (<code>;</code>), але це вважається ознакою поганого стилю 🤡, тому що код в таких випадках складніше зрозуміти 🤔.</p>
 <p>Python буде ігнорувати пусті рядки. Наприклад, попередній код є еквівалентним наступному коду. Зверніть увагу, що нижче приведений код має два пусті рядки:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="синтаксис.html#cb59-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">9</span></span>
-<span id="cb59-2"><a href="синтаксис.html#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-3"><a href="синтаксис.html#cb59-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-4"><a href="синтаксис.html#cb59-4" aria-hidden="true" tabindex="-1"></a>(grade <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">11</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="синтаксис.html#cb61-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb61-2"><a href="синтаксис.html#cb61-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-3"><a href="синтаксис.html#cb61-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb61-4"><a href="синтаксис.html#cb61-4" aria-hidden="true" tabindex="-1"></a>(grade <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">11</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 72.72727272727273</code></pre>
 <p>Такі пусті рядки ми будемо використовувати для того, щоб відділити частини коду, щоб покращити читабельність 🤓. Про це ми поговоримо детальніше в Додатку <a href="style.html#style">C</a>.</p>
 <p><img src="images/5-instructions.png" width="100%" /></p>
 <p>До речі, в одній клітинці записника Colab може міститись скільки завгодно інструкцій. Якщо остання інструкція – це вираз або виклик функції який повертає значення – це значення буде надруковано під клітинкою, коли ми її виконаємо:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="синтаксис.html#cb61-1" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> <span class="dv">23</span></span>
-<span id="cb61-2"><a href="синтаксис.html#cb61-2" aria-hidden="true" tabindex="-1"></a>temp_c</span>
-<span id="cb61-3"><a href="синтаксис.html#cb61-3" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">*</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
+<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="синтаксис.html#cb63-1" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb63-2"><a href="синтаксис.html#cb63-2" aria-hidden="true" tabindex="-1"></a>temp_c</span>
+<span id="cb63-3"><a href="синтаксис.html#cb63-3" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">*</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
 <pre><code>## 135.5</code></pre>
 <p>Зверніть увагу, що у попередньому випадку, значення <code>temp_c</code> не було надруковано, тому що це не була остання інструкція. Якщо ж ми хочемо надрукувати значення виразу чи змінної десь в середині клітинки, ми можемо використати функцію <code>print()</code>:</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="синтаксис.html#cb63-1" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> <span class="dv">23</span></span>
-<span id="cb63-2"><a href="синтаксис.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temp_c)</span>
-<span id="cb63-3"><a href="синтаксис.html#cb63-3" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">*</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
+<div class="sourceCode" id="cb65"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="синтаксис.html#cb65-1" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb65-2"><a href="синтаксис.html#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temp_c)</span>
+<span id="cb65-3"><a href="синтаксис.html#cb65-3" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">*</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
 <pre><code>## 23</code></pre>
 <pre><code>## 135.5</code></pre>
 <p>А ось кількість інструкцій в одній клітинці – це знову ж таки про стиль 🎩 написання коду, про який ми поговоримо у Додатку <a href="style.html#style">C</a>.</p>
@@ -473,15 +473,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="використовуємо-коментарі" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> 📬 Використовуємо коментарі<a href="синтаксис.html#використовуємо-коментарі" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Для того, щоб код зробити більш зрозумілим, ми будемо часто писати <span class="highlight-container"><span class="highlight">коментарі<span class="tooltiptext">🇬🇧 comments</span></span></span> в коді. Коментарі пояснюють для чого ми написали ті чи інші інструкції. Щоб додати коментар у Python, треба почати рядок тексту із символу <code>#</code>. Все що буде написано праворуч від такого символу буде ігноруватись, тобто не сприйматись як код:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="синтаксис.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Рахуємо скільки секунд в одній добі. Цей коментар не буде сприматись як код.</span></span>
-<span id="cb66-2"><a href="синтаксис.html#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="dv">60</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">24</span></span></code></pre></div>
+<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="синтаксис.html#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Рахуємо скільки секунд в одній добі. Цей коментар не буде сприматись як код.</span></span>
+<span id="cb68-2"><a href="синтаксис.html#cb68-2" aria-hidden="true" tabindex="-1"></a><span class="dv">60</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">24</span></span></code></pre></div>
 <pre><code>## 86400</code></pre>
 <p>Ми навіть можемо писати коментар в тому ж рядку що й інструкція, почавши його з <code>#</code>:</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="синтаксис.html#cb68-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">12</span> <span class="co"># оцінка з фізики</span></span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="синтаксис.html#cb70-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">12</span> <span class="co"># оцінка з фізики</span></span></code></pre></div>
 <p>Також, нам буде дуже зручно <span class="highlight-container"><span class="highlight">закоментувати<span class="tooltiptext">🇬🇧 comment out</span></span></span> деякі рядки коду, наприклад, коли ми будемо експериментувати 🧪. У зазначеному внизу випадку, рядок <code>grade = 11</code> не буде виконаний, тому що починається з <code>#</code>. Тому наш код поверне <code>12</code> замість <code>11</code>:</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="синтаксис.html#cb69-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">12</span> </span>
-<span id="cb69-2"><a href="синтаксис.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="co"># grade = 11</span></span>
-<span id="cb69-3"><a href="синтаксис.html#cb69-3" aria-hidden="true" tabindex="-1"></a>grade</span></code></pre></div>
+<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="синтаксис.html#cb71-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">12</span> </span>
+<span id="cb71-2"><a href="синтаксис.html#cb71-2" aria-hidden="true" tabindex="-1"></a><span class="co"># grade = 11</span></span>
+<span id="cb71-3"><a href="синтаксис.html#cb71-3" aria-hidden="true" tabindex="-1"></a>grade</span></code></pre></div>
 <pre><code>## 12</code></pre>
 <p>Не забувайте подивитись вправи, щоб повністю опанувати коментарі. Вам може здатись, що ваші програми ніхто не буде бачити. Проте буде один, але дуже важливий читач – майбутній ви. І повірте, майбутній-ви буде дуже вдячний за коментарі.</p>
 <p><img src="images/5-comments.png" width="100%" /></p>
@@ -492,27 +492,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Ми можемо надати змінній будь-яке ім’я і існує всього лише декілька правил:</p>
 <ul>
 <li><p>ім’я повинно починатись або з малої 🔡 чи великої 🔠 літери або з підкреслення (<code>_</code>)</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="синтаксис.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co"># допустимі імена</span></span>
-<span id="cb71-2"><a href="синтаксис.html#cb71-2" aria-hidden="true" tabindex="-1"></a>_rock_ <span class="op">=</span> <span class="fl">0.5</span></span>
-<span id="cb71-3"><a href="синтаксис.html#cb71-3" aria-hidden="true" tabindex="-1"></a>paper <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb71-4"><a href="синтаксис.html#cb71-4" aria-hidden="true" tabindex="-1"></a>Sissors <span class="op">=</span> <span class="dv">2</span></span></code></pre></div></li>
-<li><p>ім’я не може починатись із цифри 🔢</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="синтаксис.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># недопустимі імена</span></span>
-<span id="cb72-2"><a href="синтаксис.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="er">pen</span> <span class="op">=</span> <span class="dv">10</span></span></code></pre></div></li>
-<li><p>ім’я повинно складатись із цифр 🔢, літер (малих 🔡 та великих 🔠) та підкреслення (<code>_</code>)</p>
 <div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="синтаксис.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># допустимі імена</span></span>
-<span id="cb73-2"><a href="синтаксис.html#cb73-2" aria-hidden="true" tabindex="-1"></a>long_name_with_numbers_42 <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb73-3"><a href="синтаксис.html#cb73-3" aria-hidden="true" tabindex="-1"></a>a_ <span class="op">=</span> <span class="dv">24</span></span>
-<span id="cb73-4"><a href="синтаксис.html#cb73-4" aria-hidden="true" tabindex="-1"></a>CamelCase <span class="op">=</span> <span class="dv">345</span></span>
-<span id="cb73-5"><a href="синтаксис.html#cb73-5" aria-hidden="true" tabindex="-1"></a>VAR <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb73-6"><a href="синтаксис.html#cb73-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb73-7"><a href="синтаксис.html#cb73-7" aria-hidden="true" tabindex="-1"></a><span class="co"># недопустимі імена</span></span>
-<span id="cb73-8"><a href="синтаксис.html#cb73-8" aria-hidden="true" tabindex="-1"></a>a b <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb73-9"><a href="синтаксис.html#cb73-9" aria-hidden="true" tabindex="-1"></a>dog<span class="op">-</span>cat <span class="op">=</span> <span class="dv">1</span></span></code></pre></div></li>
+<span id="cb73-2"><a href="синтаксис.html#cb73-2" aria-hidden="true" tabindex="-1"></a>_rock_ <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb73-3"><a href="синтаксис.html#cb73-3" aria-hidden="true" tabindex="-1"></a>paper <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb73-4"><a href="синтаксис.html#cb73-4" aria-hidden="true" tabindex="-1"></a>Sissors <span class="op">=</span> <span class="dv">2</span></span></code></pre></div></li>
+<li><p>ім’я не може починатись із цифри 🔢</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="синтаксис.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># недопустимі імена</span></span>
+<span id="cb74-2"><a href="синтаксис.html#cb74-2" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="er">pen</span> <span class="op">=</span> <span class="dv">10</span></span></code></pre></div></li>
+<li><p>ім’я повинно складатись із цифр 🔢, літер (малих 🔡 та великих 🔠) та підкреслення (<code>_</code>)</p>
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="синтаксис.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># допустимі імена</span></span>
+<span id="cb75-2"><a href="синтаксис.html#cb75-2" aria-hidden="true" tabindex="-1"></a>long_name_with_numbers_42 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb75-3"><a href="синтаксис.html#cb75-3" aria-hidden="true" tabindex="-1"></a>a_ <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb75-4"><a href="синтаксис.html#cb75-4" aria-hidden="true" tabindex="-1"></a>CamelCase <span class="op">=</span> <span class="dv">345</span></span>
+<span id="cb75-5"><a href="синтаксис.html#cb75-5" aria-hidden="true" tabindex="-1"></a>VAR <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb75-6"><a href="синтаксис.html#cb75-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-7"><a href="синтаксис.html#cb75-7" aria-hidden="true" tabindex="-1"></a><span class="co"># недопустимі імена</span></span>
+<span id="cb75-8"><a href="синтаксис.html#cb75-8" aria-hidden="true" tabindex="-1"></a>a b <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb75-9"><a href="синтаксис.html#cb75-9" aria-hidden="true" tabindex="-1"></a>dog<span class="op">-</span>cat <span class="op">=</span> <span class="dv">1</span></span></code></pre></div></li>
 <li><p>імена змінних чутливі до регістру</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="синтаксис.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ці змінні різні</span></span>
-<span id="cb74-2"><a href="синтаксис.html#cb74-2" aria-hidden="true" tabindex="-1"></a>dog <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb74-3"><a href="синтаксис.html#cb74-3" aria-hidden="true" tabindex="-1"></a>DOG <span class="op">=</span> <span class="dv">2</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb76"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb76-1"><a href="синтаксис.html#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ці змінні різні</span></span>
+<span id="cb76-2"><a href="синтаксис.html#cb76-2" aria-hidden="true" tabindex="-1"></a>dog <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb76-3"><a href="синтаксис.html#cb76-3" aria-hidden="true" tabindex="-1"></a>DOG <span class="op">=</span> <span class="dv">2</span></span></code></pre></div></li>
 </ul>
 <p><img src="images/5-vars.png" width="100%" /></p>
 <p>Ще одне неформальне правило, якого ми будемо притримуватись – не давати імена змінним, які вже зарезервовано для <span class="highlight-container"><span class="highlight">вбудованих<span class="tooltiptext">🇬🇧 built-in</span></span></span> функцій (нагадуємо, вбудовані функції – це ті функції, які є частиною Python). Наприклад, це погана ідея використовувати такі імена як <code>round</code>, <code>max</code> тощо. Повний список ви можете переглянути ось <a href="https://docs.python.org/uk/3.9/library/functions.html">тут</a>.</p>

@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-20" />
+<meta name="date" content="2023-06-21" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -415,11 +415,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="багаторядкові-текстові-стрічки" class="section level2 hasAnchor" number="25.1">
 <h2><span class="header-section-number">D.1</span> Багаторядкові текстові стрічки<a href="string.html#багаторядкові-текстові-стрічки" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Стрічки можуть займати також кілька рядків. Щоб створити стрічку з декількох рядків, ми можемо використати три одинарні або три подвійні лапки:</p>
-<div class="sourceCode" id="cb578"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb578-1"><a href="string.html#cb578-1" aria-hidden="true" tabindex="-1"></a>poem <span class="op">=</span> <span class="st">&quot;&quot;&quot;Реве та стогне Дніпр широкий,</span></span>
-<span id="cb578-2"><a href="string.html#cb578-2" aria-hidden="true" tabindex="-1"></a><span class="st">Сердитий вітер завива...</span></span>
-<span id="cb578-3"><a href="string.html#cb578-3" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
-<span id="cb578-4"><a href="string.html#cb578-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb578-5"><a href="string.html#cb578-5" aria-hidden="true" tabindex="-1"></a>poem</span></code></pre></div>
+<div class="sourceCode" id="cb582"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb582-1"><a href="string.html#cb582-1" aria-hidden="true" tabindex="-1"></a>poem <span class="op">=</span> <span class="st">&quot;&quot;&quot;Реве та стогне Дніпр широкий,</span></span>
+<span id="cb582-2"><a href="string.html#cb582-2" aria-hidden="true" tabindex="-1"></a><span class="st">Сердитий вітер завива...</span></span>
+<span id="cb582-3"><a href="string.html#cb582-3" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;&quot;&quot;</span></span>
+<span id="cb582-4"><a href="string.html#cb582-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb582-5"><a href="string.html#cb582-5" aria-hidden="true" tabindex="-1"></a>poem</span></code></pre></div>
 <pre><code>## &#39;Реве та стогне Дніпр широкий,\nСердитий вітер завива...\n&#39;</code></pre>
 <p>Скоріш за все, ви звернули увагу, що замість нового рядку, Python видав комбінацію символів <code>\n</code>. Ця комбінація має спеціальний зміст, а саме – нова строка.</p>
 </div>
@@ -429,49 +429,49 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="оператори" class="section level2 hasAnchor" number="25.3">
 <h2><span class="header-section-number">D.3</span> Оператори<a href="string.html#оператори" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb580"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb580-1"><a href="string.html#cb580-1" aria-hidden="true" tabindex="-1"></a>part1 <span class="op">=</span> <span class="st">&quot;Hey! &quot;</span></span>
-<span id="cb580-2"><a href="string.html#cb580-2" aria-hidden="true" tabindex="-1"></a>part2 <span class="op">=</span> <span class="st">&quot;How are you doing?&quot;</span></span>
-<span id="cb580-3"><a href="string.html#cb580-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb580-4"><a href="string.html#cb580-4" aria-hidden="true" tabindex="-1"></a>part1 <span class="op">+</span> part2</span></code></pre></div>
+<div class="sourceCode" id="cb584"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb584-1"><a href="string.html#cb584-1" aria-hidden="true" tabindex="-1"></a>part1 <span class="op">=</span> <span class="st">&quot;Hey! &quot;</span></span>
+<span id="cb584-2"><a href="string.html#cb584-2" aria-hidden="true" tabindex="-1"></a>part2 <span class="op">=</span> <span class="st">&quot;How are you doing?&quot;</span></span>
+<span id="cb584-3"><a href="string.html#cb584-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb584-4"><a href="string.html#cb584-4" aria-hidden="true" tabindex="-1"></a>part1 <span class="op">+</span> part2</span></code></pre></div>
 <pre><code>## &#39;Hey! How are you doing?&#39;</code></pre>
-<div class="sourceCode" id="cb582"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb582-1"><a href="string.html#cb582-1" aria-hidden="true" tabindex="-1"></a>phraze <span class="op">=</span> <span class="st">&quot;Я не повторюю два рази! &quot;</span></span>
-<span id="cb582-2"><a href="string.html#cb582-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb582-3"><a href="string.html#cb582-3" aria-hidden="true" tabindex="-1"></a>phraze <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb586"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb586-1"><a href="string.html#cb586-1" aria-hidden="true" tabindex="-1"></a>phraze <span class="op">=</span> <span class="st">&quot;Я не повторюю два рази! &quot;</span></span>
+<span id="cb586-2"><a href="string.html#cb586-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb586-3"><a href="string.html#cb586-3" aria-hidden="true" tabindex="-1"></a>phraze <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## &#39;Я не повторюю два рази! Я не повторюю два рази! &#39;</code></pre>
 </div>
 <div id="довжина-текстової-стрічки" class="section level2 hasAnchor" number="25.4">
 <h2><span class="header-section-number">D.4</span> Довжина текстової стрічки<a href="string.html#довжина-текстової-стрічки" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb584"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb584-1"><a href="string.html#cb584-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
-<span id="cb584-2"><a href="string.html#cb584-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(address)</span></code></pre></div>
+<div class="sourceCode" id="cb588"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb588-1"><a href="string.html#cb588-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb588-2"><a href="string.html#cb588-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(address)</span></code></pre></div>
 <pre><code>## 17</code></pre>
 </div>
 <div id="індексація-та-слайсінг" class="section level2 hasAnchor" number="25.5">
 <h2><span class="header-section-number">D.5</span> Індексація та слайсінг<a href="string.html#індексація-та-слайсінг" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Те, що ми використовували для <code>list</code> та <code>tuples</code> (Глава XXX та XXX), можна використовувати й тут.</p>
-<div class="sourceCode" id="cb586"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb586-1"><a href="string.html#cb586-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
-<span id="cb586-2"><a href="string.html#cb586-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">3</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb590"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb590-1"><a href="string.html#cb590-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb590-2"><a href="string.html#cb590-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">3</span>]</span></code></pre></div>
 <pre><code>## &#39;B&#39;</code></pre>
 <p>Але на відміну від list, наприклад, ми не можемо змінити стрічку.</p>
-<div class="sourceCode" id="cb588"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb588-1"><a href="string.html#cb588-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
-<span id="cb588-2"><a href="string.html#cb588-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">3</span>] <span class="op">=</span> <span class="st">&quot;A&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb592"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb592-1"><a href="string.html#cb592-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb592-2"><a href="string.html#cb592-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">3</span>] <span class="op">=</span> <span class="st">&quot;A&quot;</span></span></code></pre></div>
 <pre><code>## Error: TypeError: &#39;str&#39; object does not support item assignment</code></pre>
 <p>Проте, є все одно один маленький трюк – метод <code>.replace()</code>, про який ми поговоримо у секції <a href="string.html#string-methods">D.6</a>.</p>
 <p>Слайсінг або зріз.</p>
-<div class="sourceCode" id="cb590"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb590-1"><a href="string.html#cb590-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
-<span id="cb590-2"><a href="string.html#cb590-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">0</span>:<span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb594"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb594-1"><a href="string.html#cb594-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb594-2"><a href="string.html#cb594-2" aria-hidden="true" tabindex="-1"></a>address[<span class="dv">0</span>:<span class="dv">4</span>]</span></code></pre></div>
 <pre><code>## &#39;221B&#39;</code></pre>
 <!-- Подумай чи має сенс додавати це сюди? -->
 </div>
 <div id="string-methods" class="section level2 hasAnchor" number="25.6">
 <h2><span class="header-section-number">D.6</span> Корисні методи стрічок<a href="string.html#string-methods" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb592"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb592-1"><a href="string.html#cb592-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
-<span id="cb592-2"><a href="string.html#cb592-2" aria-hidden="true" tabindex="-1"></a>address.replace(<span class="st">&quot;221B&quot;</span>, <span class="st">&quot;222&quot;</span>)</span></code></pre></div>
-<pre><code>## &#39;222 Baker Street&#39;</code></pre>
-<div class="sourceCode" id="cb594"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb594-1"><a href="string.html#cb594-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
-<span id="cb594-2"><a href="string.html#cb594-2" aria-hidden="true" tabindex="-1"></a>address.split(<span class="st">&quot; &quot;</span>)</span></code></pre></div>
-<pre><code>## [&#39;221B&#39;, &#39;Baker&#39;, &#39;Street&#39;]</code></pre>
 <div class="sourceCode" id="cb596"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb596-1"><a href="string.html#cb596-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
-<span id="cb596-2"><a href="string.html#cb596-2" aria-hidden="true" tabindex="-1"></a>address.upper()</span></code></pre></div>
+<span id="cb596-2"><a href="string.html#cb596-2" aria-hidden="true" tabindex="-1"></a>address.replace(<span class="st">&quot;221B&quot;</span>, <span class="st">&quot;222&quot;</span>)</span></code></pre></div>
+<pre><code>## &#39;222 Baker Street&#39;</code></pre>
+<div class="sourceCode" id="cb598"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb598-1"><a href="string.html#cb598-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb598-2"><a href="string.html#cb598-2" aria-hidden="true" tabindex="-1"></a>address.split(<span class="st">&quot; &quot;</span>)</span></code></pre></div>
+<pre><code>## [&#39;221B&#39;, &#39;Baker&#39;, &#39;Street&#39;]</code></pre>
+<div class="sourceCode" id="cb600"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb600-1"><a href="string.html#cb600-1" aria-hidden="true" tabindex="-1"></a>address <span class="op">=</span> <span class="st">&quot;221B Baker Street&quot;</span></span>
+<span id="cb600-2"><a href="string.html#cb600-2" aria-hidden="true" tabindex="-1"></a>address.upper()</span></code></pre></div>
 <pre><code>## &#39;221B BAKER STREET&#39;</code></pre>
 
 </div>
