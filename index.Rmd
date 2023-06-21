@@ -120,7 +120,7 @@ knitr::write_bib(c(
 ), 'packages.bib')
 ```
 
-## 📚 Як ця книга вписується в программу школи trye {-}
+## 📚 Як ця книга вписується в программу школи TRYE {-}
 
 Такі галузі та підгалузі як <span class="highlight-container"><span class="highlight">аналіз даних<span class="tooltiptext">🇬🇧 data analysis</span></span></span>, <span class="highlight-container"><span class="highlight">наука про дані<span class="tooltiptext">🇬🇧 data science</span></span></span>, <span class="highlight-container"><span class="highlight">добування даних<span class="tooltiptext">🇬🇧 data mining</span></span></span>, <span class="highlight-container"><span class="highlight">статистика<span class="tooltiptext">🇬🇧 statistics</span></span></span>, <span class="highlight-container"><span class="highlight">машине навчання<span class="tooltiptext">🇬🇧 machine learning</span></span></span>, <span class="highlight-container"><span class="highlight">глибоке навчання<span class="tooltiptext">🇬🇧 deep learning</span></span></span> та <span class="highlight-container"><span class="highlight">штучний інтелект<span class="tooltiptext">🇬🇧 artificial intelligence</span></span></span> використовують програмування як один з найнеобхідніших інструментів. Тому усі три наші курси (📈 Data Science, 🤖 Machine Learning та 🧠 Artificial Intelligence) використовують базові знання та навички, які ви можете здобути з цієї книги. 
 
