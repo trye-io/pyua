@@ -416,7 +416,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><button class="lecture">🎥 Лекція</button>
 <button class="podcast">🎙️ Подкаст</button>
 <button class="notebook">📓 Записник</button>
-<button class="exercises">🤸 Вправи</button>
+<button class="exercises" onclick="openDetailsById('for_exercises');">🤸 Вправи</button>
 <button class="cheat">📝 Шпора</button></p>
 </div>
 <p><strong>⏱️ Час на опанування теми:</strong> 15 хвилин</p>
@@ -554,8 +554,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb315"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb315-1"><a href="цикл-for.html#cb315-1" aria-hidden="true" tabindex="-1"></a>egg <span class="op">=</span> {<span class="st">&quot;egg white&quot;</span>, <span class="st">&quot;yolk&quot;</span>}</span>
 <span id="cb315-2"><a href="цикл-for.html#cb315-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> part <span class="kw">in</span> egg: </span>
 <span id="cb315-3"><a href="цикл-for.html#cb315-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(part)</span></code></pre></div>
-<pre><code>## yolk
-## egg white</code></pre>
+<pre><code>## egg white
+## yolk</code></pre>
 </div>
 <div id="використовуємо-range-та-enumerate-для-зміни-елементів-списків" class="section level2 hasAnchor" number="12.3">
 <h2><span class="header-section-number">12.3</span> Використовуємо <code>range()</code> та <code>enumerate()</code> для зміни елементів списків<a href="цикл-for.html#використовуємо-range-та-enumerate-для-зміни-елементів-списків" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -659,6 +659,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb341-2"><a href="цикл-for.html#cb341-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>((i, j))</span></code></pre></div>
 <pre><code>## (2, 4)</code></pre>
 <hr />
+<hr />
+<details id="for_exercises">
+<summary>
+🤸 Вправи
+</summary>
+</details>
 
 </div>
 </div>
