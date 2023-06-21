@@ -2,7 +2,7 @@ function openDetailsById(id) {
   const detailsElement = document.getElementById(id);
   if (detailsElement) {
     detailsElement.open = true;
-    detailsElement.scrollIntoView({ behavior: 'smooth' });
+    detailsElement.scrollIntoView({ behavior: 'smooth', block: "start" });
   }
 }
 
@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('mcq_scalars_2');
+    const radioButtons = document.getElementsByName('mcq_scalars_1');
     const submitButton = document.getElementById('check_scalars_1');
 
     radioButtons.forEach(function(radioButton) {
@@ -27,6 +27,73 @@ window.addEventListener('DOMContentLoaded', function() {
       });
     });
 });
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_scalars_2');
+    const submitButton = document.getElementById('check_scalars_2');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_scalars_3');
+    const submitButton = document.getElementById('check_scalars_3');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_scalars_4');
+    const submitButton = document.getElementById('check_scalars_4');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_scalars_5');
+    const submitButton = document.getElementById('check_scalars_5');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_scalars_6');
+    const submitButton = document.getElementById('check_scalars_6');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_scalars_8');
+    const submitButton = document.getElementById('check_scalars_8');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
 
 function checkAnswer(button_name, radio_name) {
     

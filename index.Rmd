@@ -16,6 +16,7 @@ github-repo: rstudio/bookdown-demo
 ---
 
 ```{r, setup, echo=FALSE}
+library(jsquiz)
 library(reticulate)
 ```
 

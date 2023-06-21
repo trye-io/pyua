@@ -200,7 +200,7 @@ int(some_letters)
 <summary>🤸 Вправи</summary>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+generate_mcq(
     question = "1. Вкажіть скаляр з типом даних <code>float</code>:",
     answers = c(
         "<code>2.37</code>" = TRUE,
@@ -211,8 +211,113 @@ jsquiz::generate_mcq(
     allow_multiple_answers = FALSE,
     button_label = "Перевірити",
     button_id = "check_scalars_1",
+    radio_buttons_id = "mcq_scalars_1"
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_mcq(
+    question = "2. Вкажіть скаляр з типом даних <code>int</code>:",
+    answers = c(
+        "<code>25.0</code>" = FALSE,
+        "<code>'25'</code>" = FALSE,
+        "<code>25</code>" = TRUE,
+        "Жодна з перелічених опцій" = FALSE
+    ),
+    allow_multiple_answers = FALSE,
+    button_label = "Перевірити",
+    button_id = "check_scalars_2",
     radio_buttons_id = "mcq_scalars_2"
 )
 ```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_mcq(
+    question = "3. Які типи даних можуть містити скаляри?",
+    answers = c(
+        "Числові значення, текстові значення, бульові значення" = FALSE,
+        "Лише числові значення" = FALSE,
+        "<code>int</code>, <code>float</code>, <code>bool</code>, <code>str</code>" = FALSE,
+        "1 і 3 варіант є правильним" = TRUE
+    ),
+    allow_multiple_answers = FALSE,
+    button_label = "Перевірити",
+    button_id = "check_scalars_3",
+    radio_buttons_id = "mcq_scalars_3"
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_mcq(
+    question = "4. Обʼєкти типу <code>bool</code> можуть приймати:",
+    answers = c(
+        "Одне з багатьох можливих значень" = FALSE,
+        "Одне з трьох можливих значень" = FALSE,
+        "Одне з двох можливих значень" = TRUE,
+        "Або <code>Yes</code> aбо <code>No</code>" = FALSE
+    ),
+    allow_multiple_answers = FALSE,
+    button_label = "Перевірити",
+    button_id = "check_scalars_4",
+    radio_buttons_id = "mcq_scalars_4"
+)
+```
+
+<div class="quiz">
+<div class="question">5\. Вкажіть рядок, у якому правильно створено текстову стрічку:</div>
+```
+1️⃣ my_age = "13"
+2️⃣ my_age = 13
+3️⃣ my_age = тринадцять
+4️⃣ my_age = 'тринадцять'
+```
+<label><input type="radio" name="mcq_scalars_5" value="false"> Рядок 2️⃣ </label>
+<label><input type="radio" name="mcq_scalars_5" value="false"> Рядок 3️⃣ </label>
+<label><input type="radio" name="mcq_scalars_5" value="false"> Рядок 3️⃣ і 4️⃣ </label>
+<label><input type="radio" name="mcq_scalars_5" value="true"> Рядок 1️⃣ і 4️⃣ </label>
+<button class="check" id="check_scalars_5" onclick="checkAnswer('check_scalars_5', 'mcq_scalars_5');" disabled>Перевірити</button>
+</div>
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_mcq(
+    question = "6. Функція <code>type()</code> допомагає перевірити тип обʼєкта:",
+    answers = c(
+        "Так" = TRUE,
+        "Ні" = FALSE
+    ),
+    allow_multiple_answers = FALSE,
+    button_label = "Перевірити",
+    button_id = "check_scalars_6",
+    radio_buttons_id = "mcq_scalars_6"
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_mcq(
+    question = "7. Які функції перетворюють текст на число?",
+    answers = c(
+        "<code>float()</code>" = TRUE,
+        "<code>int()</code>" = TRUE,
+        "<code>str()</code>" = FALSE,
+        "Жодна" = FALSE
+    ),
+    button_label = "Перевірити",
+    button_id = "check_scalars_7",
+    radio_buttons_id = "mcq_scalars_7"
+)
+```
+
+<div class="quiz">
+<div class="question">8\. Що поверне наступний код:</div>
+```
+price_apple = 25
+price_orange = '29.99'
+price_apple + price_orange
+```
+<label><input type="radio" name="mcq_scalars_8" value="false">`54.99` </label>
+<label><input type="radio" name="mcq_scalars_8" value="false">`54,99`</label>
+<label><input type="radio" name="mcq_scalars_8" value="true">Помилку</label>
+<button class="check" id="check_scalars_8" onclick="checkAnswer('check_scalars_8', 'mcq_scalars_8');" disabled>Перевірити</button>
+</div>
 
 </details>
