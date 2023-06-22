@@ -332,7 +332,7 @@ price_apple + price_orange
 <div class="element" name = "drg" id="el4" draggable="true" ondragstart="drag(event)"><code>)</code></div>
 </div>
 
-<button class="check" id="check_tuple_1" onclick="checkAnswer('check_tuple_1', 'order_c', ['el3', 'el1', 'el2', 'el4']);" disabled>Перевірити</button>
+<button class="check" id="check_tuple_1" onclick="checkOrder('check_tuple_1', 'order_c', ['el3', 'el1', 'el2', 'el4']);" disabled>Перевірити</button>
 </div>
 
 </details>
