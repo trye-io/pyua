@@ -6,7 +6,7 @@ function checkArraysOrder(arr1, arr2) {
   return true;
 }
 
-function checkAnswer(button_name, containerID, orderedIDs) {
+function checkOrder(button_name, containerID, orderedIDs) {
     
   const container = document.getElementById(containerID);
   const currentOrder = Array.from(container.children).map(box => box.id);
