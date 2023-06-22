@@ -29,7 +29,7 @@ Intelligence.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-06-21" />
+<meta name="date" content="2023-06-22" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -58,8 +58,12 @@ Intelligence.</p>" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
 <link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
-<script src="squiz.js"></script>
-<script src="open.js"></script>
+<script src="openDetailsById.js"></script>
+<script src="listeners.js"></script>
+<script src="checkAnswer.js"></script>
+<script src="dragndrop.js"></script>
+<script src="checkOrder.js"></script>
+        
 
 
 <style type="text/css">
@@ -663,6 +667,31 @@ price_apple + price_orange</code></pre>
 <label><input type="radio" name="mcq_scalars_8" value="false"><code>54,99</code></label>
 <label><input type="radio" name="mcq_scalars_8" value="true">Помилку</label>
 <button class="check" id="check_scalars_8" onclick="checkAnswer('check_scalars_8', 'mcq_scalars_8');" disabled>Перевірити</button></p>
+</div>
+<div class="quiz">
+<div class="question">
+9. Перетягніть символи коду у правильному порядку, щоб перевірити тип об’єкту <code>bar</code>:
+</div>
+<div id="order_c" class="order" ondrop="drop(event)" ondragover="allowDrop(event)">
+
+</div>
+<div id="pool_c" class="pool">
+<div id="el1" class="element" name="drg" draggable="true" ondragstart="drag(event)">
+<code>(</code>
+</div>
+<div id="el2" class="element" name="drg" draggable="true" ondragstart="drag(event)">
+<code>bar</code>
+</div>
+<div id="el3" class="element" name="drg" draggable="true" ondragstart="drag(event)">
+<code>type</code>
+</div>
+<div id="el4" class="element" name="drg" draggable="true" ondragstart="drag(event)">
+<code>)</code>
+</div>
+</div>
+<button class="check" id="check_tuple_1" onclick="checkAnswer(&#39;check_tuple_1&#39;, &#39;order_c&#39;, [&#39;el3&#39;, &#39;el1&#39;, &#39;el2&#39;, &#39;el4&#39;]);" disabled>
+Перевірити
+</button>
 </div>
 </details>
 
