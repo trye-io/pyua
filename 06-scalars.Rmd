@@ -320,4 +320,19 @@ price_apple + price_orange
 <button class="check" id="check_scalars_8" onclick="checkAnswer('check_scalars_8', 'mcq_scalars_8');" disabled>Перевірити</button>
 </div>
 
+<div class="quiz">
+<div class="question">9\. Перетягніть символи коду у правильному порядку, щоб перевірити тип об'єкту <code>bar</code>:</div>
+
+<div class="order" id="order_c" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+<div class="pool" id = "pool_c">
+<div class="element" name = "drg" id="el1" draggable="true" ondragstart="drag(event)"><code>(</code></div>
+<div class="element" name = "drg" id="el2" draggable="true" ondragstart="drag(event)"><code>bar</code></div>
+<div class="element" name = "drg" id="el3" draggable="true" ondragstart="drag(event)"><code>type</code></div>
+<div class="element" name = "drg" id="el4" draggable="true" ondragstart="drag(event)"><code>)</code></div>
+</div>
+
+<button class="check" id="check_tuple_1" onclick="checkAnswer('check_tuple_1', 'order_c', ['el3', 'el1', 'el2', 'el4']);" disabled>Перевірити</button>
+</div>
+
 </details>

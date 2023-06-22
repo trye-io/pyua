@@ -233,3 +233,38 @@ details[open] summary {
   color: #222222;
   padding: 0.5em 0.5em 0.5em 0.5em;
 }
+
+/*----------------------------------------------------------------------------*/
+/* Exercises */
+
+.quiz .order {
+    /* display: inline-block;
+    justify-content: space-between; */
+    
+    width: 100%;
+    height: auto;
+    min-height: 3.95em;
+    border-radius: 10px;
+    background: #d7effd;
+    padding: 0.5em 0.5em 0.5em 0.5em;
+}
+
+.quiz .pool {
+    padding: 1em 0 1em;
+}
+
+.quiz .element {
+    display: inline-block;
+    padding: 0.5em 1em;
+    border-radius: 8px;
+    background: #2D3143;
+    cursor: grab;
+    margin: 0.125em;
+    opacity: 0.999;
+}
+
+.quiz .element code {
+    text-align: center;
+    background: #2D3143 !important;
+    color: #6EB2D7 !important;
+}

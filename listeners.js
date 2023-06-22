@@ -266,3 +266,19 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.getElementsByName('drg');
+    const checkButton = document.getElementById('check_tuple_1');
+    
+    elements.forEach(function(element) {
+        element.addEventListener('dragend', function() {
+            
+            const pool = document.getElementById('pool_c');
+            
+            
+            if(pool.getElementsByClassName("element").length === 0) {
+                checkButton.disabled = false;
+            }
+        });
+    });
+});
