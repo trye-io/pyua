@@ -1,10 +1,72 @@
-function openDetailsById(id) {
-  const detailsElement = document.getElementById(id);
-  if (detailsElement) {
-    detailsElement.open = true;
-    detailsElement.scrollIntoView({ behavior: 'smooth', block: "start" });
+/* Listener to adjust header buttons' text when widnow is squeezed */
+window.addEventListener('DOMContentLoaded', function() {
+    
+    var maxWidth = 150;
+    
+    var lectureButtons = document.querySelectorAll('.lecture');
+    var podcastButtons = document.querySelectorAll('.podcast');
+    var notebookButtons = document.querySelectorAll('.notebook');
+    var exercisesButtons = document.querySelectorAll('.exercises');
+    var cheatButtons = document.querySelectorAll('.cheat');
+    
+    function updateButtonText() {
+        
+        for (var i = 0; i < lectureButtons.length; i++) {
+            var button = lectureButtons[i];
+            if (button.offsetWidth < maxWidth) {
+                button.textContent = '🎥';
+            } else {
+                button.textContent = '🎥 Лекція';
+            }
+        }
+        
+        for (var i = 0; i < podcastButtons.length; i++) {
+            var button = podcastButtons[i];
+            if (button.offsetWidth < maxWidth) {
+                button.textContent = '🎙';
+            } else {
+                button.textContent = '🎙️ Подкаст';
+            }
+        }
+        
+        for (var i = 0; i < notebookButtons.length; i++) {
+            var button = notebookButtons[i];
+            if (button.offsetWidth < maxWidth) {
+                button.textContent = '📓';
+            } else {
+                button.textContent = '📓 Записник';
+            }
+        }
+        
+        for (var i = 0; i < exercisesButtons.length; i++) {
+            var button = exercisesButtons[i];
+            if (button.offsetWidth < maxWidth) {
+                button.textContent = '🤸';
+            } else {
+                button.textContent = '🤸 Вправи';
+            }
+        }
+        
+        for (var i = 0; i < cheatButtons.length; i++) {
+            var button = cheatButtons[i];
+            if (button.offsetWidth < maxWidth) {
+                button.textContent = '📝';
+            } else {
+                button.textContent = '📝 Шпора';
+            }
+        }
+        
   }
-}
+  
+  updateButtonText();
+  
+  window.addEventListener('resize', function() {
+      updateButtonText();
+  });
+  
+});
+
+/* Listeners to enable quizzes' buttons when an option is selected */
 
 window.addEventListener('DOMContentLoaded', function() {
     const radioButtons = document.getElementsByName('create');
@@ -204,54 +266,3 @@ window.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-
-function checkAnswer(button_name, radio_name) {
-    
-  const radioButtons = document.getElementsByName(radio_name);
-  let hasTrueValue = true;
-  
-  for (var i = radioButtons.length - 1; i >= 0; i--) {
-    const radioButton = radioButtons[i];
-    const text = radioButton.value === 'true' ? '✅' : '❌';
-    const textElement = document.createElement('span');
-    textElement.textContent = text;
-    textElement.style.width = '20px';
-    radioButton.parentNode.replaceChild(textElement, radioButton);
-    
-    if ((radioButton.checked && radioButton.value != 'true') || (!radioButton.checked && radioButton.value != 'false')) {
-      hasTrueValue = false;
-    }
-    
-  }
-  
-  var success_messages = [
-      "Так тримати, чемпіон 🌟",
-      "Просто супер 🤩",
-      "Ти -- молодец 😎",
-      "Йой, бачу довідченого кодера 🤓",
-      "А ти точно не прцював в OpenAI до цього 🤖"
-  ];
-  
-  var failure_messages = [
-      "Упс, ще трошки 😬",
-      "Це не зовсім те, що ми мали на увазі, але вже близько 🙊",
-      "Ти ще на один крок ближче до успіху, тільки не здавайся 🚀",
-      "Нічого, головне не здаватися 💪"
-  ];
-  
-  const button = document.getElementById(button_name);
-  const message = document.createElement('div');
-  
-  if (hasTrueValue) {
-    
-    message.textContent = success_messages[Math.floor(Math.random() * success_messages.length)];
-    message.className = 'success';
-
-  } else {
-    message.textContent = failure_messages[Math.floor(Math.random() * failure_messages.length)];
-    message.className = 'failure';
-  }
-  
-  button.parentNode.replaceChild(message, button);
-  
-}
