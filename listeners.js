@@ -267,6 +267,17 @@ window.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('mcq_tuple_1');
+    const submitButton = document.getElementById('check_tuple_1');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});
+
+window.addEventListener('DOMContentLoaded', function() {
     const elements = document.getElementsByName('drg');
     const checkButton = document.getElementById('check_tuple_1');
     
