@@ -38,7 +38,7 @@
 - `int`: тип даних для цілих чисел
 - `float`: тип даних для дійсних чисел
 - `bool`: тип даних для бульових значень
-- `str`: тип даних для текстових рядків
+- `str`: тип даних для текстових стрічок
 
 Існують ще більш екзотичні, такі як `complex`, `bytes`, `NoneType`, але вони зараз нам не знадобляться. До одного з них ми повернемось у наступних главах, коли вони будуть використовуватись. А зараз почнемо ми саме з того, що ми вже бачили -- чисел, які представлені у Python типом даних `int` та `float`.
 
@@ -200,7 +200,7 @@ int(some_letters)
 <summary>🤸 Вправи</summary>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-generate_mcq(
+jsquiz::generate_mcq(
     question = "1. Вкажіть скаляр з типом даних <code>float</code>:",
     answers = c(
         "<code>2.37</code>" = TRUE,
@@ -216,7 +216,7 @@ generate_mcq(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-generate_mcq(
+jsquiz::generate_mcq(
     question = "2. Вкажіть скаляр з типом даних <code>int</code>:",
     answers = c(
         "<code>25.0</code>" = FALSE,
@@ -232,7 +232,7 @@ generate_mcq(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-generate_mcq(
+jsquiz::generate_mcq(
     question = "3. Які типи даних можуть містити скаляри?",
     answers = c(
         "Числові значення, текстові значення, бульові значення" = FALSE,
@@ -248,7 +248,7 @@ generate_mcq(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-generate_mcq(
+jsquiz::generate_mcq(
     question = "4. Обʼєкти типу <code>bool</code> можуть приймати:",
     answers = c(
         "Одне з багатьох можливих значень" = FALSE,
@@ -279,7 +279,7 @@ generate_mcq(
 </div>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-generate_mcq(
+jsquiz::generate_mcq(
     question = "6. Функція <code>type()</code> допомагає перевірити тип обʼєкта:",
     answers = c(
         "Так" = TRUE,
@@ -293,7 +293,7 @@ generate_mcq(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-generate_mcq(
+jsquiz::generate_mcq(
     question = "7. Які функції перетворюють текст на число?",
     answers = c(
         "<code>float()</code>" = TRUE,
