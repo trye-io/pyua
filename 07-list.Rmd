@@ -358,7 +358,7 @@ star_lord.sort()
 <summary>🤸 Вправи</summary>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+jsquiz::generate_options_quiz(
     question = "1. Що може бути елементами списку?",
     answers = c(
         "Об'єкти <code>int</code>" = FALSE,
@@ -366,15 +366,12 @@ jsquiz::generate_mcq(
         "Списки <code>list</code>" = FALSE,
         "Усі перелічені опції" = TRUE
     ),
-    allow_multiple_answers = FALSE,
-    button_label = "Перевірити",
-    button_id = "check_list_1",
-    radio_buttons_id = "mcq_list_1"
+    allow_multiple_answers = FALSE
 )
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+jsquiz::generate_options_quiz(
     question = "2. Скільки елементів у списку <code>[4, 5, 10, 4, 1]</code>?",
     answers = c(
         "4" = FALSE,
@@ -382,15 +379,12 @@ jsquiz::generate_mcq(
         "1" = FALSE,
         "0" = FALSE
     ),
-    allow_multiple_answers = FALSE,
-    button_label = "Перевірити",
-    button_id = "check_list_2",
-    radio_buttons_id = "mcq_list_2"
+    allow_multiple_answers = FALSE
 )
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+jsquiz::generate_options_quiz(
     question = "3. Яку функцію нам потрібно використати, щоб порахувати кількість елементів у списку?",
     answers = c(
         "<code>max()</code>" = FALSE,
@@ -398,15 +392,12 @@ jsquiz::generate_mcq(
         "<code>len()</code>" = TRUE,
         "<code>size()</code>" = FALSE
     ),
-    allow_multiple_answers = FALSE,
-    button_label = "Перевірити",
-    button_id = "check_list_3",
-    radio_buttons_id = "mcq_list_3"
+    allow_multiple_answers = FALSE
 )
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+jsquiz::generate_options_quiz(
     question = "4. Який рядок коду створить список <code>duration</code>?",
     answers = c(
         "<code>duration = 31, 42, 12</code>" = FALSE,
@@ -415,99 +406,91 @@ jsquiz::generate_mcq(
         "<code>[31, 42, 12] = duration</code>" = FALSE,
         "<code>duration <- [31, 42, 12]</code>" = FALSE
     ),
-    allow_multiple_answers = FALSE,
-    button_label = "Перевірити",
-    button_id = "check_list_4",
-    radio_buttons_id = "mcq_list_4"
+    allow_multiple_answers = FALSE
 )
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+jsquiz::generate_options_quiz(
     question = "5. На який об'єкт буде вказувати змінна <code>x</code>, після виконання <code>x = [12]</code>?",
     answers = c(
         "На об'єкт типу <code>list</code>" = TRUE,
         "На об'єкт типу <code>int</code>" = FALSE,
         "На об'єкт типу <code>str</code>" = FALSE
     ),
-    allow_multiple_answers = FALSE,
-    button_label = "Перевірити",
-    button_id = "check_list_5",
-    radio_buttons_id = "mcq_list_5"
+    allow_multiple_answers = FALSE
 )
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+jsquiz::generate_options_quiz(
     question = "6. Для чого ми можемо використати списки?",
     answers = c(
         "Для зберігання імен учнів в класі" = FALSE,
         "Для зберігання оцінок з фізики" = FALSE,
         "Усі перелічені опції" = TRUE
     ),
-    allow_multiple_answers = FALSE,
-    button_label = "Перевірити",
-    button_id = "check_list_6",
-    radio_buttons_id = "mcq_list_6"
+    allow_multiple_answers = FALSE
 )
 ```
 
-<div class="quiz">
-<div class="question">7\. Наступний рядок створить новий список:</div>
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>flowers = ["lily", "rose", "daisy", "tulip"]
+</code></pre>
+<div class="question">Як отримати назву квітки, яка знаходиться на другому місці у списку (тобто `"rose"`)?</div>'
 
+jsquiz::generate_options_quiz(
+    question = "7. Наступний рядок створить новий список:",
+    between = between,
+    answers = c(
+        "<code>flowers(2)</code>" = FALSE,
+        "<code>flowers(1)</code>" = FALSE,
+        "<code>flowers[1]</code>" = TRUE,
+        "<code>flowers[2]</code>" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
 ```
-flowers = ["lily", "rose", "daisy", "tulip"]
-```
-<div class="question">Як отримати назву квітки, яка знаходиться на другому місці у списку (тобто `"rose"`)?</div>
-
-<label><input type="radio" name="mcq_list_7" value="false">`flowers(2)`</label>
-<label><input type="radio" name="mcq_list_7" value="false">`flowers(1)`</label>
-<label><input type="radio" name="mcq_list_7" value="false">`flowers[1]`</label>
-<label><input type="radio" name="mcq_list_7" value="true">`flowers[2]`</label>
-<button class="check" id="check_list_7" onclick="checkAnswer('check_list_7', 'mcq_list_7');" disabled>Перевірити</button>
-</div>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+jsquiz::generate_options_quiz(
     question = "8. Чи можемо ми створити список з одним елементом?",
     answers = c(
         "Так!" = TRUE,
         "Ні!" = FALSE
     ),
-    allow_multiple_answers = FALSE,
-    button_label = "Перевірити",
-    button_id = "check_list_8",
-    radio_buttons_id = "mcq_list_8"
+    allow_multiple_answers = FALSE
 )
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
+jsquiz::generate_options_quiz(
     question = "9. Який індекс має перший елемент у списку?",
     answers = c(
         "<code>0</code>" = TRUE,
         "<code>1</code>" = FALSE,
         "<code>'first'</code>" = FALSE
     ),
-    allow_multiple_answers = FALSE,
-    button_label = "Перевірити",
-    button_id = "check_list_9",
-    radio_buttons_id = "mcq_list_9"
+    allow_multiple_answers = FALSE
 )
 ```
 
-<div class="quiz">
-<div class="question">10\. Що поверне наступний код:</div>
-
-```
-clothes = ["t-shirt", "pants", "tie", "suit", "dress"]
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>clothes = ["t-shirt", "pants", "tie", "suit", "dress"]
 clothes[5]
-```
+</code></pre>'
 
-<label><input type="radio" name="mcq_list_10" value="true">Помилку</label>
-<label><input type="radio" name="mcq_list_10" value="false">`"dress"`</label>
-<label><input type="radio" name="mcq_list_10" value="false">`"t-shirt"`</label>
-<button class="check" id="check_list_10" onclick="checkAnswer('check_list_10', 'mcq_list_10');" disabled>Перевірити</button>
-</div>
+jsquiz::generate_options_quiz(
+    question = "10. Що поверне наступний код:",
+    between = between,
+    answers = c(
+        "Помилку" = TRUE,
+        "<code>flowers(1)</code>" = FALSE,
+        "<code>\"dress\"</code>" = TRUE,
+        "<code>\"t-shirt\"</code>" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
 
 </details>

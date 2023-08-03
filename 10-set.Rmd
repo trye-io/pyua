@@ -156,26 +156,46 @@ hamburger.union(macchicken)
 <details id="set_exercises">
 <summary>🤸 Вправи</summary>
 
-  <div class="quiz">
-  <div class="question">1\. Як створити множину?</div>
-  <label><input type="radio" name="create" value="false"> `x = [1, 2, 3]` </label>
-  <label><input type="radio" name="create" value="false"> `x = (1, 2, 3)` </label>
-  <label><input type="radio" name="create" value="true"> `x = {1, 2, 3}`</label>
-  <button class="check" id="check-btn" onclick="checkAnswer('check-btn', 'create');" disabled>Перевірити</button>
-  </div>
-  
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_mcq(
-    question = "2. Виберіть мову програмування:",
+jsquiz::generate_options_quiz(
+    question = "1. Як створити множину?",
     answers = c(
-        "Python" = TRUE,
-        "C++" = TRUE,
-        "RStudio" = FALSE
+        "<code>x = [1, 2, 3]</code>" = FALSE,
+        "<code>x = {1, 2, 3}</code>" = TRUE,
+        "<code>x = (1, 2, 3)</code>" = FALSE
     ),
-    button_label = "Перевірити",
-    allow_multiple_answers = TRUE,
-    button_id = "check_set_2",
-    radio_buttons_id = "mcq_set_2"
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+jsquiz::generate_arrange_quiz(
+    question = "2. Перетягніть символи коду у правильному порядку, щоб знайти перетин множин <code>A</code> та <code>B</code>:",
+    elements = c(
+        "<code>B</code>" = 3,
+        "<code>A</code>" = 1,
+        "<code>&</code>" = 2
+    )
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+jsquiz::generate_short_quiz(
+    question = "3. Напищіть код, що додає елемет <code>12</code> до множини <code>grades</code>:",
+    correct_answer = "grades.add(12)"
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+jsquiz::generate_bucket_quiz(
+    question = "4. Перетягніть структури даних до правильної корзини:",
+    elements = c(
+        "<code>list</code>" = "Можна змінити",
+        "<code>tuple</code>" = "Не можна змінити",
+        "<code>dict</code>" = "Не можна змінити",
+        "<code>set</code>" = "Не можна змінити"
+    ),
+    buckets = c("Можна змінити", "Не можна змінити")
 )
 ```
 
