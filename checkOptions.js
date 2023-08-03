@@ -1,8 +1,8 @@
-function checkAnswer(button_name, radio_name) {
-    
+function checkOptions(button_name, radio_name, success_messages, failure_messages) {
+
   const radioButtons = document.getElementsByName(radio_name);
   let hasTrueValue = true;
-  
+
   for (var i = radioButtons.length - 1; i >= 0; i--) {
     const radioButton = radioButtons[i];
     const text = radioButton.value === 'true' ? '✅' : '❌';
@@ -10,33 +10,30 @@ function checkAnswer(button_name, radio_name) {
     textElement.textContent = text;
     textElement.style.width = '20px';
     radioButton.parentNode.replaceChild(textElement, radioButton);
-    
+
     if ((radioButton.checked && radioButton.value != 'true') || (!radioButton.checked && radioButton.value != 'false')) {
       hasTrueValue = false;
     }
-    
+
   }
-  
-  var success_messages = [
-      "Так тримати, чемпіон 🌟",
-      "Просто супер 🤩",
-      "Ти -- молодец 😎",
-      "Йой, бачу довідченого кодера 🤓",
-      "А ти точно не прцював в OpenAI до цього 🤖"
+
+  /* var success_messages = [
+      "Way to go 🌟",
+      "You are amazing 🤩",
+      "Cool 😎"
   ];
-  
+
   var failure_messages = [
-      "Упс, ще трошки 😬",
-      "Це не зовсім те, що ми мали на увазі, але вже близько 🙊",
-      "Ти ще на один крок ближче до успіху, тільки не здавайся 🚀",
-      "Нічого, головне не здаватися 💪"
-  ];
-  
+      "Oops, almost 😬",
+      "It's slightly different 🙊",
+      "Never give up 🚀"
+  ]; */
+
   const button = document.getElementById(button_name);
   const message = document.createElement('div');
-  
+
   if (hasTrueValue) {
-    
+
     message.textContent = success_messages[Math.floor(Math.random() * success_messages.length)];
     message.className = 'success';
 
@@ -44,7 +41,7 @@ function checkAnswer(button_name, radio_name) {
     message.textContent = failure_messages[Math.floor(Math.random() * failure_messages.length)];
     message.className = 'failure';
   }
-  
+
   button.parentNode.replaceChild(message, button);
-  
+
 }
