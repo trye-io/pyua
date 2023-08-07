@@ -16,11 +16,12 @@
   "Packages": {
     "Matrix": {
       "Package": "Matrix",
-      "Version": "1.4-1",
+      "Version": "1.6-0",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R",
+        "grDevices",
         "graphics",
         "grid",
         "lattice",
@@ -28,7 +29,7 @@
         "stats",
         "utils"
       ],
-      "Hash": "699c47c606293bdfbc9fd78a93c9c8fe"
+      "Hash": "31262fd18481fab05c5e7258dac163ca"
     },
     "R6": {
       "Package": "R6",
@@ -530,7 +531,7 @@
     },
     "reticulate": {
       "Package": "reticulate",
-      "Version": "1.28",
+      "Version": "1.30",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -544,10 +545,11 @@
         "methods",
         "png",
         "rappdirs",
+        "rlang",
         "utils",
         "withr"
       ],
-      "Hash": "86c441bf33e1d608db773cb94b848458"
+      "Hash": "103e4814f4a7a3eb9fb28adf52bf1586"
     },
     "rlang": {
       "Package": "rlang",
