@@ -417,30 +417,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="semantics" class="section level1 hasAnchor" number="26">
 <h1><span class="header-section-number">E</span> Семантіка Python<a href="semantics.html#semantics" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb598"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb598-1"><a href="semantics.html#cb598-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
-<span id="cb598-2"><a href="semantics.html#cb598-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
-<span id="cb598-3"><a href="semantics.html#cb598-3" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb600"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb600-1"><a href="semantics.html#cb600-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span></span>
+<span id="cb600-2"><a href="semantics.html#cb600-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> a</span>
+<span id="cb600-3"><a href="semantics.html#cb600-3" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## 2</code></pre>
-<div class="sourceCode" id="cb600"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb600-1"><a href="semantics.html#cb600-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb600-2"><a href="semantics.html#cb600-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
+<div class="sourceCode" id="cb602"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb602-1"><a href="semantics.html#cb602-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb602-2"><a href="semantics.html#cb602-2" aria-hidden="true" tabindex="-1"></a>b</span></code></pre></div>
 <pre><code>## 2</code></pre>
-<div class="sourceCode" id="cb602"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb602-1"><a href="semantics.html#cb602-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> append_element(x, element):</span>
-<span id="cb602-2"><a href="semantics.html#cb602-2" aria-hidden="true" tabindex="-1"></a>    x.append(element)</span></code></pre></div>
-<div class="sourceCode" id="cb603"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb603-1"><a href="semantics.html#cb603-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
-<span id="cb603-2"><a href="semantics.html#cb603-2" aria-hidden="true" tabindex="-1"></a>append_element(data, <span class="dv">4</span>)</span>
-<span id="cb603-3"><a href="semantics.html#cb603-3" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
+<div class="sourceCode" id="cb604"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb604-1"><a href="semantics.html#cb604-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> append_element(x, element):</span>
+<span id="cb604-2"><a href="semantics.html#cb604-2" aria-hidden="true" tabindex="-1"></a>    x.append(element)</span></code></pre></div>
+<div class="sourceCode" id="cb605"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb605-1"><a href="semantics.html#cb605-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb605-2"><a href="semantics.html#cb605-2" aria-hidden="true" tabindex="-1"></a>append_element(data, <span class="dv">4</span>)</span>
+<span id="cb605-3"><a href="semantics.html#cb605-3" aria-hidden="true" tabindex="-1"></a>data</span></code></pre></div>
 <pre><code>## [1, 2, 3, 4]</code></pre>
-<div class="sourceCode" id="cb605"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb605-1"><a href="semantics.html#cb605-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb605-2"><a href="semantics.html#cb605-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
-<span id="cb605-3"><a href="semantics.html#cb605-3" aria-hidden="true" tabindex="-1"></a>    x.append(<span class="dv">3</span>)</span>
-<span id="cb605-4"><a href="semantics.html#cb605-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(x)</span>
-<span id="cb605-5"><a href="semantics.html#cb605-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb605-6"><a href="semantics.html#cb605-6" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
-<span id="cb605-7"><a href="semantics.html#cb605-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb605-8"><a href="semantics.html#cb605-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb605-9"><a href="semantics.html#cb605-9" aria-hidden="true" tabindex="-1"></a>f(a)</span></code></pre></div>
+<div class="sourceCode" id="cb607"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb607-1"><a href="semantics.html#cb607-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x):</span>
+<span id="cb607-2"><a href="semantics.html#cb607-2" aria-hidden="true" tabindex="-1"></a>    x.append(<span class="dv">3</span>)</span>
+<span id="cb607-3"><a href="semantics.html#cb607-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(x)</span>
+<span id="cb607-4"><a href="semantics.html#cb607-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb607-5"><a href="semantics.html#cb607-5" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>]</span>
+<span id="cb607-6"><a href="semantics.html#cb607-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb607-7"><a href="semantics.html#cb607-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb607-8"><a href="semantics.html#cb607-8" aria-hidden="true" tabindex="-1"></a>f(a)</span></code></pre></div>
 <pre><code>## [1, 2, 3]</code></pre>
-<div class="sourceCode" id="cb607"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb607-1"><a href="semantics.html#cb607-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
+<div class="sourceCode" id="cb609"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb609-1"><a href="semantics.html#cb609-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a)</span></code></pre></div>
 <pre><code>## [1, 2, 3]</code></pre>
 
 </div>
