@@ -178,7 +178,7 @@ details[open] summary {
 /* Course map */
 
 .course-map {
-  padding: 1em 1em 1em 1em;
+  padding: 0em 0em 1em 0em;
   display: grid;
   place-items: center;
 }
@@ -190,6 +190,12 @@ details[open] summary {
   padding: 1em 1em 1em 1em;
   width: 100%;
   margin-bottom: 1em;
+  transition: all .3s ease-in-out;
+}
+
+.course-map .pyua:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 15px 30px;
+  transform: translate3d(0px, -5px, 0px);
 }
 
 .pyua p {
@@ -204,13 +210,16 @@ details[open] summary {
     width: 100%;
 }
 
-/* */
-
 .course-map .courses .column {
     flex: 1;
     text-align: center;
     margin-right: 0.5em;
 }
+
+.course-map .courses .column a {
+    text-decoration: none !important;
+}
+
 
 .course-map .courses .column:last-child {
     margin-right: 0;
@@ -220,28 +229,19 @@ details[open] summary {
     border-radius: 15px;
     background: #2D3143;
     padding: 1em 1em 1em 1em;
+    transition: all .3s ease-in-out;
 }
 
-/* .course-map .courses .course {
-    flex: 1;
-    text-align: center;
-    
-    border-radius: 15px;
-    background: #2D3143;
-    padding: 1em 1em 1em 1em;
-    
-    margin-right: 0.5em;
+.course-map .courses .column .course:hover {
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 15px 30px;
+  transform: translate3d(0px, -5px, 0px);
 }
 
-.course-map .courses .course:last-child {
-    margin-right: 0;
-} */
-
-.course-map .courses .course p {
+.course-map .courses .column .course p {
     font-size: 22px;
     text-align: center;
     margin-bottom: 0 !important;
-    color: #6EB1D8;
+    color: #FFFFFF;
 }
 
 /*----------------------------------------------------------------------------*/

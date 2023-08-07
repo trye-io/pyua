@@ -151,11 +151,9 @@ knitr::write_bib(c(
 
 Такі галузі та підгалузі як <span class="highlight-container"><span class="highlight">аналіз даних<span class="tooltiptext">🇬🇧 data analysis</span></span></span>, <span class="highlight-container"><span class="highlight">наука про дані<span class="tooltiptext">🇬🇧 data science</span></span></span>, <span class="highlight-container"><span class="highlight">добування даних<span class="tooltiptext">🇬🇧 data mining</span></span></span>, <span class="highlight-container"><span class="highlight">статистика<span class="tooltiptext">🇬🇧 statistics</span></span></span>, <span class="highlight-container"><span class="highlight">машине навчання<span class="tooltiptext">🇬🇧 machine learning</span></span></span>, <span class="highlight-container"><span class="highlight">глибоке навчання<span class="tooltiptext">🇬🇧 deep learning</span></span></span> та <span class="highlight-container"><span class="highlight">штучний інтелект<span class="tooltiptext">🇬🇧 artificial intelligence</span></span></span> використовують програмування як один з найнеобхідніших інструментів. Тому усі три наші курси (📈 Data Science, 🤖 Machine Learning та 🧠 Artificial Intelligence) використовують базові знання та навички, які ви можете здобути з цієї книги. 
 
-<map name="courses">
-    <area href="https://trye.io" coords="641,570,101,920" shape="rect">
-    <area href="https://trye.io" coords="1228,919,691,570" shape="rect">
-    <area href="https://trye.io" coords="1818,920,1277,569" shape="rect">
-</map>
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("images/0-annotation-1.png")
+```
 <div class = "course-map">
   <div class = "pyua">
   <p>🐍</p>
@@ -163,28 +161,37 @@ knitr::write_bib(c(
   </div>
   <div class = "courses">
   <div class = "column">
-  <img src = "images/0-arrow.png" height="24"/>
+  <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-arrow.png" height="24"/>
+  <a href="https://trye.io">
   <div class = "course">
   <p>📈</p>
   <p>Data Science</p>
   </div>
+  </a>
   </div>
   <div class = "column">
-  <img src = "images/0-arrow.png" height="24"/>
+  <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-arrow.png" height="24"/>
+  <a href="https://trye.io">
   <div class = "course">
   <p>🤖</p>
   <p>Machine Learning</p>
   </div>
+  <a>
   </div>
   <div class = "column">
-  <img src = "images/0-arrow.png" height="24"/>
+  <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-arrow.png" height="24"/>
+  <a href="https://trye.io">
   <div class = "course">
   <p>🧠</p>
-  <p style="color:#FFFFFF;">Artificial Intelligence</p>
+  <p>Artificial Intelligence</p>
   </div>
+  </a>
   </div>
   </div>
 </div>
+```{r, echo=FALSE, out.width="100%"}
+knitr::include_graphics("images/0-annotation-2.png")
+```
 
 Це не означає, що ви повинні прочитату усю книгу перед початком курсів у TRYE. Як раз навпаки -- ця книга створенна як додаткові матеріали. Перед кожною лекцією 📈 Data Science, 🤖 Machine Learning та 🧠 Artificial Intelligence, ми будемо висилати номери глав, які необхідно знати для успішного проходження теми. Наприклад, коли ми будемо вивчати тему "Як зображення зберігаються на комп'ютері", вимогою є знання з NumPy (Глава \@ref(numpy)), посилання на яку ви отримаєте перед заняттям. 
 
@@ -194,7 +201,3 @@ knitr::write_bib(c(
 
 * Христина Хмільовська
 * Анжеліка Курбатова
-
-```{r}
-knitr::include_graphics("images/0-arrow.png")
-```
