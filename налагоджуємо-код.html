@@ -437,7 +437,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <hr />
 <p>Перед тим як поглибитись у техніки та стратегії налагодження коду, давайте спершу погоримо про різницю між баґами та помилками.</p>
 <p>Під <strong>помилками</strong> ми будемо розуміти ті ситуції, коли ви порушите правила Python коду. В таких ситуаціях Python не буде розуміти як інтерпретувати ваш код, виконання програми зупиниться і Python надрукує повідомлення про помилку. Зазвичай повідомлення буде друкуватись червоним коліром. Наприклад, Python не знає як додати об’єкт <code>int</code> та об’єкт <code>str</code>:</p>
-<div class="sourceCode" id="cb517"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb517-1"><a href="налагоджуємо-код.html#cb517-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;1&quot;</span> <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb516"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb516-1"><a href="налагоджуємо-код.html#cb516-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;1&quot;</span> <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
 <pre><code>## can only concatenate str (not &quot;int&quot;) to str</code></pre>
 <p>Це все одно що сказати таку фарзу:</p>
 <blockquote>
@@ -445,9 +445,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </blockquote>
 <p>У цьому реченні є граматична помилка, а саме замість <strong>її</strong> повинно стояти <strong>його</strong> (чайнк – чоловічого роду). Ми, люди, зможемо зрозуміти це речення з конексту, навіть якщо побачимо таку помилку. А ось Python не зможе, тому що розуміє тільки точні інструкції.</p>
 <p><strong>Баґ</strong> – трохи інший тип дефекту програми. Код може бути абсолютно валідним і зрозумілим для Python, але він буде містити в собі хибну логіку або просто поводитись не так, як того хоче розробник. Тобто ми :) Давайте розглянемо наступний випадок:</p>
-<div class="sourceCode" id="cb519"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb519-1"><a href="налагоджуємо-код.html#cb519-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
-<span id="cb519-2"><a href="налагоджуємо-код.html#cb519-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>: </span>
-<span id="cb519-3"><a href="налагоджуємо-код.html#cb519-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x є додатнім числом&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb518"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb518-1"><a href="налагоджуємо-код.html#cb518-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb518-2"><a href="налагоджуємо-код.html#cb518-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> x <span class="op">&lt;</span> <span class="dv">0</span>: </span>
+<span id="cb518-3"><a href="налагоджуємо-код.html#cb518-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;x є додатнім числом&quot;</span>)</span></code></pre></div>
 <pre><code>## x є додатнім числом</code></pre>
 <p>Код спрацював і не “викинув” помилку, проте він містить хибне твердження. Такі баґи не завжди очевидні, тому нам спершу треба їх знайти, і тільки потім “фіксити” (тобто виправляти). Якщо ми повернемось до нашого прикладу з чайником, це буде виглядати якось так:</p>
 <blockquote>
@@ -460,16 +460,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Скоріш за все не весь ваш код не правильний, а тільки його маленька частина. Нам треба сфокусуватись саме на тій частині, яка друкує помилку. Коли ви локалізували помилку, тобто знайшли яка клітинка друкує помилку, ми зразу ж можемо забути про все, що йде після неї.</p>
 <p>Якщо така клітанка має велику кількість рядків коду, не погана ідея розбити її на декілька клітинок, і подивитись у якій саме клітинци виникає помилка. Це також дозволяє виконувати код радок за рядком, і спостерігати значення змінних, які використовуються у хибному коді.</p>
 <p>У коді внизу ми хочемо розрахувати процент хлопчиків у класі:</p>
-<div class="sourceCode" id="cb521"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb521-1"><a href="налагоджуємо-код.html#cb521-1" aria-hidden="true" tabindex="-1"></a>boys <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb521-2"><a href="налагоджуємо-код.html#cb521-2" aria-hidden="true" tabindex="-1"></a>girls <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb521-3"><a href="налагоджуємо-код.html#cb521-3" aria-hidden="true" tabindex="-1"></a>share_boys <span class="op">=</span> boys <span class="op">/</span> (boys <span class="op">+</span> girls)</span></code></pre></div>
+<div class="sourceCode" id="cb520"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb520-1"><a href="налагоджуємо-код.html#cb520-1" aria-hidden="true" tabindex="-1"></a>boys <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb520-2"><a href="налагоджуємо-код.html#cb520-2" aria-hidden="true" tabindex="-1"></a>girls <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb520-3"><a href="налагоджуємо-код.html#cb520-3" aria-hidden="true" tabindex="-1"></a>share_boys <span class="op">=</span> boys <span class="op">/</span> (boys <span class="op">+</span> girls)</span></code></pre></div>
 <pre><code>## division by zero</code></pre>
-<div class="sourceCode" id="cb523"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb523-1"><a href="налагоджуємо-код.html#cb523-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(share_boys)</span></code></pre></div>
+<div class="sourceCode" id="cb522"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb522-1"><a href="налагоджуємо-код.html#cb522-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(share_boys)</span></code></pre></div>
 <pre><code>## name &#39;share_boys&#39; is not defined</code></pre>
 <p>Якщо ми його розіб’ємо на частини, то побачимо що проблема у рядку <code>share_boys = boys / (boys + girls)</code>, тому що попередні рядки виконуються без помилок.</p>
-<div class="sourceCode" id="cb525"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb525-1"><a href="налагоджуємо-код.html#cb525-1" aria-hidden="true" tabindex="-1"></a>boys <span class="op">=</span> <span class="dv">0</span></span></code></pre></div>
-<div class="sourceCode" id="cb526"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb526-1"><a href="налагоджуємо-код.html#cb526-1" aria-hidden="true" tabindex="-1"></a>girls <span class="op">=</span> <span class="dv">0</span></span></code></pre></div>
-<div class="sourceCode" id="cb527"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb527-1"><a href="налагоджуємо-код.html#cb527-1" aria-hidden="true" tabindex="-1"></a>share_boys <span class="op">=</span> boys <span class="op">/</span> (boys <span class="op">+</span> girls)</span></code></pre></div>
+<div class="sourceCode" id="cb524"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb524-1"><a href="налагоджуємо-код.html#cb524-1" aria-hidden="true" tabindex="-1"></a>boys <span class="op">=</span> <span class="dv">0</span></span></code></pre></div>
+<div class="sourceCode" id="cb525"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb525-1"><a href="налагоджуємо-код.html#cb525-1" aria-hidden="true" tabindex="-1"></a>girls <span class="op">=</span> <span class="dv">0</span></span></code></pre></div>
+<div class="sourceCode" id="cb526"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb526-1"><a href="налагоджуємо-код.html#cb526-1" aria-hidden="true" tabindex="-1"></a>share_boys <span class="op">=</span> boys <span class="op">/</span> (boys <span class="op">+</span> girls)</span></code></pre></div>
 <pre><code>## division by zero</code></pre>
 <p>Після того, як ми знайшли у якому рядку виникає помилка, ми можемо далі розібратися що саме скоїлось, а саме – ми розділили на нуль, тому що обидві змінні <code>boys</code> та <code>girls</code> дорівнюють нулю.</p>
 </div>
@@ -477,79 +477,79 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">20.2</span> Спрощуємо код<a href="налагоджуємо-код.html#спрощуємо-код" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Коли рядок коду складається з декількох викликів функцій чи операторів, ми можемо розгортати та розділяти на прості компоненти. Потім, ми можемо дивитись який саме компонент спровокував помилку.</p>
 <p>У прикладі внизу ми намагаємось порахувати площу кола з радіусом <code>R = 1</code>:</p>
-<div class="sourceCode" id="cb529"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb529-1"><a href="налагоджуємо-код.html#cb529-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb529-2"><a href="налагоджуємо-код.html#cb529-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
-<span id="cb529-3"><a href="налагоджуємо-код.html#cb529-3" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;,&quot;</span>)) <span class="op">*</span> R <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb528"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb528-1"><a href="налагоджуємо-код.html#cb528-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb528-2"><a href="налагоджуємо-код.html#cb528-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
+<span id="cb528-3"><a href="налагоджуємо-код.html#cb528-3" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;,&quot;</span>)) <span class="op">*</span> R <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## invalid literal for int() with base 10: &#39;3,14&#39;</code></pre>
 <p>Давайте видалемо <code>* R ** 2</code> з останнього рядку і подивимось чи є ще помилка. Якщо її нема – то помилка саме в <code>* R ** 2</code>.</p>
-<div class="sourceCode" id="cb531"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb531-1"><a href="налагоджуємо-код.html#cb531-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb531-2"><a href="налагоджуємо-код.html#cb531-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
-<span id="cb531-3"><a href="налагоджуємо-код.html#cb531-3" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;,&quot;</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb530"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb530-1"><a href="налагоджуємо-код.html#cb530-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb530-2"><a href="налагоджуємо-код.html#cb530-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
+<span id="cb530-3"><a href="налагоджуємо-код.html#cb530-3" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;,&quot;</span>))</span></code></pre></div>
 <pre><code>## invalid literal for int() with base 10: &#39;3,14&#39;</code></pre>
 <p>Далі ми можемо ще спростити цей код, позбавившись <code>int()</code>:</p>
-<div class="sourceCode" id="cb533"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb533-1"><a href="налагоджуємо-код.html#cb533-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb533-2"><a href="налагоджуємо-код.html#cb533-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
-<span id="cb533-3"><a href="налагоджуємо-код.html#cb533-3" aria-hidden="true" tabindex="-1"></a>pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;,&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb532"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb532-1"><a href="налагоджуємо-код.html#cb532-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb532-2"><a href="налагоджуємо-код.html#cb532-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
+<span id="cb532-3"><a href="налагоджуємо-код.html#cb532-3" aria-hidden="true" tabindex="-1"></a>pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;,&quot;</span>)</span></code></pre></div>
 <pre><code>## &#39;3,14&#39;</code></pre>
 <p>Тепер код не повертає помилку, тому помилка утворюється саме коли ми передаємо <code>3,14</code> в <code>int()</code>. А, так Python не розуміє кому <code>,</code> як десятковий розділювач, а тільки крапку <code>.</code>. Тобто нам треба замінити <code>","</code> на <code>"."</code>:</p>
-<div class="sourceCode" id="cb535"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb535-1"><a href="налагоджуємо-код.html#cb535-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb535-2"><a href="налагоджуємо-код.html#cb535-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
-<span id="cb535-3"><a href="налагоджуємо-код.html#cb535-3" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;.&quot;</span>)) <span class="op">*</span> R <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb534"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb534-1"><a href="налагоджуємо-код.html#cb534-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb534-2"><a href="налагоджуємо-код.html#cb534-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
+<span id="cb534-3"><a href="налагоджуємо-код.html#cb534-3" aria-hidden="true" tabindex="-1"></a><span class="bu">int</span>(pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;.&quot;</span>)) <span class="op">*</span> R <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## invalid literal for int() with base 10: &#39;3.14&#39;</code></pre>
 <p>А, так <code>3.14</code> – це <code>float</code>, а не <code>int</code>. Тому треба використати фунцкію <code>float()</code> замість <code>int()</code>:</p>
-<div class="sourceCode" id="cb537"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb537-1"><a href="налагоджуємо-код.html#cb537-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb537-2"><a href="налагоджуємо-код.html#cb537-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
-<span id="cb537-3"><a href="налагоджуємо-код.html#cb537-3" aria-hidden="true" tabindex="-1"></a><span class="bu">float</span>(pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;.&quot;</span>)) <span class="op">*</span> R <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb536"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb536-1"><a href="налагоджуємо-код.html#cb536-1" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb536-2"><a href="налагоджуємо-код.html#cb536-2" aria-hidden="true" tabindex="-1"></a>pi <span class="op">=</span> <span class="st">&quot;3*14&quot;</span></span>
+<span id="cb536-3"><a href="налагоджуємо-код.html#cb536-3" aria-hidden="true" tabindex="-1"></a><span class="bu">float</span>(pi.replace(<span class="st">&quot;*&quot;</span>, <span class="st">&quot;.&quot;</span>)) <span class="op">*</span> R <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## 3.14</code></pre>
 </div>
 <div id="розгортаємо-цикли-та-фунції" class="section level2 hasAnchor" number="20.3">
 <h2><span class="header-section-number">20.3</span> Розгортаємо цикли та фунції<a href="налагоджуємо-код.html#розгортаємо-цикли-та-фунції" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Якщо код, який повертає помилку, міститься у фунції або циклі, ми не можемо розділити його на клітинки. В цьому випадку, ми можемо розгорнути цикли та функції. Розгорнути цикл означає явно прописати кожну його ітерацію – те що ми робили, коли намагались зрозуміти як працюють цикли <code>for</code> у Главі <a href="#for"><strong>??</strong></a>.</p>
 <p>Цикл унизу повинен взяти логаріфм кожного елемента у списку:</p>
-<div class="sourceCode" id="cb539"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb539-1"><a href="налагоджуємо-код.html#cb539-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
-<span id="cb539-2"><a href="налагоджуємо-код.html#cb539-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb539-3"><a href="налагоджуємо-код.html#cb539-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>]</span>
-<span id="cb539-4"><a href="налагоджуємо-код.html#cb539-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb539-5"><a href="налагоджуємо-код.html#cb539-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> temperature: </span>
-<span id="cb539-6"><a href="налагоджуємо-код.html#cb539-6" aria-hidden="true" tabindex="-1"></a>    log(x)</span></code></pre></div>
+<div class="sourceCode" id="cb538"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb538-1"><a href="налагоджуємо-код.html#cb538-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
+<span id="cb538-2"><a href="налагоджуємо-код.html#cb538-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb538-3"><a href="налагоджуємо-код.html#cb538-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>]</span>
+<span id="cb538-4"><a href="налагоджуємо-код.html#cb538-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb538-5"><a href="налагоджуємо-код.html#cb538-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> temperature: </span>
+<span id="cb538-6"><a href="налагоджуємо-код.html#cb538-6" aria-hidden="true" tabindex="-1"></a>    log(x)</span></code></pre></div>
 <pre><code>## math domain error</code></pre>
 <p>Давайте тепер розгорнимо цей цикл:</p>
-<div class="sourceCode" id="cb541"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb541-1"><a href="налагоджуємо-код.html#cb541-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
-<span id="cb541-2"><a href="налагоджуємо-код.html#cb541-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb541-3"><a href="налагоджуємо-код.html#cb541-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>]</span>
-<span id="cb541-4"><a href="налагоджуємо-код.html#cb541-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb541-5"><a href="налагоджуємо-код.html#cb541-5" aria-hidden="true" tabindex="-1"></a><span class="co"># перша ітерація</span></span>
-<span id="cb541-6"><a href="налагоджуємо-код.html#cb541-6" aria-hidden="true" tabindex="-1"></a>log(temperature[<span class="dv">0</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb540"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb540-1"><a href="налагоджуємо-код.html#cb540-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
+<span id="cb540-2"><a href="налагоджуємо-код.html#cb540-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb540-3"><a href="налагоджуємо-код.html#cb540-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> [<span class="dv">3</span>, <span class="op">-</span><span class="dv">2</span>, <span class="dv">0</span>]</span>
+<span id="cb540-4"><a href="налагоджуємо-код.html#cb540-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb540-5"><a href="налагоджуємо-код.html#cb540-5" aria-hidden="true" tabindex="-1"></a><span class="co"># перша ітерація</span></span>
+<span id="cb540-6"><a href="налагоджуємо-код.html#cb540-6" aria-hidden="true" tabindex="-1"></a>log(temperature[<span class="dv">0</span>])</span></code></pre></div>
 <pre><code>## 1.0986122886681098</code></pre>
-<div class="sourceCode" id="cb543"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb543-1"><a href="налагоджуємо-код.html#cb543-1" aria-hidden="true" tabindex="-1"></a><span class="co"># друга ітерація</span></span>
-<span id="cb543-2"><a href="налагоджуємо-код.html#cb543-2" aria-hidden="true" tabindex="-1"></a>log(temperature[<span class="dv">1</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb542"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb542-1"><a href="налагоджуємо-код.html#cb542-1" aria-hidden="true" tabindex="-1"></a><span class="co"># друга ітерація</span></span>
+<span id="cb542-2"><a href="налагоджуємо-код.html#cb542-2" aria-hidden="true" tabindex="-1"></a>log(temperature[<span class="dv">1</span>])</span></code></pre></div>
 <pre><code>## math domain error</code></pre>
-<div class="sourceCode" id="cb545"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb545-1"><a href="налагоджуємо-код.html#cb545-1" aria-hidden="true" tabindex="-1"></a><span class="co"># третя ітерація</span></span>
-<span id="cb545-2"><a href="налагоджуємо-код.html#cb545-2" aria-hidden="true" tabindex="-1"></a>log(temperature[<span class="dv">2</span>])</span></code></pre></div>
+<div class="sourceCode" id="cb544"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb544-1"><a href="налагоджуємо-код.html#cb544-1" aria-hidden="true" tabindex="-1"></a><span class="co"># третя ітерація</span></span>
+<span id="cb544-2"><a href="налагоджуємо-код.html#cb544-2" aria-hidden="true" tabindex="-1"></a>log(temperature[<span class="dv">2</span>])</span></code></pre></div>
 <pre><code>## math domain error</code></pre>
 <p>А далі ми можемо розділити на клітини та виявити, що помилку гереує саме друга ітерація <code>log(temperature[1])</code>, тому що ми не можемо брати логаріфм від від’ємного числа.</p>
 <p>Схожа історія трапляється з функціями. Але у випадку фунцкій ми будемо розгортати не на ітерації, а на виклик функції. Давайте подивимось на визначення та виклик функції унизу:</p>
-<div class="sourceCode" id="cb547"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb547-1"><a href="налагоджуємо-код.html#cb547-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_person(name, surname, age, city):</span>
-<span id="cb547-2"><a href="налагоджуємо-код.html#cb547-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Name: &quot;</span> <span class="op">+</span> name)</span>
-<span id="cb547-3"><a href="налагоджуємо-код.html#cb547-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Surname: &quot;</span> <span class="op">+</span> surname)</span>
-<span id="cb547-4"><a href="налагоджуємо-код.html#cb547-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Age: &quot;</span> <span class="op">+</span> age)</span>
-<span id="cb547-5"><a href="налагоджуємо-код.html#cb547-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;City: &quot;</span> <span class="op">+</span> city)</span>
-<span id="cb547-6"><a href="налагоджуємо-код.html#cb547-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb547-7"><a href="налагоджуємо-код.html#cb547-7" aria-hidden="true" tabindex="-1"></a>print_person(<span class="st">&quot;Boris&quot;</span>, <span class="st">&quot;Johnson&quot;</span>, <span class="dv">58</span>, <span class="st">&quot;London&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb546"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb546-1"><a href="налагоджуємо-код.html#cb546-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> print_person(name, surname, age, city):</span>
+<span id="cb546-2"><a href="налагоджуємо-код.html#cb546-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Name: &quot;</span> <span class="op">+</span> name)</span>
+<span id="cb546-3"><a href="налагоджуємо-код.html#cb546-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Surname: &quot;</span> <span class="op">+</span> surname)</span>
+<span id="cb546-4"><a href="налагоджуємо-код.html#cb546-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Age: &quot;</span> <span class="op">+</span> age)</span>
+<span id="cb546-5"><a href="налагоджуємо-код.html#cb546-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;City: &quot;</span> <span class="op">+</span> city)</span>
+<span id="cb546-6"><a href="налагоджуємо-код.html#cb546-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb546-7"><a href="налагоджуємо-код.html#cb546-7" aria-hidden="true" tabindex="-1"></a>print_person(<span class="st">&quot;Boris&quot;</span>, <span class="st">&quot;Johnson&quot;</span>, <span class="dv">58</span>, <span class="st">&quot;London&quot;</span>)</span></code></pre></div>
 <pre><code>## can only concatenate str (not &quot;int&quot;) to str</code></pre>
 <p>Ця функція друкує ім’я, прізвище та вік у гарному форматі. Проте ця функція повертає помилку. Код який ми написали зверху еквівалентний коду унизу. Ми створимо змінні з іменами параметрів фунцкії і присвоїмо їм значення аргументів, які ми використовували при виклику функції. Далі, ми просто скопіюємо тіло функції без змін.</p>
-<div class="sourceCode" id="cb549"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb549-1"><a href="налагоджуємо-код.html#cb549-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Boris&quot;</span></span>
-<span id="cb549-2"><a href="налагоджуємо-код.html#cb549-2" aria-hidden="true" tabindex="-1"></a>surname <span class="op">=</span> <span class="st">&quot;Johnson&quot;</span></span>
-<span id="cb549-3"><a href="налагоджуємо-код.html#cb549-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">58</span></span>
-<span id="cb549-4"><a href="налагоджуємо-код.html#cb549-4" aria-hidden="true" tabindex="-1"></a>city <span class="op">=</span> <span class="st">&quot;London&quot;</span></span>
-<span id="cb549-5"><a href="налагоджуємо-код.html#cb549-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb549-6"><a href="налагоджуємо-код.html#cb549-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Name: &quot;</span> <span class="op">+</span> name)</span></code></pre></div>
+<div class="sourceCode" id="cb548"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb548-1"><a href="налагоджуємо-код.html#cb548-1" aria-hidden="true" tabindex="-1"></a>name <span class="op">=</span> <span class="st">&quot;Boris&quot;</span></span>
+<span id="cb548-2"><a href="налагоджуємо-код.html#cb548-2" aria-hidden="true" tabindex="-1"></a>surname <span class="op">=</span> <span class="st">&quot;Johnson&quot;</span></span>
+<span id="cb548-3"><a href="налагоджуємо-код.html#cb548-3" aria-hidden="true" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">58</span></span>
+<span id="cb548-4"><a href="налагоджуємо-код.html#cb548-4" aria-hidden="true" tabindex="-1"></a>city <span class="op">=</span> <span class="st">&quot;London&quot;</span></span>
+<span id="cb548-5"><a href="налагоджуємо-код.html#cb548-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb548-6"><a href="налагоджуємо-код.html#cb548-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Name: &quot;</span> <span class="op">+</span> name)</span></code></pre></div>
 <pre><code>## Name: Boris</code></pre>
-<div class="sourceCode" id="cb551"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb551-1"><a href="налагоджуємо-код.html#cb551-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Surname: &quot;</span> <span class="op">+</span> surname)</span></code></pre></div>
+<div class="sourceCode" id="cb550"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb550-1"><a href="налагоджуємо-код.html#cb550-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Surname: &quot;</span> <span class="op">+</span> surname)</span></code></pre></div>
 <pre><code>## Surname: Johnson</code></pre>
-<div class="sourceCode" id="cb553"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb553-1"><a href="налагоджуємо-код.html#cb553-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Age: &quot;</span> <span class="op">+</span> age)</span></code></pre></div>
+<div class="sourceCode" id="cb552"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb552-1"><a href="налагоджуємо-код.html#cb552-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;Age: &quot;</span> <span class="op">+</span> age)</span></code></pre></div>
 <pre><code>## can only concatenate str (not &quot;int&quot;) to str</code></pre>
-<div class="sourceCode" id="cb555"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb555-1"><a href="налагоджуємо-код.html#cb555-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;City: &quot;</span> <span class="op">+</span> city)</span></code></pre></div>
+<div class="sourceCode" id="cb554"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb554-1"><a href="налагоджуємо-код.html#cb554-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&quot;City: &quot;</span> <span class="op">+</span> city)</span></code></pre></div>
 <pre><code>## City: London</code></pre>
 <p>Тепер ми можемо звузити пошук та спростити код і знайти який рядок коду генерує цю помилку.</p>
 </div>
@@ -557,25 +557,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">20.4</span> Використовуємо функцію <code>print()</code><a href="налагоджуємо-код.html#використовуємо-функцію-print" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Не завжди розгорнути цикл чи функцію – проста задача. Наприклад, якщо у нас більше десяти ітерацій, це може бути проблемою. Тоді ми можемо зробити хитрість – друкувати індкс на кожній ітерації. Таким чином, остній роздрукований індекс і буде індексом де трапляється проблема.</p>
 <p>Ми трохи модифікуємо праклад з логаріфмом, але ідея буде та сама – в певний момент елемент буде від’єдним числом, логаріфм від якого ми не можемо взяти. Різниця буде в тому, що елементів буде 100:</p>
-<div class="sourceCode" id="cb557"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb557-1"><a href="налагоджуємо-код.html#cb557-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
-<span id="cb557-2"><a href="налагоджуємо-код.html#cb557-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb557-3"><a href="налагоджуємо-код.html#cb557-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">101</span>))</span>
-<span id="cb557-4"><a href="налагоджуємо-код.html#cb557-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb557-5"><a href="налагоджуємо-код.html#cb557-5" aria-hidden="true" tabindex="-1"></a>temperature[<span class="dv">32</span>] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span> <span class="co"># тридцять третій елемент буде проблемним</span></span>
-<span id="cb557-6"><a href="налагоджуємо-код.html#cb557-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb557-7"><a href="налагоджуємо-код.html#cb557-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> temperature: </span>
-<span id="cb557-8"><a href="налагоджуємо-код.html#cb557-8" aria-hidden="true" tabindex="-1"></a>    log(x)</span></code></pre></div>
+<div class="sourceCode" id="cb556"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb556-1"><a href="налагоджуємо-код.html#cb556-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
+<span id="cb556-2"><a href="налагоджуємо-код.html#cb556-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb556-3"><a href="налагоджуємо-код.html#cb556-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">101</span>))</span>
+<span id="cb556-4"><a href="налагоджуємо-код.html#cb556-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb556-5"><a href="налагоджуємо-код.html#cb556-5" aria-hidden="true" tabindex="-1"></a>temperature[<span class="dv">32</span>] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span> <span class="co"># тридцять третій елемент буде проблемним</span></span>
+<span id="cb556-6"><a href="налагоджуємо-код.html#cb556-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb556-7"><a href="налагоджуємо-код.html#cb556-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> temperature: </span>
+<span id="cb556-8"><a href="налагоджуємо-код.html#cb556-8" aria-hidden="true" tabindex="-1"></a>    log(x)</span></code></pre></div>
 <pre><code>## math domain error</code></pre>
 <p>Для того щоб знайти проблему у коді, нам треба буде прописати прйнані 33 ітерації. А тепер ми скористаємось функцією <code>print()</code>:</p>
-<div class="sourceCode" id="cb559"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb559-1"><a href="налагоджуємо-код.html#cb559-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
-<span id="cb559-2"><a href="налагоджуємо-код.html#cb559-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb559-3"><a href="налагоджуємо-код.html#cb559-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">100</span>))</span>
-<span id="cb559-4"><a href="налагоджуємо-код.html#cb559-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb559-5"><a href="налагоджуємо-код.html#cb559-5" aria-hidden="true" tabindex="-1"></a>temperature[<span class="dv">32</span>] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span> <span class="co"># тридцять третій елемент буде проблемним</span></span>
-<span id="cb559-6"><a href="налагоджуємо-код.html#cb559-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb559-7"><a href="налагоджуємо-код.html#cb559-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, x <span class="kw">in</span> <span class="bu">enumerate</span>(temperature): </span>
-<span id="cb559-8"><a href="налагоджуємо-код.html#cb559-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb559-9"><a href="налагоджуємо-код.html#cb559-9" aria-hidden="true" tabindex="-1"></a>    log(x)</span></code></pre></div>
+<div class="sourceCode" id="cb558"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb558-1"><a href="налагоджуємо-код.html#cb558-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> math <span class="im">import</span> log</span>
+<span id="cb558-2"><a href="налагоджуємо-код.html#cb558-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb558-3"><a href="налагоджуємо-код.html#cb558-3" aria-hidden="true" tabindex="-1"></a>temperature <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">100</span>))</span>
+<span id="cb558-4"><a href="налагоджуємо-код.html#cb558-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb558-5"><a href="налагоджуємо-код.html#cb558-5" aria-hidden="true" tabindex="-1"></a>temperature[<span class="dv">32</span>] <span class="op">=</span> <span class="op">-</span><span class="dv">1</span> <span class="co"># тридцять третій елемент буде проблемним</span></span>
+<span id="cb558-6"><a href="налагоджуємо-код.html#cb558-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb558-7"><a href="налагоджуємо-код.html#cb558-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, x <span class="kw">in</span> <span class="bu">enumerate</span>(temperature): </span>
+<span id="cb558-8"><a href="налагоджуємо-код.html#cb558-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb558-9"><a href="налагоджуємо-код.html#cb558-9" aria-hidden="true" tabindex="-1"></a>    log(x)</span></code></pre></div>
 <pre><code>## math domain error</code></pre>
 <p>Останній індекс був 32, тому це саме те місце де треба шукати помилку.</p>
 <p>У цій главі ми показали тільки декілька технік. Ці техніки більш неформальні і використовують здоровий глузд ніж більш наукові підходи чи наворочені інструменти. Але для початкового програміста це повинно бути більш ніж достатнім.</p>
