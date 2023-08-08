@@ -23,6 +23,36 @@
 - Визначати тип даних скалярного об'єкта 
 - Перетворювати один тип скалярних даних на інший
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+#-------------------------------------------------------------------------------
+# Code below is for knit caching purposes
+
+library(reticulate)
+library(jsquiz)
+source("term.R")
+
+# set up all messages 
+set_button_label("Перевірити")
+set_placeholder("Пишіть тут...")
+set_success_messages(
+    c(
+        "Так тримати, чемпіон 🌟",
+        "Просто супер 🤩",
+        "Ти -- молодец 😎",
+        "Йой, бачу довідченого кодера 🤓",
+        "А ти точно не прцював в OpenAI до цього 🤖"
+    )
+)
+set_failure_messages(
+    c(
+        "Упс, ще трошки 😬",
+        "Це не зовсім те, що ми мали на увазі, але вже близько 🙊",
+        "Ти ще на один крок ближче до успіху, тільки не здавайся 🚀",
+        "Нічого, головне не здаватися 💪"
+    )
+)
+```
+
 ---
 
 У цій главі ми розберемося з простими <span class="highlight-container"><span class="highlight">типами даних<span class="tooltiptext">🇬🇧 data types</span></span></span>. Розглянемо ми тільки ті типи даних, які активно використовуються в науці про дані та машинному навчанні, а саме типи `int`, `float`, `bool` та `str`. Ми навчимося створювати об'єкти з такими типами даних, визначати типи даних об'єктів та змінювати типи з одного на інший.
@@ -200,7 +230,7 @@ int(some_letters)
 <summary>🤸 Вправи</summary>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "1. Вкажіть скаляр з типом даних <code>float</code>:",
     answers = c(
         "<code>2.37</code>" = TRUE,
@@ -213,7 +243,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "2. Вкажіть скаляр з типом даних <code>int</code>:",
     answers = c(
         "<code>25.0</code>" = FALSE,
@@ -226,7 +256,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "3. Які типи даних можуть містити скаляри?",
     answers = c(
         "Числові значення, текстові значення, бульові значення" = FALSE,
@@ -239,7 +269,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "4. Обʼєкти типу <code>bool</code> можуть приймати:",
     answers = c(
         "Одне з багатьох можливих значень" = FALSE,
@@ -258,7 +288,7 @@ between <- '<pre><code>1️⃣ my_age = "13"
 4️⃣ my_age = \'тринадцять\'
 </code></pre>'
 
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "5. Вкажіть рядок, у якому правильно створено текстову стрічку:",
     between = between,
     answers = c(
@@ -272,7 +302,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "6. Функція <code>type()</code> допомагає перевірити тип обʼєкта:",
     answers = c(
         "Так" = TRUE,
@@ -283,7 +313,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "7. Які функції перетворюють текст на число?",
     answers = c(
         "<code>float()</code>" = TRUE,
@@ -301,7 +331,7 @@ price_orange = \'29.99\'
 price_apple + price_orange
 </code></pre>'
 
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "8. Що поверне наступний код:",
     between = between,
     answers = c(
@@ -314,7 +344,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_arrange_quiz(
+generate_arrange_quiz(
     question = "9. Перетягніть символи коду у правильному порядку, щоб перевірити тип об'єкту <code>bar</code>:",
     elements = c(
         "<code>(</code>" = 2,

@@ -22,7 +22,7 @@
 - пояснити чому Python є найкращою мовою програмування для новачків
 - використовувати Python як калькулятор у Google Colaboratory
 
-```{r, setup, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
 #-------------------------------------------------------------------------------
 # Code below is for knit caching purposes
 

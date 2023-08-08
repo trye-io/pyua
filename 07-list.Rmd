@@ -26,6 +26,36 @@
 - знаходити максимальний та мінімальний елемент списку
 - сортувати та змінювати порядок елементів на зворотній
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+#-------------------------------------------------------------------------------
+# Code below is for knit caching purposes
+
+library(reticulate)
+library(jsquiz)
+source("term.R")
+
+# set up all messages 
+set_button_label("Перевірити")
+set_placeholder("Пишіть тут...")
+set_success_messages(
+    c(
+        "Так тримати, чемпіон 🌟",
+        "Просто супер 🤩",
+        "Ти -- молодец 😎",
+        "Йой, бачу довідченого кодера 🤓",
+        "А ти точно не прцював в OpenAI до цього 🤖"
+    )
+)
+set_failure_messages(
+    c(
+        "Упс, ще трошки 😬",
+        "Це не зовсім те, що ми мали на увазі, але вже близько 🙊",
+        "Ти ще на один крок ближче до успіху, тільки не здавайся 🚀",
+        "Нічого, головне не здаватися 💪"
+    )
+)
+```
+
 ---
 
 У цій главі, ми вивчимо чи не найважливіший ❗️ <span class="highlight-container"><span class="highlight">контейнер<span class="tooltiptext">🇬🇧 container</span></span></span> у Python -- <span class="highlight-container"><span class="highlight">список<span class="tooltiptext">🇬🇧 list</span></span></span> `list`. Під контейнерами або <span class="highlight-container"><span class="highlight">структурами даних<span class="tooltiptext">🇬🇧 data structures</span></span></span> ми будемо розуміти типи об'єктів, які дозволяють зберігати сукупність інших об'єктів. Спочатку ми подивимось 👀 на те, а навіщо нам взагалі структури даних. Потім ми розглянемо практичну частину -- як створювати та взаємодіяти зі списками та їх елементами.
@@ -358,7 +388,7 @@ star_lord.sort()
 <summary>🤸 Вправи</summary>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "1. Що може бути елементами списку?",
     answers = c(
         "Об'єкти <code>int</code>" = FALSE,
@@ -371,7 +401,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "2. Скільки елементів у списку <code>[4, 5, 10, 4, 1]</code>?",
     answers = c(
         "4" = FALSE,
@@ -384,7 +414,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "3. Яку функцію нам потрібно використати, щоб порахувати кількість елементів у списку?",
     answers = c(
         "<code>max()</code>" = FALSE,
@@ -397,7 +427,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "4. Який рядок коду створить список <code>duration</code>?",
     answers = c(
         "<code>duration = 31, 42, 12</code>" = FALSE,
@@ -411,7 +441,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "5. На який об'єкт буде вказувати змінна <code>x</code>, після виконання <code>x = [12]</code>?",
     answers = c(
         "На об'єкт типу <code>list</code>" = TRUE,
@@ -423,7 +453,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "6. Для чого ми можемо використати списки?",
     answers = c(
         "Для зберігання імен учнів в класі" = FALSE,
@@ -439,7 +469,7 @@ between <- '<pre><code>flowers = ["lily", "rose", "daisy", "tulip"]
 </code></pre>
 <div class="question">Як отримати назву квітки, яка знаходиться на другому місці у списку (тобто `"rose"`)?</div>'
 
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "7. Наступний рядок створить новий список:",
     between = between,
     answers = c(
@@ -453,7 +483,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "8. Чи можемо ми створити список з одним елементом?",
     answers = c(
         "Так!" = TRUE,
@@ -464,7 +494,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "9. Який індекс має перший елемент у списку?",
     answers = c(
         "<code>0</code>" = TRUE,
@@ -480,7 +510,7 @@ between <- '<pre><code>clothes = ["t-shirt", "pants", "tie", "suit", "dress"]
 clothes[5]
 </code></pre>'
 
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "10. Що поверне наступний код:",
     between = between,
     answers = c(

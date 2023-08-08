@@ -15,7 +15,7 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
 
-```{r, setup, echo=FALSE}
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
 library(reticulate)
 library(jsquiz)
 source("term.R")

@@ -22,6 +22,36 @@
 - додавати та видаляти елементи
 - отримувати об'єднання, перетин та різницю двох множин
 
+```{r, echo=FALSE, message=FALSE, warning=FALSE, error=TRUE}
+#-------------------------------------------------------------------------------
+# Code below is for knit caching purposes
+
+library(reticulate)
+library(jsquiz)
+source("term.R")
+
+# set up all messages 
+set_button_label("Перевірити")
+set_placeholder("Пишіть тут...")
+set_success_messages(
+    c(
+        "Так тримати, чемпіон 🌟",
+        "Просто супер 🤩",
+        "Ти -- молодец 😎",
+        "Йой, бачу довідченого кодера 🤓",
+        "А ти точно не прцював в OpenAI до цього 🤖"
+    )
+)
+set_failure_messages(
+    c(
+        "Упс, ще трошки 😬",
+        "Це не зовсім те, що ми мали на увазі, але вже близько 🙊",
+        "Ти ще на один крок ближче до успіху, тільки не здавайся 🚀",
+        "Нічого, головне не здаватися 💪"
+    )
+)
+```
+
 ---
 
 Множина `set` -- це <span class="highlight-container"><span class="highlight">неупорядкована<span class="tooltiptext">🇬🇧 unordered</span></span></span> сукупність унікальних об'єктів. Якщо простіше -- це як `list`, але **без індексів** та тільки з **унікальними** елементами. Ми також можемо представити собі множини `set` як словники `dict`, в яких є тільки ключі 🔑 без значень. Давайте трохи зануримось у тему множин.
@@ -157,7 +187,7 @@ hamburger.union(macchicken)
 <summary>🤸 Вправи</summary>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_options_quiz(
+generate_options_quiz(
     question = "1. Як створити множину?",
     answers = c(
         "<code>x = [1, 2, 3]</code>" = FALSE,
@@ -169,7 +199,7 @@ jsquiz::generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_arrange_quiz(
+generate_arrange_quiz(
     question = "2. Перетягніть символи коду у правильному порядку, щоб знайти перетин множин <code>A</code> та <code>B</code>:",
     elements = c(
         "<code>B</code>" = 3,
@@ -180,14 +210,14 @@ jsquiz::generate_arrange_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_short_quiz(
+generate_short_quiz(
     question = "3. Напищіть код, що додає елемет <code>12</code> до множини <code>grades</code>:",
     correct_answer = "grades.add(12)"
 )
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-jsquiz::generate_bucket_quiz(
+generate_bucket_quiz(
     question = "4. Перетягніть структури даних до правильної корзини:",
     elements = c(
         "<code>list</code>" = "Можна змінити",
