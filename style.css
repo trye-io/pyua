@@ -217,6 +217,13 @@ details[open] summary {
     margin-bottom: 0.5em;
 }
 
+.exercise-example {
+    background-color: #6db2d6;
+    border-radius: 15px;
+    padding: 0.5em 1em 0.5em 1em;
+    margin-bottom: 0.5em;
+}
+
 /*----------------------------------------------------------------------------*/
 /* Course map */
 
