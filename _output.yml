@@ -7,7 +7,7 @@ bookdown::gitbook:
       collapse: section
       scroll_highlight: true
       before: |
-        <li><a href="./">🐍 Python програмування</a></li>
+        <li><a href="./">🐍 Python Програмування</a></li>
       after: |
         <li><a href="https://trye.io" target="blank">Зробленно TRYE з ❤️ до України</a></li>
     edit: null
