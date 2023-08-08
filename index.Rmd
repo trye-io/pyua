@@ -155,47 +155,25 @@ knitr::write_bib(c(
 knitr::include_graphics("images/0-annotation-1.png")
 ```
 <div class = "course-map">
-  <div class = "pyua" id = "this_book">
-  <p>🐍</p>
-  <p>Python Програмування</p>
-  </div>
+  <div class = "pyua" id = "this_book"><p>🐍</p><p>Python Програмування</p></div>
   <div class = "courses">
   <div class = "column">
   <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-arrow.png" height="24"/>
-  <a href="https://trye.io">
-  <div class = "course">
-  <p>📈</p>
-  <p>Data Science</p>
-  </div>
-  </a>
+  <a href="https://trye.io"><div class = "course"><p>📈</p><p>Data Science</p></div></a>
   </div>
   <div class = "column">
   <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-arrow.png" height="24"/>
-  <a href="https://trye.io">
-  <div class = "course">
-  <p>🤖</p>
-  <p>Machine Learning</p>
-  </div>
-  <a>
+  <a href="https://trye.io"><div class = "course"><p>🤖</p><p>Machine Learning</p></div><a>
   </div>
   <div class = "column">
   <img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/0-arrow.png" height="24"/>
-  <a href="https://trye.io">
-  <div class = "course">
-  <p>🧠</p>
-  <p>Artificial Intelligence</p>
-  </div>
-  </a>
+  <a href="https://trye.io"><div class = "course"><p>🧠</p><p>Artificial Intelligence</p></div></a>
   </div>
   </div>
 </div>
 ```{r, echo=FALSE, out.width="100%"}
 knitr::include_graphics("images/0-annotation-2.png")
 ```
-
-<!-- <button id="btn"> -->
-<!--     Make it Fire -->
-<!-- </button> -->
 
 Це не означає, що ви повинні прочитату усю книгу перед початком курсів у TRYE. Як раз навпаки -- ця книга створенна як додаткові матеріали. Перед кожною лекцією 📈 Data Science, 🤖 Machine Learning та 🧠 Artificial Intelligence, ми будемо висилати номери глав, які необхідно знати для успішного проходження теми. Наприклад, коли ми будемо вивчати тему "Як зображення зберігаються на комп'ютері", вимогою є знання з NumPy (Глава \@ref(numpy)), посилання на яку ви отримаєте перед заняттям. 
 
