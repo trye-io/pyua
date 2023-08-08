@@ -7,7 +7,7 @@
   <button class="podcast">🎙️ Подкаст</button>
   <button class="notebook">📓 Записник</button>
   <button class="exercises" onclick="openDetailsById('programming_exercises');">🤸 Вправи</button>
-  <button class="cheat">📝 Шпора</button>
+  <button class="cheat" disabled>📝 Шпора</button>
 </div>
 
 **⏱️ Час на опанування теми:** 10 хвилин

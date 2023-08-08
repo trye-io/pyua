@@ -5,7 +5,7 @@
   <button class="podcast">🎙️ Подкаст</button>
   <button class="notebook" onClick="parent.open('https://colab.research.google.com/drive/1Ac3l7X8bdNEl8FkQBLIPgmlLHIzUKPRm?usp=sharing')">📓 Записник</button>
   <button class="exercises" onclick="openDetailsById('syntax_exercises');">🤸 Вправи</button>
-  <button class="cheat">📝 Шпора</button>
+  <button class="cheat" disabled>📝 Шпора</button>
 </div>
 
 **⏱️ Час на опанування теми:** 15 хвилин
