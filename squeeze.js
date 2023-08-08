@@ -1,3 +1,10 @@
+function addTooltip(button) {
+    var tooltip = document.createElement("span");
+    tooltip.className = "tooltip";
+    tooltip.textContent = "Ми зараз над цим працюємо 🤫";
+    button.appendChild(tooltip);
+}
+
 /* Listener to adjust header buttons' text when widnow is squeezed */
 window.addEventListener('DOMContentLoaded', function() {
 
@@ -18,6 +25,10 @@ window.addEventListener('DOMContentLoaded', function() {
             } else {
                 button.textContent = '🎥 Лекція';
             }
+            if (button.disabled) {
+                addTooltip(button);
+            }
+            
         }
 
         for (var i = 0; i < podcastButtons.length; i++) {
@@ -26,6 +37,9 @@ window.addEventListener('DOMContentLoaded', function() {
                 button.textContent = '🎙';
             } else {
                 button.textContent = '🎙️ Подкаст';
+            }
+            if (button.disabled) {
+                addTooltip(button);
             }
         }
 
@@ -36,6 +50,9 @@ window.addEventListener('DOMContentLoaded', function() {
             } else {
                 button.textContent = '📓 Записник';
             }
+            if (button.disabled) {
+                addTooltip(button);
+            }
         }
 
         for (var i = 0; i < exercisesButtons.length; i++) {
@@ -45,6 +62,9 @@ window.addEventListener('DOMContentLoaded', function() {
             } else {
                 button.textContent = '🤸 Вправи';
             }
+            if (button.disabled) {
+                addTooltip(button);
+            }
         }
 
         for (var i = 0; i < cheatButtons.length; i++) {
@@ -53,6 +73,9 @@ window.addEventListener('DOMContentLoaded', function() {
                 button.textContent = '📝';
             } else {
                 button.textContent = '📝 Шпора';
+            }
+            if (button.disabled) {
+                addTooltip(button);
             }
         }
 
