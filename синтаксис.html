@@ -29,7 +29,7 @@ Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-08-08" />
+<meta name="date" content="2023-08-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -485,7 +485,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="ставимо-пробіли" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> 🫙 Ставимо пробіли<a href="синтаксис.html#ставимо-пробіли" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Зазвичай, Python буде ігнорувати <span class="highlight-container"> <span class="highlight"> пробіли <span class="tooltiptext">🇬🇧 spaces</span> </span> </span> у коді. Наприклад, інструкція <code>x = 1</code> та <code>x=1</code> має одне і те саме значення для Python. Так само як і наступний виклик функції <code>sum(x)</code> та <code>sum (x)</code>: Python буде інтерпретувати їх однаково. Проте для нас це буде важливо, тому що це впливає на читабельність 🤓 коду, і про це ми поговоримо більш детально у нашому старому і доброму Додатку <a href="style.html#style">C</a>. Зараз ми тільки домовимось не ставити пробіл перед дужками у викликах функцій і додавати пробіли між опертором та операндами.</p>
+<p>Зазвичай, Python буде ігнорувати <span class="highlight-container"> <span class="highlight"> пробіли <span class="tooltiptext">🇬🇧 spaces</span> </span> </span> у коді. Наприклад, інструкція <code>x = 1</code> та <code>x=1</code> має одне і те саме значення для Python. Так само як і наступний виклик функції <code>sum(x)</code> та <code>sum (x)</code>: Python буде інтерпретувати їх однаково. Проте для нас це буде важливо, тому що це впливає на читабельність 🤓 коду, і про це ми поговоримо більш детально у нашому старому і доброму Додатку <a href="style.html#style">C</a>. Зараз ми тільки домовимось не ставити пробіл перед дужками у викликах функцій (пишемо <code>sum(x)</code> замість <code>sum (x)</code>) і додавати пробіли між опертором та операндами (пишемо <code>x = 1</code> замість <code>x=1</code>).</p>
 <p><img src="images/5-spaces.png" width="100%" /></p>
 </div>
 <div id="використовуємо-коментарі" class="section level2 hasAnchor" number="5.3">
@@ -541,6 +541,150 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 🤸 Вправи
 </summary>
+<div class="quiz">
+<div class="question">1. Для чого ми використали символ <code>#</code> в цьому випадку?</div>
+<pre><code>day = 10
+temp_c = 25
+# переводимо температуру у Цельсіях у температуру у Фаренгейтах
+temp_f = (temp_c * 9 / 5) + 32
+</code></pre>
+<label>
+<input type="radio" name="0a53e96f-5a55-4281-9e85-c7b9518dfd63" value="true">Надати коментар який пояснює наступну інструкцію 🎯</input>
+</label>
+<label>
+<input type="radio" name="0a53e96f-5a55-4281-9e85-c7b9518dfd63" value="false">Надати більш детальне пояснення інструкції комп'ютерові 💻</input>
+</label>
+<label>
+<input type="radio" name="0a53e96f-5a55-4281-9e85-c7b9518dfd63" value="false">Закоментувати інструкцію ✏️</input>
+</label>
+<label>
+<input type="radio" name="0a53e96f-5a55-4281-9e85-c7b9518dfd63" value="false">Передати аргументи до функції ⚙️</input>
+</label>
+<label>
+<input type="radio" name="0a53e96f-5a55-4281-9e85-c7b9518dfd63" value="false">Зазначити оператор множення ✖️</input>
+</label>
+<button class="check" id="a79188a8-6210-425f-a953-a9b581c4b866" onclick="checkOptions(&quot;a79188a8-6210-425f-a953-a9b581c4b866&quot;, &quot;0a53e96f-5a55-4281-9e85-c7b9518dfd63&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('0a53e96f-5a55-4281-9e85-c7b9518dfd63');
+    const submitButton = document.getElementById('a79188a8-6210-425f-a953-a9b581c4b866');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">2. Чи поверне помилку наступний код?</div>
+<pre><code>x = 29.99; round(x);</code></pre>
+<label>
+<input type="radio" name="8f6dfdff-c3fa-4fdb-9d3f-41865ba526d9" value="false">Ні, цей код ідеальний 🤩</input>
+</label>
+<label>
+<input type="radio" name="8f6dfdff-c3fa-4fdb-9d3f-41865ba526d9" value="false">Так, тому що ми розташували декілька інструкцій в одному рядку 😔</input>
+</label>
+<label>
+<input type="radio" name="8f6dfdff-c3fa-4fdb-9d3f-41865ba526d9" value="true">Ні, але розташовувати декілька інструкцій в одному рядку є ознакою поганого стилю 🧐</input>
+</label>
+<button class="check" id="9b9c6eb3-e203-4861-8469-874bc185d019" onclick="checkOptions(&quot;9b9c6eb3-e203-4861-8469-874bc185d019&quot;, &quot;8f6dfdff-c3fa-4fdb-9d3f-41865ba526d9&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('8f6dfdff-c3fa-4fdb-9d3f-41865ba526d9');
+    const submitButton = document.getElementById('9b9c6eb3-e203-4861-8469-874bc185d019');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">3. Перетягніть імена змінних до правильної корзини:</div>
+<div class="elements_pool" id="f38024ce-a26b-492b-a9a5-05488fe53f5b">
+<div class="element" name="92377ad9-68fb-40df-981b-a14eabe7ed82" id="9984c5ca-9037-43b7-9b56-0a29f23a6058" draggable="true" ondragstart="drag(event)"><code>dr_strange</code></div>
+<div class="element" name="92377ad9-68fb-40df-981b-a14eabe7ed82" id="233b2d3d-59ba-45ea-9a1e-ab6a91f31319" draggable="true" ondragstart="drag(event)"><code>first day</code></div>
+<div class="element" name="92377ad9-68fb-40df-981b-a14eabe7ed82" id="6d4860e6-2226-49dc-8d6e-61416c89f558" draggable="true" ondragstart="drag(event)"><code>2023year</code></div>
+<div class="element" name="92377ad9-68fb-40df-981b-a14eabe7ed82" id="83d5411b-d9ed-473f-935c-100b990f57cd" draggable="true" ondragstart="drag(event)"><code>API_KEY</code></div>
+<div class="element" name="92377ad9-68fb-40df-981b-a14eabe7ed82" id="c3cb9d46-10e1-4bd8-a058-35c906233880" draggable="true" ondragstart="drag(event)"><code>max</code></div>
+</div>
+<div class="buckets">
+<div class="column">
+<span>Допустимі імена</span>
+<div class="bucket" id="10e395e1-69a6-4381-9d27-e9919f574f35" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>Недопустимі імена</span>
+<div class="bucket" id="bf7434b6-4005-4ca2-9129-e4e123e029bb" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+</div>
+<button class="check" id="65ca8519-5ce8-402a-993e-d1d6323dc3c0" onclick="checkBucket(&quot;65ca8519-5ce8-402a-993e-d1d6323dc3c0&quot;, [&quot;10e395e1-69a6-4381-9d27-e9919f574f35&quot;, &quot;bf7434b6-4005-4ca2-9129-e4e123e029bb&quot;], [[&quot;9984c5ca-9037-43b7-9b56-0a29f23a6058&quot;, &quot;83d5411b-d9ed-473f-935c-100b990f57cd&quot;, &quot;c3cb9d46-10e1-4bd8-a058-35c906233880&quot;], [&quot;233b2d3d-59ba-45ea-9a1e-ab6a91f31319&quot;, &quot;6d4860e6-2226-49dc-8d6e-61416c89f558&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.getElementsByName('92377ad9-68fb-40df-981b-a14eabe7ed82');
+    const checkButton = document.getElementById('65ca8519-5ce8-402a-993e-d1d6323dc3c0');
+
+    elements.forEach(function(element) {
+        element.addEventListener('dragend', function() {
+
+            const pool = document.getElementById('f38024ce-a26b-492b-a9a5-05488fe53f5b');
+
+            if(pool.getElementsByClassName("element").length === 0) {
+                checkButton.disabled = false;
+            }
+        });
+    });
+});</script>
+<div class="quiz">
+<div class="question">4. Яке значення буде міститися у змінній <code>day</code>,  якщо ми виконаємо наступний код:</div>
+<pre><code>day = 10
+# day = 7
+day = 2
+# day = 4
+</code></pre>
+<label>
+<input type="radio" name="27748a05-bcdf-453a-8b3d-325848eeec2a" value="false"><code>10</code></input>
+</label>
+<label>
+<input type="radio" name="27748a05-bcdf-453a-8b3d-325848eeec2a" value="false"><code>7</code></input>
+</label>
+<label>
+<input type="radio" name="27748a05-bcdf-453a-8b3d-325848eeec2a" value="true"><code>2</code></input>
+</label>
+<label>
+<input type="radio" name="27748a05-bcdf-453a-8b3d-325848eeec2a" value="false"><code>4</code></input>
+</label>
+<button class="check" id="38a0dc05-19e5-4d4c-aae5-56ded7edfa79" onclick="checkOptions(&quot;38a0dc05-19e5-4d4c-aae5-56ded7edfa79&quot;, &quot;27748a05-bcdf-453a-8b3d-325848eeec2a&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('27748a05-bcdf-453a-8b3d-325848eeec2a');
+    const submitButton = document.getElementById('38a0dc05-19e5-4d4c-aae5-56ded7edfa79');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">5. Виберіть інструкції, в яких пробіли розставлені "як ми домовлялись":</div>
+<label>
+<input type="checkbox" name="2ee04b79-49fd-41e7-af90-a02588a406a4" value="false"><code>round (10)</code></input>
+</label>
+<label>
+<input type="checkbox" name="2ee04b79-49fd-41e7-af90-a02588a406a4" value="false"><code>answer=42</code></input>
+</label>
+<label>
+<input type="checkbox" name="2ee04b79-49fd-41e7-af90-a02588a406a4" value="true"><code>2 + 2</code></input>
+</label>
+<label>
+<input type="checkbox" name="2ee04b79-49fd-41e7-af90-a02588a406a4" value="false"><code>45*23+31/29</code></input>
+</label>
+<label>
+<input type="checkbox" name="2ee04b79-49fd-41e7-af90-a02588a406a4" value="true"><code>max(12, 3, 4)</code></input>
+</label>
+<button class="check" id="6f8474e8-e7b5-49f0-a2dc-01a9c44bba1d" onclick="checkOptions(&quot;6f8474e8-e7b5-49f0-a2dc-01a9c44bba1d&quot;, &quot;2ee04b79-49fd-41e7-af90-a02588a406a4&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+</div>
 </details>
 
 </div>

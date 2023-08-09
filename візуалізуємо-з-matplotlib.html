@@ -29,7 +29,7 @@ Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-08-08" />
+<meta name="date" content="2023-08-09" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -479,7 +479,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb503-3"><a href="візуалізуємо-з-matplotlib.html#cb503-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb503-4"><a href="візуалізуємо-з-matplotlib.html#cb503-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb503-5"><a href="візуалізуємо-з-matplotlib.html#cb503-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-330-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-335-1.png" width="672" /></p>
 <p>Змінні <code>x</code> та <code>y</code> не обов’язково повинні бути списками. Вони також можуть бути одновимирними масивами <code>ndarray</code> з пакунку NumPy, про які ми говорили у попередній главі. Попередній приклад, але з використанням NumPy масивів:</p>
 <div class="sourceCode" id="cb504"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb504-1"><a href="візуалізуємо-з-matplotlib.html#cb504-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># не забуваємо завантажувати пакунок</span></span>
 <span id="cb504-2"><a href="візуалізуємо-з-matplotlib.html#cb504-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -488,7 +488,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb504-5"><a href="візуалізуємо-з-matplotlib.html#cb504-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb504-6"><a href="візуалізуємо-з-matplotlib.html#cb504-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb504-7"><a href="візуалізуємо-з-matplotlib.html#cb504-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-331-3.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-336-3.png" width="672" /></p>
 <p>Це буде дуже корисно, якщо ми нам треба виконати якусь математичну операцію, ну наприклад взяти логарифм від кожного елемента з масиву <code>y</code>:</p>
 <div class="sourceCode" id="cb505"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb505-1"><a href="візуалізуємо-з-matplotlib.html#cb505-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">10</span>])</span>
 <span id="cb505-2"><a href="візуалізуємо-з-matplotlib.html#cb505-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
@@ -497,7 +497,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb505-5"><a href="візуалізуємо-з-matplotlib.html#cb505-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb505-6"><a href="візуалізуємо-з-matplotlib.html#cb505-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb505-7"><a href="візуалізуємо-з-matplotlib.html#cb505-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-332-5.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-337-5.png" width="672" /></p>
 <p>А ось більш конкретний приклад:</p>
 <ul>
 <li><code>x</code> – кількість лайків за останій пост в Інстаграмі українських кухарів (у тисячах)</li>
@@ -508,7 +508,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb506-3"><a href="візуалізуємо-з-matplotlib.html#cb506-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb506-4"><a href="візуалізуємо-з-matplotlib.html#cb506-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb506-5"><a href="візуалізуємо-з-matplotlib.html#cb506-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-333-7.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-338-7.png" width="672" /></p>
 </div>
 <div id="діаграма-лінії" class="section level2 hasAnchor" number="19.2">
 <h2><span class="header-section-number">19.2</span> Діаграма лінії<a href="візуалізуємо-з-matplotlib.html#діаграма-лінії" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -521,7 +521,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb507-3"><a href="візуалізуємо-з-matplotlib.html#cb507-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb507-4"><a href="візуалізуємо-з-matplotlib.html#cb507-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
 <span id="cb507-5"><a href="візуалізуємо-з-matplotlib.html#cb507-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-334-9.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-339-9.png" width="672" /></p>
 <p>Існує один трюк, який точно встане у нагоді. Іноді нам знадобиться побудувати графік якоїсь математчиної фунцкії, ну наприклад <code>np.cos()</code>, тобто фунцкії косинуса. Графік цієй фунцкії – крива. А ми вміємо будувати тільки прямі лінії :( Але ми зробимо невеличкий фокус – ми представимо цю криву як дуже багато прямих ліній. Таке представлення буде виглядати як крива і дасть нам змогу подивитись на загальну поведінку графіка.</p>
 <p>Наприклад, нам цікаво як фунцкія себе поводить, коли <code>x</code> між 0 так 7. Ми можемо згенерувати 700 значень <code>x</code> і потім порахувати значення <code>y</code> у цих точках:</p>
 <div class="sourceCode" id="cb508"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb508-1"><a href="візуалізуємо-з-matplotlib.html#cb508-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">7</span>, <span class="fl">0.01</span>)</span>
@@ -529,7 +529,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Тепер ми використаємо нашу <code>plt.plot()</code> щоб побудувати 449 маленьких ліній між цими точками, які будуть виглядати майже як крива:</p>
 <div class="sourceCode" id="cb509"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb509-1"><a href="візуалізуємо-з-matplotlib.html#cb509-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
 <span id="cb509-2"><a href="візуалізуємо-з-matplotlib.html#cb509-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-336-11.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-341-11.png" width="672" /></p>
 <p>Це може виглядати нудно, але в школі це дуже допомогало автору цієї книги, коли йому треба було швидко “прикинути” графік фунції.</p>
 </div>
 <div id="стовпчикова-діаграма" class="section level2 hasAnchor" number="19.3">
@@ -545,7 +545,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb510-4"><a href="візуалізуємо-з-matplotlib.html#cb510-4" aria-hidden="true" tabindex="-1"></a>plt.bar(x, y)</span></code></pre></div>
 <pre><code>## &lt;BarContainer object of 2 artists&gt;</code></pre>
 <div class="sourceCode" id="cb512"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb512-1"><a href="візуалізуємо-з-matplotlib.html#cb512-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-337-13.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-342-13.png" width="672" /></p>
 <p>Або ціна на бургери у McDonald’s у гривнях:</p>
 <div class="sourceCode" id="cb513"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb513-1"><a href="візуалізуємо-з-matplotlib.html#cb513-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="st">&quot;Big Mac&quot;</span>, <span class="st">&quot;Double Cheesburger&quot;</span>, <span class="st">&quot;Big Tasty&quot;</span>]</span>
 <span id="cb513-2"><a href="візуалізуємо-з-matplotlib.html#cb513-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="dv">101</span>, <span class="dv">89</span>, <span class="dv">169</span>]</span>
@@ -553,7 +553,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb513-4"><a href="візуалізуємо-з-matplotlib.html#cb513-4" aria-hidden="true" tabindex="-1"></a>plt.bar(x, y)</span></code></pre></div>
 <pre><code>## &lt;BarContainer object of 3 artists&gt;</code></pre>
 <div class="sourceCode" id="cb515"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb515-1"><a href="візуалізуємо-з-matplotlib.html#cb515-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-338-15.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-343-15.png" width="672" /></p>
 <hr />
 <hr />
 <details id="matplotlib_exercises">
