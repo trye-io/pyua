@@ -240,4 +240,109 @@ knitr::include_graphics("images/2-colab-3.png")
 <details id="python_exercises">
 <summary>🤸 Вправи</summary>
 
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- paste(
+    "1. Уявіть що вам треба розробити додаток для Apple IPhone.",
+    "Виберіть мови, які найкраще підкохдять для цієї задачі 📱:"
+)
+
+generate_options_quiz(
+    question = question,
+    answers = c(
+        "Python" = FALSE,
+        "IBM" = FALSE,
+        "Julia"  = FALSE,
+        "Objective-C" = TRUE,
+        "Swift" = TRUE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- 
+    "2. Перетягніть мови програмування у порядку швидкості (найшвидша - перша) 🏎️:"
+
+generate_arrange_quiz(
+    question = question,
+    elements = c(
+        "Python" = 3,
+        "C++" = 1,
+        "C#" = 2
+    )
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "3. Для чого ми можемо використати Python ⚙️:",
+    answers = c(
+        "Для розробки вбудованого програмного забезпечення" = TRUE,
+        "Для веброзробки (фронтенду)" = FALSE,
+        "Розробка в галузі науки про дані, машинного навчання та штучного інтелекту" = TRUE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "4. Що таке Kaggle 🎳?",
+    answers = c(
+        "Бібліотека Python" = FALSE,
+        "Платформа змагань з машинного навчання" = TRUE,
+        "Python у вебпереглядачі" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_bucket_quiz(
+    question = "5. Перетягніть переваги до відповідної мови програмування 💪:",
+    elements = c(
+        "Швидкість" = "Python",
+        "Розповсюдженість" = "Python"
+    ),
+    buckets = c("Python", "R")
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "6. Чому Python -- one love 😍:",
+    answers = c(
+        "Швидкий" = FALSE,
+        "Легкий у навчанні" = TRUE,
+        "Універсальний" = TRUE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <-
+    "7. Перетягніть ігри відповідно до мови на якій вони розроблялись 👾:"
+
+generate_bucket_quiz(
+    question = question,
+    elements = c(
+        "Grand Theft Auto" = "C++",
+        "Minecraft" = "Java",
+        "Fortnite" = "C++",
+        "Genshin Impact" = "C#",
+        "World of Warcraft" = "C++",
+        "Call of Duty" = "C#"
+    ),
+    buckets = c("C++", "C#", "Java")
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <-
+    "Яка мова програмування є найпопулярнішою відповідно до TIOBE у 2023 році?"
+
+generate_short_quiz(question = question, correct_answer = "Python")
+```
+
 </details>
