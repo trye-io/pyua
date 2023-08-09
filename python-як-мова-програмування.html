@@ -620,6 +620,187 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 🤸 Вправи
 </summary>
+<div class="quiz">
+<div class="question">1. Уявіть що вам треба розробити додаток для Apple IPhone. Виберіть мови, які найкраще підкохдять для цієї задачі 📱:</div>
+<label>
+<input type="checkbox" name="9c9b94ad-c65b-4753-84d7-fbff3e45538d" value="false">Python</input>
+</label>
+<label>
+<input type="checkbox" name="9c9b94ad-c65b-4753-84d7-fbff3e45538d" value="false">IBM</input>
+</label>
+<label>
+<input type="checkbox" name="9c9b94ad-c65b-4753-84d7-fbff3e45538d" value="false">Julia</input>
+</label>
+<label>
+<input type="checkbox" name="9c9b94ad-c65b-4753-84d7-fbff3e45538d" value="true">Objective-C</input>
+</label>
+<label>
+<input type="checkbox" name="9c9b94ad-c65b-4753-84d7-fbff3e45538d" value="true">Swift</input>
+</label>
+<button class="check" id="817211ca-9312-4912-89a7-2a78d257d170" onclick="checkOptions(&quot;817211ca-9312-4912-89a7-2a78d257d170&quot;, &quot;9c9b94ad-c65b-4753-84d7-fbff3e45538d&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">2. Перетягніть мови програмування у порядку швидкості (найшвидша - перша) 🏎️:</div>
+<div class="answer_pool" id="d6d98f00-dc54-464e-b987-a43399f94123" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="elements_pool" id="62e324a2-b5e9-4d11-91dc-d9856c40cc6c">
+<div class="element" name="9effc25b-e2ce-45d2-89f0-3f7acac3b1cc" id="cfa66dce-55b7-4685-bc35-1e28dccca7a6" draggable="true" ondragstart="drag(event)">Python</div>
+<div class="element" name="9effc25b-e2ce-45d2-89f0-3f7acac3b1cc" id="2e6740a9-a288-4360-bcbe-0fc75eb0f425" draggable="true" ondragstart="drag(event)">C++</div>
+<div class="element" name="9effc25b-e2ce-45d2-89f0-3f7acac3b1cc" id="2cf6219e-6c68-4663-ae3c-a6f5a16c0efb" draggable="true" ondragstart="drag(event)">C#</div>
+</div>
+<button class="check" id="109ec591-f35b-4d99-b9b3-1dab22047f52" onclick="checkArrange(&quot;109ec591-f35b-4d99-b9b3-1dab22047f52&quot;, &quot;d6d98f00-dc54-464e-b987-a43399f94123&quot;, [&quot;2e6740a9-a288-4360-bcbe-0fc75eb0f425&quot;, &quot;2cf6219e-6c68-4663-ae3c-a6f5a16c0efb&quot;, &quot;cfa66dce-55b7-4685-bc35-1e28dccca7a6&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.getElementsByName('9effc25b-e2ce-45d2-89f0-3f7acac3b1cc');
+    const checkButton = document.getElementById('109ec591-f35b-4d99-b9b3-1dab22047f52');
+
+    elements.forEach(function(element) {
+        element.addEventListener('dragend', function() {
+
+            const pool = document.getElementById('62e324a2-b5e9-4d11-91dc-d9856c40cc6c');
+
+            if(pool.getElementsByClassName("element").length === 0) {
+                checkButton.disabled = false;
+            }
+        });
+    });
+});</script>
+<div class="quiz">
+<div class="question">3. Для чого ми можемо використати Python ⚙️:</div>
+<label>
+<input type="checkbox" name="ddb55184-5f9f-403e-9d8b-447c6f99c235" value="true">Для розробки вбудованого програмного забезпечення</input>
+</label>
+<label>
+<input type="checkbox" name="ddb55184-5f9f-403e-9d8b-447c6f99c235" value="false">Для веброзробки (фронтенду)</input>
+</label>
+<label>
+<input type="checkbox" name="ddb55184-5f9f-403e-9d8b-447c6f99c235" value="true">Розробка в галузі науки про дані, машинного навчання та штучного інтелекту</input>
+</label>
+<button class="check" id="c95c5568-35d4-428d-bb38-66207a24abe8" onclick="checkOptions(&quot;c95c5568-35d4-428d-bb38-66207a24abe8&quot;, &quot;ddb55184-5f9f-403e-9d8b-447c6f99c235&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">4. Що таке Kaggle 🎳?</div>
+<label>
+<input type="radio" name="295dc4aa-0b0b-40d9-96ad-3d88b572b0e5" value="false">Бібліотека Python</input>
+</label>
+<label>
+<input type="radio" name="295dc4aa-0b0b-40d9-96ad-3d88b572b0e5" value="true">Платформа змагань з машинного навчання</input>
+</label>
+<label>
+<input type="radio" name="295dc4aa-0b0b-40d9-96ad-3d88b572b0e5" value="false">Python у вебпереглядачі</input>
+</label>
+<button class="check" id="8d26e667-5025-4c91-89a6-669ef2920e25" onclick="checkOptions(&quot;8d26e667-5025-4c91-89a6-669ef2920e25&quot;, &quot;295dc4aa-0b0b-40d9-96ad-3d88b572b0e5&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('295dc4aa-0b0b-40d9-96ad-3d88b572b0e5');
+    const submitButton = document.getElementById('8d26e667-5025-4c91-89a6-669ef2920e25');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">5. Перетягніть переваги до відповідної мови програмування 💪:</div>
+<div class="elements_pool" id="5a963caf-daa2-4457-af6a-3c882d995d5d">
+<div class="element" name="448f3887-366b-4b20-b18b-6e6c23894dd9" id="44601e2d-e3f7-4002-9bb1-34678e02b7fd" draggable="true" ondragstart="drag(event)">Швидкість</div>
+<div class="element" name="448f3887-366b-4b20-b18b-6e6c23894dd9" id="99d16e62-dc1f-4f5b-bf8a-8ddb7b1ec923" draggable="true" ondragstart="drag(event)">Розповсюдженість</div>
+</div>
+<div class="buckets">
+<div class="column">
+<span>Python</span>
+<div class="bucket" id="aa0a0eb8-7650-4c2b-aa1a-99ecfb2d6cef" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>R</span>
+<div class="bucket" id="4cab3179-bdba-44c5-a4ab-9b213011fc0b" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+</div>
+<button class="check" id="1701fcfb-fbe8-4016-a536-1ad341dd5d78" onclick="checkBucket(&quot;1701fcfb-fbe8-4016-a536-1ad341dd5d78&quot;, [&quot;aa0a0eb8-7650-4c2b-aa1a-99ecfb2d6cef&quot;, &quot;4cab3179-bdba-44c5-a4ab-9b213011fc0b&quot;], [[&quot;44601e2d-e3f7-4002-9bb1-34678e02b7fd&quot;, &quot;99d16e62-dc1f-4f5b-bf8a-8ddb7b1ec923&quot;], [&quot;&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.getElementsByName('448f3887-366b-4b20-b18b-6e6c23894dd9');
+    const checkButton = document.getElementById('1701fcfb-fbe8-4016-a536-1ad341dd5d78');
+
+    elements.forEach(function(element) {
+        element.addEventListener('dragend', function() {
+
+            const pool = document.getElementById('5a963caf-daa2-4457-af6a-3c882d995d5d');
+
+            if(pool.getElementsByClassName("element").length === 0) {
+                checkButton.disabled = false;
+            }
+        });
+    });
+});</script>
+<div class="quiz">
+<div class="question">6. Чому Python -- one love 😍:</div>
+<label>
+<input type="checkbox" name="7d272ae2-f29f-44b0-8c51-4aa85dcb0f93" value="false">Швидкий</input>
+</label>
+<label>
+<input type="checkbox" name="7d272ae2-f29f-44b0-8c51-4aa85dcb0f93" value="true">Легкий у навчанні</input>
+</label>
+<label>
+<input type="checkbox" name="7d272ae2-f29f-44b0-8c51-4aa85dcb0f93" value="true">Універсальний</input>
+</label>
+<button class="check" id="781b1618-f9e0-45e2-99a7-37a1e382ce0e" onclick="checkOptions(&quot;781b1618-f9e0-45e2-99a7-37a1e382ce0e&quot;, &quot;7d272ae2-f29f-44b0-8c51-4aa85dcb0f93&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+</div>
+<div class="quiz">
+<div class="question">7. Перетягніть ігри відповідно до мови на якій вони розроблялись 👾:</div>
+<div class="elements_pool" id="4fae18be-09a6-4f04-aa22-a428b1ab0a63">
+<div class="element" name="ecd95a49-cb61-40bd-819e-787deba386c5" id="580a7d2d-f533-4616-9457-bee5f13f301f" draggable="true" ondragstart="drag(event)">Grand Theft Auto</div>
+<div class="element" name="ecd95a49-cb61-40bd-819e-787deba386c5" id="c75b97aa-0107-4570-a6ff-7b745b6ced09" draggable="true" ondragstart="drag(event)">Minecraft</div>
+<div class="element" name="ecd95a49-cb61-40bd-819e-787deba386c5" id="ae06081e-5134-43a1-93f7-eb33ddb214fd" draggable="true" ondragstart="drag(event)">Fortnite</div>
+<div class="element" name="ecd95a49-cb61-40bd-819e-787deba386c5" id="51311ebb-7072-440e-b02a-8f58d4b7f354" draggable="true" ondragstart="drag(event)">Genshin Impact</div>
+<div class="element" name="ecd95a49-cb61-40bd-819e-787deba386c5" id="8a81041b-5e92-4c7f-bd88-12d7862c8ca4" draggable="true" ondragstart="drag(event)">World of Warcraft</div>
+<div class="element" name="ecd95a49-cb61-40bd-819e-787deba386c5" id="b304e706-2861-4e1b-b48b-d36c87177d2a" draggable="true" ondragstart="drag(event)">Call of Duty</div>
+</div>
+<div class="buckets">
+<div class="column">
+<span>C++</span>
+<div class="bucket" id="c428652e-d7a0-4ac3-9ced-eb5d1b72f616" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>C#</span>
+<div class="bucket" id="72530598-a489-4d1c-beff-cadb60668b5d" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>Java</span>
+<div class="bucket" id="2d18e76b-5b2d-462a-8bfa-a2ae4624e92f" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+</div>
+<button class="check" id="bb443453-b3bf-4231-b15d-02c69860883d" onclick="checkBucket(&quot;bb443453-b3bf-4231-b15d-02c69860883d&quot;, [&quot;c428652e-d7a0-4ac3-9ced-eb5d1b72f616&quot;, &quot;72530598-a489-4d1c-beff-cadb60668b5d&quot;, &quot;2d18e76b-5b2d-462a-8bfa-a2ae4624e92f&quot;], [[&quot;580a7d2d-f533-4616-9457-bee5f13f301f&quot;, &quot;ae06081e-5134-43a1-93f7-eb33ddb214fd&quot;, &quot;8a81041b-5e92-4c7f-bd88-12d7862c8ca4&quot;], [&quot;51311ebb-7072-440e-b02a-8f58d4b7f354&quot;, &quot;b304e706-2861-4e1b-b48b-d36c87177d2a&quot;], [&quot;c75b97aa-0107-4570-a6ff-7b745b6ced09&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.getElementsByName('ecd95a49-cb61-40bd-819e-787deba386c5');
+    const checkButton = document.getElementById('bb443453-b3bf-4231-b15d-02c69860883d');
+
+    elements.forEach(function(element) {
+        element.addEventListener('dragend', function() {
+
+            const pool = document.getElementById('4fae18be-09a6-4f04-aa22-a428b1ab0a63');
+
+            if(pool.getElementsByClassName("element").length === 0) {
+                checkButton.disabled = false;
+            }
+        });
+    });
+});</script>
+<div class="quiz">
+<div class="question">Яка мова програмування є найпопулярнішою відповідно до TIOBE у 2023 році?</div>
+<input id="8f3bc62c-6497-4496-a1ee-63bf7f1a1102" type="text" placeholder="Пишіть тут..."/>
+<button class="check" id="9c757298-477f-499b-963e-4083559e72b1" disabled="disabled" onclick="checkShort(&quot;9c757298-477f-499b-963e-4083559e72b1&quot;, &quot;8f3bc62c-6497-4496-a1ee-63bf7f1a1102&quot;, &quot;Python&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const inputElement = document.getElementById("8f3bc62c-6497-4496-a1ee-63bf7f1a1102");
+    const buttonElement = document.getElementById("9c757298-477f-499b-963e-4083559e72b1");
+
+    inputElement.addEventListener("input", function () {
+        const inputValue = inputElement.value.trim();
+        buttonElement.disabled = inputValue === "";
+    });
+});</script>
 </details>
 
 </div>
