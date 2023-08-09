@@ -216,7 +216,7 @@ knitr::include_graphics("images/5-vars.png")
 <summary>🤸 Вправи</summary>
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-question <- "1. Для чого ми використали символ <code>#</code> в цьому випадку?"
+question <- "1. Для чого ми використали символ <code>#</code> в цьому випадку 🗣️?"
 between <- "<pre><code>day = 10
 temp_c = 25
 # переводимо температуру у Цельсіях у температуру у Фаренгейтах
@@ -238,7 +238,7 @@ generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-question <- "2. Чи поверне помилку наступний код?"
+question <- "2. Чи поверне помилку наступний код 😬?"
 between <- "<pre><code>x = 29.99; round(x);</code></pre>"
 
 generate_options_quiz(
@@ -254,8 +254,46 @@ generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
+question <- "3. Наступний код повинен рахувати об'єм циліндра, але повертає помилку 😭:"
+
+between <- '<pre><code>radius = 5
+height = 10
+area = pi * radius ^ 2
+volume = area * height
+print(volume)
+</code></pre>
+
+<div class="question">Щоб знайти помилку, ми будемо поступово коментувати інструкції починаючи з останьої. Наприклад, спробуємо спочатку закоментувати тільки останній рядок:</div>
+<pre><code>radius = 5
+height = 10
+area = pi * radius ^ 2
+volume = area * height
+# print(volume)
+</code></pre>
+<div class="question">Скопіюйте код у Colab записник і запустіть. Скільки останніх рядків нам треба закоментувати, щоб код НЕ повертав помилку 🧮?</div>
+'
+
+generate_options_quiz(
+    question = question, 
+    answers = c(
+        "Тільки останній рядок" = FALSE,
+        "Останні два рядки" = FALSE,
+        "Останні три рядки" = TRUE
+    ),
+    between = between,
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- '4. Додайте пробіли у код <code>tva=100</code> в правильних місцях ✍️:'
+
+generate_short_quiz(question = question,correct_answer = "tva = 100")
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
 generate_bucket_quiz(
-    question = "3. Перетягніть імена змінних до правильної корзини:",
+    question = "5. Перетягніть імена змінних до правильного кошику 🧺:",
     elements = c(
         "<code>dr_strange</code>" = "Допустимі імена",
         "<code>first day</code>" = "Недопустимі імена",
@@ -269,8 +307,8 @@ generate_bucket_quiz(
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
 question <- paste(
-    "4. Яке значення буде міститися у змінній <code>day</code>, ",
-    "якщо ми виконаємо наступний код:"
+    "6. Яке значення буде міститися у змінній <code>day</code>, ",
+    "якщо ми виконаємо наступний код 🤔:"
 )
 
 between <- "<pre><code>day = 10
@@ -294,7 +332,7 @@ generate_options_quiz(
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
 question <-
-    '5. Виберіть інструкції, в яких пробіли розставлені "як ми домовлялись":'
+    '7. Виберіть інструкції, в яких пробіли розставлені "як ми домовлялись" 🤝:'
 
 generate_options_quiz(
     question = question, 
@@ -306,6 +344,34 @@ generate_options_quiz(
         "<code>max(12, 3, 4)</code>" = TRUE
     ),
     allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- paste(
+    '8. Що треба записати замість <code>_____</code>, щоб роздрукувати',
+    'значення також змінної <code>loki</code> 🦊:'
+)
+
+between <- "<pre><code>loki = 12
+thor = 9
+_____(loki)
+loki + thor
+</code></pre>
+<div class='question'>Хей, не забуваємо що ми завжди можемо скопіювати код у Colab записник і поексперементувати! 🤓</div>
+"
+
+generate_options_quiz(
+    question = question, 
+    between = between,
+    answers = c(
+        "<code>round</code>" = FALSE,
+        "<code>print</code>" = TRUE,
+        "<code>sum</code>" = FALSE,
+        "<code>show</code>" = FALSE,
+        "<code>display</code>" = FALSE
+    ),
+    allow_multiple_answers = FALSE
 )
 ```
 

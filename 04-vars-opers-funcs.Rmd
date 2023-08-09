@@ -302,6 +302,147 @@ knitr::include_graphics("images/4-attribute.png")
 <details id="vars_exercises">
 <summary>🤸 Вправи</summary>
 
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- "1. Перетягніть атрибути та методи до їх відповідних кошиків 🧺:"
+
+generate_bucket_quiz(
+    question = question,
+    elements = c(
+        "<code>.numerator</code>" = "Атрибути",
+        "<code>.conjugate()</code>" = "Методи",
+        "<code>.denominator</code>" = "Атрибути",
+        "<code>.bit_count()</code>" = "Методи"
+    ),
+    buckets = c("Атрибути", "Методи")
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- paste(
+    "2. Як називаються <code>oranges</code> та <code>34</code> у",
+    "виразі <code>34 / oranges</code> 🍊?"
+)
+
+generate_options_quiz(
+    question = question,
+    answers = c(
+        "Змінними" = FALSE,
+        "Операторами" = FALSE, 
+        "Операндами" = TRUE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- "3. Що поверне наступний код 🤓?"
+
+between <- "<pre><code>quarter = 0.25
+quarter.as_integer_ratio()
+</code></pre>"
+
+generate_options_quiz(
+    question = question, 
+    between = between,
+    answers = c(
+        "<code>(2, 8)</code>" = FALSE,
+        "<code>(1, 4)</code>" = TRUE,
+        "<code>1/4</code>" = FALSE,
+        "<code>True</code>" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_short_quiz(
+    question = "4. Запиши код, який поверне модуль числа <code>3.14</code> 🔪:",
+    correct_answer = "abs(3.14)"
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- '5. Чому наступний код не працює 🤔?'
+
+between <- "<pre><code>price_in_eur = 8
+price_in_eur * eur_to_uah
+eur_to_uah = 40.31
+</code></pre>
+"
+
+generate_options_quiz(
+    question = question, 
+    between = between,
+    answers = c(
+        "Ми використовуємо оператор <code>*</code> замість оператора <code>/</code>" = FALSE,
+        "Ми використовуємо змінну <code>eur_to_uah</code> до того, як її створити" = TRUE,
+        "Python не вміє вирішувати рівняння" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- paste(
+    "6. Враховуючи що функція <code>max()</code> повертає максимальне число",
+    "серед зазначенних, то фукнція <code>min()</code> 💬..."
+)
+
+generate_options_quiz(
+    question = question,
+    answers = c(
+        "...округлить числа!" = FALSE,
+        "...поверне мінімальне!" = TRUE,
+        "...поверне модуль числа!" = FALSE,
+        "...поверне числа з протилежним знаком!" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- paste(
+    "7. Перетягніть елементи коду, щоб у результаті отримати <code>4</code>:"
+)
+
+generate_arrange_quiz(
+    question = question,
+    elements = c(
+        "<code>20</code>" = 1,
+        "<code>1</code>" = 5,
+        "<code>-</code>" = 4,
+        "<code>/</code>" = 2,
+        "<code>4</code>" = 3
+    )
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- paste(
+    '8. Наступний код повинен підрахувати площу',
+    'круга 🟣 з радіусом <code>5</code>:'
+)
+
+between <- "<pre><code>______ = 5
+pi = 3.14
+pi * radius ^ 2
+</code></pre>
+<div class='question'>Що треба зазначити замість <code>______</code>, щоб код запрацював?</div>
+"
+
+generate_options_quiz(
+    question = question, 
+    between = between,
+    answers = c(
+        "<code>circle</code>" = FALSE,
+        "<code>radius</code>" = TRUE,
+        "<code>r</code>" = FALSE,
+        "<code>diameter</code>" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
 </details>
 
 <!-- Подумай, може є сенс поміняти місцями оператори та функції, тоді вирішиться проблема з виразами -->
