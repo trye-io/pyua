@@ -464,52 +464,52 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>🎈 <strong>Увага</strong>: У Python як десятковий розділювач використовується точка <code>.</code> замість коми <code>,</code>. Тобто <code>5.5</code> ми інтерпретуємо як п’ять цілих п’ять десятих. У цій книзі ми також будемо користуватись точкою <code>.</code>, щоб не заплутатись.</p>
 </div>
 <p>Скажімо, у вашому смартфоні збережено дуже велика кількість фотографій 📸 і залишилось <code>5.5</code> <span class="highlight-container"> <span class="highlight"> гігабайт <span class="tooltiptext">🇬🇧 gigabytes, скороченно Gb</span> </span> </span> пам’яті з <code>64</code> гігабайт доступних. Спочатку, давайте з’ясуємо скільки вільного місця залишилось в <span class="highlight-container"> <span class="highlight"> мегабайтах <span class="tooltiptext">🇬🇧 megabytes, скорочено Mb</span> </span> </span>. Нагадаємо, що в одному гігабайті міститься <code>1000</code> мегабайт. Ми вже вміємо використовувати Python як калькулятор 🧮, то ж давайте порахуємо:</p>
-<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="vars.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fl">5.5</span> <span class="op">*</span> <span class="dv">1000</span></span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="vars.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fl">5.5</span> <span class="op">*</span> <span class="dv">1000</span></span></code></pre></div>
 <pre><code>## 5500.0</code></pre>
 <p>Тепер нам цікаво скільки фотографій ще ми можемо зробити. Одна фотографія на вашому смартфоні займає приблизно <code>3</code> мегабайти. Нам треба перевести <code>5.5</code> гігабайти у мегабайти, тобто <code>5.5 * 1000</code> і розділити на розмір фотографії, тобто <code>3</code> мегабайти:</p>
-<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="vars.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fl">5.5</span> <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="vars.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fl">5.5</span> <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
 <pre><code>## 1833.3333333333333</code></pre>
 <p>А тепер ми розрахуємо який відсоток вашої загальної пам’яті залишається доступним. Для цього ділимо кількість вільної пам’яті (<code>5.5</code> гігабайт) на <code>64</code> гігабайти та множимо на 100%:</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="vars.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fl">5.5</span> <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="vars.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fl">5.5</span> <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 8.59375</code></pre>
 <p>Через кілька днів ваша пам’ять зменшилась ⬇️ до <code>5</code> гігабайти та ми хочемо порахувати усе те, що ми рахували до цього: 1️⃣ приблизну кількість фотографій і 2️⃣ відсоток вільної пам’яті:</p>
-<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="vars.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="vars.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
 <pre><code>## 1666.6666666666667</code></pre>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="vars.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="vars.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span> <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 7.8125</code></pre>
 <p>Так само, через кілька днів, пам’ять зменшується ⬇️ до <code>4.5</code> і нам треба порахувати ще разочок:</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="vars.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fl">4.5</span> <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="vars.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fl">4.5</span> <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
 <pre><code>## 1500.0</code></pre>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="vars.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fl">5.5</span> <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="vars.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fl">5.5</span> <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 8.59375</code></pre>
 <p>Якщо ви уважно дивились 👀 на цифри, то звернули увагу на те, що відсоток вільної пам’яті збільшився ⬆️ з приблизно <code>7.8</code> до <code>8.6</code> відсотків. Як таке можливо? Якщо ми придивимось, ми побачимо що ми наплутали 🫤 та зазначили <code>5.5</code> замість <code>4.5</code>. Насправді ми зробили цю помилку не випадково. Ми використовували й переписували одне і те саме число (кількість вільної пам’яті у гігабайтів) двічі, і тому вірогідність зробити помилку хоча б в одному місці доволі велика.</p>
 <p>Саме цей факт і є мотивацією нового концепту який називається <span class="highlight-container"> <span class="highlight"> змінна <span class="tooltiptext">🇬🇧 variable</span> </span> </span>. Формально, <strong>змінна</strong> – це <strong>ім’я</strong>, яке вказує на певний <span class="highlight-container"> <span class="highlight"> об'єкт <span class="tooltiptext">🇬🇧 object</span> </span> </span> (тобто ділянку пам’яті комп’ютера).<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a> У цій главі під об’єктами ми будемо розуміти числові <span class="highlight-container"> <span class="highlight"> значення <span class="tooltiptext">🇬🇧 values</span> </span> </span>. Ми можемо створювати нові змінні, змінювати їх значення, але найважливіше – використовувати значення змінних у коді.</p>
 <p>Давайте створимо нову змінну з ім’ям <code>free_space</code> (з англійської – вільне місце) і присвоїмо цій змінній значення <code>4.5</code>:</p>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="vars.html#cb21-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">=</span> <span class="fl">4.5</span></span></code></pre></div>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="vars.html#cb20-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">=</span> <span class="fl">4.5</span></span></code></pre></div>
 <p>Синтаксис створення змінних простий і складається з трьох частин: <strong>ім’я</strong> змінної зліва, потім <strong>знак дорівнює</strong>, а все що залишається праворуч – це буде <strong>значення</strong>.</p>
 <p><img src="images/4-variable.png" width="100%" /></p>
 <div class="warning">
 <p>🎈 <strong>Увага</strong>: У школі, на уроках математики <code>x = 1</code> інтерпретувалось як рівняння <em>x дорівнює 1</em>. У програмуванні, цей запис має інше значення: ми присвоїли ім’я <code>x</code> до об’єкта <code>1</code> або іншими словами створили змінну яка вказує на <code>1</code>.</p>
 </div>
 <p>Спочатку, давайте подивимось що саме міститься в змінній <code>free_space</code>. Для цього ми можемо просто зазначити її ім’я в клітинці для коду та виконати її. Python роздрукує значення цієї змінної:</p>
-<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="vars.html#cb22-1" aria-hidden="true" tabindex="-1"></a>free_space</span></code></pre></div>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="vars.html#cb21-1" aria-hidden="true" tabindex="-1"></a>free_space</span></code></pre></div>
 <pre><code>## 4.5</code></pre>
 <p>Окей, їдемо далі. Коли змінна створена, ми можемо використовувати її в наших розрахунках 🧮. Давайте порахуємо кількість фотографій, які ми можемо зробити, коли в нас залишилось <code>4.5</code> вільної пам’яті. Тобто замість <code>4.5</code>, ми зазначимо нашу змінну <code>free_space</code>:</p>
-<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="vars.html#cb24-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="vars.html#cb23-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
 <pre><code>## 1500.0</code></pre>
 <p>Та кількість вільної пам’яті у відсотках:</p>
-<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="vars.html#cb26-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="vars.html#cb25-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 7.03125</code></pre>
 <p>А тепер ми змінимо значення змінної на <code>4</code> гігабайти і знову запустимо розрахунки. Тут важливо звернути увагу, що розрахунки використовуються нове значення <code>4</code>:</p>
-<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="vars.html#cb28-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">=</span> <span class="dv">4</span></span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="vars.html#cb27-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">=</span> <span class="dv">4</span></span></code></pre></div>
 <p>Давайте спочатку перевіримо, що <code>free_space</code> все ж таки містить значення <code>4</code>:</p>
-<div class="sourceCode" id="cb29"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="vars.html#cb29-1" aria-hidden="true" tabindex="-1"></a>free_space</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="vars.html#cb28-1" aria-hidden="true" tabindex="-1"></a>free_space</span></code></pre></div>
 <pre><code>## 4</code></pre>
 <p>Кількість фотографій, коли у нас <code>4</code> гігабайти вільної пам’яті буде:</p>
-<div class="sourceCode" id="cb31"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="vars.html#cb31-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
+<div class="sourceCode" id="cb30"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb30-1"><a href="vars.html#cb30-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">*</span> <span class="dv">1000</span> <span class="op">/</span> <span class="dv">3</span></span></code></pre></div>
 <pre><code>## 1333.3333333333333</code></pre>
 <p>А вільна пам’ять в процентах буде:</p>
-<div class="sourceCode" id="cb33"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="vars.html#cb33-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb32"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb32-1"><a href="vars.html#cb32-1" aria-hidden="true" tabindex="-1"></a>free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 6.25</code></pre>
 </div>
 <div id="рахуємо-за-допомогою-операторів" class="section level2 hasAnchor" number="4.2">
@@ -526,40 +526,40 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Йдемо далі. Послідовність з операндів та операторів називається <span class="highlight-container"> <span class="highlight"> виразом <span class="tooltiptext">🇬🇧 expression</span> </span> </span>. Наприклад, <code>2 + 2</code> є виразом, і, наприклад <code>free_space / 64 * 100</code> також є складним, але все одно виразом. З цього слідує, що операндами можуть бути не тільки змінні та значення, а й інші вирази.</p>
 <p><img src="images/4-operator.png" width="100%" /></p>
 <p>Ми вже бачили багато прикладів з операторами, коли робили наші підрахунки. Тут ми тільки глянемо на новий оператор піднесення до степеня:</p>
-<div class="sourceCode" id="cb35"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="vars.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb34-1"><a href="vars.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="dv">3</span> <span class="op">**</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## 9</code></pre>
 <p>Крім математичних операторів існують ще інші, як, наприклад, оператори порівняння, логічні оператори тощо. Ми ще до них повернемось у Главі <a href="ifelse.html#ifelse">11</a>.</p>
 <p>До речі, у виразах з операторами, дужки відіграють таку ж роль, як і в математиці – вони регулюють порядок виконання дій. Наприклад, вираз <code>2 + 3 * 4</code> буде мати зовсім інший результат ніж <code>(2 + 3) * 4</code>:</p>
-<div class="sourceCode" id="cb37"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb37-1"><a href="vars.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb36-1"><a href="vars.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
 <pre><code>## 14</code></pre>
 <p>Результат цього виразу не дорівнює значенню, яке поверне наступний вираз:</p>
-<div class="sourceCode" id="cb39"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb39-1"><a href="vars.html#cb39-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span>) <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb38-1"><a href="vars.html#cb38-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span>) <span class="op">*</span> <span class="dv">4</span></span></code></pre></div>
 <pre><code>## 20</code></pre>
 <p>Ми також можемо записати результат виразу до змінної та потім використати її:</p>
-<div class="sourceCode" id="cb41"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb41-1"><a href="vars.html#cb41-1" aria-hidden="true" tabindex="-1"></a>used_space <span class="op">=</span> <span class="dv">64</span> <span class="op">-</span> free_space</span>
-<span id="cb41-2"><a href="vars.html#cb41-2" aria-hidden="true" tabindex="-1"></a>used_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb40-1"><a href="vars.html#cb40-1" aria-hidden="true" tabindex="-1"></a>used_space <span class="op">=</span> <span class="dv">64</span> <span class="op">-</span> free_space</span>
+<span id="cb40-2"><a href="vars.html#cb40-2" aria-hidden="true" tabindex="-1"></a>used_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 93.75</code></pre>
 </div>
 <div id="викликаємо-функції" class="section level2 hasAnchor" number="4.3">
 <h2><span class="header-section-number">4.3</span> 🔡 Викликаємо функції<a href="vars.html#викликаємо-функції" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Повернемось до нашого прикладу з вільною пам’яттю смартфона. Кількість вільної пам’яті в <code>4</code> гігабайти відповідає <code>6.25%</code> від усієї доступної пам’яті телефона (дивись попередні розрахунки). Звичайно десяткова частина <code>0.25%</code> цього відсотка для нас не так суттєва і не відіграє важливу роль. Ми все одно округляємо в голові до <code>6%</code>, коли дивимось. Але ми не повинні цього робити в голові – у Python існує механізм, який дозволяє комп’ютерові округлити ⭕️ це число. Цей механізм – функція <code>round()</code>:</p>
-<div class="sourceCode" id="cb43"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="vars.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(<span class="fl">6.25</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb42-1"><a href="vars.html#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(<span class="fl">6.25</span>)</span></code></pre></div>
 <pre><code>## 6</code></pre>
 <p>Згодом ви побачите, що у програмуванні ми дуже часто виконуємо одні і ті самі завдання. Наприклад, завдання знайти максимальне значення серед чисел або знайти модуль числа виникають майже постійно. І щоб щоразу не писати код, який вирішує такі повторні завдання, ми можемо створити окрему невеличку програму, яку ми назвемо <span class="highlight-container"> <span class="highlight"> функцією <span class="tooltiptext">🇬🇧 function</span> </span> </span>. Зазвичай у функцій є ім’я за яким ми можемо її викликати – тобто виконати. Після імені функції треба написати дужки, між якими ми можемо зазначити <span class="highlight-container"> <span class="highlight"> аргументи <span class="tooltiptext">🇬🇧 arguments</span> </span> </span> (якщо це передбачає функція). Аргументи дозволяють передавати інформацію у функцію, щоб функція могла виконати ту чи іншу дію, чи обчислення. Іншими словами, аргументи використовують для того, щоб вплинути на виконання функції.</p>
 <p><img src="images/4-function.png" width="100%" /></p>
 <p>До речі, аргументами функції можуть бути не тільки значення, а й змінні, вирази та виклики інших функцій. Повертаючись до прикладу про вільну пам’ять, ми можемо використати вираз <code>free_space / 64 * 100</code> безпосередньо як аргумент до функції:</p>
-<div class="sourceCode" id="cb45"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb45-1"><a href="vars.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="vars.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">round</span>(free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span>)</span></code></pre></div>
 <pre><code>## 6</code></pre>
 <p>А ще ми можемо записати значення, яке поверне функція до змінної:</p>
-<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="vars.html#cb47-1" aria-hidden="true" tabindex="-1"></a>free_space_percentage <span class="op">=</span> <span class="bu">round</span>(free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="vars.html#cb46-1" aria-hidden="true" tabindex="-1"></a>free_space_percentage <span class="op">=</span> <span class="bu">round</span>(free_space <span class="op">/</span> <span class="dv">64</span> <span class="op">*</span> <span class="dv">100</span>)</span></code></pre></div>
 <p>І потім використати, наприклад для того, щоб порахувати кількість зайнятої пам’яті:</p>
-<div class="sourceCode" id="cb48"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="vars.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">-</span> free_space_percentage</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb47-1"><a href="vars.html#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="dv">100</span> <span class="op">-</span> free_space_percentage</span></code></pre></div>
 <pre><code>## 94</code></pre>
 <p>Ось приклад функції <code>max()</code>, яка повертає максимум серед зазначених чисел:</p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="vars.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(<span class="dv">3</span>, <span class="fl">3.5</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">20</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb49-1"><a href="vars.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="bu">max</span>(<span class="dv">3</span>, <span class="fl">3.5</span>, <span class="dv">10</span>, <span class="op">-</span><span class="dv">20</span>)</span></code></pre></div>
 <pre><code>## 10</code></pre>
 <p>А ось приклад функції <code>abs()</code>, яка знаходить <span class="highlight-container"> <span class="highlight"> модуль <span class="tooltiptext">🇬🇧 absolute value</span> </span> </span> числа:</p>
-<div class="sourceCode" id="cb52"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb52-1"><a href="vars.html#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="bu">abs</span>(<span class="op">-</span><span class="dv">10</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb51"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="vars.html#cb51-1" aria-hidden="true" tabindex="-1"></a><span class="bu">abs</span>(<span class="op">-</span><span class="dv">10</span>)</span></code></pre></div>
 <pre><code>## 10</code></pre>
 <p>Python охоплює 69 <span class="highlight-container"> <span class="highlight"> вбудованих <span class="tooltiptext">🇬🇧 built-in</span> </span> </span> функцій. Коли ми кажемо що функція вбудована – ми маємо на увазі, що ця функція є частиною Python. Інакше кажучи, ми можемо зразу ж нею користуватись. Активно користуватись ви будете скоріш всього не більш ніж 20 вбудованими функціями. Але на даному етапі це не повинно вас турбувати, ми вивчимо ці функції природним шляхом через практику, ніж будемо запам’ятовувати як вірші.</p>
 </div>
@@ -568,12 +568,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Окрім функцій, є ще кілька корисних речей, які полегшать нам життя. По-перше, майже кожен об’єкт у Pyhon має так звані <span class="highlight-container"> <span class="highlight"> методи <span class="tooltiptext">🇬🇧 methods</span> </span> </span>. Методи – це функції які прикріплені до об’єктів. Вони використовуються щоб, наприклад, змінити цей об’єкт чи отримати якусь інформацію про цей об’єкт.</p>
 <p>Давайте конкретніше! Спершу створимо змінну <code>half</code> (з англійської – половина), яка вказуватиме на число <code>0.5</code>. Якщо ми захочемо представити це число у вигляді дробі 🍰, ми можемо скористатися методом <code>.as_integer_ratio()</code>, який поверне пару – чисельник та знаменник. тобто <code>1</code> та <code>2</code>. Число <span class="math inline">\(0.5\)</span> у вигляді дробі має вигляд <span class="math inline">\(\frac{1}{2}\)</span>, де <span class="math inline">\(1\)</span> – це чисельник, а <span class="math inline">\(2\)</span> – це знаменник.</p>
 <p>Щоб використати цей метод, нам потрібно спочатку зазначити: ім’я нашої змінної <code>half</code>, крапку <code>.</code>, ім’я нашого методу <code>as_integer_ratio</code> і нарешті дужки <code>(</code> та <code>)</code>. Якщо метод передбачає використання аргументів, то їх треба зазначити між дужками.</p>
-<div class="sourceCode" id="cb54"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb54-1"><a href="vars.html#cb54-1" aria-hidden="true" tabindex="-1"></a>half <span class="op">=</span> <span class="fl">0.5</span></span>
-<span id="cb54-2"><a href="vars.html#cb54-2" aria-hidden="true" tabindex="-1"></a>half.as_integer_ratio()</span></code></pre></div>
+<div class="sourceCode" id="cb53"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="vars.html#cb53-1" aria-hidden="true" tabindex="-1"></a>half <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb53-2"><a href="vars.html#cb53-2" aria-hidden="true" tabindex="-1"></a>half.as_integer_ratio()</span></code></pre></div>
 <pre><code>## (1, 2)</code></pre>
 <p><img src="images/4-method.png" width="100%" /></p>
 <p>Наступна корисна штука називається <span class="highlight-container"> <span class="highlight"> атрибут <span class="tooltiptext">🇬🇧 attribute</span> </span> </span>. Атрибут теж прикріплений до певного об’єкта та використовується для того, щоб отримати якусь інформацію про об’єкт. Наприклад, щоб отримати дійсну частину від нашої змінної <code>half</code>, ми можемо використати атрибут <code>.real</code>. Ми не будемо занурюватись у математику <a href="https://uk.wikipedia.org/wiki/Комплексне_число">комплексних чисел</a> 😱, щоб зрозуміти що саме означає цей атрибут, нам тільки важливо зрозуміти як його отримати. А отримати значення атрибута дуже просто – треба спочатку прописати ім’я змінної <code>half</code>, крапку <code>.</code>, і нарешті ім’я атрибуту <code>real</code>:</p>
-<div class="sourceCode" id="cb56"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb56-1"><a href="vars.html#cb56-1" aria-hidden="true" tabindex="-1"></a>half.real</span></code></pre></div>
+<div class="sourceCode" id="cb55"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="vars.html#cb55-1" aria-hidden="true" tabindex="-1"></a>half.real</span></code></pre></div>
 <pre><code>## 0.5</code></pre>
 <p><img src="images/4-attribute.png" width="100%" /></p>
 <p>Ось і все, що нам потрібно зараз знати про методи та атрибути. До речі, у тексті цієї книги 📕 ми будемо позначати методи починаючи з крапки та закінчуючи дужками <code>.ім'я_метода()</code>, а атрибути – просто починаючи з крапки <code>.ім'я_атрибуту</code>.</p>
@@ -586,32 +586,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </summary>
 <div class="quiz">
 <div class="question">1. Перетягніть атрибути та методи до їх відповідних кошиків 🧺:</div>
-<div class="elements_pool" id="a104d2f8-7c01-412e-af1c-6a93ce95f4e5">
-<div class="element" name="87ba8681-d6dd-4c4b-98b2-53fcce08c93b" id="de372127-4ca0-4443-a3dd-031aec6d96fd" draggable="true" ondragstart="drag(event)"><code>.numerator</code></div>
-<div class="element" name="87ba8681-d6dd-4c4b-98b2-53fcce08c93b" id="0b48a1c9-57a0-4fb8-94ee-20b7a36d9e50" draggable="true" ondragstart="drag(event)"><code>.conjugate()</code></div>
-<div class="element" name="87ba8681-d6dd-4c4b-98b2-53fcce08c93b" id="7fe06316-8c77-4ec2-a7ea-df8c94299f15" draggable="true" ondragstart="drag(event)"><code>.denominator</code></div>
-<div class="element" name="87ba8681-d6dd-4c4b-98b2-53fcce08c93b" id="2d8103f2-3fef-4cf7-bac1-bf89f1f27998" draggable="true" ondragstart="drag(event)"><code>.bit_count()</code></div>
+<div class="elements_pool" id="e8a3a867-49ae-4944-8663-a865af5f3fcc">
+<div class="element" name="80204136-f434-4b2c-8f4b-b78b03696048" id="1ca269dd-1539-40d5-b333-d0666b88a05f" draggable="true" ondragstart="drag(event)"><code>.numerator</code></div>
+<div class="element" name="80204136-f434-4b2c-8f4b-b78b03696048" id="91031ab8-c295-47ba-b9e9-a925c4aa649d" draggable="true" ondragstart="drag(event)"><code>.conjugate()</code></div>
+<div class="element" name="80204136-f434-4b2c-8f4b-b78b03696048" id="0116fd28-705e-44f6-ac31-fa5f4e4eef4b" draggable="true" ondragstart="drag(event)"><code>.denominator</code></div>
+<div class="element" name="80204136-f434-4b2c-8f4b-b78b03696048" id="0fe33327-ff1f-423d-8979-5da35f3aef7e" draggable="true" ondragstart="drag(event)"><code>.bit_count()</code></div>
 </div>
 <div class="buckets">
 <div class="column">
 <span>Атрибути</span>
-<div class="bucket" id="87b83a25-f89e-44d5-8d1a-702a95d378aa" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="bucket" id="40010503-59a8-4fc6-b5ab-6aa747af968a" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div>
 <div class="column">
 <span>Методи</span>
-<div class="bucket" id="64c94581-f051-4204-9dbb-315891334235" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="bucket" id="549e752c-8a31-4c4d-8402-3f75298b7f26" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div>
 </div>
-<button class="check" id="721e6754-06b4-447d-b77d-5cc7f2e5b198" onclick="checkBucket(&quot;721e6754-06b4-447d-b77d-5cc7f2e5b198&quot;, [&quot;87b83a25-f89e-44d5-8d1a-702a95d378aa&quot;, &quot;64c94581-f051-4204-9dbb-315891334235&quot;], [[&quot;de372127-4ca0-4443-a3dd-031aec6d96fd&quot;, &quot;7fe06316-8c77-4ec2-a7ea-df8c94299f15&quot;], [&quot;0b48a1c9-57a0-4fb8-94ee-20b7a36d9e50&quot;, &quot;2d8103f2-3fef-4cf7-bac1-bf89f1f27998&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="366cf024-8681-4bd5-9756-1b67be9d8220" onclick="checkBucket(&quot;366cf024-8681-4bd5-9756-1b67be9d8220&quot;, [&quot;40010503-59a8-4fc6-b5ab-6aa747af968a&quot;, &quot;549e752c-8a31-4c4d-8402-3f75298b7f26&quot;], [[&quot;1ca269dd-1539-40d5-b333-d0666b88a05f&quot;, &quot;0116fd28-705e-44f6-ac31-fa5f4e4eef4b&quot;], [&quot;91031ab8-c295-47ba-b9e9-a925c4aa649d&quot;, &quot;0fe33327-ff1f-423d-8979-5da35f3aef7e&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const elements = document.getElementsByName('87ba8681-d6dd-4c4b-98b2-53fcce08c93b');
-    const checkButton = document.getElementById('721e6754-06b4-447d-b77d-5cc7f2e5b198');
+    const elements = document.getElementsByName('80204136-f434-4b2c-8f4b-b78b03696048');
+    const checkButton = document.getElementById('366cf024-8681-4bd5-9756-1b67be9d8220');
 
     elements.forEach(function(element) {
         element.addEventListener('dragend', function() {
 
-            const pool = document.getElementById('a104d2f8-7c01-412e-af1c-6a93ce95f4e5');
+            const pool = document.getElementById('e8a3a867-49ae-4944-8663-a865af5f3fcc');
 
             if(pool.getElementsByClassName("element").length === 0) {
                 checkButton.disabled = false;
@@ -622,19 +622,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">2. Як називаються <code>oranges</code> та <code>34</code> у виразі <code>34 / oranges</code> 🍊?</div>
 <label>
-<input type="radio" name="f914b9d2-86b8-4231-8cff-b73fd837fffb" value="false">Змінними</input>
+<input type="radio" name="64be9bb8-977e-4dff-b66a-e887edeff980" value="false">Змінними</input>
 </label>
 <label>
-<input type="radio" name="f914b9d2-86b8-4231-8cff-b73fd837fffb" value="false">Операторами</input>
+<input type="radio" name="64be9bb8-977e-4dff-b66a-e887edeff980" value="false">Операторами</input>
 </label>
 <label>
-<input type="radio" name="f914b9d2-86b8-4231-8cff-b73fd837fffb" value="true">Операндами</input>
+<input type="radio" name="64be9bb8-977e-4dff-b66a-e887edeff980" value="true">Операндами</input>
 </label>
-<button class="check" id="ab2bbf0f-e1ec-41ea-a80c-6db2291bb375" onclick="checkOptions(&quot;ab2bbf0f-e1ec-41ea-a80c-6db2291bb375&quot;, &quot;f914b9d2-86b8-4231-8cff-b73fd837fffb&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="356ae4f1-c542-4c0b-b08b-73a27b0a20af" onclick="checkOptions(&quot;356ae4f1-c542-4c0b-b08b-73a27b0a20af&quot;, &quot;64be9bb8-977e-4dff-b66a-e887edeff980&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('f914b9d2-86b8-4231-8cff-b73fd837fffb');
-    const submitButton = document.getElementById('ab2bbf0f-e1ec-41ea-a80c-6db2291bb375');
+    const radioButtons = document.getElementsByName('64be9bb8-977e-4dff-b66a-e887edeff980');
+    const submitButton = document.getElementById('356ae4f1-c542-4c0b-b08b-73a27b0a20af');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -648,22 +648,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 quarter.as_integer_ratio()
 </code></pre>
 <label>
-<input type="radio" name="12d82974-2e8d-40bc-9324-1c7116d9d1a0" value="false"><code>(2, 8)</code></input>
+<input type="radio" name="9c4aeaa4-d616-4ecc-8ef9-50cf0d2ea2fd" value="false"><code>(2, 8)</code></input>
 </label>
 <label>
-<input type="radio" name="12d82974-2e8d-40bc-9324-1c7116d9d1a0" value="true"><code>(1, 4)</code></input>
+<input type="radio" name="9c4aeaa4-d616-4ecc-8ef9-50cf0d2ea2fd" value="true"><code>(1, 4)</code></input>
 </label>
 <label>
-<input type="radio" name="12d82974-2e8d-40bc-9324-1c7116d9d1a0" value="false"><code>1/4</code></input>
+<input type="radio" name="9c4aeaa4-d616-4ecc-8ef9-50cf0d2ea2fd" value="false"><code>1/4</code></input>
 </label>
 <label>
-<input type="radio" name="12d82974-2e8d-40bc-9324-1c7116d9d1a0" value="false"><code>True</code></input>
+<input type="radio" name="9c4aeaa4-d616-4ecc-8ef9-50cf0d2ea2fd" value="false"><code>True</code></input>
 </label>
-<button class="check" id="4d9ff6d8-4ae1-47dd-85c4-312c2753ae09" onclick="checkOptions(&quot;4d9ff6d8-4ae1-47dd-85c4-312c2753ae09&quot;, &quot;12d82974-2e8d-40bc-9324-1c7116d9d1a0&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="7c0a1097-26d1-4c56-b63a-418b7c3603a2" onclick="checkOptions(&quot;7c0a1097-26d1-4c56-b63a-418b7c3603a2&quot;, &quot;9c4aeaa4-d616-4ecc-8ef9-50cf0d2ea2fd&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('12d82974-2e8d-40bc-9324-1c7116d9d1a0');
-    const submitButton = document.getElementById('4d9ff6d8-4ae1-47dd-85c4-312c2753ae09');
+    const radioButtons = document.getElementsByName('9c4aeaa4-d616-4ecc-8ef9-50cf0d2ea2fd');
+    const submitButton = document.getElementById('7c0a1097-26d1-4c56-b63a-418b7c3603a2');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -673,12 +673,12 @@ quarter.as_integer_ratio()
 });</script>
 <div class="quiz">
 <div class="question">4. Запиши код, який поверне модуль числа <code>3.14</code> 🔪:</div>
-<input id="15a19af7-72a2-469e-81a9-a7218f233371" type="text" placeholder="Пишіть тут..."/>
-<button class="check" id="521c2708-2fb4-4658-8d51-0744cd0d2114" disabled="disabled" onclick="checkShort(&quot;521c2708-2fb4-4658-8d51-0744cd0d2114&quot;, &quot;15a19af7-72a2-469e-81a9-a7218f233371&quot;, &quot;abs(3.14)&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<input id="4af13ff4-e0a7-4d0e-a08c-65b7d33427ff" type="text" placeholder="Пишіть тут..."/>
+<button class="check" id="d2c6e0aa-ff2a-4521-ab75-04a60234e829" disabled="disabled" onclick="checkShort(&quot;d2c6e0aa-ff2a-4521-ab75-04a60234e829&quot;, &quot;4af13ff4-e0a7-4d0e-a08c-65b7d33427ff&quot;, &quot;abs(3.14)&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const inputElement = document.getElementById("15a19af7-72a2-469e-81a9-a7218f233371");
-    const buttonElement = document.getElementById("521c2708-2fb4-4658-8d51-0744cd0d2114");
+    const inputElement = document.getElementById("4af13ff4-e0a7-4d0e-a08c-65b7d33427ff");
+    const buttonElement = document.getElementById("d2c6e0aa-ff2a-4521-ab75-04a60234e829");
 
     inputElement.addEventListener("input", function () {
         const inputValue = inputElement.value.trim();
@@ -693,19 +693,19 @@ eur_to_uah = 40.31
 </code></pre>
 
 <label>
-<input type="radio" name="597138b0-f523-435d-8334-43c1b4e4fad4" value="false">Ми використовуємо оператор <code>*</code> замість оператора <code>/</code></input>
+<input type="radio" name="31cefd39-5998-4890-9588-b34d0f0b0e04" value="false">Ми використовуємо оператор <code>*</code> замість оператора <code>/</code></input>
 </label>
 <label>
-<input type="radio" name="597138b0-f523-435d-8334-43c1b4e4fad4" value="true">Ми використовуємо змінну <code>eur_to_uah</code> до того, як її створити</input>
+<input type="radio" name="31cefd39-5998-4890-9588-b34d0f0b0e04" value="true">Ми використовуємо змінну <code>eur_to_uah</code> до того, як її створити</input>
 </label>
 <label>
-<input type="radio" name="597138b0-f523-435d-8334-43c1b4e4fad4" value="false">Python не вміє вирішувати рівняння</input>
+<input type="radio" name="31cefd39-5998-4890-9588-b34d0f0b0e04" value="false">Python не вміє вирішувати рівняння</input>
 </label>
-<button class="check" id="c6af2cdc-e23c-4c4e-bfc2-a79d64988247" onclick="checkOptions(&quot;c6af2cdc-e23c-4c4e-bfc2-a79d64988247&quot;, &quot;597138b0-f523-435d-8334-43c1b4e4fad4&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="9342c215-fa8f-444b-b28c-0432aa1313a9" onclick="checkOptions(&quot;9342c215-fa8f-444b-b28c-0432aa1313a9&quot;, &quot;31cefd39-5998-4890-9588-b34d0f0b0e04&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('597138b0-f523-435d-8334-43c1b4e4fad4');
-    const submitButton = document.getElementById('c6af2cdc-e23c-4c4e-bfc2-a79d64988247');
+    const radioButtons = document.getElementsByName('31cefd39-5998-4890-9588-b34d0f0b0e04');
+    const submitButton = document.getElementById('9342c215-fa8f-444b-b28c-0432aa1313a9');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -716,22 +716,22 @@ eur_to_uah = 40.31
 <div class="quiz">
 <div class="question">6. Враховуючи що функція <code>max()</code> повертає максимальне число серед зазначенних, то фукнція <code>min()</code> 💬...</div>
 <label>
-<input type="radio" name="b43981bd-a70e-49d0-aa09-204ff99454dc" value="false">...округлить числа!</input>
+<input type="radio" name="a1c7b2af-7bac-4f95-b6de-76fcefb1e378" value="false">...округлить числа!</input>
 </label>
 <label>
-<input type="radio" name="b43981bd-a70e-49d0-aa09-204ff99454dc" value="true">...поверне мінімальне!</input>
+<input type="radio" name="a1c7b2af-7bac-4f95-b6de-76fcefb1e378" value="true">...поверне мінімальне!</input>
 </label>
 <label>
-<input type="radio" name="b43981bd-a70e-49d0-aa09-204ff99454dc" value="false">...поверне модуль числа!</input>
+<input type="radio" name="a1c7b2af-7bac-4f95-b6de-76fcefb1e378" value="false">...поверне модуль числа!</input>
 </label>
 <label>
-<input type="radio" name="b43981bd-a70e-49d0-aa09-204ff99454dc" value="false">...поверне числа з протилежним знаком!</input>
+<input type="radio" name="a1c7b2af-7bac-4f95-b6de-76fcefb1e378" value="false">...поверне числа з протилежним знаком!</input>
 </label>
-<button class="check" id="100d38ae-342b-46fd-b851-7ab8fef38988" onclick="checkOptions(&quot;100d38ae-342b-46fd-b851-7ab8fef38988&quot;, &quot;b43981bd-a70e-49d0-aa09-204ff99454dc&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="dc2d9d6d-a41d-4ca4-89c0-9684211d85fb" onclick="checkOptions(&quot;dc2d9d6d-a41d-4ca4-89c0-9684211d85fb&quot;, &quot;a1c7b2af-7bac-4f95-b6de-76fcefb1e378&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('b43981bd-a70e-49d0-aa09-204ff99454dc');
-    const submitButton = document.getElementById('100d38ae-342b-46fd-b851-7ab8fef38988');
+    const radioButtons = document.getElementsByName('a1c7b2af-7bac-4f95-b6de-76fcefb1e378');
+    const submitButton = document.getElementById('dc2d9d6d-a41d-4ca4-89c0-9684211d85fb');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -741,24 +741,24 @@ eur_to_uah = 40.31
 });</script>
 <div class="quiz">
 <div class="question">7. Перетягніть елементи коду, щоб у результаті отримати <code>4</code>:</div>
-<div class="answer_pool" id="0a60bf35-95f8-4a96-91d3-0c4c85707f39" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="elements_pool" id="9e6b0154-6bbc-4134-add1-0ad2402be9d7">
-<div class="element" name="9bf35d97-b375-44f2-87b7-553e88234050" id="ffd0e6eb-40d0-463a-b1d9-6112af71bd08" draggable="true" ondragstart="drag(event)"><code>20</code></div>
-<div class="element" name="9bf35d97-b375-44f2-87b7-553e88234050" id="9ee19b51-ce1c-44e6-93f9-a01dfa9dc8e8" draggable="true" ondragstart="drag(event)"><code>1</code></div>
-<div class="element" name="9bf35d97-b375-44f2-87b7-553e88234050" id="533185d8-74e4-41bd-9991-844252cc94d7" draggable="true" ondragstart="drag(event)"><code>-</code></div>
-<div class="element" name="9bf35d97-b375-44f2-87b7-553e88234050" id="2f178044-a198-4df8-9f6d-17bb16d65266" draggable="true" ondragstart="drag(event)"><code>/</code></div>
-<div class="element" name="9bf35d97-b375-44f2-87b7-553e88234050" id="65394797-f809-4868-b091-216a0b0176db" draggable="true" ondragstart="drag(event)"><code>4</code></div>
+<div class="answer_pool" id="21999051-0838-4b04-b429-5b4d91a86deb" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="elements_pool" id="9d524df6-bd95-4310-a3a1-82d69b72a1ef">
+<div class="element" name="82fd3eda-9d75-41bf-a824-f2a174af2f27" id="60ebfd68-7f05-4501-9f28-1b20b45beb41" draggable="true" ondragstart="drag(event)"><code>20</code></div>
+<div class="element" name="82fd3eda-9d75-41bf-a824-f2a174af2f27" id="655b97d9-9e4f-4110-8421-5d9ae6edf0e2" draggable="true" ondragstart="drag(event)"><code>1</code></div>
+<div class="element" name="82fd3eda-9d75-41bf-a824-f2a174af2f27" id="da1170ee-db13-47d0-ae52-facfaf9eb6e4" draggable="true" ondragstart="drag(event)"><code>-</code></div>
+<div class="element" name="82fd3eda-9d75-41bf-a824-f2a174af2f27" id="096c4955-ba26-4aca-92e7-8fcbf06cc94c" draggable="true" ondragstart="drag(event)"><code>/</code></div>
+<div class="element" name="82fd3eda-9d75-41bf-a824-f2a174af2f27" id="81d1da36-1300-49d5-8795-c609b52c158b" draggable="true" ondragstart="drag(event)"><code>4</code></div>
 </div>
-<button class="check" id="69f2a2df-4b66-429f-a633-d515fddf12fa" onclick="checkArrange(&quot;69f2a2df-4b66-429f-a633-d515fddf12fa&quot;, &quot;0a60bf35-95f8-4a96-91d3-0c4c85707f39&quot;, [&quot;ffd0e6eb-40d0-463a-b1d9-6112af71bd08&quot;, &quot;2f178044-a198-4df8-9f6d-17bb16d65266&quot;, &quot;65394797-f809-4868-b091-216a0b0176db&quot;, &quot;533185d8-74e4-41bd-9991-844252cc94d7&quot;, &quot;9ee19b51-ce1c-44e6-93f9-a01dfa9dc8e8&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="8d435638-0971-4eae-b054-a6cffdab4e85" onclick="checkArrange(&quot;8d435638-0971-4eae-b054-a6cffdab4e85&quot;, &quot;21999051-0838-4b04-b429-5b4d91a86deb&quot;, [&quot;60ebfd68-7f05-4501-9f28-1b20b45beb41&quot;, &quot;096c4955-ba26-4aca-92e7-8fcbf06cc94c&quot;, &quot;81d1da36-1300-49d5-8795-c609b52c158b&quot;, &quot;da1170ee-db13-47d0-ae52-facfaf9eb6e4&quot;, &quot;655b97d9-9e4f-4110-8421-5d9ae6edf0e2&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const elements = document.getElementsByName('9bf35d97-b375-44f2-87b7-553e88234050');
-    const checkButton = document.getElementById('69f2a2df-4b66-429f-a633-d515fddf12fa');
+    const elements = document.getElementsByName('82fd3eda-9d75-41bf-a824-f2a174af2f27');
+    const checkButton = document.getElementById('8d435638-0971-4eae-b054-a6cffdab4e85');
 
     elements.forEach(function(element) {
         element.addEventListener('dragend', function() {
 
-            const pool = document.getElementById('9e6b0154-6bbc-4134-add1-0ad2402be9d7');
+            const pool = document.getElementById('9d524df6-bd95-4310-a3a1-82d69b72a1ef');
 
             if(pool.getElementsByClassName("element").length === 0) {
                 checkButton.disabled = false;
@@ -775,22 +775,22 @@ pi * radius ^ 2
 <div class='question'>Що треба зазначити замість <code>______</code>, щоб код запрацював?</div>
 
 <label>
-<input type="radio" name="66f32fbb-57c9-4fa5-aca6-6b843438910a" value="false"><code>circle</code></input>
+<input type="radio" name="f315df15-b3ff-459b-85c7-ed54259f0472" value="false"><code>circle</code></input>
 </label>
 <label>
-<input type="radio" name="66f32fbb-57c9-4fa5-aca6-6b843438910a" value="true"><code>radius</code></input>
+<input type="radio" name="f315df15-b3ff-459b-85c7-ed54259f0472" value="true"><code>radius</code></input>
 </label>
 <label>
-<input type="radio" name="66f32fbb-57c9-4fa5-aca6-6b843438910a" value="false"><code>r</code></input>
+<input type="radio" name="f315df15-b3ff-459b-85c7-ed54259f0472" value="false"><code>r</code></input>
 </label>
 <label>
-<input type="radio" name="66f32fbb-57c9-4fa5-aca6-6b843438910a" value="false"><code>diameter</code></input>
+<input type="radio" name="f315df15-b3ff-459b-85c7-ed54259f0472" value="false"><code>diameter</code></input>
 </label>
-<button class="check" id="4ed0ab2f-d788-46c0-825d-996547dfd80a" onclick="checkOptions(&quot;4ed0ab2f-d788-46c0-825d-996547dfd80a&quot;, &quot;66f32fbb-57c9-4fa5-aca6-6b843438910a&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="02231f28-5a98-4ce4-bddd-3220d1f661ea" onclick="checkOptions(&quot;02231f28-5a98-4ce4-bddd-3220d1f661ea&quot;, &quot;f315df15-b3ff-459b-85c7-ed54259f0472&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('66f32fbb-57c9-4fa5-aca6-6b843438910a');
-    const submitButton = document.getElementById('4ed0ab2f-d788-46c0-825d-996547dfd80a');
+    const radioButtons = document.getElementsByName('f315df15-b3ff-459b-85c7-ed54259f0472');
+    const submitButton = document.getElementById('02231f28-5a98-4ce4-bddd-3220d1f661ea');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
