@@ -176,7 +176,8 @@ question <- paste(
     "Іншими словами ви... 💬"
 )
 
-between <- ""
+between <-
+    '<img src = "https://raw.githubusercontent.com/trye-io/pyua/main/images/1-curiosity.png"/>'
 
 generate_options_quiz(
     question = question,
@@ -185,13 +186,9 @@ generate_options_quiz(
         "Написали алгоритм" = TRUE,
         "Розробили додаток" = FALSE
     ),
-    between = ,
+    between = between,
     allow_multiple_answers = FALSE
 )
-```
-
-```{r}
-knitr::include_graphics("images/1-curiosity.png")
 ```
 
 </details>
