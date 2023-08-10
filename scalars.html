@@ -463,6 +463,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li><code>str</code>: тип даних для текстових стрічок</li>
 </ul>
 <p>Існують ще більш екзотичні, такі як <code>complex</code>, <code>bytes</code>, <code>NoneType</code>, але вони зараз нам не знадобляться. До одного з них ми повернемось у наступних главах, коли вони будуть використовуватись. А зараз почнемо ми саме з того, що ми вже бачили – чисел, які представлені у Python типом даних <code>int</code> та <code>float</code>.</p>
+<p><img src="images/6-scalars.png" width="100%" /></p>
 </div>
 <div id="використовуємо-тип-int-для-цілих-чисел" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> 🔢 Використовуємо тип <code>int</code> для цілих чисел<a href="scalars.html#використовуємо-тип-int-для-цілих-чисел" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -477,6 +478,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb77-3"><a href="scalars.html#cb77-3" aria-hidden="true" tabindex="-1"></a>challenger_deep</span></code></pre></div>
 <pre><code>## -10935</code></pre>
 <p>Тип <code>int</code> ідеально підходять для змінних, які містять кількості: кількість стрибків з парашутом 🪂, кількість квартир в будівлі 🏙️ тощо. Також цей тип підходить для оцінок у школі, віку, поверху квартири тощо.</p>
+<p><img src="images/6-int.png" width="100%" /></p>
 </div>
 <div id="використовуємо-тип-float-для-дійсних-чисел" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел<a href="scalars.html#використовуємо-тип-float-для-дійсних-чисел" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -493,6 +495,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb81-2"><a href="scalars.html#cb81-2" aria-hidden="true" tabindex="-1"></a>nice_number</span></code></pre></div>
 <pre><code>## 25.0</code></pre>
 <p>З точки зору математики, <code>25</code> як мало значення <code>25</code>, так і матиме. А ось з точки зору програмування <code>25</code> та <code>25.0</code> є об’єктами з різними типами даних.</p>
+<p><img src="images/6-float.png" width="100%" /></p>
 </div>
 <div id="використовуємо-тип-bool-для-бульових-значень" class="section level2 hasAnchor" number="6.4">
 <h2><span class="header-section-number">6.4</span> 🐂 Використовуємо тип <code>bool</code> для бульових значень<a href="scalars.html#використовуємо-тип-bool-для-бульових-значень" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -504,6 +507,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Звичайно, ви можете посперечатися, що ту ж саму інформацію можна закодувати за допомогою <code>int</code>. Скажімо, змінна матиме значення <code>1</code> коли літак запізнився і <code>0</code> коли прилетів вчасно. І це буде непогане рішення, але у такому випад ми можемо зіткнутися з проблемами, коли випадково змінемо значення на, наприклад, <code>2</code>, яке не матиме сенсу в нашій системі кодування. У випадку, коли ми використовуємо тип <code>bool</code>, це неможливо, тому що тільки два значення можливі – <code>True</code> та <code>False</code>.</p>
 <p>До речі, не забувайте що Python чутливий до регістру, тобто він відрізняє великі 🔠 та малі літери 🔡. Тому писати <code>True</code> і <code>False</code> треба писати саме як вони написані: перша велика і всі інші малі літери.</p>
 <p>А ось ще один спосіб легко запам’ятати. Пам’ятаєте гру, коли вам на лоб чипляють стікер з ім’ям героя, і вам треба вгадати хто це, ставлячи тільки питання з відповідями так/ні? Те ж саме і з об’єктими з типом <code>bool</code>: вони використовуються для інформації, яка може бути відображенна відповідями <strong>так</strong> або <strong>ні</strong>.</p>
+<p><img src="images/6-bool.png" width="100%" /></p>
 </div>
 <div id="використовуємо-тип-str-для-текстових-стрічок" class="section level2 hasAnchor" number="6.5">
 <h2><span class="header-section-number">6.5</span> 🔤 Використовуємо тип <code>str</code> для текстових стрічок<a href="scalars.html#використовуємо-тип-str-для-текстових-стрічок" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -517,6 +521,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb87-2"><a href="scalars.html#cb87-2" aria-hidden="true" tabindex="-1"></a>greetings_ua</span></code></pre></div>
 <pre><code>## &#39;Вітання!&#39;</code></pre>
 <p>Стрічки – дуже важливі об’єкти та ми можемо робити з ними велку кількість корисного. Проте зараз для нас набагато важливіше побудувати загальне розуміння програмування. Тому ми залишимо більше практичної інформації у Додатку <a href="string.html#string">D</a>.</p>
+<p><img src="images/6-str.png" width="100%" /></p>
 </div>
 <div id="перетворюємо-типи" class="section level2 hasAnchor" number="6.6">
 <h2><span class="header-section-number">6.6</span> 🪄 Перетворюємо типи<a href="scalars.html#перетворюємо-типи" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -531,6 +536,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb93"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb93-1"><a href="scalars.html#cb93-1" aria-hidden="true" tabindex="-1"></a>year_float <span class="op">=</span> <span class="fl">2008.0</span> <span class="co"># нагадуємо, що float створюється за домомогою крапки</span></span>
 <span id="cb93-2"><a href="scalars.html#cb93-2" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(year_float)</span></code></pre></div>
 <pre><code>## &lt;class &#39;float&#39;&gt;</code></pre>
+<p><img src="images/6-type.png" width="100%" /></p>
 <p>Залежно від типу даних, об’єкт буде себе поводитись різним чином. Наприклад, <code>int</code> та <code>float</code> без проблем можна використовувати в одному виразі:</p>
 <div class="sourceCode" id="cb95"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb95-1"><a href="scalars.html#cb95-1" aria-hidden="true" tabindex="-1"></a>year_float <span class="op">=</span> <span class="fl">2008.0</span></span>
 <span id="cb95-2"><a href="scalars.html#cb95-2" aria-hidden="true" tabindex="-1"></a>current_year <span class="op">=</span> <span class="dv">2023</span> <span class="co"># цей об&#39;єкт має тип int</span></span>
@@ -576,6 +582,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb113"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb113-1"><a href="scalars.html#cb113-1" aria-hidden="true" tabindex="-1"></a><span class="bu">bool</span>(<span class="st">&quot;False&quot;</span>)</span></code></pre></div>
 <pre><code>## True</code></pre>
 <p>З функцією <code>str()</code>, яка перетворює об’єкти на стрічки <code>str</code> простіше. Ця функція так би мовити загорне значення у лапки, тобто значення <code>True</code> стане <code>"True"</code>, а число <code>42</code> перетвориться на стрічку <code>"42"</code>.</p>
+<p><img src="images/6-cast.png" width="100%" /></p>
 <hr />
 <p>Ми подивились на найпоширеніші типи скалярних даних та навчилися створювати змінні з такими типами. Ми також побачили що значення можуть зберігатися в об’єктах з різними типами даних та навчилися їх змінювати.</p>
 <hr />
@@ -586,22 +593,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">1. Вкажіть скаляр з типом даних <code>float</code>:</div>
 <label>
-<input type="radio" name="b1b09488-8c33-4692-87a1-7ddb0778ace6" value="true"><code>2.37</code></input>
+<input type="radio" name="8dc3915a-267f-4242-8aa7-e2c53972c28c" value="true"><code>2.37</code></input>
 </label>
 <label>
-<input type="radio" name="b1b09488-8c33-4692-87a1-7ddb0778ace6" value="false"><code>2,37</code></input>
+<input type="radio" name="8dc3915a-267f-4242-8aa7-e2c53972c28c" value="false"><code>2,37</code></input>
 </label>
 <label>
-<input type="radio" name="b1b09488-8c33-4692-87a1-7ddb0778ace6" value="false"><code>2. 37</code></input>
+<input type="radio" name="8dc3915a-267f-4242-8aa7-e2c53972c28c" value="false"><code>2. 37</code></input>
 </label>
 <label>
-<input type="radio" name="b1b09488-8c33-4692-87a1-7ddb0778ace6" value="false">Усі перелічені опції</input>
+<input type="radio" name="8dc3915a-267f-4242-8aa7-e2c53972c28c" value="false">Усі перелічені опції</input>
 </label>
-<button class="check" id="a6bf26cd-6e46-437b-b5ba-0df566fa2d2f" onclick="checkOptions(&quot;a6bf26cd-6e46-437b-b5ba-0df566fa2d2f&quot;, &quot;b1b09488-8c33-4692-87a1-7ddb0778ace6&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="172aa6a3-ee3e-4435-8bf1-c35db8da5a7c" onclick="checkOptions(&quot;172aa6a3-ee3e-4435-8bf1-c35db8da5a7c&quot;, &quot;8dc3915a-267f-4242-8aa7-e2c53972c28c&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('b1b09488-8c33-4692-87a1-7ddb0778ace6');
-    const submitButton = document.getElementById('a6bf26cd-6e46-437b-b5ba-0df566fa2d2f');
+    const radioButtons = document.getElementsByName('8dc3915a-267f-4242-8aa7-e2c53972c28c');
+    const submitButton = document.getElementById('172aa6a3-ee3e-4435-8bf1-c35db8da5a7c');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -612,22 +619,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">2. Вкажіть скаляр з типом даних <code>int</code>:</div>
 <label>
-<input type="radio" name="8fd19070-5b28-44f2-bc68-170fb6eb2e8f" value="false"><code>25.0</code></input>
+<input type="radio" name="79c1ec9e-43e4-47d6-9271-2f20af198d4d" value="false"><code>25.0</code></input>
 </label>
 <label>
-<input type="radio" name="8fd19070-5b28-44f2-bc68-170fb6eb2e8f" value="false"><code>'25'</code></input>
+<input type="radio" name="79c1ec9e-43e4-47d6-9271-2f20af198d4d" value="false"><code>'25'</code></input>
 </label>
 <label>
-<input type="radio" name="8fd19070-5b28-44f2-bc68-170fb6eb2e8f" value="true"><code>25</code></input>
+<input type="radio" name="79c1ec9e-43e4-47d6-9271-2f20af198d4d" value="true"><code>25</code></input>
 </label>
 <label>
-<input type="radio" name="8fd19070-5b28-44f2-bc68-170fb6eb2e8f" value="false">Жодна з перелічених опцій</input>
+<input type="radio" name="79c1ec9e-43e4-47d6-9271-2f20af198d4d" value="false">Жодна з перелічених опцій</input>
 </label>
-<button class="check" id="223c47f2-34ee-4c95-9329-13f71af17d0e" onclick="checkOptions(&quot;223c47f2-34ee-4c95-9329-13f71af17d0e&quot;, &quot;8fd19070-5b28-44f2-bc68-170fb6eb2e8f&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="828106f3-87d3-428e-9cb9-1d7eddae36c2" onclick="checkOptions(&quot;828106f3-87d3-428e-9cb9-1d7eddae36c2&quot;, &quot;79c1ec9e-43e4-47d6-9271-2f20af198d4d&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('8fd19070-5b28-44f2-bc68-170fb6eb2e8f');
-    const submitButton = document.getElementById('223c47f2-34ee-4c95-9329-13f71af17d0e');
+    const radioButtons = document.getElementsByName('79c1ec9e-43e4-47d6-9271-2f20af198d4d');
+    const submitButton = document.getElementById('828106f3-87d3-428e-9cb9-1d7eddae36c2');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -638,22 +645,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">3. Які типи даних можуть містити скаляри?</div>
 <label>
-<input type="radio" name="3ee051f8-1c82-4b18-8f36-e10b3b366539" value="false">Числові значення, текстові значення, бульові значення</input>
+<input type="radio" name="4e154dd3-e080-4cd9-b116-2c7eb78b55c7" value="false">Числові значення, текстові значення, бульові значення</input>
 </label>
 <label>
-<input type="radio" name="3ee051f8-1c82-4b18-8f36-e10b3b366539" value="false">Лише числові значення</input>
+<input type="radio" name="4e154dd3-e080-4cd9-b116-2c7eb78b55c7" value="false">Лише числові значення</input>
 </label>
 <label>
-<input type="radio" name="3ee051f8-1c82-4b18-8f36-e10b3b366539" value="false"><code>int</code>, <code>float</code>, <code>bool</code>, <code>str</code></input>
+<input type="radio" name="4e154dd3-e080-4cd9-b116-2c7eb78b55c7" value="false"><code>int</code>, <code>float</code>, <code>bool</code>, <code>str</code></input>
 </label>
 <label>
-<input type="radio" name="3ee051f8-1c82-4b18-8f36-e10b3b366539" value="true">1 і 3 варіант є правильним</input>
+<input type="radio" name="4e154dd3-e080-4cd9-b116-2c7eb78b55c7" value="true">1 і 3 варіант є правильним</input>
 </label>
-<button class="check" id="7aa02b5c-6443-4228-87b0-da84d3b96ee4" onclick="checkOptions(&quot;7aa02b5c-6443-4228-87b0-da84d3b96ee4&quot;, &quot;3ee051f8-1c82-4b18-8f36-e10b3b366539&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="34070ee6-4807-4f9a-8aa2-3b8429712885" onclick="checkOptions(&quot;34070ee6-4807-4f9a-8aa2-3b8429712885&quot;, &quot;4e154dd3-e080-4cd9-b116-2c7eb78b55c7&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('3ee051f8-1c82-4b18-8f36-e10b3b366539');
-    const submitButton = document.getElementById('7aa02b5c-6443-4228-87b0-da84d3b96ee4');
+    const radioButtons = document.getElementsByName('4e154dd3-e080-4cd9-b116-2c7eb78b55c7');
+    const submitButton = document.getElementById('34070ee6-4807-4f9a-8aa2-3b8429712885');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -664,22 +671,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">4. Обʼєкти типу <code>bool</code> можуть приймати:</div>
 <label>
-<input type="radio" name="a0fae5c1-7128-4b00-bd77-77b95f104f56" value="false">Одне з багатьох можливих значень</input>
+<input type="radio" name="e8aeae62-a1d8-4123-ad5f-06372f3596db" value="false">Одне з багатьох можливих значень</input>
 </label>
 <label>
-<input type="radio" name="a0fae5c1-7128-4b00-bd77-77b95f104f56" value="false">Одне з трьох можливих значень</input>
+<input type="radio" name="e8aeae62-a1d8-4123-ad5f-06372f3596db" value="false">Одне з трьох можливих значень</input>
 </label>
 <label>
-<input type="radio" name="a0fae5c1-7128-4b00-bd77-77b95f104f56" value="true">Одне з двох можливих значень</input>
+<input type="radio" name="e8aeae62-a1d8-4123-ad5f-06372f3596db" value="true">Одне з двох можливих значень</input>
 </label>
 <label>
-<input type="radio" name="a0fae5c1-7128-4b00-bd77-77b95f104f56" value="false">Або <code>Yes</code> aбо <code>No</code></input>
+<input type="radio" name="e8aeae62-a1d8-4123-ad5f-06372f3596db" value="false">Або <code>Yes</code> aбо <code>No</code></input>
 </label>
-<button class="check" id="ce3ef2d8-655d-4fc3-bdfa-8797458e2552" onclick="checkOptions(&quot;ce3ef2d8-655d-4fc3-bdfa-8797458e2552&quot;, &quot;a0fae5c1-7128-4b00-bd77-77b95f104f56&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="1151535a-759e-4f0c-8f2c-d39df86b1d7d" onclick="checkOptions(&quot;1151535a-759e-4f0c-8f2c-d39df86b1d7d&quot;, &quot;e8aeae62-a1d8-4123-ad5f-06372f3596db&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('a0fae5c1-7128-4b00-bd77-77b95f104f56');
-    const submitButton = document.getElementById('ce3ef2d8-655d-4fc3-bdfa-8797458e2552');
+    const radioButtons = document.getElementsByName('e8aeae62-a1d8-4123-ad5f-06372f3596db');
+    const submitButton = document.getElementById('1151535a-759e-4f0c-8f2c-d39df86b1d7d');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -695,22 +702,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 4️⃣ my_age = 'тринадцять'
 </code></pre>
 <label>
-<input type="radio" name="870a6fd6-137a-42ab-8473-bbdc82e81d25" value="false">Рядок 2️⃣</input>
+<input type="radio" name="03bcab9c-e256-4145-8203-4d05d9604406" value="false">Рядок 2️⃣</input>
 </label>
 <label>
-<input type="radio" name="870a6fd6-137a-42ab-8473-bbdc82e81d25" value="false">Рядок 3️⃣</input>
+<input type="radio" name="03bcab9c-e256-4145-8203-4d05d9604406" value="false">Рядок 3️⃣</input>
 </label>
 <label>
-<input type="radio" name="870a6fd6-137a-42ab-8473-bbdc82e81d25" value="false">Рядок 3️⃣ і 4️⃣</input>
+<input type="radio" name="03bcab9c-e256-4145-8203-4d05d9604406" value="false">Рядок 3️⃣ і 4️⃣</input>
 </label>
 <label>
-<input type="radio" name="870a6fd6-137a-42ab-8473-bbdc82e81d25" value="true">Рядок 1️⃣ і 4️⃣</input>
+<input type="radio" name="03bcab9c-e256-4145-8203-4d05d9604406" value="true">Рядок 1️⃣ і 4️⃣</input>
 </label>
-<button class="check" id="7b940d23-2a73-4b2e-a307-827c6ea945a8" onclick="checkOptions(&quot;7b940d23-2a73-4b2e-a307-827c6ea945a8&quot;, &quot;870a6fd6-137a-42ab-8473-bbdc82e81d25&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="1fe97f1e-87b1-4e51-a25d-304ea29b7736" onclick="checkOptions(&quot;1fe97f1e-87b1-4e51-a25d-304ea29b7736&quot;, &quot;03bcab9c-e256-4145-8203-4d05d9604406&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('870a6fd6-137a-42ab-8473-bbdc82e81d25');
-    const submitButton = document.getElementById('7b940d23-2a73-4b2e-a307-827c6ea945a8');
+    const radioButtons = document.getElementsByName('03bcab9c-e256-4145-8203-4d05d9604406');
+    const submitButton = document.getElementById('1fe97f1e-87b1-4e51-a25d-304ea29b7736');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -721,16 +728,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">6. Функція <code>type()</code> допомагає перевірити тип обʼєкта:</div>
 <label>
-<input type="radio" name="d3cade61-82e1-48bf-9caf-df64dd19a1b3" value="true">Так</input>
+<input type="radio" name="8f512d25-95f9-4721-bafc-43ff20a3d2d5" value="true">Так</input>
 </label>
 <label>
-<input type="radio" name="d3cade61-82e1-48bf-9caf-df64dd19a1b3" value="false">Ні</input>
+<input type="radio" name="8f512d25-95f9-4721-bafc-43ff20a3d2d5" value="false">Ні</input>
 </label>
-<button class="check" id="b573704d-26c7-4cda-8092-8c357682088d" onclick="checkOptions(&quot;b573704d-26c7-4cda-8092-8c357682088d&quot;, &quot;d3cade61-82e1-48bf-9caf-df64dd19a1b3&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="4f519af5-1145-4ad7-b10d-5442f5fb3241" onclick="checkOptions(&quot;4f519af5-1145-4ad7-b10d-5442f5fb3241&quot;, &quot;8f512d25-95f9-4721-bafc-43ff20a3d2d5&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('d3cade61-82e1-48bf-9caf-df64dd19a1b3');
-    const submitButton = document.getElementById('b573704d-26c7-4cda-8092-8c357682088d');
+    const radioButtons = document.getElementsByName('8f512d25-95f9-4721-bafc-43ff20a3d2d5');
+    const submitButton = document.getElementById('4f519af5-1145-4ad7-b10d-5442f5fb3241');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -741,18 +748,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">7. Які функції перетворюють текст на число?</div>
 <label>
-<input type="checkbox" name="5e1d7e1f-58c6-4e2f-badc-791fead6bb92" value="true"><code>float()</code></input>
+<input type="checkbox" name="7434aeb3-3637-4e66-bc61-9217d061a151" value="true"><code>float()</code></input>
 </label>
 <label>
-<input type="checkbox" name="5e1d7e1f-58c6-4e2f-badc-791fead6bb92" value="true"><code>int()</code></input>
+<input type="checkbox" name="7434aeb3-3637-4e66-bc61-9217d061a151" value="true"><code>int()</code></input>
 </label>
 <label>
-<input type="checkbox" name="5e1d7e1f-58c6-4e2f-badc-791fead6bb92" value="false"><code>str()</code></input>
+<input type="checkbox" name="7434aeb3-3637-4e66-bc61-9217d061a151" value="false"><code>str()</code></input>
 </label>
 <label>
-<input type="checkbox" name="5e1d7e1f-58c6-4e2f-badc-791fead6bb92" value="false">Жодна</input>
+<input type="checkbox" name="7434aeb3-3637-4e66-bc61-9217d061a151" value="false">Жодна</input>
 </label>
-<button class="check" id="5a7cb2e4-442b-4fb2-9358-1fa18b057305" onclick="checkOptions(&quot;5a7cb2e4-442b-4fb2-9358-1fa18b057305&quot;, &quot;5e1d7e1f-58c6-4e2f-badc-791fead6bb92&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<button class="check" id="ba4170f8-2604-4ba7-8bb6-a3b9e837a860" onclick="checkOptions(&quot;ba4170f8-2604-4ba7-8bb6-a3b9e837a860&quot;, &quot;7434aeb3-3637-4e66-bc61-9217d061a151&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <div class="quiz">
 <div class="question">8. Що поверне наступний код:</div>
@@ -761,19 +768,19 @@ price_orange = '29.99'
 price_apple + price_orange
 </code></pre>
 <label>
-<input type="radio" name="c0533f8d-845c-4e4a-9e65-e8b8c3b76080" value="false"><code>54.99</code></input>
+<input type="radio" name="8af1e08e-abfb-476b-8831-f880cf7e12c2" value="false"><code>54.99</code></input>
 </label>
 <label>
-<input type="radio" name="c0533f8d-845c-4e4a-9e65-e8b8c3b76080" value="false"><code>54,99</code></input>
+<input type="radio" name="8af1e08e-abfb-476b-8831-f880cf7e12c2" value="false"><code>54,99</code></input>
 </label>
 <label>
-<input type="radio" name="c0533f8d-845c-4e4a-9e65-e8b8c3b76080" value="true">Помилку</input>
+<input type="radio" name="8af1e08e-abfb-476b-8831-f880cf7e12c2" value="true">Помилку</input>
 </label>
-<button class="check" id="5b663c87-31cb-4f72-9998-e98258d77fb2" onclick="checkOptions(&quot;5b663c87-31cb-4f72-9998-e98258d77fb2&quot;, &quot;c0533f8d-845c-4e4a-9e65-e8b8c3b76080&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="e975622f-e5ec-40cb-86f1-b138fdb6dd6d" onclick="checkOptions(&quot;e975622f-e5ec-40cb-86f1-b138fdb6dd6d&quot;, &quot;8af1e08e-abfb-476b-8831-f880cf7e12c2&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('c0533f8d-845c-4e4a-9e65-e8b8c3b76080');
-    const submitButton = document.getElementById('5b663c87-31cb-4f72-9998-e98258d77fb2');
+    const radioButtons = document.getElementsByName('8af1e08e-abfb-476b-8831-f880cf7e12c2');
+    const submitButton = document.getElementById('e975622f-e5ec-40cb-86f1-b138fdb6dd6d');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -783,23 +790,23 @@ price_apple + price_orange
 });</script>
 <div class="quiz">
 <div class="question">9. Перетягніть символи коду у правильному порядку, щоб перевірити тип об'єкту <code>bar</code>:</div>
-<div class="answer_pool" id="bc0d2283-8bf4-4963-84d0-04e99583fe24" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="elements_pool" id="81e6ab04-75b3-4417-8086-01eff43b964e">
-<div class="element" name="7e550486-93f4-41da-8866-3a8e5d9412ed" id="20b09a45-c3bb-4aa1-b20e-97865b419692" draggable="true" ondragstart="drag(event)"><code>(</code></div>
-<div class="element" name="7e550486-93f4-41da-8866-3a8e5d9412ed" id="aab94245-a715-48d7-93c3-8e64f48d211d" draggable="true" ondragstart="drag(event)"><code>bar</code></div>
-<div class="element" name="7e550486-93f4-41da-8866-3a8e5d9412ed" id="e6d78072-8962-4892-ac74-8338756522a0" draggable="true" ondragstart="drag(event)"><code>type</code></div>
-<div class="element" name="7e550486-93f4-41da-8866-3a8e5d9412ed" id="9b65823a-b934-43d4-813f-0ab2e52a698b" draggable="true" ondragstart="drag(event)"><code>)</code></div>
+<div class="answer_pool" id="b5f838cc-b153-4a13-b062-0b6def7d4153" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="elements_pool" id="b2667150-cfee-4017-bc7b-b8116b75d714">
+<div class="element" name="c7e575a5-955e-443f-8845-bbfa5d24c757" id="20bb64f5-6c1f-4346-aa30-0d53de006d42" draggable="true" ondragstart="drag(event)"><code>(</code></div>
+<div class="element" name="c7e575a5-955e-443f-8845-bbfa5d24c757" id="f54a792f-e0f9-4ebc-94ec-2360c41a4489" draggable="true" ondragstart="drag(event)"><code>bar</code></div>
+<div class="element" name="c7e575a5-955e-443f-8845-bbfa5d24c757" id="b55c9b82-5a37-4424-a7d3-4d5d4dbfdfc7" draggable="true" ondragstart="drag(event)"><code>type</code></div>
+<div class="element" name="c7e575a5-955e-443f-8845-bbfa5d24c757" id="d01b4e43-01c7-4d39-a653-186dfa2e87ae" draggable="true" ondragstart="drag(event)"><code>)</code></div>
 </div>
-<button class="check" id="b6f4e128-e529-4d6e-8b3a-72b0416b7d9f" onclick="checkArrange(&quot;b6f4e128-e529-4d6e-8b3a-72b0416b7d9f&quot;, &quot;bc0d2283-8bf4-4963-84d0-04e99583fe24&quot;, [&quot;e6d78072-8962-4892-ac74-8338756522a0&quot;, &quot;20b09a45-c3bb-4aa1-b20e-97865b419692&quot;, &quot;aab94245-a715-48d7-93c3-8e64f48d211d&quot;, &quot;9b65823a-b934-43d4-813f-0ab2e52a698b&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="6b6b40b1-57b5-4d01-94a1-e453910772c5" onclick="checkArrange(&quot;6b6b40b1-57b5-4d01-94a1-e453910772c5&quot;, &quot;b5f838cc-b153-4a13-b062-0b6def7d4153&quot;, [&quot;b55c9b82-5a37-4424-a7d3-4d5d4dbfdfc7&quot;, &quot;20bb64f5-6c1f-4346-aa30-0d53de006d42&quot;, &quot;f54a792f-e0f9-4ebc-94ec-2360c41a4489&quot;, &quot;d01b4e43-01c7-4d39-a653-186dfa2e87ae&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const elements = document.getElementsByName('7e550486-93f4-41da-8866-3a8e5d9412ed');
-    const checkButton = document.getElementById('b6f4e128-e529-4d6e-8b3a-72b0416b7d9f');
+    const elements = document.getElementsByName('c7e575a5-955e-443f-8845-bbfa5d24c757');
+    const checkButton = document.getElementById('6b6b40b1-57b5-4d01-94a1-e453910772c5');
 
     elements.forEach(function(element) {
         element.addEventListener('dragend', function() {
 
-            const pool = document.getElementById('81e6ab04-75b3-4417-8086-01eff43b964e');
+            const pool = document.getElementById('b2667150-cfee-4017-bc7b-b8116b75d714');
 
             if(pool.getElementsByClassName("element").length === 0) {
                 checkButton.disabled = false;
