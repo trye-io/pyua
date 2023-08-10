@@ -151,7 +151,6 @@ knitr::include_graphics("images/1-coding.png")
 <details id="programming_exercises">
 <summary>🤸 Вправи</summary>
 
-
 ```{r, results='asis', message=FALSE, echo=FALSE}
 generate_bucket_quiz(
     question = "1. Перетягніть об'єкти до відповідних кошиків 🧺:",
@@ -165,7 +164,6 @@ generate_bucket_quiz(
     buckets = c("Програмне забезпечення", "Апаратне забезпечення")
 )
 ```
-
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
 question <- paste(
@@ -188,6 +186,29 @@ generate_options_quiz(
     ),
     between = between,
     allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_arrange_quiz(
+    question = "3. Розташуйте дії у правильному порядку 🥪:",
+    elements = c(
+        "Взяти сендвіч" = 2,
+        "Відкрити холодильник" = 1, 
+        "Закрити холодильник" = 3
+    )
+)
+```
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "4. Які твердження відносяться до додатків 📱:",
+    answers = c(
+        "Мають кнопки та поля для вводу" = TRUE,
+        "Можуть бути написані на аркуші паперу" = FALSE,
+        "Призначені для використання користувачем" = TRUE,
+        "Написані мовою програмування" = TRUE
+    ),
+    allow_multiple_answers = TRUE
 )
 ```
 
