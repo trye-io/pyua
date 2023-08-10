@@ -29,7 +29,7 @@ Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-08-09" />
+<meta name="date" content="2023-08-10" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -458,27 +458,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Під <span class="highlight-container"> <span class="highlight"> інструкцією <span class="tooltiptext">🇬🇧 statement</span> </span> </span> ми будемо розуміти синтаксичну одиницю яка виражає певну дію. Наприклад, створення нової змінної або присвоєння нового значення вважається однією інструкцією. Також інструкцією є будь-який вираз, виклик функцій тощо. Тобто все що ми робили до цього є інструкціями.</p>
 <!-- XXX: example of the script  -->
 <p>У Python зазвичай кожну інструкцію ми пишемо в окремому рядку. Наприклад:</p>
-<div class="sourceCode" id="cb57"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="синтаксис.html#cb57-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">9</span></span>
-<span id="cb57-2"><a href="синтаксис.html#cb57-2" aria-hidden="true" tabindex="-1"></a>(grade <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">11</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb58"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="синтаксис.html#cb58-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb58-2"><a href="синтаксис.html#cb58-2" aria-hidden="true" tabindex="-1"></a>(grade <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">11</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 72.72727272727273</code></pre>
 <p>У Python інструкції можна також записати в один рядок і відокремити крапкою з комою (<code>;</code>). Але це вважається ознакою поганого стилю 🤡, тому що код в таких випадках складніше зрозуміти 🤔.</p>
 <p>Python буде ігнорувати пусті рядки. Наприклад, попередній код є еквівалентним наступному коду. Зверніть увагу, що нижче приведений код має два пусті рядки:</p>
-<div class="sourceCode" id="cb59"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb59-1"><a href="синтаксис.html#cb59-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">9</span></span>
-<span id="cb59-2"><a href="синтаксис.html#cb59-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-3"><a href="синтаксис.html#cb59-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb59-4"><a href="синтаксис.html#cb59-4" aria-hidden="true" tabindex="-1"></a>(grade <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">11</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
+<div class="sourceCode" id="cb60"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb60-1"><a href="синтаксис.html#cb60-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">9</span></span>
+<span id="cb60-2"><a href="синтаксис.html#cb60-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-3"><a href="синтаксис.html#cb60-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb60-4"><a href="синтаксис.html#cb60-4" aria-hidden="true" tabindex="-1"></a>(grade <span class="op">-</span> <span class="dv">1</span>) <span class="op">/</span> <span class="dv">11</span> <span class="op">*</span> <span class="dv">100</span></span></code></pre></div>
 <pre><code>## 72.72727272727273</code></pre>
 <p>Такі пусті рядки ми будемо використовувати для того, щоб відділити частини коду і покращити читабельність 🤓. Про це ми поговоримо детальніше в Додатку <a href="style.html#style">C</a>.</p>
 <p><img src="images/5-instructions.png" width="100%" /></p>
 <p>До речі, в одній клітинці записника Colab може міститись скільки завгодно інструкцій. Якщо остання інструкція – це вираз або виклик функції який повертає значення – це значення буде надруковано під клітинкою, коли ми її виконаємо:</p>
-<div class="sourceCode" id="cb61"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb61-1"><a href="синтаксис.html#cb61-1" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> <span class="dv">23</span></span>
-<span id="cb61-2"><a href="синтаксис.html#cb61-2" aria-hidden="true" tabindex="-1"></a>temp_c</span>
-<span id="cb61-3"><a href="синтаксис.html#cb61-3" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">*</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
+<div class="sourceCode" id="cb62"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb62-1"><a href="синтаксис.html#cb62-1" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb62-2"><a href="синтаксис.html#cb62-2" aria-hidden="true" tabindex="-1"></a>temp_c</span>
+<span id="cb62-3"><a href="синтаксис.html#cb62-3" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">*</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
 <pre><code>## 135.5</code></pre>
 <p>Зверніть увагу, що у попередньому випадку, значення <code>temp_c</code> не було надруковано, тому що це не була остання інструкція. Якщо ж ми хочемо надрукувати значення виразу чи змінної десь в середині клітинки, ми можемо використати функцію <code>print()</code>:</p>
-<div class="sourceCode" id="cb63"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb63-1"><a href="синтаксис.html#cb63-1" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> <span class="dv">23</span></span>
-<span id="cb63-2"><a href="синтаксис.html#cb63-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temp_c)</span>
-<span id="cb63-3"><a href="синтаксис.html#cb63-3" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">*</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
+<div class="sourceCode" id="cb64"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb64-1"><a href="синтаксис.html#cb64-1" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">=</span> <span class="dv">23</span></span>
+<span id="cb64-2"><a href="синтаксис.html#cb64-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(temp_c)</span>
+<span id="cb64-3"><a href="синтаксис.html#cb64-3" aria-hidden="true" tabindex="-1"></a>temp_c <span class="op">*</span> <span class="dv">9</span> <span class="op">/</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">32</span></span></code></pre></div>
 <pre><code>## 23</code></pre>
 <pre><code>## 135.5</code></pre>
 <p>А ось кількість інструкцій в одній клітинці – це знову ж таки про стиль 🎩 написання коду, про який ми поговоримо у Додатку <a href="style.html#style">C</a>.</p>
@@ -491,15 +491,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="використовуємо-коментарі" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> 📬 Використовуємо коментарі<a href="синтаксис.html#використовуємо-коментарі" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Для того, щоб зробити код більш зрозумілим, ми будемо часто писати <span class="highlight-container"> <span class="highlight"> коментарі <span class="tooltiptext">🇬🇧 comments</span> </span> </span> в коді. Коментарі пояснюють для чого ми написали ті чи інші інструкції. Щоб додати коментар у Python, треба почати рядок тексту із символу <code>#</code>. Все що буде написано праворуч від такого символу буде ігноруватись, тобто не сприйматись як код:</p>
-<div class="sourceCode" id="cb66"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="синтаксис.html#cb66-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Рахуємо скільки секунд в одній добі. Цей коментар не буде сприматись як код.</span></span>
-<span id="cb66-2"><a href="синтаксис.html#cb66-2" aria-hidden="true" tabindex="-1"></a><span class="dv">60</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">24</span></span></code></pre></div>
+<div class="sourceCode" id="cb67"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="синтаксис.html#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Рахуємо скільки секунд в одній добі. Цей коментар не буде сприматись як код.</span></span>
+<span id="cb67-2"><a href="синтаксис.html#cb67-2" aria-hidden="true" tabindex="-1"></a><span class="dv">60</span> <span class="op">*</span> <span class="dv">60</span> <span class="op">*</span> <span class="dv">24</span></span></code></pre></div>
 <pre><code>## 86400</code></pre>
 <p>Ми навіть можемо писати коментар в тому ж рядку що й інструкція, почавши його з <code>#</code>:</p>
-<div class="sourceCode" id="cb68"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb68-1"><a href="синтаксис.html#cb68-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">12</span> <span class="co"># оцінка з фізики</span></span></code></pre></div>
+<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="синтаксис.html#cb69-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">12</span> <span class="co"># оцінка з фізики</span></span></code></pre></div>
 <p>Також, нам буде дуже зручно <span class="highlight-container"> <span class="highlight"> закоментувати <span class="tooltiptext">🇬🇧 comment out</span> </span> </span> деякі рядки коду, наприклад, коли ми будемо експериментувати 🧪. У зазначеному внизу випадку, рядок <code>grade = 11</code> не буде виконаний, тому що починається з <code>#</code>. Тому наш код поверне <code>12</code> замість <code>11</code>:</p>
-<div class="sourceCode" id="cb69"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="синтаксис.html#cb69-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">12</span> </span>
-<span id="cb69-2"><a href="синтаксис.html#cb69-2" aria-hidden="true" tabindex="-1"></a><span class="co"># grade = 11</span></span>
-<span id="cb69-3"><a href="синтаксис.html#cb69-3" aria-hidden="true" tabindex="-1"></a>grade</span></code></pre></div>
+<div class="sourceCode" id="cb70"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb70-1"><a href="синтаксис.html#cb70-1" aria-hidden="true" tabindex="-1"></a>grade <span class="op">=</span> <span class="dv">12</span> </span>
+<span id="cb70-2"><a href="синтаксис.html#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="co"># grade = 11</span></span>
+<span id="cb70-3"><a href="синтаксис.html#cb70-3" aria-hidden="true" tabindex="-1"></a>grade</span></code></pre></div>
 <pre><code>## 12</code></pre>
 <p>Не забувайте подивитись вправи, щоб повністю опанувати коментарі. Вам може здатись, що ваші програми ніхто не буде бачити. Проте буде один, але дуже важливий читач – майбутній ви. І повірте, майбутній-ви буде дуже вдячний за коментарі.</p>
 <p><img src="images/5-comments.png" width="100%" /></p>
@@ -510,27 +510,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Ми можемо надати змінній будь-яке ім’я і існує всього лише декілька правил:</p>
 <ul>
 <li><p>ім’я повинно починатись або з малої 🔡 чи великої 🔠 літери або з підкреслення (<code>_</code>)</p>
-<div class="sourceCode" id="cb71"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="синтаксис.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="co"># допустимі імена</span></span>
-<span id="cb71-2"><a href="синтаксис.html#cb71-2" aria-hidden="true" tabindex="-1"></a>_rock_ <span class="op">=</span> <span class="fl">0.5</span></span>
-<span id="cb71-3"><a href="синтаксис.html#cb71-3" aria-hidden="true" tabindex="-1"></a>paper <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb71-4"><a href="синтаксис.html#cb71-4" aria-hidden="true" tabindex="-1"></a>Sissors <span class="op">=</span> <span class="dv">2</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="синтаксис.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># допустимі імена</span></span>
+<span id="cb72-2"><a href="синтаксис.html#cb72-2" aria-hidden="true" tabindex="-1"></a>_rock_ <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb72-3"><a href="синтаксис.html#cb72-3" aria-hidden="true" tabindex="-1"></a>paper <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb72-4"><a href="синтаксис.html#cb72-4" aria-hidden="true" tabindex="-1"></a>Sissors <span class="op">=</span> <span class="dv">2</span></span></code></pre></div></li>
 <li><p>ім’я не може починатись із цифри 🔢</p>
-<div class="sourceCode" id="cb72"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb72-1"><a href="синтаксис.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="co"># недопустимі імена</span></span>
-<span id="cb72-2"><a href="синтаксис.html#cb72-2" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="er">pen</span> <span class="op">=</span> <span class="dv">10</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="синтаксис.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># недопустимі імена</span></span>
+<span id="cb73-2"><a href="синтаксис.html#cb73-2" aria-hidden="true" tabindex="-1"></a><span class="dv">10</span><span class="er">pen</span> <span class="op">=</span> <span class="dv">10</span></span></code></pre></div></li>
 <li><p>ім’я повинно складатись із цифр 🔢, літер (малих 🔡 та великих 🔠) та підкреслення (<code>_</code>)</p>
-<div class="sourceCode" id="cb73"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="синтаксис.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="co"># допустимі імена</span></span>
-<span id="cb73-2"><a href="синтаксис.html#cb73-2" aria-hidden="true" tabindex="-1"></a>long_name_with_numbers_42 <span class="op">=</span> <span class="dv">10</span></span>
-<span id="cb73-3"><a href="синтаксис.html#cb73-3" aria-hidden="true" tabindex="-1"></a>a_ <span class="op">=</span> <span class="dv">24</span></span>
-<span id="cb73-4"><a href="синтаксис.html#cb73-4" aria-hidden="true" tabindex="-1"></a>CamelCase <span class="op">=</span> <span class="dv">345</span></span>
-<span id="cb73-5"><a href="синтаксис.html#cb73-5" aria-hidden="true" tabindex="-1"></a>VAR <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb73-6"><a href="синтаксис.html#cb73-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb73-7"><a href="синтаксис.html#cb73-7" aria-hidden="true" tabindex="-1"></a><span class="co"># недопустимі імена</span></span>
-<span id="cb73-8"><a href="синтаксис.html#cb73-8" aria-hidden="true" tabindex="-1"></a>a b <span class="op">=</span> <span class="dv">30</span></span>
-<span id="cb73-9"><a href="синтаксис.html#cb73-9" aria-hidden="true" tabindex="-1"></a>dog<span class="op">-</span>cat <span class="op">=</span> <span class="dv">1</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="синтаксис.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># допустимі імена</span></span>
+<span id="cb74-2"><a href="синтаксис.html#cb74-2" aria-hidden="true" tabindex="-1"></a>long_name_with_numbers_42 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb74-3"><a href="синтаксис.html#cb74-3" aria-hidden="true" tabindex="-1"></a>a_ <span class="op">=</span> <span class="dv">24</span></span>
+<span id="cb74-4"><a href="синтаксис.html#cb74-4" aria-hidden="true" tabindex="-1"></a>CamelCase <span class="op">=</span> <span class="dv">345</span></span>
+<span id="cb74-5"><a href="синтаксис.html#cb74-5" aria-hidden="true" tabindex="-1"></a>VAR <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb74-6"><a href="синтаксис.html#cb74-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-7"><a href="синтаксис.html#cb74-7" aria-hidden="true" tabindex="-1"></a><span class="co"># недопустимі імена</span></span>
+<span id="cb74-8"><a href="синтаксис.html#cb74-8" aria-hidden="true" tabindex="-1"></a>a b <span class="op">=</span> <span class="dv">30</span></span>
+<span id="cb74-9"><a href="синтаксис.html#cb74-9" aria-hidden="true" tabindex="-1"></a>dog<span class="op">-</span>cat <span class="op">=</span> <span class="dv">1</span></span></code></pre></div></li>
 <li><p>імена змінних чутливі до регістру</p>
-<div class="sourceCode" id="cb74"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb74-1"><a href="синтаксис.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ці змінні різні</span></span>
-<span id="cb74-2"><a href="синтаксис.html#cb74-2" aria-hidden="true" tabindex="-1"></a>dog <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb74-3"><a href="синтаксис.html#cb74-3" aria-hidden="true" tabindex="-1"></a>DOG <span class="op">=</span> <span class="dv">2</span></span></code></pre></div></li>
+<div class="sourceCode" id="cb75"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="синтаксис.html#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="co"># ці змінні різні</span></span>
+<span id="cb75-2"><a href="синтаксис.html#cb75-2" aria-hidden="true" tabindex="-1"></a>dog <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb75-3"><a href="синтаксис.html#cb75-3" aria-hidden="true" tabindex="-1"></a>DOG <span class="op">=</span> <span class="dv">2</span></span></code></pre></div></li>
 </ul>
 <p><img src="images/5-vars.png" width="100%" /></p>
 <p>Ще одне неформальне правило, якого ми будемо притримуватись – не давати імена змінним, які вже зарезервовано для <span class="highlight-container"> <span class="highlight"> вбудованих <span class="tooltiptext">🇬🇧 built-in</span> </span> </span> функцій (нагадуємо, вбудовані функції – це ті функції, які є частиною Python). Наприклад, це погана ідея використовувати такі імена як <code>round</code>, <code>max</code> тощо. Повний список ви можете переглянути ось <a href="https://docs.python.org/uk/3.9/library/functions.html">тут</a>.</p>
@@ -549,25 +549,25 @@ temp_c = 25
 temp_f = (temp_c * 9 / 5) + 32
 </code></pre>
 <label>
-<input type="radio" name="57c5906b-f0f8-4fa8-9806-7b9a1fd47dac" value="true">Надати коментар який пояснює наступну інструкцію 🎯</input>
+<input type="radio" name="5045b7ea-55de-4f68-9d9a-f5843fd59153" value="true">Надати коментар який пояснює наступну інструкцію 🎯</input>
 </label>
 <label>
-<input type="radio" name="57c5906b-f0f8-4fa8-9806-7b9a1fd47dac" value="false">Надати більш детальне пояснення інструкції комп'ютерові 💻</input>
+<input type="radio" name="5045b7ea-55de-4f68-9d9a-f5843fd59153" value="false">Надати більш детальне пояснення інструкції комп'ютерові 💻</input>
 </label>
 <label>
-<input type="radio" name="57c5906b-f0f8-4fa8-9806-7b9a1fd47dac" value="false">Закоментувати інструкцію ✏️</input>
+<input type="radio" name="5045b7ea-55de-4f68-9d9a-f5843fd59153" value="false">Закоментувати інструкцію ✏️</input>
 </label>
 <label>
-<input type="radio" name="57c5906b-f0f8-4fa8-9806-7b9a1fd47dac" value="false">Передати аргументи до функції ⚙️</input>
+<input type="radio" name="5045b7ea-55de-4f68-9d9a-f5843fd59153" value="false">Передати аргументи до функції ⚙️</input>
 </label>
 <label>
-<input type="radio" name="57c5906b-f0f8-4fa8-9806-7b9a1fd47dac" value="false">Зазначити оператор множення ✖️</input>
+<input type="radio" name="5045b7ea-55de-4f68-9d9a-f5843fd59153" value="false">Зазначити оператор множення ✖️</input>
 </label>
-<button class="check" id="6048cc93-30cd-4b42-ad54-587f3be7515d" onclick="checkOptions(&quot;6048cc93-30cd-4b42-ad54-587f3be7515d&quot;, &quot;57c5906b-f0f8-4fa8-9806-7b9a1fd47dac&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="eacc74ef-2707-414f-93e3-837d4da22497" onclick="checkOptions(&quot;eacc74ef-2707-414f-93e3-837d4da22497&quot;, &quot;5045b7ea-55de-4f68-9d9a-f5843fd59153&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('57c5906b-f0f8-4fa8-9806-7b9a1fd47dac');
-    const submitButton = document.getElementById('6048cc93-30cd-4b42-ad54-587f3be7515d');
+    const radioButtons = document.getElementsByName('5045b7ea-55de-4f68-9d9a-f5843fd59153');
+    const submitButton = document.getElementById('eacc74ef-2707-414f-93e3-837d4da22497');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -579,19 +579,19 @@ temp_f = (temp_c * 9 / 5) + 32
 <div class="question">2. Чи поверне помилку наступний код 😬?</div>
 <pre><code>x = 29.99; round(x);</code></pre>
 <label>
-<input type="radio" name="f6a0649d-64cd-4ea1-9f28-0c7e3cd0c841" value="false">Ні, цей код ідеальний 🤩</input>
+<input type="radio" name="7fc209bd-7fb8-4c4b-ab7f-554dde06f3b8" value="false">Ні, цей код ідеальний 🤩</input>
 </label>
 <label>
-<input type="radio" name="f6a0649d-64cd-4ea1-9f28-0c7e3cd0c841" value="false">Так, тому що ми розташували декілька інструкцій в одному рядку 😔</input>
+<input type="radio" name="7fc209bd-7fb8-4c4b-ab7f-554dde06f3b8" value="false">Так, тому що ми розташували декілька інструкцій в одному рядку 😔</input>
 </label>
 <label>
-<input type="radio" name="f6a0649d-64cd-4ea1-9f28-0c7e3cd0c841" value="true">Ні, але розташовувати декілька інструкцій в одному рядку є ознакою поганого стилю 🧐</input>
+<input type="radio" name="7fc209bd-7fb8-4c4b-ab7f-554dde06f3b8" value="true">Ні, але розташовувати декілька інструкцій в одному рядку є ознакою поганого стилю 🧐</input>
 </label>
-<button class="check" id="cdb69ff0-57cc-4983-8d80-f7b3b0f2ebcd" onclick="checkOptions(&quot;cdb69ff0-57cc-4983-8d80-f7b3b0f2ebcd&quot;, &quot;f6a0649d-64cd-4ea1-9f28-0c7e3cd0c841&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="d5e0f06b-94a1-4907-b6a0-e238cf970c26" onclick="checkOptions(&quot;d5e0f06b-94a1-4907-b6a0-e238cf970c26&quot;, &quot;7fc209bd-7fb8-4c4b-ab7f-554dde06f3b8&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('f6a0649d-64cd-4ea1-9f28-0c7e3cd0c841');
-    const submitButton = document.getElementById('cdb69ff0-57cc-4983-8d80-f7b3b0f2ebcd');
+    const radioButtons = document.getElementsByName('7fc209bd-7fb8-4c4b-ab7f-554dde06f3b8');
+    const submitButton = document.getElementById('d5e0f06b-94a1-4907-b6a0-e238cf970c26');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -618,19 +618,19 @@ volume = area * height
 <div class="question">Скопіюйте код у Colab записник і запустіть. Скільки останніх рядків нам треба закоментувати, щоб код НЕ повертав помилку 🧮?</div>
 
 <label>
-<input type="radio" name="7041c2a2-fb45-4c67-adf5-96b8c34d614f" value="false">Тільки останній рядок</input>
+<input type="radio" name="293a19e1-43b7-47f2-b140-7adca7e23044" value="false">Тільки останній рядок</input>
 </label>
 <label>
-<input type="radio" name="7041c2a2-fb45-4c67-adf5-96b8c34d614f" value="false">Останні два рядки</input>
+<input type="radio" name="293a19e1-43b7-47f2-b140-7adca7e23044" value="false">Останні два рядки</input>
 </label>
 <label>
-<input type="radio" name="7041c2a2-fb45-4c67-adf5-96b8c34d614f" value="true">Останні три рядки</input>
+<input type="radio" name="293a19e1-43b7-47f2-b140-7adca7e23044" value="true">Останні три рядки</input>
 </label>
-<button class="check" id="fca476e2-c6a0-4c3c-8b03-8e18e58697de" onclick="checkOptions(&quot;fca476e2-c6a0-4c3c-8b03-8e18e58697de&quot;, &quot;7041c2a2-fb45-4c67-adf5-96b8c34d614f&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="17b1bd1d-6f01-4c23-b2c0-7cae626feec9" onclick="checkOptions(&quot;17b1bd1d-6f01-4c23-b2c0-7cae626feec9&quot;, &quot;293a19e1-43b7-47f2-b140-7adca7e23044&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('7041c2a2-fb45-4c67-adf5-96b8c34d614f');
-    const submitButton = document.getElementById('fca476e2-c6a0-4c3c-8b03-8e18e58697de');
+    const radioButtons = document.getElementsByName('293a19e1-43b7-47f2-b140-7adca7e23044');
+    const submitButton = document.getElementById('17b1bd1d-6f01-4c23-b2c0-7cae626feec9');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -640,12 +640,12 @@ volume = area * height
 });</script>
 <div class="quiz">
 <div class="question">4. Додайте пробіли у код <code>tva=100</code> в правильних місцях ✍️:</div>
-<input id="9d11eec9-11ff-41c3-bc24-84dde0d58798" type="text" placeholder="Пишіть тут..."/>
-<button class="check" id="5a9e75b7-f50a-4356-bef1-0f0fe07756cc" disabled="disabled" onclick="checkShort(&quot;5a9e75b7-f50a-4356-bef1-0f0fe07756cc&quot;, &quot;9d11eec9-11ff-41c3-bc24-84dde0d58798&quot;, &quot;tva = 100&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<input id="f174dd88-8c6c-4237-9f58-59702fd41642" type="text" placeholder="Пишіть тут..."/>
+<button class="check" id="813427de-9b19-40f6-aa69-682ebc764b7b" disabled="disabled" onclick="checkShort(&quot;813427de-9b19-40f6-aa69-682ebc764b7b&quot;, &quot;f174dd88-8c6c-4237-9f58-59702fd41642&quot;, &quot;tva = 100&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const inputElement = document.getElementById("9d11eec9-11ff-41c3-bc24-84dde0d58798");
-    const buttonElement = document.getElementById("5a9e75b7-f50a-4356-bef1-0f0fe07756cc");
+    const inputElement = document.getElementById("f174dd88-8c6c-4237-9f58-59702fd41642");
+    const buttonElement = document.getElementById("813427de-9b19-40f6-aa69-682ebc764b7b");
 
     inputElement.addEventListener("input", function () {
         const inputValue = inputElement.value.trim();
@@ -654,33 +654,33 @@ volume = area * height
 });</script>
 <div class="quiz">
 <div class="question">5. Перетягніть імена змінних до правильного кошику 🧺:</div>
-<div class="elements_pool" id="0ef2d7c4-71db-4d68-9c34-93978663330f">
-<div class="element" name="4a50aaaf-c8ff-404b-b16a-a8b36d57514f" id="3cb10e1c-8f18-42cc-9535-41a80f4f8566" draggable="true" ondragstart="drag(event)"><code>dr_strange</code></div>
-<div class="element" name="4a50aaaf-c8ff-404b-b16a-a8b36d57514f" id="937af154-2bde-4c4c-9756-36c02b52c53b" draggable="true" ondragstart="drag(event)"><code>first day</code></div>
-<div class="element" name="4a50aaaf-c8ff-404b-b16a-a8b36d57514f" id="7e998e29-4c85-4fa3-b243-d8ee2764e683" draggable="true" ondragstart="drag(event)"><code>2023year</code></div>
-<div class="element" name="4a50aaaf-c8ff-404b-b16a-a8b36d57514f" id="ece68723-741c-4ffc-9807-89f1271c5418" draggable="true" ondragstart="drag(event)"><code>API_KEY</code></div>
-<div class="element" name="4a50aaaf-c8ff-404b-b16a-a8b36d57514f" id="d5b8fd86-8c5e-4429-861a-7d96d5c94fff" draggable="true" ondragstart="drag(event)"><code>max</code></div>
+<div class="elements_pool" id="9bb0ebd9-4bad-4348-90fb-6e377837ff11">
+<div class="element" name="108da9b7-8eeb-47bf-b19e-72b3f92baaff" id="845d6889-f316-4c9b-9ffa-12be8fef8ad4" draggable="true" ondragstart="drag(event)"><code>dr_strange</code></div>
+<div class="element" name="108da9b7-8eeb-47bf-b19e-72b3f92baaff" id="1e5c0dab-133f-4e19-8d6e-76bc40cd5373" draggable="true" ondragstart="drag(event)"><code>first day</code></div>
+<div class="element" name="108da9b7-8eeb-47bf-b19e-72b3f92baaff" id="b805d0d7-98ee-429e-ae05-8702a57c891b" draggable="true" ondragstart="drag(event)"><code>2023year</code></div>
+<div class="element" name="108da9b7-8eeb-47bf-b19e-72b3f92baaff" id="ba01c6cd-4c99-497b-afb3-0826dee7ea63" draggable="true" ondragstart="drag(event)"><code>API_KEY</code></div>
+<div class="element" name="108da9b7-8eeb-47bf-b19e-72b3f92baaff" id="2224d862-6f81-4ca4-99a9-05a4c0156b24" draggable="true" ondragstart="drag(event)"><code>max</code></div>
 </div>
 <div class="buckets">
 <div class="column">
 <span>Допустимі імена</span>
-<div class="bucket" id="e582c266-0a30-450d-a62c-106b11b2a40e" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="bucket" id="af5f3fb5-bf6a-4570-a4a2-e56c86d8145e" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div>
 <div class="column">
 <span>Недопустимі імена</span>
-<div class="bucket" id="55e1b334-13ca-4784-b248-32fb1641e34b" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="bucket" id="3e1638aa-21ec-42e9-833a-12a05ca2266f" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div>
 </div>
-<button class="check" id="2acd3a9a-451b-4e6b-923a-ffea3b725009" onclick="checkBucket(&quot;2acd3a9a-451b-4e6b-923a-ffea3b725009&quot;, [&quot;e582c266-0a30-450d-a62c-106b11b2a40e&quot;, &quot;55e1b334-13ca-4784-b248-32fb1641e34b&quot;], [[&quot;3cb10e1c-8f18-42cc-9535-41a80f4f8566&quot;, &quot;ece68723-741c-4ffc-9807-89f1271c5418&quot;, &quot;d5b8fd86-8c5e-4429-861a-7d96d5c94fff&quot;], [&quot;937af154-2bde-4c4c-9756-36c02b52c53b&quot;, &quot;7e998e29-4c85-4fa3-b243-d8ee2764e683&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="f9ebd9e0-7080-4f60-8450-8f8b65930a90" onclick="checkBucket(&quot;f9ebd9e0-7080-4f60-8450-8f8b65930a90&quot;, [&quot;af5f3fb5-bf6a-4570-a4a2-e56c86d8145e&quot;, &quot;3e1638aa-21ec-42e9-833a-12a05ca2266f&quot;], [[&quot;845d6889-f316-4c9b-9ffa-12be8fef8ad4&quot;, &quot;ba01c6cd-4c99-497b-afb3-0826dee7ea63&quot;, &quot;2224d862-6f81-4ca4-99a9-05a4c0156b24&quot;], [&quot;1e5c0dab-133f-4e19-8d6e-76bc40cd5373&quot;, &quot;b805d0d7-98ee-429e-ae05-8702a57c891b&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const elements = document.getElementsByName('4a50aaaf-c8ff-404b-b16a-a8b36d57514f');
-    const checkButton = document.getElementById('2acd3a9a-451b-4e6b-923a-ffea3b725009');
+    const elements = document.getElementsByName('108da9b7-8eeb-47bf-b19e-72b3f92baaff');
+    const checkButton = document.getElementById('f9ebd9e0-7080-4f60-8450-8f8b65930a90');
 
     elements.forEach(function(element) {
         element.addEventListener('dragend', function() {
 
-            const pool = document.getElementById('0ef2d7c4-71db-4d68-9c34-93978663330f');
+            const pool = document.getElementById('9bb0ebd9-4bad-4348-90fb-6e377837ff11');
 
             if(pool.getElementsByClassName("element").length === 0) {
                 checkButton.disabled = false;
@@ -696,22 +696,22 @@ day = 2
 # day = 4
 </code></pre>
 <label>
-<input type="radio" name="add68a9c-3e22-45e8-a26c-77b2e4edcd77" value="false"><code>10</code></input>
+<input type="radio" name="a1627d70-d223-424a-8d50-06d3b4b16803" value="false"><code>10</code></input>
 </label>
 <label>
-<input type="radio" name="add68a9c-3e22-45e8-a26c-77b2e4edcd77" value="false"><code>7</code></input>
+<input type="radio" name="a1627d70-d223-424a-8d50-06d3b4b16803" value="false"><code>7</code></input>
 </label>
 <label>
-<input type="radio" name="add68a9c-3e22-45e8-a26c-77b2e4edcd77" value="true"><code>2</code></input>
+<input type="radio" name="a1627d70-d223-424a-8d50-06d3b4b16803" value="true"><code>2</code></input>
 </label>
 <label>
-<input type="radio" name="add68a9c-3e22-45e8-a26c-77b2e4edcd77" value="false"><code>4</code></input>
+<input type="radio" name="a1627d70-d223-424a-8d50-06d3b4b16803" value="false"><code>4</code></input>
 </label>
-<button class="check" id="6c14df67-da09-431d-b9c9-83c7211043c7" onclick="checkOptions(&quot;6c14df67-da09-431d-b9c9-83c7211043c7&quot;, &quot;add68a9c-3e22-45e8-a26c-77b2e4edcd77&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="5490032b-c350-43cf-bb00-a90147f5ee6d" onclick="checkOptions(&quot;5490032b-c350-43cf-bb00-a90147f5ee6d&quot;, &quot;a1627d70-d223-424a-8d50-06d3b4b16803&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('add68a9c-3e22-45e8-a26c-77b2e4edcd77');
-    const submitButton = document.getElementById('6c14df67-da09-431d-b9c9-83c7211043c7');
+    const radioButtons = document.getElementsByName('a1627d70-d223-424a-8d50-06d3b4b16803');
+    const submitButton = document.getElementById('5490032b-c350-43cf-bb00-a90147f5ee6d');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -722,21 +722,21 @@ day = 2
 <div class="quiz">
 <div class="question">7. Виберіть інструкції, в яких пробіли розставлені "як ми домовлялись" 🤝:</div>
 <label>
-<input type="checkbox" name="188d1afa-9276-40a3-9e2f-6cd151cd2c33" value="false"><code>round (10)</code></input>
+<input type="checkbox" name="573fa5a3-dac9-4d6b-ba05-e26eb985f6db" value="false"><code>round (10)</code></input>
 </label>
 <label>
-<input type="checkbox" name="188d1afa-9276-40a3-9e2f-6cd151cd2c33" value="false"><code>answer=42</code></input>
+<input type="checkbox" name="573fa5a3-dac9-4d6b-ba05-e26eb985f6db" value="false"><code>answer=42</code></input>
 </label>
 <label>
-<input type="checkbox" name="188d1afa-9276-40a3-9e2f-6cd151cd2c33" value="true"><code>2 + 2</code></input>
+<input type="checkbox" name="573fa5a3-dac9-4d6b-ba05-e26eb985f6db" value="true"><code>2 + 2</code></input>
 </label>
 <label>
-<input type="checkbox" name="188d1afa-9276-40a3-9e2f-6cd151cd2c33" value="false"><code>45*23+31/29</code></input>
+<input type="checkbox" name="573fa5a3-dac9-4d6b-ba05-e26eb985f6db" value="false"><code>45*23+31/29</code></input>
 </label>
 <label>
-<input type="checkbox" name="188d1afa-9276-40a3-9e2f-6cd151cd2c33" value="true"><code>max(12, 3, 4)</code></input>
+<input type="checkbox" name="573fa5a3-dac9-4d6b-ba05-e26eb985f6db" value="true"><code>max(12, 3, 4)</code></input>
 </label>
-<button class="check" id="9f32cec0-4565-439a-b4fb-56c4392e2dd6" onclick="checkOptions(&quot;9f32cec0-4565-439a-b4fb-56c4392e2dd6&quot;, &quot;188d1afa-9276-40a3-9e2f-6cd151cd2c33&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<button class="check" id="e201e5a0-6704-48c1-883c-499164a14aaf" onclick="checkOptions(&quot;e201e5a0-6704-48c1-883c-499164a14aaf&quot;, &quot;573fa5a3-dac9-4d6b-ba05-e26eb985f6db&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <div class="quiz">
 <div class="question">8. Що треба записати замість <code>_____</code>, щоб роздрукувати значення також змінної <code>loki</code> 🦊:</div>
@@ -748,25 +748,25 @@ loki + thor
 <div class='question'>Хей, не забуваємо що ми завжди можемо скопіювати код у Colab записник і поексперементувати! 🤓</div>
 
 <label>
-<input type="radio" name="14b414b1-3704-4415-bc44-9f711506c4b5" value="false"><code>round</code></input>
+<input type="radio" name="7f57d9e1-2372-45a4-aca5-ee149d87975d" value="false"><code>round</code></input>
 </label>
 <label>
-<input type="radio" name="14b414b1-3704-4415-bc44-9f711506c4b5" value="true"><code>print</code></input>
+<input type="radio" name="7f57d9e1-2372-45a4-aca5-ee149d87975d" value="true"><code>print</code></input>
 </label>
 <label>
-<input type="radio" name="14b414b1-3704-4415-bc44-9f711506c4b5" value="false"><code>sum</code></input>
+<input type="radio" name="7f57d9e1-2372-45a4-aca5-ee149d87975d" value="false"><code>sum</code></input>
 </label>
 <label>
-<input type="radio" name="14b414b1-3704-4415-bc44-9f711506c4b5" value="false"><code>show</code></input>
+<input type="radio" name="7f57d9e1-2372-45a4-aca5-ee149d87975d" value="false"><code>show</code></input>
 </label>
 <label>
-<input type="radio" name="14b414b1-3704-4415-bc44-9f711506c4b5" value="false"><code>display</code></input>
+<input type="radio" name="7f57d9e1-2372-45a4-aca5-ee149d87975d" value="false"><code>display</code></input>
 </label>
-<button class="check" id="8a93b6ea-6db1-4b78-8abb-1732add4eb91" onclick="checkOptions(&quot;8a93b6ea-6db1-4b78-8abb-1732add4eb91&quot;, &quot;14b414b1-3704-4415-bc44-9f711506c4b5&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="1dde1cbe-3bb3-46b9-9acb-840be9ae1513" onclick="checkOptions(&quot;1dde1cbe-3bb3-46b9-9acb-840be9ae1513&quot;, &quot;7f57d9e1-2372-45a4-aca5-ee149d87975d&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('14b414b1-3704-4415-bc44-9f711506c4b5');
-    const submitButton = document.getElementById('8a93b6ea-6db1-4b78-8abb-1732add4eb91');
+    const radioButtons = document.getElementsByName('7f57d9e1-2372-45a4-aca5-ee149d87975d');
+    const submitButton = document.getElementById('1dde1cbe-3bb3-46b9-9acb-840be9ae1513');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
