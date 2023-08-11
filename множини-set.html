@@ -29,7 +29,7 @@ Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-08-10" />
+<meta name="date" content="2023-08-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -458,16 +458,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Пам’ятаєте як створити список <code>list</code>? Тоді ви вже майже знаєте як створити множини. Замість квадратних дужок (<code>[</code> та <code>]</code>) використайте фігурні (<code>{</code> та <code>}</code>), і це створить множину. Давайте створимо множину інгредієнтів гамбургера з МакДональдз. Це <code>"bun"</code> (булочка 🥯), <code>"mustard"</code> (гірчиця 🟡), <code>"ketchup"</code> (кетчуп 🔴), <code>"onion"</code> (цибуля 🧅), <code>"pickle"</code> (маринований огірок 🥒) та <code>"beef"</code> (яловичина 🥩):</p>
 <div class="sourceCode" id="cb234"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb234-1"><a href="множини-set.html#cb234-1" aria-hidden="true" tabindex="-1"></a>hamburger <span class="op">=</span> {<span class="st">&quot;bun&quot;</span>, <span class="st">&quot;mustard&quot;</span>, <span class="st">&quot;ketchup&quot;</span>, <span class="st">&quot;onion&quot;</span>, <span class="st">&quot;pickle&quot;</span>, <span class="st">&quot;beef&quot;</span>}</span>
 <span id="cb234-2"><a href="множини-set.html#cb234-2" aria-hidden="true" tabindex="-1"></a>hamburger</span></code></pre></div>
-<pre><code>## {&#39;bun&#39;, &#39;ketchup&#39;, &#39;mustard&#39;, &#39;onion&#39;, &#39;beef&#39;, &#39;pickle&#39;}</code></pre>
+<pre><code>## {&#39;beef&#39;, &#39;onion&#39;, &#39;bun&#39;, &#39;mustard&#39;, &#39;pickle&#39;, &#39;ketchup&#39;}</code></pre>
 <p>До речі якби ми два рази зазначили <code>"beef"</code>, то словник все одно залишився б таким же. Тому що в словниках можуть бути тільки унікальні елементи, тобто без повторень. Давайте спробуємо:</p>
 <div class="sourceCode" id="cb236"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb236-1"><a href="множини-set.html#cb236-1" aria-hidden="true" tabindex="-1"></a>hamburger <span class="op">=</span> {<span class="st">&quot;bun&quot;</span>, <span class="st">&quot;mustard&quot;</span>, <span class="st">&quot;ketchup&quot;</span>, <span class="st">&quot;onion&quot;</span>, <span class="st">&quot;pickle&quot;</span>, <span class="st">&quot;beef&quot;</span>, <span class="st">&quot;beef&quot;</span>}</span>
 <span id="cb236-2"><a href="множини-set.html#cb236-2" aria-hidden="true" tabindex="-1"></a>hamburger</span></code></pre></div>
-<pre><code>## {&#39;bun&#39;, &#39;ketchup&#39;, &#39;mustard&#39;, &#39;onion&#39;, &#39;beef&#39;, &#39;pickle&#39;}</code></pre>
+<pre><code>## {&#39;beef&#39;, &#39;onion&#39;, &#39;bun&#39;, &#39;mustard&#39;, &#39;pickle&#39;, &#39;ketchup&#39;}</code></pre>
 <p>До речі, як і ключі 🔑 в словниках <code>dict</code>, елементами множин <code>set</code> можуть бути тільки незмінні об’єкти, такі як <code>int</code>, <code>float</code>, <code>str</code>, <code>bool</code>, <code>tuple</code> тощо.</p>
 <p>Давайте ще створимо множину, яка міститиме інгредієнти МакЧікен 🍗. Нам ця множина знадобиться трохи згодом. Назвемо цей об’єкт <code>macchicken</code>:</p>
 <div class="sourceCode" id="cb238"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb238-1"><a href="множини-set.html#cb238-1" aria-hidden="true" tabindex="-1"></a>macchicken <span class="op">=</span> {<span class="st">&quot;bun&quot;</span>, <span class="st">&quot;sauce&quot;</span>, <span class="st">&quot;salad&quot;</span>, <span class="st">&quot;chicken&quot;</span>}</span>
 <span id="cb238-2"><a href="множини-set.html#cb238-2" aria-hidden="true" tabindex="-1"></a>macchicken</span></code></pre></div>
-<pre><code>## {&#39;bun&#39;, &#39;chicken&#39;, &#39;sauce&#39;, &#39;salad&#39;}</code></pre>
+<pre><code>## {&#39;salad&#39;, &#39;bun&#39;, &#39;sauce&#39;, &#39;chicken&#39;}</code></pre>
 </div>
 <div id="застосовуємо-оператори-2" class="section level2 hasAnchor" number="10.2">
 <h2><span class="header-section-number">10.2</span> ➕ Застосовуємо оператори<a href="множини-set.html#застосовуємо-оператори-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -485,7 +485,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- XXX: image of union -->
 <p>У нашому прикладі з бургерами, це будуть усі інгредієнти які містяться в гамбургері та усі інгредієнти які містяться в МакЧікені:</p>
 <div class="sourceCode" id="cb242"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb242-1"><a href="множини-set.html#cb242-1" aria-hidden="true" tabindex="-1"></a>hamburger <span class="op">|</span> macchicken</span></code></pre></div>
-<pre><code>## {&#39;bun&#39;, &#39;chicken&#39;, &#39;sauce&#39;, &#39;onion&#39;, &#39;beef&#39;, &#39;pickle&#39;, &#39;ketchup&#39;, &#39;salad&#39;, &#39;mustard&#39;}</code></pre>
+<pre><code>## {&#39;beef&#39;, &#39;chicken&#39;, &#39;sauce&#39;, &#39;onion&#39;, &#39;bun&#39;, &#39;mustard&#39;, &#39;salad&#39;, &#39;pickle&#39;, &#39;ketchup&#39;}</code></pre>
 </div>
 <div id="знаходимо-перетин-множин" class="section level3 hasAnchor" number="10.2.3">
 <h3><span class="header-section-number">10.2.3</span> Знаходимо перетин множин<a href="множини-set.html#знаходимо-перетин-множин" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -501,7 +501,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- XXX: image of difference -->
 <p>Різниця між <code>hamburger</code> та <code>macchicken</code>, це інгредієнти які є в гамбургері, але яких нема у МакЧікен:</p>
 <div class="sourceCode" id="cb246"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb246-1"><a href="множини-set.html#cb246-1" aria-hidden="true" tabindex="-1"></a>hamburger <span class="op">-</span> macchicken</span></code></pre></div>
-<pre><code>## {&#39;onion&#39;, &#39;beef&#39;, &#39;pickle&#39;, &#39;ketchup&#39;, &#39;mustard&#39;}</code></pre>
+<pre><code>## {&#39;beef&#39;, &#39;onion&#39;, &#39;mustard&#39;, &#39;pickle&#39;, &#39;ketchup&#39;}</code></pre>
 </div>
 </div>
 <div id="застосовуємо-корисні-методи-2" class="section level2 hasAnchor" number="10.3">
@@ -512,14 +512,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Для того, щоб додати елемент до множини, ми можемо використати метод <code>.add()</code>. Новий елемент треба буде зазначити між дужками. Додаємо <code>"cheese"</code> до множини <code>hamburger</code>:</p>
 <div class="sourceCode" id="cb248"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb248-1"><a href="множини-set.html#cb248-1" aria-hidden="true" tabindex="-1"></a>hamburger.add(<span class="st">&quot;cheese&quot;</span>)</span>
 <span id="cb248-2"><a href="множини-set.html#cb248-2" aria-hidden="true" tabindex="-1"></a>hamburger</span></code></pre></div>
-<pre><code>## {&#39;bun&#39;, &#39;ketchup&#39;, &#39;mustard&#39;, &#39;onion&#39;, &#39;beef&#39;, &#39;pickle&#39;, &#39;cheese&#39;}</code></pre>
+<pre><code>## {&#39;beef&#39;, &#39;onion&#39;, &#39;bun&#39;, &#39;cheese&#39;, &#39;mustard&#39;, &#39;pickle&#39;, &#39;ketchup&#39;}</code></pre>
 </div>
 <div id="видаляємо-елементи-із-множини" class="section level3 hasAnchor" number="10.3.2">
 <h3><span class="header-section-number">10.3.2</span> Видаляємо елементи із множини<a href="множини-set.html#видаляємо-елементи-із-множини" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Так, сир не повинен бути у множині <code>hamburger</code>. Ми можемо його видалити двома методами: <code>.remove()</code> чи <code>.pop()</code>. Різниця у тому, що <code>.pop()</code> ще й поверне значення видаленого елементу, після того, як його видалить. Ми ж скористаємось <code>.remove()</code>:</p>
 <div class="sourceCode" id="cb250"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb250-1"><a href="множини-set.html#cb250-1" aria-hidden="true" tabindex="-1"></a>hamburger.remove(<span class="st">&quot;cheese&quot;</span>)</span>
 <span id="cb250-2"><a href="множини-set.html#cb250-2" aria-hidden="true" tabindex="-1"></a>hamburger</span></code></pre></div>
-<pre><code>## {&#39;bun&#39;, &#39;ketchup&#39;, &#39;mustard&#39;, &#39;onion&#39;, &#39;beef&#39;, &#39;pickle&#39;}</code></pre>
+<pre><code>## {&#39;beef&#39;, &#39;onion&#39;, &#39;bun&#39;, &#39;mustard&#39;, &#39;pickle&#39;, &#39;ketchup&#39;}</code></pre>
 <p>Якщо такого елемента не існує, то методи повернуть помилку:</p>
 <div class="sourceCode" id="cb252"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb252-1"><a href="множини-set.html#cb252-1" aria-hidden="true" tabindex="-1"></a>hamburger.remove(<span class="st">&quot;cheese&quot;</span>)</span></code></pre></div>
 <pre><code>## &#39;cheese&#39;</code></pre>
@@ -528,7 +528,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">10.3.3</span> Методи, які еквівалентні операторам<a href="множини-set.html#методи-які-еквівалентні-операторам" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Математичні оператори які ми розглянули, тобто об’єднання <code>|</code>, перетин <code>&amp;</code> та різниця <code>-</code>, також реалізовані як методи. Замість того щоб написати <code>a | b</code>, ми можемо записати цей вираз як <code>a.union(b)</code>. Цей вираз не змінить <code>a</code>, а поверне нову множину, яка дорівнюватиме <code>a | b</code>. Використовуючи множини <code>hamburger</code> та <code>macchicken</code>, маємо:</p>
 <div class="sourceCode" id="cb254"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb254-1"><a href="множини-set.html#cb254-1" aria-hidden="true" tabindex="-1"></a>hamburger.union(macchicken)</span></code></pre></div>
-<pre><code>## {&#39;bun&#39;, &#39;chicken&#39;, &#39;sauce&#39;, &#39;onion&#39;, &#39;beef&#39;, &#39;pickle&#39;, &#39;ketchup&#39;, &#39;salad&#39;, &#39;mustard&#39;}</code></pre>
+<pre><code>## {&#39;beef&#39;, &#39;chicken&#39;, &#39;sauce&#39;, &#39;onion&#39;, &#39;bun&#39;, &#39;mustard&#39;, &#39;salad&#39;, &#39;pickle&#39;, &#39;ketchup&#39;}</code></pre>
 <p>Нижче ми покажемо таблицю відповідності методів до операторів:</p>
 <table>
 <thead>
@@ -562,19 +562,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">1. Як створити множину?</div>
 <label>
-<input type="radio" name="bf450b86-472d-4427-83d0-ceee37decb1b" value="false"><code>x = [1, 2, 3]</code></input>
+<input type="radio" name="73326c76-1087-4327-a4d5-ca78339d8db6" value="false"><code>x = [1, 2, 3]</code></input>
 </label>
 <label>
-<input type="radio" name="bf450b86-472d-4427-83d0-ceee37decb1b" value="true"><code>x = {1, 2, 3}</code></input>
+<input type="radio" name="73326c76-1087-4327-a4d5-ca78339d8db6" value="true"><code>x = {1, 2, 3}</code></input>
 </label>
 <label>
-<input type="radio" name="bf450b86-472d-4427-83d0-ceee37decb1b" value="false"><code>x = (1, 2, 3)</code></input>
+<input type="radio" name="73326c76-1087-4327-a4d5-ca78339d8db6" value="false"><code>x = (1, 2, 3)</code></input>
 </label>
-<button class="check" id="d1929b9a-6db6-4baa-971f-b64def0e8191" onclick="checkOptions(&quot;d1929b9a-6db6-4baa-971f-b64def0e8191&quot;, &quot;bf450b86-472d-4427-83d0-ceee37decb1b&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="fe1805a3-61e5-41b0-91ac-fc234b0e958e" onclick="checkOptions(&quot;fe1805a3-61e5-41b0-91ac-fc234b0e958e&quot;, &quot;73326c76-1087-4327-a4d5-ca78339d8db6&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('bf450b86-472d-4427-83d0-ceee37decb1b');
-    const submitButton = document.getElementById('d1929b9a-6db6-4baa-971f-b64def0e8191');
+    const radioButtons = document.getElementsByName('73326c76-1087-4327-a4d5-ca78339d8db6');
+    const submitButton = document.getElementById('fe1805a3-61e5-41b0-91ac-fc234b0e958e');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -584,22 +584,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 });</script>
 <div class="quiz">
 <div class="question">2. Перетягніть символи коду у правильному порядку, щоб знайти перетин множин <code>A</code> та <code>B</code>:</div>
-<div class="answer_pool" id="3dd3b251-3604-40e0-919b-4e55137133f5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="elements_pool" id="185f7dbd-c5e6-469e-90de-e62dcb26fed7">
-<div class="element" name="b91b4c32-d52d-4bb9-8eb0-4e43dcb17fab" id="231e0172-ceb5-4494-b460-b230de54c6b0" draggable="true" ondragstart="drag(event)"><code>B</code></div>
-<div class="element" name="b91b4c32-d52d-4bb9-8eb0-4e43dcb17fab" id="f17e4762-7aaf-47d3-826f-b0c0d4301d25" draggable="true" ondragstart="drag(event)"><code>A</code></div>
-<div class="element" name="b91b4c32-d52d-4bb9-8eb0-4e43dcb17fab" id="ca2d0142-44a6-4a8e-9f52-08681e8154c1" draggable="true" ondragstart="drag(event)"><code>&</code></div>
+<div class="answer_pool" id="23f334f8-d200-49c4-8695-136f6786ed02" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="elements_pool" id="db1ea931-8e2a-4add-b3f1-0548279ce7d4">
+<div class="element" name="89488075-f35c-44f6-9562-ce8c9cdd5c57" id="ace65ea9-9a5f-44cb-b5b3-a375fbbc419d" draggable="true" ondragstart="drag(event)"><code>B</code></div>
+<div class="element" name="89488075-f35c-44f6-9562-ce8c9cdd5c57" id="caba80c9-35a4-4e6e-9a14-c5415b0d0700" draggable="true" ondragstart="drag(event)"><code>A</code></div>
+<div class="element" name="89488075-f35c-44f6-9562-ce8c9cdd5c57" id="793fc6eb-b386-4d2a-9948-5fa38c3721b7" draggable="true" ondragstart="drag(event)"><code>&</code></div>
 </div>
-<button class="check" id="0f8c0b8e-67cb-45b5-9b4e-8b3c2aa0a10e" onclick="checkArrange(&quot;0f8c0b8e-67cb-45b5-9b4e-8b3c2aa0a10e&quot;, &quot;3dd3b251-3604-40e0-919b-4e55137133f5&quot;, [&quot;f17e4762-7aaf-47d3-826f-b0c0d4301d25&quot;, &quot;ca2d0142-44a6-4a8e-9f52-08681e8154c1&quot;, &quot;231e0172-ceb5-4494-b460-b230de54c6b0&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="20a5b0d0-2b7c-424d-981c-f0012faed01f" onclick="checkArrange(&quot;20a5b0d0-2b7c-424d-981c-f0012faed01f&quot;, &quot;23f334f8-d200-49c4-8695-136f6786ed02&quot;, [&quot;caba80c9-35a4-4e6e-9a14-c5415b0d0700&quot;, &quot;793fc6eb-b386-4d2a-9948-5fa38c3721b7&quot;, &quot;ace65ea9-9a5f-44cb-b5b3-a375fbbc419d&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const elements = document.getElementsByName('b91b4c32-d52d-4bb9-8eb0-4e43dcb17fab');
-    const checkButton = document.getElementById('0f8c0b8e-67cb-45b5-9b4e-8b3c2aa0a10e');
+    const elements = document.getElementsByName('89488075-f35c-44f6-9562-ce8c9cdd5c57');
+    const checkButton = document.getElementById('20a5b0d0-2b7c-424d-981c-f0012faed01f');
 
     elements.forEach(function(element) {
         element.addEventListener('dragend', function() {
 
-            const pool = document.getElementById('185f7dbd-c5e6-469e-90de-e62dcb26fed7');
+            const pool = document.getElementById('db1ea931-8e2a-4add-b3f1-0548279ce7d4');
 
             if(pool.getElementsByClassName("element").length === 0) {
                 checkButton.disabled = false;
@@ -609,12 +609,12 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 });</script>
 <div class="quiz">
 <div class="question">3. Напищіть код, що додає елемет <code>12</code> до множини <code>grades</code>:</div>
-<input id="6755b033-4f70-4a95-bb64-19b0b922587d" type="text" placeholder="Пишіть тут..."/>
-<button class="check" id="4d44486e-5d2c-43e7-92ff-eb87cfa87ae0" disabled="disabled" onclick="checkShort(&quot;4d44486e-5d2c-43e7-92ff-eb87cfa87ae0&quot;, &quot;6755b033-4f70-4a95-bb64-19b0b922587d&quot;, &quot;grades.add(12)&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<input id="47bb26f7-3535-4058-8399-4fc7d36fe607" type="text" placeholder="Пишіть тут..."/>
+<button class="check" id="006fe85e-df29-4c57-810b-580d0c300294" disabled="disabled" onclick="checkShort(&quot;006fe85e-df29-4c57-810b-580d0c300294&quot;, &quot;47bb26f7-3535-4058-8399-4fc7d36fe607&quot;, &quot;grades.add(12)&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const inputElement = document.getElementById("6755b033-4f70-4a95-bb64-19b0b922587d");
-    const buttonElement = document.getElementById("4d44486e-5d2c-43e7-92ff-eb87cfa87ae0");
+    const inputElement = document.getElementById("47bb26f7-3535-4058-8399-4fc7d36fe607");
+    const buttonElement = document.getElementById("006fe85e-df29-4c57-810b-580d0c300294");
 
     inputElement.addEventListener("input", function () {
         const inputValue = inputElement.value.trim();
@@ -623,32 +623,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 });</script>
 <div class="quiz">
 <div class="question">4. Перетягніть структури даних до правильної корзини:</div>
-<div class="elements_pool" id="7e6a0285-e5e4-4f91-b7df-23f78d6c0b41">
-<div class="element" name="8e2728a7-80ea-4a99-aa0e-67a03077bc8c" id="d0164981-3135-40c8-9997-3bba1c6a8002" draggable="true" ondragstart="drag(event)"><code>list</code></div>
-<div class="element" name="8e2728a7-80ea-4a99-aa0e-67a03077bc8c" id="1191660a-1e0c-4edb-a93d-496eeac9744b" draggable="true" ondragstart="drag(event)"><code>tuple</code></div>
-<div class="element" name="8e2728a7-80ea-4a99-aa0e-67a03077bc8c" id="19dd89a7-0ddc-4759-9bf5-08ac876076a2" draggable="true" ondragstart="drag(event)"><code>dict</code></div>
-<div class="element" name="8e2728a7-80ea-4a99-aa0e-67a03077bc8c" id="5ecb7a31-21ac-45e1-81e7-350dff5900df" draggable="true" ondragstart="drag(event)"><code>set</code></div>
+<div class="elements_pool" id="870fc285-6005-4b8c-a11c-58986cb15155">
+<div class="element" name="35346bf9-1640-40a3-9ce1-4a3edbe535d3" id="e01da46f-ba53-410a-942a-6e9f5797c0c4" draggable="true" ondragstart="drag(event)"><code>list</code></div>
+<div class="element" name="35346bf9-1640-40a3-9ce1-4a3edbe535d3" id="0627bbe6-2220-493d-a047-267f484ee164" draggable="true" ondragstart="drag(event)"><code>tuple</code></div>
+<div class="element" name="35346bf9-1640-40a3-9ce1-4a3edbe535d3" id="4f62b7e4-c35d-4591-b55b-473dfbba1c4b" draggable="true" ondragstart="drag(event)"><code>dict</code></div>
+<div class="element" name="35346bf9-1640-40a3-9ce1-4a3edbe535d3" id="2570ceab-c912-47a0-b86b-a2368a1404be" draggable="true" ondragstart="drag(event)"><code>set</code></div>
 </div>
 <div class="buckets">
 <div class="column">
 <span>Можна змінити</span>
-<div class="bucket" id="37c58e9a-6fcf-4199-9500-2bb4952e96f2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="bucket" id="1c57278a-a4f0-41ec-afaa-64d4a8413a0a" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div>
 <div class="column">
 <span>Не можна змінити</span>
-<div class="bucket" id="94a452e8-8bb6-46e5-8508-929d12182648" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="bucket" id="27a04f0c-9f42-43ec-a20f-ca1f37e9ae91" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
 </div>
 </div>
-<button class="check" id="bf6163f2-407f-41dd-9f17-8a6300ef99e5" onclick="checkBucket(&quot;bf6163f2-407f-41dd-9f17-8a6300ef99e5&quot;, [&quot;37c58e9a-6fcf-4199-9500-2bb4952e96f2&quot;, &quot;94a452e8-8bb6-46e5-8508-929d12182648&quot;], [[&quot;d0164981-3135-40c8-9997-3bba1c6a8002&quot;], [&quot;1191660a-1e0c-4edb-a93d-496eeac9744b&quot;, &quot;19dd89a7-0ddc-4759-9bf5-08ac876076a2&quot;, &quot;5ecb7a31-21ac-45e1-81e7-350dff5900df&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="799f5124-9875-4b8b-874f-eafa5e32eef8" onclick="checkBucket(&quot;799f5124-9875-4b8b-874f-eafa5e32eef8&quot;, [&quot;1c57278a-a4f0-41ec-afaa-64d4a8413a0a&quot;, &quot;27a04f0c-9f42-43ec-a20f-ca1f37e9ae91&quot;], [[&quot;e01da46f-ba53-410a-942a-6e9f5797c0c4&quot;], [&quot;0627bbe6-2220-493d-a047-267f484ee164&quot;, &quot;4f62b7e4-c35d-4591-b55b-473dfbba1c4b&quot;, &quot;2570ceab-c912-47a0-b86b-a2368a1404be&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const elements = document.getElementsByName('8e2728a7-80ea-4a99-aa0e-67a03077bc8c');
-    const checkButton = document.getElementById('bf6163f2-407f-41dd-9f17-8a6300ef99e5');
+    const elements = document.getElementsByName('35346bf9-1640-40a3-9ce1-4a3edbe535d3');
+    const checkButton = document.getElementById('799f5124-9875-4b8b-874f-eafa5e32eef8');
 
     elements.forEach(function(element) {
         element.addEventListener('dragend', function() {
 
-            const pool = document.getElementById('7e6a0285-e5e4-4f91-b7df-23f78d6c0b41');
+            const pool = document.getElementById('870fc285-6005-4b8c-a11c-58986cb15155');
 
             if(pool.getElementsByClassName("element").length === 0) {
                 checkButton.disabled = false;
