@@ -148,6 +148,13 @@ string
 довжина-текстової-стрічки
 індексація-та-слайсінг
 string-methods
+advanced-index
+відємна-індексація
+зрізи
+start-та-stop-за-замовчуванням
+use-case-перша-половина-списку-та-друга-половина-списку
+відємні-start-та-stop
+крок-step
 semantics
 sugar
 ternary-expressions
