@@ -29,7 +29,7 @@ Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-08-11" />
+<meta name="date" content="2023-08-14" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -499,18 +499,18 @@ ChatGPT розуміє українську, хоч українська і не
 <p>І ось такою приблизно буде відповідь ChatGPT:</p>
 <!-- XXX: output of ChatGPT -->
 <p>Ми можемо просто скопіювати код і виконати його:</p>
-<div class="sourceCode" id="cb563"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb563-1"><a href="internet.html#cb563-1" aria-hidden="true" tabindex="-1"></a>greeting <span class="op">=</span> <span class="st">&quot;Привіт! Як справи?&quot;</span></span>
-<span id="cb563-2"><a href="internet.html#cb563-2" aria-hidden="true" tabindex="-1"></a>greeting.split(<span class="st">&quot; &quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb562"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb562-1"><a href="internet.html#cb562-1" aria-hidden="true" tabindex="-1"></a>greeting <span class="op">=</span> <span class="st">&quot;Привіт! Як справи?&quot;</span></span>
+<span id="cb562-2"><a href="internet.html#cb562-2" aria-hidden="true" tabindex="-1"></a>greeting.split(<span class="st">&quot; &quot;</span>)</span></code></pre></div>
 <pre><code>## [&#39;Привіт!&#39;, &#39;Як&#39;, &#39;справи?&#39;]</code></pre>
 </div>
 <div id="виправити-помилку" class="section level3 hasAnchor" number="21.1.2">
 <h3><span class="header-section-number">21.1.2</span> …виправити помилку?<a href="internet.html#виправити-помилку" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Нижче зазначенний код видає помилку:</p>
-<div class="sourceCode" id="cb565"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb565-1"><a href="internet.html#cb565-1" aria-hidden="true" tabindex="-1"></a>question <span class="op">=</span> <span class="st">&quot;The Answer to the Ultimate Question of Life, the Universe, and Everything is &quot;</span></span>
-<span id="cb565-2"><a href="internet.html#cb565-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb565-3"><a href="internet.html#cb565-3" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="dv">42</span></span>
-<span id="cb565-4"><a href="internet.html#cb565-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb565-5"><a href="internet.html#cb565-5" aria-hidden="true" tabindex="-1"></a>question <span class="op">+</span> answer</span></code></pre></div>
+<div class="sourceCode" id="cb564"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb564-1"><a href="internet.html#cb564-1" aria-hidden="true" tabindex="-1"></a>question <span class="op">=</span> <span class="st">&quot;The Answer to the Ultimate Question of Life, the Universe, and Everything is &quot;</span></span>
+<span id="cb564-2"><a href="internet.html#cb564-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb564-3"><a href="internet.html#cb564-3" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb564-4"><a href="internet.html#cb564-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb564-5"><a href="internet.html#cb564-5" aria-hidden="true" tabindex="-1"></a>question <span class="op">+</span> answer</span></code></pre></div>
 <pre><code>## can only concatenate str (not &quot;int&quot;) to str</code></pre>
 <p>ChatGPT може нам допомогти її випаравити. Для цього треба прописати запит:</p>
 <blockquote>
@@ -526,18 +526,18 @@ TypeError: can only concatenate str (not “int”) to str</p>
 <p>Приблизно ось так відповість ChatGPT:</p>
 <!-- XXX: output of ChatGPT -->
 <p>Це означає що нам треба було просто загорнути <code>answer</code> у <code>str()</code>:</p>
-<div class="sourceCode" id="cb567"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb567-1"><a href="internet.html#cb567-1" aria-hidden="true" tabindex="-1"></a>question <span class="op">=</span> <span class="st">&quot;The Answer to the Ultimate Question of Life, the Universe, and Everything is &quot;</span></span>
-<span id="cb567-2"><a href="internet.html#cb567-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb567-3"><a href="internet.html#cb567-3" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="dv">42</span></span>
-<span id="cb567-4"><a href="internet.html#cb567-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb567-5"><a href="internet.html#cb567-5" aria-hidden="true" tabindex="-1"></a>question <span class="op">+</span> <span class="bu">str</span>(answer)</span></code></pre></div>
+<div class="sourceCode" id="cb566"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb566-1"><a href="internet.html#cb566-1" aria-hidden="true" tabindex="-1"></a>question <span class="op">=</span> <span class="st">&quot;The Answer to the Ultimate Question of Life, the Universe, and Everything is &quot;</span></span>
+<span id="cb566-2"><a href="internet.html#cb566-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb566-3"><a href="internet.html#cb566-3" aria-hidden="true" tabindex="-1"></a>answer <span class="op">=</span> <span class="dv">42</span></span>
+<span id="cb566-4"><a href="internet.html#cb566-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb566-5"><a href="internet.html#cb566-5" aria-hidden="true" tabindex="-1"></a>question <span class="op">+</span> <span class="bu">str</span>(answer)</span></code></pre></div>
 <pre><code>## &#39;The Answer to the Ultimate Question of Life, the Universe, and Everything is 42&#39;</code></pre>
 <p>Якщо помилку видає виклик функції, яку ви написали самі, то треба разом із викликом фунцкії також надати і код визначення фунцкії.</p>
 <p>Ось клітинка з визначенням фунцкії:</p>
-<div class="sourceCode" id="cb569"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb569-1"><a href="internet.html#cb569-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> standardize(x):</span>
-<span id="cb569-2"><a href="internet.html#cb569-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (x <span class="op">-</span> mean) <span class="op">/</span> sd</span></code></pre></div>
+<div class="sourceCode" id="cb568"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb568-1"><a href="internet.html#cb568-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> standardize(x):</span>
+<span id="cb568-2"><a href="internet.html#cb568-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (x <span class="op">-</span> mean) <span class="op">/</span> sd</span></code></pre></div>
 <p>А ось виклик, який генерує помилку:</p>
-<div class="sourceCode" id="cb570"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb570-1"><a href="internet.html#cb570-1" aria-hidden="true" tabindex="-1"></a>standardize(<span class="fl">0.032</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb569"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb569-1"><a href="internet.html#cb569-1" aria-hidden="true" tabindex="-1"></a>standardize(<span class="fl">0.032</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## standardize() takes 1 positional argument but 3 were given</code></pre>
 <p>Нам треба передати ось такий запит:</p>
 <blockquote>
@@ -550,10 +550,10 @@ TypeError: standardize() takes 1 positional argument but 3 were given</p>
 <p>ChatGPT відповість щось накшталт:</p>
 <!-- XXX: output of ChatGPT -->
 <p>Це означає що ми забули зазначити ще два параметри <code>mean</code> та <code>sd</code> у визначенні функції:</p>
-<div class="sourceCode" id="cb572"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb572-1"><a href="internet.html#cb572-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> standardize(x, mean, sd):</span>
-<span id="cb572-2"><a href="internet.html#cb572-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (x <span class="op">-</span> mean) <span class="op">/</span> sd</span>
-<span id="cb572-3"><a href="internet.html#cb572-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb572-4"><a href="internet.html#cb572-4" aria-hidden="true" tabindex="-1"></a>standardize(<span class="fl">0.032</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb571"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb571-1"><a href="internet.html#cb571-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> standardize(x, mean, sd):</span>
+<span id="cb571-2"><a href="internet.html#cb571-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (x <span class="op">-</span> mean) <span class="op">/</span> sd</span>
+<span id="cb571-3"><a href="internet.html#cb571-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb571-4"><a href="internet.html#cb571-4" aria-hidden="true" tabindex="-1"></a>standardize(<span class="fl">0.032</span>, <span class="dv">0</span>, <span class="dv">1</span>)</span></code></pre></div>
 <pre><code>## 0.032</code></pre>
 <p>Далі ми розглянемо більш олд-скульні метроди знаходження інформації, які використовувались в епоху коли ChatGPT ще не існував.</p>
 </div>
@@ -581,9 +581,9 @@ TypeError: standardize() takes 1 positional argument but 3 were given</p>
 </blockquote>
 <p>Найкраще, якщо ці слова будуть термінами з Python.</p></li>
 <li><p>Якщо ви шукаєте як виправити помилку, то найефективнішою стратегією буде сформувати запит з повідомлення цієї помилки. Якщо повідомлення містить будь-які артефакти причетні тільки до вашого комп’ютеру чи коду, то їх краще прибрати. Наприклад, такі штуки як шляхи до файлів, назви змінних тощо. Код нижче читає файл, якого не існує:</p>
-<div class="sourceCode" id="cb574"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb574-1"><a href="internet.html#cb574-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">&quot;file_that_does_not_exist.txt&quot;</span>, <span class="st">&quot;r&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb573"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb573-1"><a href="internet.html#cb573-1" aria-hidden="true" tabindex="-1"></a>f <span class="op">=</span> <span class="bu">open</span>(<span class="st">&quot;file_that_does_not_exist.txt&quot;</span>, <span class="st">&quot;r&quot;</span>)</span></code></pre></div>
 <pre><code>## [Errno 2] No such file or directory: &#39;file_that_does_not_exist.txt&#39;</code></pre>
-<div class="sourceCode" id="cb576"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb576-1"><a href="internet.html#cb576-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(f.read())</span></code></pre></div>
+<div class="sourceCode" id="cb575"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb575-1"><a href="internet.html#cb575-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(f.read())</span></code></pre></div>
 <pre><code>## name &#39;f&#39; is not defined</code></pre>
 <p>Тоді найкращий запит буде виглядати (у ньому ми прибрали ім’я файлу):</p>
 <blockquote>
@@ -600,14 +600,14 @@ TypeError: standardize() takes 1 positional argument but 3 were given</p>
 <div id="вбудована-документація" class="section level2 hasAnchor" number="21.4">
 <h2><span class="header-section-number">21.4</span> Вбудована документація<a href="internet.html#вбудована-документація" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Ще одине важлививе джерело інформацій – вбудована документація. Для того щоб побачити документацію якоїсь фунцкції, нам треба сформувати існтрукцію <code>help(name_of_function)</code>, де <code>name_of_function</code> – ім’я функції без дужок:</p>
-<div class="sourceCode" id="cb578"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb578-1"><a href="internet.html#cb578-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">len</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb577"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb577-1"><a href="internet.html#cb577-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">len</span>)</span></code></pre></div>
 <pre><code>## Help on built-in function len in module builtins:
 ## 
 ## len(obj, /)
 ##     Return the number of items in a container.</code></pre>
 <p>Ми так само можемо подивитись документацію методів об’єктів:</p>
-<div class="sourceCode" id="cb580"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb580-1"><a href="internet.html#cb580-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="st">&quot;a string&quot;</span></span>
-<span id="cb580-2"><a href="internet.html#cb580-2" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(x.split)</span></code></pre></div>
+<div class="sourceCode" id="cb579"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb579-1"><a href="internet.html#cb579-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="st">&quot;a string&quot;</span></span>
+<span id="cb579-2"><a href="internet.html#cb579-2" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(x.split)</span></code></pre></div>
 <pre><code>## Help on built-in function split:
 ## 
 ## split(sep=None, maxsplit=-1) method of builtins.str instance
