@@ -260,10 +260,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="9.2.3" data-path="dict.html"><a href="dict.html#додаємо-новий-елемент-з-ключем"><i class="fa fa-check"></i><b>9.2.3</b> Додаємо новий елемент з ключем</a></li>
 </ul></li>
 <li class="chapter" data-level="9.3" data-path="dict.html"><a href="dict.html#застосовуємо-оператори-1"><i class="fa fa-check"></i><b>9.3</b> ➕ Застосовуємо оператори</a></li>
-<li class="chapter" data-level="9.4" data-path="dict.html"><a href="dict.html#застосовуємо-корисні-методи-1"><i class="fa fa-check"></i><b>9.4</b> 🪛 Застосовуємо корисні методи</a>
-<ul>
-<li class="chapter" data-level="9.4.1" data-path="dict.html"><a href="dict.html#видаляємо-елемент"><i class="fa fa-check"></i><b>9.4.1</b> Видаляємо елемент</a></li>
-</ul></li>
+<li class="chapter" data-level="9.4" data-path="dict.html"><a href="dict.html#застосовуємо-корисні-методи-1"><i class="fa fa-check"></i><b>9.4</b> 🪛 Застосовуємо корисні методи</a></li>
 </ul></li>
 <li class="chapter" data-level="10" data-path="множини-set.html"><a href="множини-set.html"><i class="fa fa-check"></i><b>10</b> Множини <code>set</code></a>
 <ul>
@@ -464,15 +461,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>перевіряти чи містяться елементи з певними ключами у словнику</li>
 </ul>
 <hr />
-<p>Не завжди такі послідовності як <code>list</code> та <code>tuple</code> є найзручнішими, щоб зберігати дані. Для деяких даних порядок елементів не важливий і отримувати доступ до елементів зручніше через так званий <span class="highlight-container"> <span class="highlight"> ключ <span class="tooltiptext">🇬🇧 key</span> </span> </span> 🔑, а не за індексом. Словники <code>dict</code> – це як раз такий набір пар <span class="highlight-container"> <span class="highlight"> ключ-значення <span class="tooltiptext">🇬🇧 key-value</span> </span> </span>. Ключ, як і значення можуть бути будь-якими об’єктами у Python. Але ключі повинні бути об’єктами незмінних типів, таких як <code>int</code>, <code>str</code>, <code>tuple</code> тощо, при чому вони <strong>не</strong> повинні бути усі одного типу. З іншого боку, ключі повинні бути <strong>унікальними</strong>, тоді як значення можуть повторюватись 👯.</p>
-<p>Чому структура даних <em>словники</em> називаються словниками? Дуже просто! Ідея фізичних словників 📕 – асоціювати кожне слово в мові з його перекладом на іншу мову. Тобто вони формують таку собі пару, точнісінько як і в структурі даних словники <code>dict</code>. Тому, коли нам треба знайти переклад певного слова, ми шукаємо його в словнику і бачимо його переклад. Так само і в словниках <code>dict</code> – ми можемо знайти переклад (читай <strong>значення</strong>) за словом на нашій рідній мові (читай <strong>ключ</strong>).</p>
+<p>Не завжди такі послідовності як <code>list</code> та <code>tuple</code> є найзручнішими, щоб зберігати дані. Для деяких даних порядок елементів не важливий і отримувати доступ до елементів зручніше через так званий <span class="highlight-container"> <span class="highlight"> ключ <span class="tooltiptext">🇬🇧 key</span> </span> </span> 🔑, а не за індексом. Словники <code>dict</code> – це як раз такий набір пар <span class="highlight-container"> <span class="highlight"> ключ-значення <span class="tooltiptext">🇬🇧 key-value</span> </span> </span>. Ключ, як і значення можуть бути будь-якими об’єктами у Python. Але ключі повинні бути об’єктами незмінних типів, таких як <code>int</code>, <code>str</code>, <code>tuple</code> тощо, при чому вони <strong>не</strong> повинні бути усі одного типу. З іншого боку, ключі повинні бути <strong>унікальними</strong>, тоді як значення можуть повторюватись 👯.
+Чому структура даних <em>словники</em> називаються словниками? Дуже просто! Ідея фізичних словників 📕 – асоціювати кожне слово в мові з його перекладом на іншу мову. Тобто вони формують таку собі пару, точнісінько як і в структурі даних словники <code>dict</code>. Тому, коли нам треба знайти переклад певного слова, ми шукаємо його в словнику і бачимо його переклад. Так само і в словниках <code>dict</code> – ми можемо знайти переклад (читай <strong>значення</strong>) за словом на нашій рідній мові (читай <strong>ключ</strong>).</p>
 <hr />
-<!-- XXX: infographics on what is the dict -->
 <div id="створюємо-словник-dict" class="section level2 hasAnchor" number="9.1">
 <h2><span class="header-section-number">9.1</span> 📕 Створюємо словник <code>dict</code><a href="dict.html#створюємо-словник-dict" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Як ми знаємо (або не знаємо), до Балтійських країн належать Естонія 🇪🇪, Латвія 🇱🇻 та Литва 🇱🇹. Столицями цих країн є відповідно Талін, Ріга та Вільнюс. Якщо ми запишемо столиці до окремого списку <code>list</code>, то ми загубимо оцей зв’язок між країною та її столицею, тому ми використаємо словник <code>dict</code>.</p>
+<p><img src="images/9-dict.png" width="100%" /></p>
 <p>Щоб створити <code>dict</code>, нам треба прописати через кому усі пари у вигляді <code>ключ:значення</code> і загорнути все це у фігурні дужки <code>{</code> та <code>}</code>.</p>
-<!-- XXX: створюємо словник -->
 <p>Насправді це виглядає легше ніж звучить. Давайте створимо словник <code>baltic_capitals</code> із пар країна-столиця:</p>
 <div class="sourceCode" id="cb203"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb203-1"><a href="dict.html#cb203-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals <span class="op">=</span> {</span>
 <span id="cb203-2"><a href="dict.html#cb203-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Estonia&quot;</span>: <span class="st">&quot;Tallinn&quot;</span>,</span>
@@ -482,6 +478,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb203-6"><a href="dict.html#cb203-6" aria-hidden="true" tabindex="-1"></a>baltic_capitals</span></code></pre></div>
 <pre><code>## {&#39;Estonia&#39;: &#39;Tallinn&#39;, &#39;Latvia&#39;: &#39;Riga&#39;, &#39;Lithuania&#39;: &#39;Vilnius&#39;}</code></pre>
 <p>У цьому випадку <code>"Estonia"</code>, <code>"Latvia"</code> та <code>"Lithuania"</code> будуть ключами 🔑, за якими ми зможемо отримати значення <code>"Tallinn"</code>, <code>"Riga"</code> та <code>"Vilnius"</code>.</p>
+<p><img src="images/9-create.png" width="100%" /></p>
+<p>До речі, нам не обов’язково розміщувати елементи на окремих рядках. Ми це зробили виключно для зручності, щоб легше було читати код.</p>
 <p>А ось інший приклад словника <code>nums</code>. Ключами якого є об’єкти <code>float</code>, <code>int</code> та <code>str</code>, а значення – <code>str</code> та <code>list</code>. Цей словник не має жодного сенсу, крім того, що демонструє можливості <code>dict</code>:</p>
 <div class="sourceCode" id="cb205"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb205-1"><a href="dict.html#cb205-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> {</span>
 <span id="cb205-2"><a href="dict.html#cb205-2" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.1</span>: <span class="st">&quot;one point one&quot;</span>,</span>
@@ -505,19 +503,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="отримуємо-елемент-за-його-ключем" class="section level3 hasAnchor" number="9.2.1">
 <h3><span class="header-section-number">9.2.1</span> Отримуємо елемент за його ключем<a href="dict.html#отримуємо-елемент-за-його-ключем" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Наприклад, ми хочемо дізнатися столицю Естонії 🇪🇪. Для отримання елемента, потрібно прописати ім’я словника, і потім ключ загорнутий у квадратні дужки <code>[</code> та <code>]</code>:</p>
-<!-- XXX: how to access elements -->
 <div class="sourceCode" id="cb209"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb209-1"><a href="dict.html#cb209-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>]</span></code></pre></div>
 <pre><code>## &#39;Tallinn&#39;</code></pre>
+<p><img src="images/9-access.png" width="100%" /></p>
 <p>До речі, навпаки це не працює. Якщо ми хочемо отримати країну, столиця якої <code>"Tallinn"</code>, то вираз <code>baltic_capitals["Tallinn"]</code> не спрацює (тому що у нас не існує ключа 🔑 <code>"Tallinn"</code>):</p>
 <div class="sourceCode" id="cb211"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb211-1"><a href="dict.html#cb211-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Tallinn&quot;</span>]</span></code></pre></div>
-<pre><code>## &#39;Tallinn&#39;</code></pre>
+<pre><code>Traceback (most recent call last):
+  File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
+KeyError: &#39;Tallinn&#39;</code></pre>
 <p>Пам’ятаєте що ключі 🔑 повинні бути унікальними? Так ось це поясняється тим, що якщо у нас було б два ключі <code>"Estonia"</code>, то Python не зміг розібратись яке саме значення повертати.</p>
 </div>
 <div id="змінюємо-елемент-за-його-ключем" class="section level3 hasAnchor" number="9.2.2">
 <h3><span class="header-section-number">9.2.2</span> Змінюємо елемент за його ключем<a href="dict.html#змінюємо-елемент-за-його-ключем" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Так само як і в <code>list</code>, ми можемо змінити елементи. Синтаксис такий самий як і у списках, але замість індексу, нам треба зазначити ключ 🔑:</p>
-<!-- XXX: how to change an element -->
 <div class="sourceCode" id="cb213"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb213-1"><a href="dict.html#cb213-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>] <span class="op">=</span> <span class="st">&quot;Tartu&quot;</span></span></code></pre></div>
+<p><img src="images/9-change.png" width="100%" /></p>
 <p>Але давайте все ж таки залишимо <code>"Tallinn"</code>, як столицю Естонії 🇪🇪:</p>
 <div class="sourceCode" id="cb214"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb214-1"><a href="dict.html#cb214-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>] <span class="op">=</span> <span class="st">&quot;Tallinn&quot;</span></span></code></pre></div>
 </div>
@@ -526,6 +526,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Щоб додати новий елемент до словника <code>dict</code>, ми можемо використати такий самий синтаксис, який ми використовували для змінення значень елементів: <code>name_of_dict[new_key] = new_value</code>.</p>
 <p>Давайте додамо Польщу 🇵🇱 до Балтійських країн (не хвилюйтеся, ми скоро її видалимо). Ключем в цій парі буде <code>"Poland"</code>, а значенням – <code>"Warsaw"</code>.</p>
 <div class="sourceCode" id="cb215"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb215-1"><a href="dict.html#cb215-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Poland&quot;</span>] <span class="op">=</span> <span class="st">&quot;Warsaw&quot;</span></span></code></pre></div>
+<p><img src="images/9-add.png" width="100%" /></p>
 </div>
 </div>
 <div id="застосовуємо-оператори-1" class="section level2 hasAnchor" number="9.3">
@@ -534,25 +535,28 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Давайте перевіримо, чи є <code>"Poland"</code> серед ключів:</p>
 <div class="sourceCode" id="cb216"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb216-1"><a href="dict.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Poland&quot;</span> <span class="kw">in</span> baltic_capitals</span></code></pre></div>
 <pre><code>## True</code></pre>
+<p><img src="images/9-in.png" width="100%" /></p>
 <p>Так само як і у <code>list</code>, ми можемо використати оператор <code>not in</code>. А ось оператори <code>+</code> та <code>*</code> не реалізовані для словників <code>dict</code>.</p>
 </div>
 <div id="застосовуємо-корисні-методи-1" class="section level2 hasAnchor" number="9.4">
 <h2><span class="header-section-number">9.4</span> 🪛 Застосовуємо корисні методи<a href="dict.html#застосовуємо-корисні-методи-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Словники мають одинадцять 1️⃣1️⃣ методів, але ми подивимось тільки на ті, що найчастіше використовуються.</p>
-<div id="видаляємо-елемент" class="section level3 hasAnchor" number="9.4.1">
-<h3><span class="header-section-number">9.4.1</span> Видаляємо елемент<a href="dict.html#видаляємо-елемент" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Словники мають одинадцять 1️⃣1️⃣ методів, але ми подивимось тільки на ті, що найчастіше використовуються.
+### Видаляємо елемент</p>
 <p>Все ж таки Польща 🇵🇱 не вважається Балтійською державою і нам треба видалити елемент з ключем <code>"Poland"</code> з нашого словнику. Для цього існує метод <code>.pop()</code>, для використання якого нам треба зазначити ключ в дужках:</p>
 <div class="sourceCode" id="cb218"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb218-1"><a href="dict.html#cb218-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.pop(<span class="st">&quot;Poland&quot;</span>)</span></code></pre></div>
 <pre><code>## &#39;Warsaw&#39;</code></pre>
 <div class="sourceCode" id="cb220"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb220-1"><a href="dict.html#cb220-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals</span></code></pre></div>
 <pre><code>## {&#39;Estonia&#39;: &#39;Tallinn&#39;, &#39;Latvia&#39;: &#39;Riga&#39;, &#39;Lithuania&#39;: &#39;Vilnius&#39;}</code></pre>
+<p><img src="images/9-delete.png" width="100%" /></p>
 <p>Це не буде працювати зі значеннями (тобто <code>"Warsaw"</code> в попередньому випадку).</p>
 <p>Інший корисний метод – це <code>.keys()</code>. Він повертає усі ключі 🔑, що містяться в словнику:</p>
 <div class="sourceCode" id="cb222"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb222-1"><a href="dict.html#cb222-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.keys()</span></code></pre></div>
 <pre><code>## dict_keys([&#39;Estonia&#39;, &#39;Latvia&#39;, &#39;Lithuania&#39;])</code></pre>
+<p><img src="images/9-keys.png" width="100%" /></p>
 <p>І дзеркальний 🪞 метод існує також і для значень – <code>.values()</code>:</p>
 <div class="sourceCode" id="cb224"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb224-1"><a href="dict.html#cb224-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.values()</span></code></pre></div>
 <pre><code>## dict_values([&#39;Tallinn&#39;, &#39;Riga&#39;, &#39;Vilnius&#39;])</code></pre>
+<p><img src="images/9-values.png" width="100%" /></p>
 <p>Якщо ви хочете використати ключі або значення як послідовності, не забудьте загорнути їх у функцію <code>list()</code>, наприклад <code>list(baltic_capitals.keys())</code>. Тому що обидва методи повертають дещо спеціальний об’єкт, який нам треба трансформувати у <code>list</code>.</p>
 <hr />
 <p>Вітання! Тепер ти вмієш створювати словники <code>dict</code>, отримувати, додавати та видаляти їх елементи та перевіряти чи містить словник той, чи інший елемент за ключем. Ще одна глава, і ми повністю звершимо основні структури даних.</p>
@@ -563,7 +567,6 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </summary>
 </details>
 
-</div>
 </div>
 </div>
             </section>
