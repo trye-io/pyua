@@ -3,9 +3,9 @@
 # Основні поняття в програмуванні {#programming}
 
 <div class="btn-group">
-  <button class="lecture">🎥 Лекція</button>
-  <button class="podcast">🎙️ Подкаст</button>
-  <button class="notebook">📓 Записник</button>
+  <button class="lecture" onclick="location.href='https://youtu.be/K6bB4BWkn98?si=5_XGrytlrW2KNs03';">🎥 Лекція</button>
+  <button class="podcast" onclick="location.href='https://spotifyanchor-web.app.link/e/Qw9YAk5pFCb';">🎙️ Подкаст</button>
+  <button class="notebook" disabled>📓 Записник</button>
   <button class="exercises" onclick="openDetailsById('programming_exercises');">🤸 Вправи</button>
   <button class="cheat" disabled>📝 Шпора</button>
 </div>
