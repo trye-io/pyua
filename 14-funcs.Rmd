@@ -335,15 +335,15 @@ generate_options_quiz(
 ```
 
 ```{r, results='asis', message=FALSE, echo=FALSE}
-#between <- '<pre><code>def add(a, b): 
-#   result = [] 
-#   return result
-#</code></pre>
-#<div class="question">Напишіть правильну відповідь:</div>'
-#
-#question <-
-#    "4. Що потрібно написати замість квадратних дужок, щоб функція рахувала суму двох чисел?"
-#
-#generate_short_quiz(question = question, between = between, correct_answer = "a+b")
+between <- '<pre><code>def add(a, b):
+  result = []
+  return result
+</code></pre>
+<div class="question">Напишіть правильну відповідь:</div>'
+
+question <-
+   "4. Що потрібно написати замість квадратних дужок, щоб функція рахувала суму двох чисел?"
+
+generate_short_quiz(question = question, between = between, correct_answer = "a+b")
 ```
 </details>

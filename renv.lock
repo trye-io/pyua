@@ -178,13 +178,13 @@
     },
     "curl": {
       "Package": "curl",
-      "Version": "5.0.1",
+      "Version": "5.0.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "2118af9cb164c8d2dddc7b89eaf732d9"
+      "Hash": "511bacbfa153a15251166b463b4da4f9"
     },
     "desc": {
       "Package": "desc",
@@ -253,7 +253,7 @@
     },
     "gert": {
       "Package": "gert",
-      "Version": "1.9.2",
+      "Version": "1.9.3",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -264,7 +264,7 @@
         "sys",
         "zip"
       ],
-      "Hash": "9122b3958e749badb5c939f498038b57"
+      "Hash": "b544c397820e05a97d391b2d614a921a"
     },
     "gh": {
       "Package": "gh",
@@ -326,7 +326,7 @@
     },
     "htmltools": {
       "Package": "htmltools",
-      "Version": "0.5.5",
+      "Version": "0.5.6",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -339,7 +339,7 @@
         "rlang",
         "utils"
       ],
-      "Hash": "ba0240784ad50a62165058a27459304a"
+      "Hash": "a2326a66919a3311f7fbb1e3bf568283"
     },
     "httr2": {
       "Package": "httr2",
@@ -396,7 +396,7 @@
       "RemoteRepo": "jsquiz",
       "RemoteUsername": "irudnyts",
       "RemoteRef": "HEAD",
-      "RemoteSha": "e7fe2347c6957bc1732f499beb6eca7c99f90961",
+      "RemoteSha": "cebf14474f6b6ace8619f14a01f8e485aab933a0",
       "Requirements": [
         "htmltools",
         "magrittr",
@@ -406,7 +406,7 @@
         "uuid",
         "yaml"
       ],
-      "Hash": "f8ac2904d18964059452c4c9e424407d"
+      "Hash": "2d36748ec2d2165a0622b05ee8d60595"
     },
     "knitr": {
       "Package": "knitr",
@@ -496,7 +496,7 @@
     },
     "purrr": {
       "Package": "purrr",
-      "Version": "1.0.1",
+      "Version": "1.0.2",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
@@ -507,7 +507,7 @@
         "rlang",
         "vctrs"
       ],
-      "Hash": "d71c815267c640f17ddbf7f16144b4bb"
+      "Hash": "1cba04a4e9414bdefc9dcaa99649a8dc"
     },
     "rappdirs": {
       "Package": "rappdirs",
@@ -696,13 +696,13 @@
     },
     "uuid": {
       "Package": "uuid",
-      "Version": "1.1-0",
+      "Version": "1.1-1",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "R"
       ],
-      "Hash": "f1cb46c157d080b729159d407be83496"
+      "Hash": "3d78edfb977a69fc7a0341bee25e163f"
     },
     "vctrs": {
       "Package": "vctrs",
@@ -740,14 +740,14 @@
     },
     "xfun": {
       "Package": "xfun",
-      "Version": "0.38",
+      "Version": "0.40",
       "Source": "Repository",
       "Repository": "CRAN",
       "Requirements": [
         "stats",
         "tools"
       ],
-      "Hash": "1ed71215d45e85562d3b1b29a068ccec"
+      "Hash": "be07d23211245fc7d4209f54c4e4ffc8"
     },
     "yaml": {
       "Package": "yaml",
