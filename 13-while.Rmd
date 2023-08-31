@@ -114,4 +114,71 @@ i = i + 1 # тепер i дорівнює 3
 <details id="while_exercises">
 <summary>🤸 Вправи</summary>
 
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>x = 0
+while x < 5:
+    x = x + 1
+print(x)</code></pre>
+<div class="question">Оберіть правильну відповідь:</div>'
+
+generate_options_quiz(
+    question = "1. Що буде результатом виконання наступного коду?",
+    between = between,
+    answers = c(
+        "1" = FALSE,
+        "0" = FALSE,
+        "5" = TRUE,
+        "4" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>1. x = 2
+while x <= 10:
+    print(x)
+    x += 2
+
+2. x = 1
+while x <= 5:
+    print(x * 2)
+    x += 1
+</code></pre>
+<div class="question">Оберіть правильну відповідь:</div>'
+
+generate_options_quiz(
+    question = "2. Який код виведе парні числа від 1 до 10?",
+    between = between,
+    answers = c(
+        "Перший" = FALSE,
+        "Другий" = FALSE,
+        "Обидва" = TRUE,
+        "Жоден" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>x = 5
+while x > 0:
+    print(x)
+    x = x - 1</code></pre>
+<div class="question">Оберіть правильну відповідь:</div>'
+
+generate_options_quiz(
+    question = "3. Що буде результатом виконання наступного коду?",
+    between = between,
+    answers = c(
+        "1 2 3 4 5" = FALSE,
+        "5 4 3 2 1" = TRUE,
+        "0 0 0 0 0 " = FALSE,
+        "1 1 1 1 1" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+
 </details>

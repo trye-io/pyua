@@ -210,5 +210,91 @@ get_mean(last_week)
 
 <details id="funcs_how_to_exercises">
 <summary>🤸 Вправи</summary>
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "1. Чи можна будувати функцію без кінцевої мети?",
+    answers = c(
+        "Так" = FALSE,
+        "Ні" = TRUE),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>1. ddef calculate_square(a): 
+    return a * a
+
+2. def calculate_square(a) 
+    return a * a
+
+3. def calculate_square(a): 
+    return a + a
+
+
+
+</code></pre>
+<div class="question">Оберіть правильну відповідь:</div>'
+
+generate_options_quiz(
+    question = "2. Котра з функцій правильно обчислить площу квадрата?",
+    between = between,
+    answers = c(
+        "Перша" = TRUE,
+        "Друга" = FALSE,
+        "Третя" = FALSE,
+        "Жодна" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "3. Що таке <code>значення за замовчуванням</code> у параметрах функції?",
+    answers = c(
+        "Значення, яке автоматично встановлюється для змінної під час декларації." = FALSE,
+        "Значення, яке використовується у випадку, якщо не передано інших значень." = TRUE,
+        "Значення, яке завжди дорівнює нулю." = FALSE),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "4. Що таке <code>тестування функції</code>? ",
+    answers = c(
+        "Розробка алгоритму для функції." = FALSE,
+        "Перевірка правильності виконання функції з вхідними даними та порівняння результату з очікуваним." = TRUE,
+        "Визначення параметрів та значень, які функція повинна повернути." = FALSE,
+        "Визначення мети функції перед її розробкою." = FALSE),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+#between <- '<pre><code>def calculate_rectangle_area(length, width): 
+#    area = length * width
+#    return []
+#
+#</code></pre>
+#<div class="question">Напишіть правильну відповідь:</div>'
+#
+#question <-
+#    "5. Що потрібно написати замість квадратних дужок, щоб функція правильно поряхувала площу прямокутника?"
+#
+#generate_short_quiz(question = question, between = between, correct_answer = "area")
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "6. Якщо довжина та ширина прамокутника дорівнюють 3 та 5 відповідно. Яка буде площа цього прямокутника?",
+    answers = c(
+        "8" = FALSE,
+        "12" = FALSE,
+        "15" = TRUE,
+        "20" = FALSE),
+    allow_multiple_answers = FALSE
+)
+```
 
 </details>

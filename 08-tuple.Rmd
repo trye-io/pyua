@@ -185,7 +185,7 @@ type(country_codes)
 </code></pre>'
 
 generate_options_quiz(
-    question = "2. Що буде роздраковано при виконанні цього коду?",
+    question = "2. Що буде роздруковано при виконанні цього коду?",
     between = between,
     answers = c(
         '<code>## ("Estonia", "Latvia", "Lithuania")</code>' = FALSE,
@@ -194,6 +194,60 @@ generate_options_quiz(
         "<code>## <class 'tuple'></code>" = FALSE
     ),
     allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+
+generate_options_quiz(
+    question = "3. У якому рядку правильно створений кортеж <code>tuple</code>?",
+    answers = c(
+        '<code>family = "mother", "father", "sister", "brother"</code>' = TRUE,
+        '<code>family = ("mother", "father", "sister", "brother")</code>' = TRUE,
+        '<code>family = {"mother", "father", "sister", "brother"}</code>' = FALSE,
+        '<code>family = ["mother", "father", "sister", "brother"]</code>' = FALSE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+
+generate_options_quiz(
+    question = "4. Оберіть правильне твердження.",
+    answers = c(
+        'Можна додавати та видаляти елементи кортежів' = FALSE,
+        'Можна використати функцію <code>.reverse()</code>, щоб змінити порядок елементів на зворотній' = FALSE,
+        'Можна замінити елемент в кортежі на інший' = FALSE,
+        'Кортежі використовують більше памʼяті, ніж списки' = FALSE,
+        'Жодне твердження не є правильним' = TRUE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+
+generate_options_quiz(
+    question = "5. Чи можемо ми дізнатися до якої структури даних належить <code>tuple</code>?",
+    answers = c(
+        'Так, за допомогою функції <code>type()</code>' = TRUE,
+        'Ні' = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+
+generate_options_quiz(
+    question = "6. Як отримати доступ до елементів <code>tuple</code>?",
+    answers = c(
+        'За допомогою індексів' = TRUE,
+        'За допомогою зрізів' = TRUE,
+        'Ніяк' = FALSE
+    ),
+    allow_multiple_answers = TRUE
 )
 ```
 

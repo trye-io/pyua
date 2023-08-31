@@ -265,5 +265,85 @@ print(returned_value)
 
 <details id="funcs_exercises">
 <summary>🤸 Вправи</summary>
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <-
+    "1. Перетягніть  ф-ції відповідно до їх виду 👾:"
 
+generate_bucket_quiz(
+    question = question,
+    elements = c(
+        "<code>def avg (x, y)</code>" = "Визначені користувачем",
+        "<code>min()</code>" = "Вбудовані",
+        "<code>max()</code>" = "Вбудовані",
+       "<code>len()</code>" = "Вбудовані",
+       "<code>def sum(a, b):</code>" = "Визначені користувачем",
+       "<code>sum()</code>" = "Вбудовані",
+       "<code>int()</code>" = "Вбудовані",
+       "<code>def compute_area(a, b, c):</code>" = "Визначені користувачем"
+    ),
+    
+    buckets = c("Вбудовані", "Визначені користувачем")
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "2. На які частини поділяється визначення функції?",
+    answers = c(
+        "def, імʼя ф-ції, параметри функції, крапка з комою, тіло ф-ції, return" = FALSE,
+        "def, імʼя ф-ції, параметри функції, двокрапка, тіло ф-ції, return" = TRUE,
+        "def, імʼя ф-ції, параметри функції, тіло ф-ції, return" = FALSE,
+        "Жодна відповідь не є правильною" = FALSE),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "3. Котрий рядок коду правильно визначить функцію?",
+    answers = c(
+        "<code>function_name:</code>" = FALSE,
+        "<code>define function_name:</code>" = FALSE,
+        "<code>def function_name():</code>" = TRUE,
+        "<code>def function_name:</code>" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>def multiply(a, b): 
+    result = a * b 
+    return result 
+    
+x = multiply(2, 3)
+x
+</code></pre>
+<div class="question">Оберіть правильну відповідь:</div>'
+
+generate_options_quiz(
+    question = "4. Що буде результатом виконання наступного коду?",
+    between = between,
+    answers = c(
+        "5" = FALSE,
+        "6" = TRUE,
+        "2" = FALSE,
+        "Помилка" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+#between <- '<pre><code>def add(a, b): 
+#   result = [] 
+#   return result
+#</code></pre>
+#<div class="question">Напишіть правильну відповідь:</div>'
+#
+#question <-
+#    "4. Що потрібно написати замість квадратних дужок, щоб функція рахувала суму двох чисел?"
+#
+#generate_short_quiz(question = question, between = between, correct_answer = "a+b")
+```
 </details>

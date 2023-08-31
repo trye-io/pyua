@@ -153,5 +153,69 @@ import matplotlib as mpl
 
 <details id="pkgs_exercises">
 <summary>🤸 Вправи</summary>
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "1. Котрий рядок правильно встановить пакет?",
+    answers = c(
+        "<code>import pandas as pd</code>" = FALSE,
+        "<code>import pandas as p</code>" = FALSE,
+        "<code>import pandas</code>" = FALSE,
+        "Кожен" = TRUE,
+        "Жоден" = FALSE),
+    allow_multiple_answers = FALSE
+)
+```
 
+```{r, results='asis', message=FALSE, echo=FALSE}
+question <- 
+    "2. Як з пакету <code>pandas</code> викачати лише одну функцію <code>DataFrame</code>? Перетягніть фрагменти коду у правильному порядку:"
+
+generate_arrange_quiz(
+    question = question,
+    elements = c(
+        "pandas" = 2,
+        "DataFrame" = 4,
+        "import" = 3,
+        "from" = 1
+    )
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "3. Котрий рядок коду правильно встановить функцію <code>read_csv()</code> з пакету <code>pandas</code>?
+",
+    answers = c(
+        "<code>from pandas.read_csv import read_csv</code>" = FALSE,
+        "<code>import read_csv from pandas</code>" = FALSE,
+        "<code>from pandas import read_csv</code>" = TRUE,
+        "<code>import read_csv() from pandas</code>" = FALSE),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "4. Які елементи можуть бути імпортовані з пакету <code>pandas</code> за допомогою <code>from pandas import...</code>?
+",
+    answers = c(
+        "Лише функції" = FALSE,
+        "Лише модулі" = FALSE,
+        "Лише об'єкти" = FALSE,
+        "Модулі, функції, та інші об'єкти" = TRUE),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "5. Що таке <code>конвенція</code> в імпортуванні пакетів з псевдонімами?",
+    answers = c(
+        "Вимога завжди використовувати одне ім'я пакету" = FALSE,
+        "Умовні правила для використання псевдонімів" = TRUE,
+        "Назва файлу модуля або пакету" = FALSE,
+        "Вимога не використовувати псевдоніми для пакетів" = FALSE),
+    allow_multiple_answers = FALSE
+)
+```
 </details>

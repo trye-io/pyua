@@ -257,4 +257,58 @@ generate_bucket_quiz(
 )
 ```
 
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "5. Оберіть правильні твердження щодо множин <code>set</code>:",
+    answers = c(
+        "Множини містять ключі та значення" = FALSE,
+        "Множини містять лише унікальні елементи" = TRUE,
+        "Множини можуть містити безліч різних значень" = FALSE,
+        "Множини - це як словники без ключів" = FALSE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "6. Щоб створити множину потрібно використовувати:",
+    answers = c(
+        "Фігурні дужки" = TRUE,
+        "Квадратні дужки" = FALSE,
+        "Круглі дужки" = FALSE,
+        "Дужки не потрібні" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- "<pre><code>## {'Dnipro', 'Kharkiv', 'Kyiv', 'Lviv', 'Odesa'}</code></pre>
+<div class='question'>Оберіть правильну відповідь:</div>"
+
+generate_options_quiz(
+    question = "7. Як правильно створити множину, щоб отримати такий результат?",
+    between = between,
+    answers = c(
+        '<code>uacities = {"Kyiv", "Lviv", "Odesa", "Kharkiv", "Dnipro"}</code>' = TRUE,
+        '<code>uacities = {"Kyiv", "Lviv", "Dnipro", "Dnipro", "Odesa", "Kharkiv", "Kharkiv" ,"Lviv" , "Dnipro"}</code>' = TRUE,
+        '<code>uacities = ["Dnipro", "Kharkiv", "Kyiv", "Lviv", "Odesa"]</code>' = TRUE,
+        'Жоден варіант не є правильним' = FALSE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "8. <code>'Lviv' in uacities</code> перевірить, чи є Львів серед українських міст:",
+    answers = c(
+        "Так" = TRUE,
+        "Ні" = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
 </details>
