@@ -272,5 +272,77 @@ for i, x in enumerate(temperature):
 
 <details id="debugging_exercises">
 <summary>🤸 Вправи</summary>
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "1. Якщо ваша клітинка з кодом генерує помилку, то…:",
+    answers = c(
+        "Наступні рядки коду також будуть генерувати помилку" = TRUE,
+        "Попердні рядки коду також будуть генерувати помилку" = FALSE,
+        "Потрібно розбити рядки коду на окремі клітинки, щоб локалізувати помилку" = TRUE,
+        "Потрібно переписати всі рядки коду з самого початку" = TRUE),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>x = "10"
+y = 5
+z = x + y
+print(z)
+</code></pre>
+<div class="question">Оберіть правильну відповідь:</div>'
+
+generate_options_quiz(
+    question = "2. Що буде результатом виконання наступного коду?",
+    between = between,
+    answers = c(
+        "<code>15</code>" = FALSE,
+        "<code>'105'</code>" = FALSE,
+        "<code>TypeError: can only concatenate str (not 'int;) to str</code>" = TRUE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>a = 5
+b = 0
+c = a / b
+print(c)
+</code></pre>
+<div class="question">Оберіть правильну відповідь:</div>'
+
+generate_options_quiz(
+    question = "3. Що буде результатом виконання наступного коду?",
+    between = between,
+    answers = c(
+        "<code>ZeroDivisionError: division by zero</code>" = TRUE,
+        "<code>TypeError: unsupported operand type(s) for /: 'int' and 'str'</code>" = FALSE,
+        "Виправлення не потрібно, код працює коректно" = FALSE),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "4. Як знайти індекс, на якому виникає помилка у циклі з більше, ніж 10 ітерацій?",
+    answers = c(
+        "Розділити цикл на декілька частин" = FALSE,
+        "Використовувати функцію <code>print()</code> для виведення індексу на кожній ітерації" = TRUE,
+        "Збільшити кількість ітерацій до сотні" = FALSE),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "5. Як знайти помилку у циклі, який містить 100 ітерацій?",
+    answers = c(
+        "Розгортати кожну ітерацію окремо" = FALSE,
+        "Пошукати помилки на перших кількох ітераціях та аналізувати їх" = FALSE,
+        "Використовувати функцію <code>print()</code> для друку індексу на кожній ітерації" = TRUE),
+    allow_multiple_answers = TRUE
+)
+```
 
 </details>

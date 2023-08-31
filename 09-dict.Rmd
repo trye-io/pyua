@@ -239,4 +239,97 @@ knitr::include_graphics("images/9-values.png")
 <details id="dict_exercises">
 <summary>🤸 Вправи</summary>
 
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = "1. Оберіть правильні твердження щодо словників <code>dict</code>:",
+    answers = c(
+        "Порядок елементів у словниках є дуже важливим" = FALSE,
+        "Отримати доступ до елементів можна за допомогою ключів" = TRUE,
+        "Значення повинні бути унікальними" = FALSE,
+        "Ключі повинні бути унікальними" = TRUE,
+        'Значення повинні бути обʼєктами незмінних типів, таких як <code>int</code>, <code>str</code>, <code>tuple</code>' = FALSE,
+        'Словники можуть мати безліч ключів та елементів' = TRUE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- '<pre><code>simpsons = {"name" : ["Homer", "marge", "Lisa", "Bart"],
+                    "fam_role" : ["father", "mother", "sister", "brother"],
+                    "age" : [39, 36, 8, 10]}</code></pre>
+<div class="question">Ключами цього словника є:</div>'
+
+generate_options_quiz(
+    question = "2. Наступні рядки створять новий словник:",
+    between = between,
+    answers = c(
+        '<code>"Homer", "marge", "Lisa", "Bart"</code>' = FALSE,
+        '<code>"father", "mother", "sister", "brother"</code>' = FALSE,
+        '<code>"age" : 39, 36, 8, 10</code>' = FALSE,
+        '<code>"name",  "fam_role", "age"</code>' = TRUE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = '3. Що поверне наступний код <code>simpsons["Homer"]</code>?',
+    answers = c(
+        "Ключ елемента" = FALSE,
+        '<code>"Homer"</code>' = FALSE,
+        "Помилку" = TRUE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = '4. Як правильно змінити елемент <code>"marge"</code> у словнику?',
+    answers = c(
+        '<code>simpsons["name"] = "Marge"</code>' = FALSE,
+        '<code>simpsons["marge"] = "Marge"</code>' = FALSE,
+        '<code>simpsons["name"][1] = "Marge"</code>' = TRUE,
+        '<code>simpsons["name"][2] = "Marge"</code>' = FALSE,
+        'Жоден варіант не є правильним' = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+generate_options_quiz(
+    question = '5. Як правильно додати ще одного забутого члена сімʼї <code>"Meggie"</code> до словника?',
+    answers = c(
+        '<code>simpsons = "Meggie", "sister", 1</code>' = FALSE,
+        '<code>simpsons[["name", "fam_role", "age"]] = "Meggie", "sister", 1</code>' = FALSE,
+        '<code>simpsons["name"].append("Meggie")</code>' = TRUE,
+        '<code>simpsons["fam_role"].append("sister")</code>' = TRUE,
+        '<code>simpsons["age"].append(1)</code>' = TRUE
+    ),
+    allow_multiple_answers = TRUE
+)
+```
+
+```{r, results='asis', message=FALSE, echo=FALSE}
+between <- "<pre><code>dict_values([['Homer', 'Marge', 'Lisa', 'Bart', 'Meggie'], 
+['father', 'mother', 'sister', 'brother'], 
+[39, 36, 8, 10]])</code></pre>
+<div class='question'>Оберіть правильну відповідь:</div>"
+
+generate_options_quiz(
+    question = "6. Який код потрібно написати, щоб отримати наступний результат?",
+    between = between,
+    answers = c(
+        '<code>simpsons.value()</code>' = FALSE,
+        '<code>simpsons.values()</code>' = TRUE,
+        '<code>simpsons.key()</code>' = FALSE,
+        '<code>simpsons.keys()</code>' = FALSE
+    ),
+    allow_multiple_answers = FALSE
+)
+```
+
 </details>
