@@ -29,7 +29,7 @@ Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-08-30" />
+<meta name="date" content="2023-08-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -487,7 +487,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb505-3"><a href="візуалізуємо-з-matplotlib.html#cb505-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb505-4"><a href="візуалізуємо-з-matplotlib.html#cb505-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb505-5"><a href="візуалізуємо-з-matplotlib.html#cb505-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-417-1.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-475-1.png" width="672" /></p>
 <p>Змінні <code>x</code> та <code>y</code> не обов’язково повинні бути списками. Вони також можуть бути одновимирними масивами <code>ndarray</code> з пакунку NumPy, про які ми говорили у попередній главі. Попередній приклад, але з використанням NumPy масивів:</p>
 <div class="sourceCode" id="cb506"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb506-1"><a href="візуалізуємо-з-matplotlib.html#cb506-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np <span class="co"># не забуваємо завантажувати пакунок</span></span>
 <span id="cb506-2"><a href="візуалізуємо-з-matplotlib.html#cb506-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -496,7 +496,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb506-5"><a href="візуалізуємо-з-matplotlib.html#cb506-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb506-6"><a href="візуалізуємо-з-matplotlib.html#cb506-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb506-7"><a href="візуалізуємо-з-matplotlib.html#cb506-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-418-3.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-476-3.png" width="672" /></p>
 <p>Це буде дуже корисно, якщо ми нам треба виконати якусь математичну операцію, ну наприклад взяти логарифм від кожного елемента з масиву <code>y</code>:</p>
 <div class="sourceCode" id="cb507"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb507-1"><a href="візуалізуємо-з-matplotlib.html#cb507-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.array([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">2</span>, <span class="dv">10</span>])</span>
 <span id="cb507-2"><a href="візуалізуємо-з-matplotlib.html#cb507-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> np.array([<span class="dv">7</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">9</span>])</span>
@@ -505,7 +505,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb507-5"><a href="візуалізуємо-з-matplotlib.html#cb507-5" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb507-6"><a href="візуалізуємо-з-matplotlib.html#cb507-6" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb507-7"><a href="візуалізуємо-з-matplotlib.html#cb507-7" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-419-5.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-477-5.png" width="672" /></p>
 <p>А ось більш конкретний приклад:</p>
 <ul>
 <li><code>x</code> – кількість лайків за останій пост в Інстаграмі українських кухарів (у тисячах)</li>
@@ -516,7 +516,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb508-3"><a href="візуалізуємо-з-matplotlib.html#cb508-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb508-4"><a href="візуалізуємо-з-matplotlib.html#cb508-4" aria-hidden="true" tabindex="-1"></a>plt.scatter(x, y)</span>
 <span id="cb508-5"><a href="візуалізуємо-з-matplotlib.html#cb508-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-420-7.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-478-7.png" width="672" /></p>
 </div>
 <div id="діаграма-лінії" class="section level2 hasAnchor" number="19.2">
 <h2><span class="header-section-number">19.2</span> Діаграма лінії<a href="візуалізуємо-з-matplotlib.html#діаграма-лінії" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -529,7 +529,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb509-3"><a href="візуалізуємо-з-matplotlib.html#cb509-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb509-4"><a href="візуалізуємо-з-matplotlib.html#cb509-4" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
 <span id="cb509-5"><a href="візуалізуємо-з-matplotlib.html#cb509-5" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-421-9.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-479-9.png" width="672" /></p>
 <p>Існує один трюк, який точно встане у нагоді. Іноді нам знадобиться побудувати графік якоїсь математчиної фунцкії, ну наприклад <code>np.cos()</code>, тобто фунцкії косинуса. Графік цієй фунцкії – крива. А ми вміємо будувати тільки прямі лінії :( Але ми зробимо невеличкий фокус – ми представимо цю криву як дуже багато прямих ліній. Таке представлення буде виглядати як крива і дасть нам змогу подивитись на загальну поведінку графіка.</p>
 <p>Наприклад, нам цікаво як фунцкія себе поводить, коли <code>x</code> між 0 так 7. Ми можемо згенерувати 700 значень <code>x</code> і потім порахувати значення <code>y</code> у цих точках:</p>
 <div class="sourceCode" id="cb510"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb510-1"><a href="візуалізуємо-з-matplotlib.html#cb510-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">7</span>, <span class="fl">0.01</span>)</span>
@@ -537,7 +537,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Тепер ми використаємо нашу <code>plt.plot()</code> щоб побудувати 449 маленьких ліній між цими точками, які будуть виглядати майже як крива:</p>
 <div class="sourceCode" id="cb511"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb511-1"><a href="візуалізуємо-з-matplotlib.html#cb511-1" aria-hidden="true" tabindex="-1"></a>plt.plot(x, y)</span>
 <span id="cb511-2"><a href="візуалізуємо-з-matplotlib.html#cb511-2" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-423-11.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-481-11.png" width="672" /></p>
 <p>Це може виглядати нудно, але в школі це дуже допомогало автору цієї книги, коли йому треба було швидко “прикинути” графік фунції.</p>
 </div>
 <div id="стовпчикова-діаграма" class="section level2 hasAnchor" number="19.3">
@@ -553,7 +553,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb512-4"><a href="візуалізуємо-з-matplotlib.html#cb512-4" aria-hidden="true" tabindex="-1"></a>plt.bar(x, y)</span></code></pre></div>
 <pre><code>## &lt;BarContainer object of 2 artists&gt;</code></pre>
 <div class="sourceCode" id="cb514"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb514-1"><a href="візуалізуємо-з-matplotlib.html#cb514-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-424-13.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-482-13.png" width="672" /></p>
 <p>Або ціна на бургери у McDonald’s у гривнях:</p>
 <div class="sourceCode" id="cb515"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb515-1"><a href="візуалізуємо-з-matplotlib.html#cb515-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="st">&quot;Big Mac&quot;</span>, <span class="st">&quot;Double Cheesburger&quot;</span>, <span class="st">&quot;Big Tasty&quot;</span>]</span>
 <span id="cb515-2"><a href="візуалізуємо-з-matplotlib.html#cb515-2" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> [<span class="dv">101</span>, <span class="dv">89</span>, <span class="dv">169</span>]</span>
@@ -561,13 +561,221 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb515-4"><a href="візуалізуємо-з-matplotlib.html#cb515-4" aria-hidden="true" tabindex="-1"></a>plt.bar(x, y)</span></code></pre></div>
 <pre><code>## &lt;BarContainer object of 3 artists&gt;</code></pre>
 <div class="sourceCode" id="cb517"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb517-1"><a href="візуалізуємо-з-matplotlib.html#cb517-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-425-15.png" width="672" /></p>
+<p><img src="_main_files/figure-html/unnamed-chunk-483-15.png" width="672" /></p>
 <hr />
 <hr />
 <details id="matplotlib_exercises">
 <summary>
 🤸 Вправи
 </summary>
+<div class="quiz">
+<div class="question">1. Перетягніть основні харктеристики та функції діаграми відповідно до її виду:</div>
+<div class="elements_pool" id="6701e243-3236-424a-8df0-25a8d0093e13">
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="9975d37c-fd58-46c9-99d3-cd241128072a" draggable="true" ondragstart="drag(event)">plt.scatter()</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="e867eca9-9eaf-4095-9995-d57ba6b296a7" draggable="true" ondragstart="drag(event)">представлена ламаною</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="c74f833d-e815-463e-852f-bd9afc288a84" draggable="true" ondragstart="drag(event)">plt.bar()</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="ee439616-171b-49f1-96f2-04366991528a" draggable="true" ondragstart="drag(event)">пари посзначаються лініями</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="ba4984e9-1d37-49ac-ae69-5eb419e4b49d" draggable="true" ondragstart="drag(event)">пари позначаються точками</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="89a8ab4c-5987-44ee-9a20-542e0cc9f363" draggable="true" ondragstart="drag(event)">змінні утворюють пари</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="27cfd03a-030d-4bbf-ac5c-36000e4c9281" draggable="true" ondragstart="drag(event)">графік будується у Декартовій системі координат</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="a85096ad-dc73-44f7-8f56-b20146bf0635" draggable="true" ondragstart="drag(event)">елементом діаграми є стовпчик</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="bfd9a068-71db-4647-8b6e-eef6443366f5" draggable="true" ondragstart="drag(event)">plt.plot()</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="dcec89dd-d987-4a60-b91d-0b1b85c33224" draggable="true" ondragstart="drag(event)">елементи списку x зазвичай містять назви категорій</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="8068bbf7-645f-48e1-890a-6307cf2eda57" draggable="true" ondragstart="drag(event)">змінні повинні бути списками або масивами ndarray</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="d6356d9e-9f03-420d-b114-39ffa4e22da1" draggable="true" ondragstart="drag(event)">можна побудувати криву</div>
+<div class="element" name="1c8b740d-3b7d-4dcf-a210-21d9a9172038" id="fe79864b-0bfb-439f-be7e-cf4d34712e73" draggable="true" ondragstart="drag(event)">показує середню заробітню плату серез жінок і чоловіків</div>
+</div>
+<div class="buckets">
+<div class="column">
+<span>Точкова діаграма</span>
+<div class="bucket" id="71287edf-5126-476b-9a59-bea64921e3e6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>Діаграма лінії</span>
+<div class="bucket" id="713f7304-610c-40ce-a115-85ef7dcaa52c" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>Стовпчикова діаграма</span>
+<div class="bucket" id="ce01adae-6c1b-42b8-882b-b7f029a96cee" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>Точкова діаграма і діаграма ліній</span>
+<div class="bucket" id="30cdd2a1-e498-4998-9e08-829d5fed46b4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+</div>
+<button class="check" id="ba298634-325e-4b5e-8a40-8e292ce7ce7e" onclick="checkBucket(&quot;ba298634-325e-4b5e-8a40-8e292ce7ce7e&quot;, [&quot;71287edf-5126-476b-9a59-bea64921e3e6&quot;, &quot;713f7304-610c-40ce-a115-85ef7dcaa52c&quot;, &quot;ce01adae-6c1b-42b8-882b-b7f029a96cee&quot;, &quot;30cdd2a1-e498-4998-9e08-829d5fed46b4&quot;], [[&quot;9975d37c-fd58-46c9-99d3-cd241128072a&quot;, &quot;ba4984e9-1d37-49ac-ae69-5eb419e4b49d&quot;], [&quot;e867eca9-9eaf-4095-9995-d57ba6b296a7&quot;, &quot;ee439616-171b-49f1-96f2-04366991528a&quot;, &quot;bfd9a068-71db-4647-8b6e-eef6443366f5&quot;, &quot;d6356d9e-9f03-420d-b114-39ffa4e22da1&quot;], [&quot;c74f833d-e815-463e-852f-bd9afc288a84&quot;, &quot;a85096ad-dc73-44f7-8f56-b20146bf0635&quot;, &quot;dcec89dd-d987-4a60-b91d-0b1b85c33224&quot;, &quot;fe79864b-0bfb-439f-be7e-cf4d34712e73&quot;], [&quot;89a8ab4c-5987-44ee-9a20-542e0cc9f363&quot;, &quot;27cfd03a-030d-4bbf-ac5c-36000e4c9281&quot;, &quot;8068bbf7-645f-48e1-890a-6307cf2eda57&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.getElementsByName('1c8b740d-3b7d-4dcf-a210-21d9a9172038');
+    const checkButton = document.getElementById('ba298634-325e-4b5e-8a40-8e292ce7ce7e');
+
+    elements.forEach(function(element) {
+        element.addEventListener('dragend', function() {
+
+            const pool = document.getElementById('6701e243-3236-424a-8df0-25a8d0093e13');
+
+            if(pool.getElementsByClassName("element").length === 0) {
+                checkButton.disabled = false;
+            }
+        });
+    });
+});</script>
+<div class="quiz">
+<div class="question">2. Чому візуалізація є важливою у <code>data science</code>?</div>
+<label>
+<input type="radio" name="0be270bd-e225-44ea-9e75-949db5da06bc" value="true">Людина сприймає візуальні дані краще ніж текстові дані</input>
+</label>
+<label>
+<input type="radio" name="0be270bd-e225-44ea-9e75-949db5da06bc" value="false">Вона дозволяє збільшити обсяг даних для аналізу</input>
+</label>
+<label>
+<input type="radio" name="0be270bd-e225-44ea-9e75-949db5da06bc" value="false">Візуалізація замінює статистичний аналіз даних</input>
+</label>
+<label>
+<input type="radio" name="0be270bd-e225-44ea-9e75-949db5da06bc" value="false">Візуалізація допомагає створювати бази даних</input>
+</label>
+<button class="check" id="268f2876-105b-4cb0-920d-601833e1b7b9" onclick="checkOptions(&quot;268f2876-105b-4cb0-920d-601833e1b7b9&quot;, &quot;0be270bd-e225-44ea-9e75-949db5da06bc&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('0be270bd-e225-44ea-9e75-949db5da06bc');
+    const submitButton = document.getElementById('268f2876-105b-4cb0-920d-601833e1b7b9');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">3. Який пакунок у <code>Python</code> є найвідомішим для візуалізації даних?</div>
+<label>
+<input type="radio" name="e4a87998-50a9-4b11-99a7-6f04240d54ac" value="false">NumPy</input>
+</label>
+<label>
+<input type="radio" name="e4a87998-50a9-4b11-99a7-6f04240d54ac" value="false">pandas</input>
+</label>
+<label>
+<input type="radio" name="e4a87998-50a9-4b11-99a7-6f04240d54ac" value="true">matplotlib</input>
+</label>
+<label>
+<input type="radio" name="e4a87998-50a9-4b11-99a7-6f04240d54ac" value="false">TensorFlow</input>
+</label>
+<button class="check" id="97b2852f-c571-410e-9bc3-c2efef18f026" onclick="checkOptions(&quot;97b2852f-c571-410e-9bc3-c2efef18f026&quot;, &quot;e4a87998-50a9-4b11-99a7-6f04240d54ac&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('e4a87998-50a9-4b11-99a7-6f04240d54ac');
+    const submitButton = document.getElementById('97b2852f-c571-410e-9bc3-c2efef18f026');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">4. Яка функція в пакунку <code>matplotlib</code> використовується для побудови точкових діаграм?</div>
+<label>
+<input type="radio" name="9e334275-192b-46cb-b154-fd144a266299" value="true"><code>plt.scatter()</code></input>
+</label>
+<label>
+<input type="radio" name="9e334275-192b-46cb-b154-fd144a266299" value="false"><code>plt.lines()</code></input>
+</label>
+<label>
+<input type="radio" name="9e334275-192b-46cb-b154-fd144a266299" value="false"><code>plt.barh()</code></input>
+</label>
+<label>
+<input type="radio" name="9e334275-192b-46cb-b154-fd144a266299" value="false"><code>plt.plot()</code></input>
+</label>
+<button class="check" id="93f0ad97-67b0-4fcd-b413-a149b3706998" onclick="checkOptions(&quot;93f0ad97-67b0-4fcd-b413-a149b3706998&quot;, &quot;9e334275-192b-46cb-b154-fd144a266299&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('9e334275-192b-46cb-b154-fd144a266299');
+    const submitButton = document.getElementById('93f0ad97-67b0-4fcd-b413-a149b3706998');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">5. Що представляє пара чисел <code>(x, y)</code> на діаграмі ліній?</div>
+<label>
+<input type="radio" name="815a61da-f34a-4004-8ee6-4c4dd1e58a8e" value="false">Кількість точок на графіку</input>
+</label>
+<label>
+<input type="radio" name="815a61da-f34a-4004-8ee6-4c4dd1e58a8e" value="true">Координати точки на графіку</input>
+</label>
+<label>
+<input type="radio" name="815a61da-f34a-4004-8ee6-4c4dd1e58a8e" value="false">Розмір точки на графіку</input>
+</label>
+<label>
+<input type="radio" name="815a61da-f34a-4004-8ee6-4c4dd1e58a8e" value="false">Колір точки на графіку</input>
+</label>
+<button class="check" id="78917745-6f0f-46fa-90fe-6c8dc50036fb" onclick="checkOptions(&quot;78917745-6f0f-46fa-90fe-6c8dc50036fb&quot;, &quot;815a61da-f34a-4004-8ee6-4c4dd1e58a8e&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('815a61da-f34a-4004-8ee6-4c4dd1e58a8e');
+    const submitButton = document.getElementById('78917745-6f0f-46fa-90fe-6c8dc50036fb');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">6. Що буде представляти кожен елемент на діаграмі ліній?</div>
+<label>
+<input type="radio" name="d60c1e14-6dce-4b10-a2a6-08f8a1a6226b" value="true">Точку</input>
+</label>
+<label>
+<input type="radio" name="d60c1e14-6dce-4b10-a2a6-08f8a1a6226b" value="false">Відрізок прямої</input>
+</label>
+<label>
+<input type="radio" name="d60c1e14-6dce-4b10-a2a6-08f8a1a6226b" value="false">Криву</input>
+</label>
+<label>
+<input type="radio" name="d60c1e14-6dce-4b10-a2a6-08f8a1a6226b" value="false">Пряму лінію</input>
+</label>
+<button class="check" id="9bf49803-9063-4fa2-ae91-905de8251aae" onclick="checkOptions(&quot;9bf49803-9063-4fa2-ae91-905de8251aae&quot;, &quot;d60c1e14-6dce-4b10-a2a6-08f8a1a6226b&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('d60c1e14-6dce-4b10-a2a6-08f8a1a6226b');
+    const submitButton = document.getElementById('9bf49803-9063-4fa2-ae91-905de8251aae');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">7. Які дані можуть бути представлені на стовпчиковій діаграмі?</div>
+<label>
+<input type="radio" name="cd28abc6-886e-4868-9483-cc413d84fafc" value="false">Кількість учнів у класі за віком</input>
+</label>
+<label>
+<input type="radio" name="cd28abc6-886e-4868-9483-cc413d84fafc" value="false">Щоденна середня температура повітня протягом тижня</input>
+</label>
+<label>
+<input type="radio" name="cd28abc6-886e-4868-9483-cc413d84fafc" value="false">Ціни на різні категорії продуктів</input>
+</label>
+<label>
+<input type="radio" name="cd28abc6-886e-4868-9483-cc413d84fafc" value="true">Усі відповіді правильні</input>
+</label>
+<button class="check" id="f910615c-8cba-4bff-bc35-855bc7439c94" onclick="checkOptions(&quot;f910615c-8cba-4bff-bc35-855bc7439c94&quot;, &quot;cd28abc6-886e-4868-9483-cc413d84fafc&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('cd28abc6-886e-4868-9483-cc413d84fafc');
+    const submitButton = document.getElementById('f910615c-8cba-4bff-bc35-855bc7439c94');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
 </details>
 
 </div>

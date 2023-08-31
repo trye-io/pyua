@@ -29,7 +29,7 @@ Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-08-30" />
+<meta name="date" content="2023-08-31" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -582,8 +582,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb313"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb313-1"><a href="цикл-for.html#cb313-1" aria-hidden="true" tabindex="-1"></a>egg <span class="op">=</span> {<span class="st">&quot;egg white&quot;</span>, <span class="st">&quot;yolk&quot;</span>}</span>
 <span id="cb313-2"><a href="цикл-for.html#cb313-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> part <span class="kw">in</span> egg: </span>
 <span id="cb313-3"><a href="цикл-for.html#cb313-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(part)</span></code></pre></div>
-<pre><code>## yolk
-## egg white</code></pre>
+<pre><code>## egg white
+## yolk</code></pre>
 </div>
 <div id="використовуємо-range-та-enumerate-для-зміни-елементів-списків" class="section level2 hasAnchor" number="12.3">
 <h2><span class="header-section-number">12.3</span> Використовуємо <code>range()</code> та <code>enumerate()</code> для зміни елементів списків<a href="цикл-for.html#використовуємо-range-та-enumerate-для-зміни-елементів-списків" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -690,6 +690,105 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <summary>
 🤸 Вправи
 </summary>
+<div class="quiz">
+<div class="question">2. Цикл <code>for</code> можна використовувати з:</div>
+<label>
+<input type="radio" name="7cc2cc59-4ce1-4b0d-b4d1-35c70f6b0f1f" value="true">кортежами, списками, словниками, множинами</input>
+</label>
+<label>
+<input type="radio" name="7cc2cc59-4ce1-4b0d-b4d1-35c70f6b0f1f" value="false">кортежами, списками, елементами словника, множинами</input>
+</label>
+<label>
+<input type="radio" name="7cc2cc59-4ce1-4b0d-b4d1-35c70f6b0f1f" value="false">жодна відповідь не є правильною</input>
+</label>
+<button class="check" id="9a1d6398-471c-4475-a4bd-594a16225572" onclick="checkOptions(&quot;9a1d6398-471c-4475-a4bd-594a16225572&quot;, &quot;7cc2cc59-4ce1-4b0d-b4d1-35c70f6b0f1f&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('7cc2cc59-4ce1-4b0d-b4d1-35c70f6b0f1f');
+    const submitButton = document.getElementById('9a1d6398-471c-4475-a4bd-594a16225572');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">3. Чи можна в тіло цикла додати інший цикл? Якщо так, то скільки?</div>
+<label>
+<input type="radio" name="4d080964-90dd-46f0-a8f0-88a90642fe68" value="false">Ні</input>
+</label>
+<label>
+<input type="radio" name="4d080964-90dd-46f0-a8f0-88a90642fe68" value="false">1</input>
+</label>
+<label>
+<input type="radio" name="4d080964-90dd-46f0-a8f0-88a90642fe68" value="false">2</input>
+</label>
+<label>
+<input type="radio" name="4d080964-90dd-46f0-a8f0-88a90642fe68" value="true">Безліч</input>
+</label>
+<button class="check" id="586e4380-7d95-4d64-9ed0-66824b58d6fe" onclick="checkOptions(&quot;586e4380-7d95-4d64-9ed0-66824b58d6fe&quot;, &quot;4d080964-90dd-46f0-a8f0-88a90642fe68&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const radioButtons = document.getElementsByName('4d080964-90dd-46f0-a8f0-88a90642fe68');
+    const submitButton = document.getElementById('586e4380-7d95-4d64-9ed0-66824b58d6fe');
+
+    radioButtons.forEach(function(radioButton) {
+      radioButton.addEventListener('change', function() {
+        submitButton.disabled = false;
+      });
+    });
+});</script>
+<div class="quiz">
+<div class="question">4. Перетягніть код відповідно до ф-ції, яку він виконує 👾:</div>
+<div class="elements_pool" id="1db640aa-6381-41f1-9975-9eded5b22c56">
+<div class="element" name="7a4e3863-12a5-496e-a15c-20c7dab8c02d" id="65d81b79-5b59-4923-8cbc-2f45ffca896e" draggable="true" ondragstart="drag(event)"><code>for i in range(1, 11):
+            print(i)</code></div>
+<div class="element" name="7a4e3863-12a5-496e-a15c-20c7dab8c02d" id="bd074f5b-7848-408c-8f74-786ddf6ef1e0" draggable="true" ondragstart="drag(event)"><code>for num in range(2, 11, 2): 
+            print(num)</code></div>
+<div class="element" name="7a4e3863-12a5-496e-a15c-20c7dab8c02d" id="f0493932-9976-4919-8e9d-d314e607f8b4" draggable="true" ondragstart="drag(event)"><code>sum = 0
+        for num in range(1, 11):
+            sum += num
+        print(sum)</code></div>
+<div class="element" name="7a4e3863-12a5-496e-a15c-20c7dab8c02d" id="3d8188ba-c049-4acc-94fb-0beaadc1d906" draggable="true" ondragstart="drag(event)"><code>fruits = ['яблуко', 'банан', 'апельсин']
+         for fruit in fruits:
+            print(fruit)</code></div>
+</div>
+<div class="buckets">
+<div class="column">
+<span>Генерує числа числа від 1 до 10</span>
+<div class="bucket" id="20802302-a416-4239-94f6-088f7de199a2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>Генерує парні числа від 2 до 10</span>
+<div class="bucket" id="06f28b90-21f7-40a2-b827-b3f5ab0eac55" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>Рахує суму чисел від 1 до 10</span>
+<div class="bucket" id="27d79b94-4e60-4fa7-aa1f-3642254aa163" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="column">
+<span>Друкує елементи масиву fruits</span>
+<div class="bucket" id="fe5cf7e5-fd65-4db9-a533-eb8ce8311a4e" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+</div>
+</div>
+<button class="check" id="ce11b5f8-ca63-4f41-a079-47e438edd8c3" onclick="checkBucket(&quot;ce11b5f8-ca63-4f41-a079-47e438edd8c3&quot;, [&quot;20802302-a416-4239-94f6-088f7de199a2&quot;, &quot;06f28b90-21f7-40a2-b827-b3f5ab0eac55&quot;, &quot;27d79b94-4e60-4fa7-aa1f-3642254aa163&quot;, &quot;fe5cf7e5-fd65-4db9-a533-eb8ce8311a4e&quot;], [[&quot;65d81b79-5b59-4923-8cbc-2f45ffca896e&quot;], [&quot;bd074f5b-7848-408c-8f74-786ddf6ef1e0&quot;], [&quot;f0493932-9976-4919-8e9d-d314e607f8b4&quot;], [&quot;3d8188ba-c049-4acc-94fb-0beaadc1d906&quot;]], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+</div>
+<script>window.addEventListener('DOMContentLoaded', function() {
+    const elements = document.getElementsByName('7a4e3863-12a5-496e-a15c-20c7dab8c02d');
+    const checkButton = document.getElementById('ce11b5f8-ca63-4f41-a079-47e438edd8c3');
+
+    elements.forEach(function(element) {
+        element.addEventListener('dragend', function() {
+
+            const pool = document.getElementById('1db640aa-6381-41f1-9975-9eded5b22c56');
+
+            if(pool.getElementsByClassName("element").length === 0) {
+                checkButton.disabled = false;
+            }
+        });
+    });
+});</script>
 </details>
 
 </div>
