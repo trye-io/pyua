@@ -38,44 +38,44 @@ cc.run({
     languages: {
         'ua': {
             consent_modal: {
-                title: 'Ми використовуємо cookies 🍪',
-                description: 'Привіт! Цей веб-сайт використовує виключно аналітичні cookies 🍪. Ви можете прочитати більше за наступним <a href = "https://trye.io/privacy/">посиланням</a>.',
+                title: 'Ми використовуємо cookie 🍪',
+                description: 'Привіт! Цей веб-сайт використовує необхідні та аналітичні файли cookie. <button type="button" data-cc="c-settings" class="cc-link" aria-haspopup="dialog">Налаштувати</button>',
                 primary_btn: {
-                    text: 'Прийняти',
+                    text: 'Погоджуюсь',
                     role: 'accept_all'              // 'accept_selected' or 'accept_all'
                 },
                 secondary_btn: {
-                    text: 'Відхилити',
+                    text: 'Не погоджуюсь',
                     role: 'accept_necessary'        // 'settings' or 'accept_necessary'
                 }
             },
             settings_modal: {
-                title: 'Cookie preferences',
-                save_settings_btn: 'Save settings',
-                accept_all_btn: 'Accept all',
-                reject_all_btn: 'Reject all',
+                title: 'Налаштування сookie',
+                save_settings_btn: 'Зберегти налаштування',
+                accept_all_btn: 'Прийняти усі',
+                reject_all_btn: 'Відхилити усі',
                 close_btn_label: 'Close',
                 cookie_table_headers: [
-                    {col1: 'Name'},
-                    {col2: 'Domain'},
-                    {col3: 'Expiration'},
-                    {col4: 'Description'}
+                    {col1: "Ім'я"},
+                    {col2: 'Домен'},
+                    {col3: 'Термін дії'},
+                    {col4: 'Опис'}
                 ],
                 blocks: [
                     {
-                        title: 'Cookie usage 📢',
-                        description: 'I use cookies to ensure the basic functionalities of the website and to enhance your online experience. You can choose for each category to opt-in/out whenever you want. For more details relative to cookies and other sensitive data, please read the full <a href="#" class="cc-link">privacy policy</a>.'
+                        title: '📢 Використання cookies',
+                        description: 'Ми використовуємо файли cookie, щоб забезпечити основні функції вебсайту та покращити ваш досвід онлайн. Ви можете ввімкнути/відключити аналітичні файли cookie. Щоб дізнатися більше про файли cookie та ваші дані, ви можете ознайомитись з нашою <a href="http://trye.io/privacy/">політикою конфіденційності та cookie</a>.'
                     }, {
-                        title: 'Strictly necessary cookies',
-                        description: 'These cookies are essential for the proper functioning of my website. Without these cookies, the website would not work properly',
+                        title: "Необхідні файли cookie",
+                        description: 'Ці файли cookie необхідні для належного функціонування нашого вебсайту. Без цих файлів cookie вебсайт не буде працювати належним чином.',
                         toggle: {
                             value: 'necessary',
                             enabled: true,
-                            readonly: true          // cookie categories with readonly=true are all treated as "necessary cookies"
+                            readonly: true
                         }
                     }, {
-                        title: 'Performance and Analytics cookies',
-                        description: 'These cookies allow the website to remember the choices you have made in the past',
+                        title: 'Аналітичні файли cookie',
+                        description: 'За допомогою цих файлів ми збираємо дані яким чином ви використовуєте сайт, щоб покращити ваш досвід. Усі дані які ми збираємо - анонімні.',
                         toggle: {
                             value: 'analytics',     // your cookie category
                             enabled: true,
@@ -85,28 +85,14 @@ cc.run({
                             {
                                 col1: '^_ga',       // match all cookies starting with "_ga"
                                 col2: 'google.com',
-                                col3: '2 years',
-                                col4: 'description ...',
+                                col3: '2 роки',
+                                col4: 'Google Analytics',
                                 is_regex: true
-                            },
-                            {
-                                col1: '_gid',
-                                col2: 'google.com',
-                                col3: '1 day',
-                                col4: 'description ...',
                             }
                         ]
                     }, {
-                        title: 'Advertisement and Targeting cookies',
-                        description: 'These cookies collect information about how you use the website, which pages you visited and which links you clicked on. All of the data is anonymized and cannot be used to identify you',
-                        toggle: {
-                            value: 'targeting',
-                            enabled: false,
-                            readonly: false
-                        }
-                    }, {
-                        title: 'More information',
-                        description: 'For any queries in relation to our policy on cookies and your choices, please <a class="cc-link" href="#yourcontactpage">contact us</a>.',
+                        title: "Зворотній зв'язок",
+                        description: "З будь-якими запитаннями щодо нашої політики файлів cookie, ви можете зв'язатися з нами за наступною <a href='mailto:support@trye.io'> адресою</a>.",
                     }
                 ]
             }
