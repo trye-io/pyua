@@ -3,7 +3,7 @@
 <div class="btn-group">
   <button class="lecture" onclick="location.href='https://youtu.be/mqN5kpgP1dU';">🎥 Лекція</button>
   <button class="podcast" onclick="location.href='https://podcasters.spotify.com/pod/show/irudnyts/episodes/2-Python-e28nrc3';">🎙️ Подкаст</button>
-  <button class="notebook">📓 Записник</button>
+  <button class="notebook" disabled>📓 Записник</button>
   <button class="exercises" onclick="openDetailsById('python_exercises');">🤸 Вправи</button>
   <button class="cheat" disabled>📝 Шпора</button>
 </div>
