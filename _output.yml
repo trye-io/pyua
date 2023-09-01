@@ -1,7 +1,7 @@
 bookdown::gitbook:
   includes:
     in_header: javascript.html
-  css: style.css
+  css: ["style.css", "cookieconsent.css"]
   config:
     toc:
       collapse: section
