@@ -199,3 +199,17 @@ knitr::include_graphics("images/0-annotation-2.png")
 
 * Христина Хмільовська
 * Анжеліка Курбатова
+
+## ⚖️ Ліцензія {-}
+
+Ця книга розповсюджена під ліцензією [Creative Commons Із Зазначенням Авторства — Некомерційна — Поширення На Тих Самих Умовах 4.0 Міжнародна (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.uk). Це означає що ви можете вільно поширювати та змінювати матеріали на наступних умовах:
+
+* Зазначати авторство
+* Безоплатно 
+* Поширювати на тих самих умовах
+
+Автором вправ до глав 6-21 є Христина Хмільовська.
+
+<a rel="license" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.uk"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a>
+
+Одночасно код який ви знайдете в цій книзі також розповсюджений з використанням ліцензії [MIT](https://opensource.org/licenses/MIT). Автором коду для вправ до глав 6-21 є Христина Хмільовська.
