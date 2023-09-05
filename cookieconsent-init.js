@@ -17,7 +17,7 @@ cc.run({
     // cookie_name: 'cc_cookie',               // default: 'cc_cookie'
     // cookie_expiration: 182,                 // default: 182 (days)
     // cookie_necessary_only_expiration: 182   // default: disabled
-    // cookie_domain: location.hostname,       // default: current domain
+    cookie_domain: 'trye.io',       // default: current domain
     // cookie_path: '/',                       // default: root
     // cookie_same_site: 'Lax',                // default: 'Lax'
     // use_rfc_cookie: false,                  // default: false
