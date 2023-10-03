@@ -6,30 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Глава 11 Умовний перехід if/elif/else | 🐍 Python Програмування</title>
   <meta name="description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Глава 11 Умовний перехід if/elif/else | 🐍 Python Програмування" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Глава 11 Умовний перехід if/elif/else | 🐍 Python Програмування" />
   
   <meta name="twitter:description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   
 
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-09-29" />
+<meta name="date" content="2023-10-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -771,23 +768,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 [  ] :
    print("Можеш йти, якщо дорога безпечна.")</code></pre>
 <div class="question">Перетягніть відсутні фрагменти коду у правильному порядку, щоб завершити програму.</div>
-<div class="answer_pool" id="33beecb8-21a2-4a7d-85c4-71a9e376e724" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="elements_pool" id="b864529b-5013-4f50-92dc-a017150b9207">
-<div class="element" name="c094f85c-c32b-46a6-a000-af9802e02770" id="b4e3b710-aa28-428e-b000-e579c4ac04dd" draggable="true" ondragstart="drag(event)"><code>elif</code></div>
-<div class="element" name="c094f85c-c32b-46a6-a000-af9802e02770" id="176c04a6-dab6-45eb-881e-f18d7b5f7df5" draggable="true" ondragstart="drag(event)"><code>if</code></div>
-<div class="element" name="c094f85c-c32b-46a6-a000-af9802e02770" id="84316dce-2932-4c40-829a-4977c59dfa12" draggable="true" ondragstart="drag(event)"><code>else</code></div>
-<div class="element" name="c094f85c-c32b-46a6-a000-af9802e02770" id="9c414ec4-476e-45c3-9e56-609869a875c1" draggable="true" ondragstart="drag(event)"><code>elif</code></div>
+<div class="answer_pool" id="1854ab9c-6bd1-4e3d-a629-2a136f5b829b" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="elements_pool" id="718aa758-10b3-4aa4-87e3-543f6a547455">
+<div class="element" name="b43614bf-e3ff-4db1-af91-ce3fb91428b2" id="baa40f68-1e2a-40dc-b2d3-6da383dbfebe" draggable="true" ondragstart="drag(event)"><code>elif</code></div>
+<div class="element" name="b43614bf-e3ff-4db1-af91-ce3fb91428b2" id="db9961f3-1cad-4802-aa01-157e659323d8" draggable="true" ondragstart="drag(event)"><code>if</code></div>
+<div class="element" name="b43614bf-e3ff-4db1-af91-ce3fb91428b2" id="f4160d32-4bbc-4317-9855-f8e273fe6093" draggable="true" ondragstart="drag(event)"><code>else</code></div>
+<div class="element" name="b43614bf-e3ff-4db1-af91-ce3fb91428b2" id="caea220f-e64e-4a05-9cd5-bf631b55e3dc" draggable="true" ondragstart="drag(event)"><code>elif</code></div>
 </div>
-<button class="check" id="defa33d6-13ca-4771-a099-bfd6bbc90b58" onclick="checkArrange(&quot;defa33d6-13ca-4771-a099-bfd6bbc90b58&quot;, &quot;33beecb8-21a2-4a7d-85c4-71a9e376e724&quot;, [&quot;176c04a6-dab6-45eb-881e-f18d7b5f7df5&quot;, &quot;b4e3b710-aa28-428e-b000-e579c4ac04dd&quot;, &quot;9c414ec4-476e-45c3-9e56-609869a875c1&quot;, &quot;84316dce-2932-4c40-829a-4977c59dfa12&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="a08b951b-e529-45bf-b12b-4c3aad3a9847" onclick="checkArrange(&quot;a08b951b-e529-45bf-b12b-4c3aad3a9847&quot;, &quot;1854ab9c-6bd1-4e3d-a629-2a136f5b829b&quot;, [&quot;db9961f3-1cad-4802-aa01-157e659323d8&quot;, &quot;baa40f68-1e2a-40dc-b2d3-6da383dbfebe&quot;, &quot;caea220f-e64e-4a05-9cd5-bf631b55e3dc&quot;, &quot;f4160d32-4bbc-4317-9855-f8e273fe6093&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const elements = document.getElementsByName('c094f85c-c32b-46a6-a000-af9802e02770');
-    const checkButton = document.getElementById('defa33d6-13ca-4771-a099-bfd6bbc90b58');
+    const elements = document.getElementsByName('b43614bf-e3ff-4db1-af91-ce3fb91428b2');
+    const checkButton = document.getElementById('a08b951b-e529-45bf-b12b-4c3aad3a9847');
 
     elements.forEach(function(element) {
         element.addEventListener('dragend', function() {
 
-            const pool = document.getElementById('b864529b-5013-4f50-92dc-a017150b9207');
+            const pool = document.getElementById('718aa758-10b3-4aa4-87e3-543f6a547455');
 
             if(pool.getElementsByClassName("element").length === 0) {
                 checkButton.disabled = false;
@@ -806,22 +803,22 @@ else:
     print("x менше або дорівнює 2")</code></pre>
 <div class="question">Оберіть правильну відповідь:</div>
 <label>
-<input type="radio" name="b8cf0af2-dfb3-4bf8-998d-fad58a69f87e" value="false">x менше або дорівнює 2</input>
+<input type="radio" name="5d17c68c-53ed-4047-a788-2025bde3355e" value="false">x менше або дорівнює 2</input>
 </label>
 <label>
-<input type="radio" name="b8cf0af2-dfb3-4bf8-998d-fad58a69f87e" value="true">x більше за 5</input>
+<input type="radio" name="5d17c68c-53ed-4047-a788-2025bde3355e" value="true">x більше за 5</input>
 </label>
 <label>
-<input type="radio" name="b8cf0af2-dfb3-4bf8-998d-fad58a69f87e" value="false">x більше за 2</input>
+<input type="radio" name="5d17c68c-53ed-4047-a788-2025bde3355e" value="false">x більше за 2</input>
 </label>
 <label>
-<input type="radio" name="b8cf0af2-dfb3-4bf8-998d-fad58a69f87e" value="false">Жоден варіант не є правильним</input>
+<input type="radio" name="5d17c68c-53ed-4047-a788-2025bde3355e" value="false">Жоден варіант не є правильним</input>
 </label>
-<button class="check" id="10e0dca5-3869-490e-9341-be5555f8a769" onclick="checkOptions(&quot;10e0dca5-3869-490e-9341-be5555f8a769&quot;, &quot;b8cf0af2-dfb3-4bf8-998d-fad58a69f87e&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="9d488ead-84ea-40f3-b9e1-6d5bb74701d0" onclick="checkOptions(&quot;9d488ead-84ea-40f3-b9e1-6d5bb74701d0&quot;, &quot;5d17c68c-53ed-4047-a788-2025bde3355e&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('b8cf0af2-dfb3-4bf8-998d-fad58a69f87e');
-    const submitButton = document.getElementById('10e0dca5-3869-490e-9341-be5555f8a769');
+    const radioButtons = document.getElementsByName('5d17c68c-53ed-4047-a788-2025bde3355e');
+    const submitButton = document.getElementById('9d488ead-84ea-40f3-b9e1-6d5bb74701d0');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -843,22 +840,22 @@ else:
     print("Холодно")</code></pre>
 <div class="question">Оберіть правильну відповідь:</div>
 <label>
-<input type="radio" name="fed9bed3-2a7e-4d7e-9a1b-303e95799fba" value="false"><code>'Тепло'</code></input>
+<input type="radio" name="f74899af-17c1-47a8-b09d-88e064b29963" value="false"><code>'Тепло'</code></input>
 </label>
 <label>
-<input type="radio" name="fed9bed3-2a7e-4d7e-9a1b-303e95799fba" value="true"><code>'Прохолодно'</code></input>
+<input type="radio" name="f74899af-17c1-47a8-b09d-88e064b29963" value="true"><code>'Прохолодно'</code></input>
 </label>
 <label>
-<input type="radio" name="fed9bed3-2a7e-4d7e-9a1b-303e95799fba" value="false"><code>'Дуже спекотно'</code></input>
+<input type="radio" name="f74899af-17c1-47a8-b09d-88e064b29963" value="false"><code>'Дуже спекотно'</code></input>
 </label>
 <label>
-<input type="radio" name="fed9bed3-2a7e-4d7e-9a1b-303e95799fba" value="false"><code>'Холодно'</code></input>
+<input type="radio" name="f74899af-17c1-47a8-b09d-88e064b29963" value="false"><code>'Холодно'</code></input>
 </label>
-<button class="check" id="7361d6fa-0426-4688-8ae2-db75f70a2a53" onclick="checkOptions(&quot;7361d6fa-0426-4688-8ae2-db75f70a2a53&quot;, &quot;fed9bed3-2a7e-4d7e-9a1b-303e95799fba&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="e91a6294-d30b-4fbb-8fbd-19bcd7c794e0" onclick="checkOptions(&quot;e91a6294-d30b-4fbb-8fbd-19bcd7c794e0&quot;, &quot;f74899af-17c1-47a8-b09d-88e064b29963&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('fed9bed3-2a7e-4d7e-9a1b-303e95799fba');
-    const submitButton = document.getElementById('7361d6fa-0426-4688-8ae2-db75f70a2a53');
+    const radioButtons = document.getElementsByName('f74899af-17c1-47a8-b09d-88e064b29963');
+    const submitButton = document.getElementById('e91a6294-d30b-4fbb-8fbd-19bcd7c794e0');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -869,19 +866,19 @@ else:
 <div class="quiz">
 <div class="question">4. Що буде результатом виразу <code>5 == 5</code>?</div>
 <label>
-<input type="radio" name="a1f8bbf3-9d9f-4ed9-9849-b3e206440154" value="true">True</input>
+<input type="radio" name="84fe6f09-f724-4e4f-8223-49e76b32b68a" value="true">True</input>
 </label>
 <label>
-<input type="radio" name="a1f8bbf3-9d9f-4ed9-9849-b3e206440154" value="false">False</input>
+<input type="radio" name="84fe6f09-f724-4e4f-8223-49e76b32b68a" value="false">False</input>
 </label>
 <label>
-<input type="radio" name="a1f8bbf3-9d9f-4ed9-9849-b3e206440154" value="false">Помилка</input>
+<input type="radio" name="84fe6f09-f724-4e4f-8223-49e76b32b68a" value="false">Помилка</input>
 </label>
-<button class="check" id="2c505634-d463-414b-be70-db955a13a69e" onclick="checkOptions(&quot;2c505634-d463-414b-be70-db955a13a69e&quot;, &quot;a1f8bbf3-9d9f-4ed9-9849-b3e206440154&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="9076358a-db9c-4900-82eb-a9a394958d0e" onclick="checkOptions(&quot;9076358a-db9c-4900-82eb-a9a394958d0e&quot;, &quot;84fe6f09-f724-4e4f-8223-49e76b32b68a&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('a1f8bbf3-9d9f-4ed9-9849-b3e206440154');
-    const submitButton = document.getElementById('2c505634-d463-414b-be70-db955a13a69e');
+    const radioButtons = document.getElementsByName('84fe6f09-f724-4e4f-8223-49e76b32b68a');
+    const submitButton = document.getElementById('9076358a-db9c-4900-82eb-a9a394958d0e');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -892,19 +889,19 @@ else:
 <div class="quiz">
 <div class="question">5. Що буде результатом виразу <code>12 > 10</code>?</div>
 <label>
-<input type="radio" name="644d36dd-3d28-427a-9261-385a0d6e9eae" value="false">True</input>
+<input type="radio" name="f646b72a-f554-4f5b-9029-592dfd60f8d4" value="false">True</input>
 </label>
 <label>
-<input type="radio" name="644d36dd-3d28-427a-9261-385a0d6e9eae" value="true">False</input>
+<input type="radio" name="f646b72a-f554-4f5b-9029-592dfd60f8d4" value="true">False</input>
 </label>
 <label>
-<input type="radio" name="644d36dd-3d28-427a-9261-385a0d6e9eae" value="false">Помилка</input>
+<input type="radio" name="f646b72a-f554-4f5b-9029-592dfd60f8d4" value="false">Помилка</input>
 </label>
-<button class="check" id="d9b1e0cb-cbbb-4d45-9236-c5bfb6c0a789" onclick="checkOptions(&quot;d9b1e0cb-cbbb-4d45-9236-c5bfb6c0a789&quot;, &quot;644d36dd-3d28-427a-9261-385a0d6e9eae&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="126dfb18-6c77-4429-911b-206c9564ae3f" onclick="checkOptions(&quot;126dfb18-6c77-4429-911b-206c9564ae3f&quot;, &quot;f646b72a-f554-4f5b-9029-592dfd60f8d4&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('644d36dd-3d28-427a-9261-385a0d6e9eae');
-    const submitButton = document.getElementById('d9b1e0cb-cbbb-4d45-9236-c5bfb6c0a789');
+    const radioButtons = document.getElementsByName('f646b72a-f554-4f5b-9029-592dfd60f8d4');
+    const submitButton = document.getElementById('126dfb18-6c77-4429-911b-206c9564ae3f');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -915,19 +912,19 @@ else:
 <div class="quiz">
 <div class="question">6. Що буде результатом виразу <code>3 = 3</code>?</div>
 <label>
-<input type="radio" name="0c9070d1-61bd-4dc8-889a-daf86ca28ea2" value="false">True</input>
+<input type="radio" name="3b3fdc54-76a3-4511-bbef-5244cab7913d" value="false">True</input>
 </label>
 <label>
-<input type="radio" name="0c9070d1-61bd-4dc8-889a-daf86ca28ea2" value="false">False</input>
+<input type="radio" name="3b3fdc54-76a3-4511-bbef-5244cab7913d" value="false">False</input>
 </label>
 <label>
-<input type="radio" name="0c9070d1-61bd-4dc8-889a-daf86ca28ea2" value="true">Помилка</input>
+<input type="radio" name="3b3fdc54-76a3-4511-bbef-5244cab7913d" value="true">Помилка</input>
 </label>
-<button class="check" id="d4f56b5d-abd5-4d62-9c10-e19aa260c867" onclick="checkOptions(&quot;d4f56b5d-abd5-4d62-9c10-e19aa260c867&quot;, &quot;0c9070d1-61bd-4dc8-889a-daf86ca28ea2&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="7318198c-cbc3-4b69-a9e6-29a890bb3d13" onclick="checkOptions(&quot;7318198c-cbc3-4b69-a9e6-29a890bb3d13&quot;, &quot;3b3fdc54-76a3-4511-bbef-5244cab7913d&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('0c9070d1-61bd-4dc8-889a-daf86ca28ea2');
-    const submitButton = document.getElementById('d4f56b5d-abd5-4d62-9c10-e19aa260c867');
+    const radioButtons = document.getElementsByName('3b3fdc54-76a3-4511-bbef-5244cab7913d');
+    const submitButton = document.getElementById('7318198c-cbc3-4b69-a9e6-29a890bb3d13');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {

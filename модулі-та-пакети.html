@@ -6,30 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Глава 17 Модулі та пакети | 🐍 Python Програмування</title>
   <meta name="description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Глава 17 Модулі та пакети | 🐍 Python Програмування" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Глава 17 Модулі та пакети | 🐍 Python Програмування" />
   
   <meta name="twitter:description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   
 
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-09-29" />
+<meta name="date" content="2023-10-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -525,25 +522,25 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">1. Котрий рядок правильно встановить пакет?</div>
 <label>
-<input type="radio" name="1ca11efc-4a43-4e29-bf51-043c4423e59c" value="false"><code>import pandas as pd</code></input>
+<input type="radio" name="4f77616c-d809-4eb6-a5c8-86b48e674802" value="false"><code>import pandas as pd</code></input>
 </label>
 <label>
-<input type="radio" name="1ca11efc-4a43-4e29-bf51-043c4423e59c" value="false"><code>import pandas as p</code></input>
+<input type="radio" name="4f77616c-d809-4eb6-a5c8-86b48e674802" value="false"><code>import pandas as p</code></input>
 </label>
 <label>
-<input type="radio" name="1ca11efc-4a43-4e29-bf51-043c4423e59c" value="false"><code>import pandas</code></input>
+<input type="radio" name="4f77616c-d809-4eb6-a5c8-86b48e674802" value="false"><code>import pandas</code></input>
 </label>
 <label>
-<input type="radio" name="1ca11efc-4a43-4e29-bf51-043c4423e59c" value="true">Кожен</input>
+<input type="radio" name="4f77616c-d809-4eb6-a5c8-86b48e674802" value="true">Кожен</input>
 </label>
 <label>
-<input type="radio" name="1ca11efc-4a43-4e29-bf51-043c4423e59c" value="false">Жоден</input>
+<input type="radio" name="4f77616c-d809-4eb6-a5c8-86b48e674802" value="false">Жоден</input>
 </label>
-<button class="check" id="ae564329-7866-4928-81fe-d253bfc86cfb" onclick="checkOptions(&quot;ae564329-7866-4928-81fe-d253bfc86cfb&quot;, &quot;1ca11efc-4a43-4e29-bf51-043c4423e59c&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="a43a61c6-fee5-4ddb-98a2-e6f29ba5a078" onclick="checkOptions(&quot;a43a61c6-fee5-4ddb-98a2-e6f29ba5a078&quot;, &quot;4f77616c-d809-4eb6-a5c8-86b48e674802&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('1ca11efc-4a43-4e29-bf51-043c4423e59c');
-    const submitButton = document.getElementById('ae564329-7866-4928-81fe-d253bfc86cfb');
+    const radioButtons = document.getElementsByName('4f77616c-d809-4eb6-a5c8-86b48e674802');
+    const submitButton = document.getElementById('a43a61c6-fee5-4ddb-98a2-e6f29ba5a078');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -553,23 +550,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 });</script>
 <div class="quiz">
 <div class="question">2. Як з пакету <code>pandas</code> викачати лише одну функцію <code>DataFrame</code>? Перетягніть фрагменти коду у правильному порядку:</div>
-<div class="answer_pool" id="fcc1b543-61a1-4230-bd73-e23e3d6b8080" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<div class="elements_pool" id="0492b4b0-530e-47ce-9098-216f563f78ce">
-<div class="element" name="61d5443a-03da-4709-8635-f4f6d2103d32" id="0d6ee0c0-5dd5-4053-a103-0592efe98925" draggable="true" ondragstart="drag(event)">pandas</div>
-<div class="element" name="61d5443a-03da-4709-8635-f4f6d2103d32" id="b577eb5b-c2cd-432b-ac90-c5f6fcc4ec47" draggable="true" ondragstart="drag(event)">DataFrame</div>
-<div class="element" name="61d5443a-03da-4709-8635-f4f6d2103d32" id="08ba88ba-5b73-4f72-9d48-7f008d34081f" draggable="true" ondragstart="drag(event)">import</div>
-<div class="element" name="61d5443a-03da-4709-8635-f4f6d2103d32" id="6f8b8195-8023-496a-ae6e-7a5e8ebc0869" draggable="true" ondragstart="drag(event)">from</div>
+<div class="answer_pool" id="cb8f0c4d-7a56-43f7-8200-b69e2b6062d7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<div class="elements_pool" id="8c35db37-cf5b-4c6e-adfb-944563d82714">
+<div class="element" name="62c774e2-1fb2-4784-85a2-637f4fe67de9" id="fdff017b-1d81-4a17-acfb-f080860f1d40" draggable="true" ondragstart="drag(event)">pandas</div>
+<div class="element" name="62c774e2-1fb2-4784-85a2-637f4fe67de9" id="9eb403f5-f869-4cc7-ad03-0cae094f58cf" draggable="true" ondragstart="drag(event)">DataFrame</div>
+<div class="element" name="62c774e2-1fb2-4784-85a2-637f4fe67de9" id="6165355a-bdf6-427f-a37d-a1d41b522168" draggable="true" ondragstart="drag(event)">import</div>
+<div class="element" name="62c774e2-1fb2-4784-85a2-637f4fe67de9" id="83fb0c4c-2e30-48dd-9148-01628b73a2a5" draggable="true" ondragstart="drag(event)">from</div>
 </div>
-<button class="check" id="e85f02aa-029b-427f-8c55-233c15dfb987" onclick="checkArrange(&quot;e85f02aa-029b-427f-8c55-233c15dfb987&quot;, &quot;fcc1b543-61a1-4230-bd73-e23e3d6b8080&quot;, [&quot;6f8b8195-8023-496a-ae6e-7a5e8ebc0869&quot;, &quot;0d6ee0c0-5dd5-4053-a103-0592efe98925&quot;, &quot;08ba88ba-5b73-4f72-9d48-7f008d34081f&quot;, &quot;b577eb5b-c2cd-432b-ac90-c5f6fcc4ec47&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="6da34d64-bc67-4970-afcb-011bc8e245db" onclick="checkArrange(&quot;6da34d64-bc67-4970-afcb-011bc8e245db&quot;, &quot;cb8f0c4d-7a56-43f7-8200-b69e2b6062d7&quot;, [&quot;83fb0c4c-2e30-48dd-9148-01628b73a2a5&quot;, &quot;fdff017b-1d81-4a17-acfb-f080860f1d40&quot;, &quot;6165355a-bdf6-427f-a37d-a1d41b522168&quot;, &quot;9eb403f5-f869-4cc7-ad03-0cae094f58cf&quot;], [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const elements = document.getElementsByName('61d5443a-03da-4709-8635-f4f6d2103d32');
-    const checkButton = document.getElementById('e85f02aa-029b-427f-8c55-233c15dfb987');
+    const elements = document.getElementsByName('62c774e2-1fb2-4784-85a2-637f4fe67de9');
+    const checkButton = document.getElementById('6da34d64-bc67-4970-afcb-011bc8e245db');
 
     elements.forEach(function(element) {
         element.addEventListener('dragend', function() {
 
-            const pool = document.getElementById('0492b4b0-530e-47ce-9098-216f563f78ce');
+            const pool = document.getElementById('8c35db37-cf5b-4c6e-adfb-944563d82714');
 
             if(pool.getElementsByClassName("element").length === 0) {
                 checkButton.disabled = false;
@@ -581,22 +578,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="question">3. Котрий рядок коду правильно встановить функцію <code>read_csv()</code> з пакету <code>pandas</code>?
 </div>
 <label>
-<input type="radio" name="45cbe5db-0f4c-4f3d-aead-3d8d86f2d3d4" value="false"><code>from pandas.read_csv import read_csv</code></input>
+<input type="radio" name="daf340a5-145a-4de8-8bbe-581b79b8c35e" value="false"><code>from pandas.read_csv import read_csv</code></input>
 </label>
 <label>
-<input type="radio" name="45cbe5db-0f4c-4f3d-aead-3d8d86f2d3d4" value="false"><code>import read_csv from pandas</code></input>
+<input type="radio" name="daf340a5-145a-4de8-8bbe-581b79b8c35e" value="false"><code>import read_csv from pandas</code></input>
 </label>
 <label>
-<input type="radio" name="45cbe5db-0f4c-4f3d-aead-3d8d86f2d3d4" value="true"><code>from pandas import read_csv</code></input>
+<input type="radio" name="daf340a5-145a-4de8-8bbe-581b79b8c35e" value="true"><code>from pandas import read_csv</code></input>
 </label>
 <label>
-<input type="radio" name="45cbe5db-0f4c-4f3d-aead-3d8d86f2d3d4" value="false"><code>import read_csv() from pandas</code></input>
+<input type="radio" name="daf340a5-145a-4de8-8bbe-581b79b8c35e" value="false"><code>import read_csv() from pandas</code></input>
 </label>
-<button class="check" id="e3e58298-c286-4903-a752-ec42b0888d5d" onclick="checkOptions(&quot;e3e58298-c286-4903-a752-ec42b0888d5d&quot;, &quot;45cbe5db-0f4c-4f3d-aead-3d8d86f2d3d4&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="6afccebd-ebba-45c7-9f74-ada843fafca0" onclick="checkOptions(&quot;6afccebd-ebba-45c7-9f74-ada843fafca0&quot;, &quot;daf340a5-145a-4de8-8bbe-581b79b8c35e&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('45cbe5db-0f4c-4f3d-aead-3d8d86f2d3d4');
-    const submitButton = document.getElementById('e3e58298-c286-4903-a752-ec42b0888d5d');
+    const radioButtons = document.getElementsByName('daf340a5-145a-4de8-8bbe-581b79b8c35e');
+    const submitButton = document.getElementById('6afccebd-ebba-45c7-9f74-ada843fafca0');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -608,22 +605,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="question">4. Які елементи можуть бути імпортовані з пакету <code>pandas</code> за допомогою <code>from pandas import...</code>?
 </div>
 <label>
-<input type="radio" name="03688f11-98dc-45bf-9154-dc8669969e7f" value="false">Лише функції</input>
+<input type="radio" name="7ccadfb4-8eb9-43be-b248-ccbdbb66da3b" value="false">Лише функції</input>
 </label>
 <label>
-<input type="radio" name="03688f11-98dc-45bf-9154-dc8669969e7f" value="false">Лише модулі</input>
+<input type="radio" name="7ccadfb4-8eb9-43be-b248-ccbdbb66da3b" value="false">Лише модулі</input>
 </label>
 <label>
-<input type="radio" name="03688f11-98dc-45bf-9154-dc8669969e7f" value="false">Лише об'єкти</input>
+<input type="radio" name="7ccadfb4-8eb9-43be-b248-ccbdbb66da3b" value="false">Лише об'єкти</input>
 </label>
 <label>
-<input type="radio" name="03688f11-98dc-45bf-9154-dc8669969e7f" value="true">Модулі, функції, та інші об'єкти</input>
+<input type="radio" name="7ccadfb4-8eb9-43be-b248-ccbdbb66da3b" value="true">Модулі, функції, та інші об'єкти</input>
 </label>
-<button class="check" id="ff741ef4-eaf4-4dc1-9e90-572d7b3823bb" onclick="checkOptions(&quot;ff741ef4-eaf4-4dc1-9e90-572d7b3823bb&quot;, &quot;03688f11-98dc-45bf-9154-dc8669969e7f&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="8c0848f5-1c91-46e3-8197-84289f4566fc" onclick="checkOptions(&quot;8c0848f5-1c91-46e3-8197-84289f4566fc&quot;, &quot;7ccadfb4-8eb9-43be-b248-ccbdbb66da3b&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('03688f11-98dc-45bf-9154-dc8669969e7f');
-    const submitButton = document.getElementById('ff741ef4-eaf4-4dc1-9e90-572d7b3823bb');
+    const radioButtons = document.getElementsByName('7ccadfb4-8eb9-43be-b248-ccbdbb66da3b');
+    const submitButton = document.getElementById('8c0848f5-1c91-46e3-8197-84289f4566fc');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -634,22 +631,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">5. Що таке <code>конвенція</code> в імпортуванні пакетів з псевдонімами?</div>
 <label>
-<input type="radio" name="47038279-01ce-4ce8-a1aa-b9910e122686" value="false">Вимога завжди використовувати одне ім'я пакету</input>
+<input type="radio" name="0530ec51-1ad1-4934-85fb-a892dd7569b7" value="false">Вимога завжди використовувати одне ім'я пакету</input>
 </label>
 <label>
-<input type="radio" name="47038279-01ce-4ce8-a1aa-b9910e122686" value="true">Умовні правила для використання псевдонімів</input>
+<input type="radio" name="0530ec51-1ad1-4934-85fb-a892dd7569b7" value="true">Умовні правила для використання псевдонімів</input>
 </label>
 <label>
-<input type="radio" name="47038279-01ce-4ce8-a1aa-b9910e122686" value="false">Назва файлу модуля або пакету</input>
+<input type="radio" name="0530ec51-1ad1-4934-85fb-a892dd7569b7" value="false">Назва файлу модуля або пакету</input>
 </label>
 <label>
-<input type="radio" name="47038279-01ce-4ce8-a1aa-b9910e122686" value="false">Вимога не використовувати псевдоніми для пакетів</input>
+<input type="radio" name="0530ec51-1ad1-4934-85fb-a892dd7569b7" value="false">Вимога не використовувати псевдоніми для пакетів</input>
 </label>
-<button class="check" id="7b4c85e6-b60a-4c9d-a7f3-942efa46074a" onclick="checkOptions(&quot;7b4c85e6-b60a-4c9d-a7f3-942efa46074a&quot;, &quot;47038279-01ce-4ce8-a1aa-b9910e122686&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="595a7dd9-69be-4c87-863c-6ac04a21e651" onclick="checkOptions(&quot;595a7dd9-69be-4c87-863c-6ac04a21e651&quot;, &quot;0530ec51-1ad1-4934-85fb-a892dd7569b7&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('47038279-01ce-4ce8-a1aa-b9910e122686');
-    const submitButton = document.getElementById('7b4c85e6-b60a-4c9d-a7f3-942efa46074a');
+    const radioButtons = document.getElementsByName('0530ec51-1ad1-4934-85fb-a892dd7569b7');
+    const submitButton = document.getElementById('595a7dd9-69be-4c87-863c-6ac04a21e651');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {

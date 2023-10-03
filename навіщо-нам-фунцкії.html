@@ -6,30 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Глава 15 Навіщо нам фунцкії | 🐍 Python Програмування</title>
   <meta name="description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Глава 15 Навіщо нам фунцкії | 🐍 Python Програмування" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Глава 15 Навіщо нам фунцкії | 🐍 Python Програмування" />
   
   <meta name="twitter:description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   
 
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-09-29" />
+<meta name="date" content="2023-10-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -570,19 +567,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">1. Що означає принцип <code>Don’t repeat yourself</code> (Не повторюйся)?</div>
 <label>
-<input type="radio" name="6f540c45-90ac-4120-b8f6-ae154f5f2060" value="true">Функції можуть бути використані багато разів без повторення коду.</input>
+<input type="radio" name="56d0330c-871c-4cfe-8275-d7048089b2ba" value="true">Функції можуть бути використані багато разів без повторення коду.</input>
 </label>
 <label>
-<input type="radio" name="6f540c45-90ac-4120-b8f6-ae154f5f2060" value="false">Варто повторювати код для кращої швидкості виконання програми.</input>
+<input type="radio" name="56d0330c-871c-4cfe-8275-d7048089b2ba" value="false">Варто повторювати код для кращої швидкості виконання програми.</input>
 </label>
 <label>
-<input type="radio" name="6f540c45-90ac-4120-b8f6-ae154f5f2060" value="false">Повторення коду є допустимим лише для коротких програм.</input>
+<input type="radio" name="56d0330c-871c-4cfe-8275-d7048089b2ba" value="false">Повторення коду є допустимим лише для коротких програм.</input>
 </label>
-<button class="check" id="e920ee22-1d1b-4d17-8c6b-0b2cf77e0c8b" onclick="checkOptions(&quot;e920ee22-1d1b-4d17-8c6b-0b2cf77e0c8b&quot;, &quot;6f540c45-90ac-4120-b8f6-ae154f5f2060&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="fe06c8d4-697b-47c9-b20d-13e357ece6f9" onclick="checkOptions(&quot;fe06c8d4-697b-47c9-b20d-13e357ece6f9&quot;, &quot;56d0330c-871c-4cfe-8275-d7048089b2ba&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('6f540c45-90ac-4120-b8f6-ae154f5f2060');
-    const submitButton = document.getElementById('e920ee22-1d1b-4d17-8c6b-0b2cf77e0c8b');
+    const radioButtons = document.getElementsByName('56d0330c-871c-4cfe-8275-d7048089b2ba');
+    const submitButton = document.getElementById('fe06c8d4-697b-47c9-b20d-13e357ece6f9');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -593,19 +590,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">2. Які переваги модулярності в програмуванні?</div>
 <label>
-<input type="radio" name="c1c8164e-fa22-403e-ab1b-4c19d3da83a1" value="false">Модульний код допомагає зменшити використання функцій у програмі.</input>
+<input type="radio" name="95169738-f0f8-4686-8754-d9e7576d6b70" value="false">Модульний код допомагає зменшити використання функцій у програмі.</input>
 </label>
 <label>
-<input type="radio" name="c1c8164e-fa22-403e-ab1b-4c19d3da83a1" value="false">Модулярний код робить програму менш зрозумілою для читача.</input>
+<input type="radio" name="95169738-f0f8-4686-8754-d9e7576d6b70" value="false">Модулярний код робить програму менш зрозумілою для читача.</input>
 </label>
 <label>
-<input type="radio" name="c1c8164e-fa22-403e-ab1b-4c19d3da83a1" value="true">Модулярність дозволяє розділити велику задачу на менші підзадачі для легшого розв'язання.</input>
+<input type="radio" name="95169738-f0f8-4686-8754-d9e7576d6b70" value="true">Модулярність дозволяє розділити велику задачу на менші підзадачі для легшого розв'язання.</input>
 </label>
-<button class="check" id="1e8e476d-c249-4014-94a6-159dbf916b4e" onclick="checkOptions(&quot;1e8e476d-c249-4014-94a6-159dbf916b4e&quot;, &quot;c1c8164e-fa22-403e-ab1b-4c19d3da83a1&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="105d35e3-43a4-42b2-a10f-2c1e96569921" onclick="checkOptions(&quot;105d35e3-43a4-42b2-a10f-2c1e96569921&quot;, &quot;95169738-f0f8-4686-8754-d9e7576d6b70&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('c1c8164e-fa22-403e-ab1b-4c19d3da83a1');
-    const submitButton = document.getElementById('1e8e476d-c249-4014-94a6-159dbf916b4e');
+    const radioButtons = document.getElementsByName('95169738-f0f8-4686-8754-d9e7576d6b70');
+    const submitButton = document.getElementById('105d35e3-43a4-42b2-a10f-2c1e96569921');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -616,19 +613,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">3. Що означає принцип <code>абстракції</code> в програмуванні?</div>
 <label>
-<input type="radio" name="17eb7279-eca9-4773-8697-8722dfa9ff87" value="true">Приховування деталей реалізації функції, залишаючи тільки необхідну інформацію.</input>
+<input type="radio" name="37de1ccc-c730-4d31-a02a-0b0b953480f1" value="true">Приховування деталей реалізації функції, залишаючи тільки необхідну інформацію.</input>
 </label>
 <label>
-<input type="radio" name="17eb7279-eca9-4773-8697-8722dfa9ff87" value="false">Повторення коду для кращої читабельності програми.</input>
+<input type="radio" name="37de1ccc-c730-4d31-a02a-0b0b953480f1" value="false">Повторення коду для кращої читабельності програми.</input>
 </label>
 <label>
-<input type="radio" name="17eb7279-eca9-4773-8697-8722dfa9ff87" value="false">Використання багатьох змінних для збереження даних.</input>
+<input type="radio" name="37de1ccc-c730-4d31-a02a-0b0b953480f1" value="false">Використання багатьох змінних для збереження даних.</input>
 </label>
-<button class="check" id="6e3b38a1-369e-4837-b272-7b115a20df27" onclick="checkOptions(&quot;6e3b38a1-369e-4837-b272-7b115a20df27&quot;, &quot;17eb7279-eca9-4773-8697-8722dfa9ff87&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="bb6fd69c-3492-41e2-8dd7-5d2cbe6c3fbc" onclick="checkOptions(&quot;bb6fd69c-3492-41e2-8dd7-5d2cbe6c3fbc&quot;, &quot;37de1ccc-c730-4d31-a02a-0b0b953480f1&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('17eb7279-eca9-4773-8697-8722dfa9ff87');
-    const submitButton = document.getElementById('6e3b38a1-369e-4837-b272-7b115a20df27');
+    const radioButtons = document.getElementsByName('37de1ccc-c730-4d31-a02a-0b0b953480f1');
+    const submitButton = document.getElementById('bb6fd69c-3492-41e2-8dd7-5d2cbe6c3fbc');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -639,19 +636,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">4. Що означає <code>чорна скриня</code> в контексті абстракції?</div>
 <label>
-<input type="radio" name="66ad87bd-51f3-4593-b489-8d6181199008" value="true">Приховування деталей реалізації функції, залишаючи тільки необхідну інформацію.</input>
+<input type="radio" name="b4902266-adb0-4018-bdac-7686a9f71acd" value="true">Приховування деталей реалізації функції, залишаючи тільки необхідну інформацію.</input>
 </label>
 <label>
-<input type="radio" name="66ad87bd-51f3-4593-b489-8d6181199008" value="false">Повторення коду для кращої читабельності програми.</input>
+<input type="radio" name="b4902266-adb0-4018-bdac-7686a9f71acd" value="false">Повторення коду для кращої читабельності програми.</input>
 </label>
 <label>
-<input type="radio" name="66ad87bd-51f3-4593-b489-8d6181199008" value="false">Використання багатьох змінних для збереження даних.</input>
+<input type="radio" name="b4902266-adb0-4018-bdac-7686a9f71acd" value="false">Використання багатьох змінних для збереження даних.</input>
 </label>
-<button class="check" id="c2f172cf-8059-4fb1-95a7-e936f6a917c8" onclick="checkOptions(&quot;c2f172cf-8059-4fb1-95a7-e936f6a917c8&quot;, &quot;66ad87bd-51f3-4593-b489-8d6181199008&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="e49f6f82-67ad-40d8-befa-65a8718f0ef3" onclick="checkOptions(&quot;e49f6f82-67ad-40d8-befa-65a8718f0ef3&quot;, &quot;b4902266-adb0-4018-bdac-7686a9f71acd&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('66ad87bd-51f3-4593-b489-8d6181199008');
-    const submitButton = document.getElementById('c2f172cf-8059-4fb1-95a7-e936f6a917c8');
+    const radioButtons = document.getElementsByName('b4902266-adb0-4018-bdac-7686a9f71acd');
+    const submitButton = document.getElementById('e49f6f82-67ad-40d8-befa-65a8718f0ef3');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -662,19 +659,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">5. Який принцип програмування допомагає уникнути реплікації коду та зробити його легше читабельним?</div>
 <label>
-<input type="radio" name="108a7da8-9027-48a3-9fdc-17c50adac936" value="false">Абстракція</input>
+<input type="radio" name="3b77824c-b244-4ad0-b277-b8bba60e11f2" value="false">Абстракція</input>
 </label>
 <label>
-<input type="radio" name="108a7da8-9027-48a3-9fdc-17c50adac936" value="false">Повторення</input>
+<input type="radio" name="3b77824c-b244-4ad0-b277-b8bba60e11f2" value="false">Повторення</input>
 </label>
 <label>
-<input type="radio" name="108a7da8-9027-48a3-9fdc-17c50adac936" value="true">Модулярність</input>
+<input type="radio" name="3b77824c-b244-4ad0-b277-b8bba60e11f2" value="true">Модулярність</input>
 </label>
-<button class="check" id="748319f3-1c18-4de2-b251-e0130f7d2c8f" onclick="checkOptions(&quot;748319f3-1c18-4de2-b251-e0130f7d2c8f&quot;, &quot;108a7da8-9027-48a3-9fdc-17c50adac936&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="1bae9129-7f0a-48d8-9e2e-ff353c01a80a" onclick="checkOptions(&quot;1bae9129-7f0a-48d8-9e2e-ff353c01a80a&quot;, &quot;3b77824c-b244-4ad0-b277-b8bba60e11f2&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('108a7da8-9027-48a3-9fdc-17c50adac936');
-    const submitButton = document.getElementById('748319f3-1c18-4de2-b251-e0130f7d2c8f');
+    const radioButtons = document.getElementsByName('3b77824c-b244-4ad0-b277-b8bba60e11f2');
+    const submitButton = document.getElementById('1bae9129-7f0a-48d8-9e2e-ff353c01a80a');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -685,19 +682,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">6. Що можна зробити, використовуючи абстракцію в програмуванні?</div>
 <label>
-<input type="radio" name="5fe7b3b9-9145-4af6-a133-64748e988b74" value="true">Приховати деталі реалізації функцій, зберігаючи їхні параметри та повернені значення.</input>
+<input type="radio" name="4321c552-5ed5-4133-becb-5d0162e084fa" value="true">Приховати деталі реалізації функцій, зберігаючи їхні параметри та повернені значення.</input>
 </label>
 <label>
-<input type="radio" name="5fe7b3b9-9145-4af6-a133-64748e988b74" value="false">Зробити програму більш складною для розуміння та зміни.</input>
+<input type="radio" name="4321c552-5ed5-4133-becb-5d0162e084fa" value="false">Зробити програму більш складною для розуміння та зміни.</input>
 </label>
 <label>
-<input type="radio" name="5fe7b3b9-9145-4af6-a133-64748e988b74" value="false">Заповнити код багатьма змінними для кращої продуктивності.</input>
+<input type="radio" name="4321c552-5ed5-4133-becb-5d0162e084fa" value="false">Заповнити код багатьма змінними для кращої продуктивності.</input>
 </label>
-<button class="check" id="5e7479e0-82af-4074-bedb-80bc7a5492be" onclick="checkOptions(&quot;5e7479e0-82af-4074-bedb-80bc7a5492be&quot;, &quot;5fe7b3b9-9145-4af6-a133-64748e988b74&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="9e80caf3-bdf0-42c9-a64e-75c86b5e9f5c" onclick="checkOptions(&quot;9e80caf3-bdf0-42c9-a64e-75c86b5e9f5c&quot;, &quot;4321c552-5ed5-4133-becb-5d0162e084fa&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('5fe7b3b9-9145-4af6-a133-64748e988b74');
-    const submitButton = document.getElementById('5e7479e0-82af-4074-bedb-80bc7a5492be');
+    const radioButtons = document.getElementsByName('4321c552-5ed5-4133-becb-5d0162e084fa');
+    const submitButton = document.getElementById('9e80caf3-bdf0-42c9-a64e-75c86b5e9f5c');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {

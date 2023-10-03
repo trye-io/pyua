@@ -6,30 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Глава 8 Кортежі tuple | 🐍 Python Програмування</title>
   <meta name="description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   <meta name="generator" content="bookdown 0.33 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Глава 8 Кортежі tuple | 🐍 Python Програмування" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="Глава 8 Кортежі tuple | 🐍 Python Програмування" />
   
   <meta name="twitter:description" content="<p>Ця книга містить в собі базові знання з Python програмування, необхідні для
-подальшого опанування 🧠 Artificial
-Intelligence, 🤖 Machine Learning та 📈 Data Science.</p>" />
+подальшого опанування штучного інтелекту, машинного навчання та науки про дані.</p>" />
   
 
 <meta name="author" content="Єгор Рудницький, PhD" />
 
 
-<meta name="date" content="2023-09-29" />
+<meta name="date" content="2023-10-03" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -533,16 +530,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">1. Кортежі <code>tuple</code> можна змінювати:</div>
 <label>
-<input type="radio" name="cb43d4ec-9eb2-456d-9140-d87e57721536" value="false">Так</input>
+<input type="radio" name="15282ba1-de40-4019-b708-98ec54bb5424" value="false">Так</input>
 </label>
 <label>
-<input type="radio" name="cb43d4ec-9eb2-456d-9140-d87e57721536" value="true">Ні</input>
+<input type="radio" name="15282ba1-de40-4019-b708-98ec54bb5424" value="true">Ні</input>
 </label>
-<button class="check" id="9baf16f2-15e8-4b94-a221-898ab9b2dfea" onclick="checkOptions(&quot;9baf16f2-15e8-4b94-a221-898ab9b2dfea&quot;, &quot;cb43d4ec-9eb2-456d-9140-d87e57721536&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="96fdc40b-2512-40b2-9bd0-c97a326aeae5" onclick="checkOptions(&quot;96fdc40b-2512-40b2-9bd0-c97a326aeae5&quot;, &quot;15282ba1-de40-4019-b708-98ec54bb5424&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('cb43d4ec-9eb2-456d-9140-d87e57721536');
-    const submitButton = document.getElementById('9baf16f2-15e8-4b94-a221-898ab9b2dfea');
+    const radioButtons = document.getElementsByName('15282ba1-de40-4019-b708-98ec54bb5424');
+    const submitButton = document.getElementById('96fdc40b-2512-40b2-9bd0-c97a326aeae5');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -556,22 +553,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 type(country_codes)
 </code></pre>
 <label>
-<input type="radio" name="d3a8883f-021c-489b-b376-2f1635a5e71f" value="false"><code>## ("Estonia", "Latvia", "Lithuania")</code></input>
+<input type="radio" name="615da019-07a7-4feb-81dc-50accc1adcf5" value="false"><code>## ("Estonia", "Latvia", "Lithuania")</code></input>
 </label>
 <label>
-<input type="radio" name="d3a8883f-021c-489b-b376-2f1635a5e71f" value="true"><code>## <class 'list'></code></input>
+<input type="radio" name="615da019-07a7-4feb-81dc-50accc1adcf5" value="true"><code>## <class 'list'></code></input>
 </label>
 <label>
-<input type="radio" name="d3a8883f-021c-489b-b376-2f1635a5e71f" value="false"><code>## list</code></input>
+<input type="radio" name="615da019-07a7-4feb-81dc-50accc1adcf5" value="false"><code>## list</code></input>
 </label>
 <label>
-<input type="radio" name="d3a8883f-021c-489b-b376-2f1635a5e71f" value="false"><code>## <class 'tuple'></code></input>
+<input type="radio" name="615da019-07a7-4feb-81dc-50accc1adcf5" value="false"><code>## <class 'tuple'></code></input>
 </label>
-<button class="check" id="0b72dc9d-3633-413d-8318-af489b764ba7" onclick="checkOptions(&quot;0b72dc9d-3633-413d-8318-af489b764ba7&quot;, &quot;d3a8883f-021c-489b-b376-2f1635a5e71f&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="8e4bccd8-ba86-4c1e-b0d7-199cd3713411" onclick="checkOptions(&quot;8e4bccd8-ba86-4c1e-b0d7-199cd3713411&quot;, &quot;615da019-07a7-4feb-81dc-50accc1adcf5&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('d3a8883f-021c-489b-b376-2f1635a5e71f');
-    const submitButton = document.getElementById('0b72dc9d-3633-413d-8318-af489b764ba7');
+    const radioButtons = document.getElementsByName('615da019-07a7-4feb-81dc-50accc1adcf5');
+    const submitButton = document.getElementById('8e4bccd8-ba86-4c1e-b0d7-199cd3713411');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -582,51 +579,51 @@ type(country_codes)
 <div class="quiz">
 <div class="question">3. У якому рядку правильно створений кортеж <code>tuple</code>?</div>
 <label>
-<input type="checkbox" name="de2351ed-fa01-47fd-a9f4-456faf125c89" value="true"><code>family = "mother", "father", "sister", "brother"</code></input>
+<input type="checkbox" name="a2feb54b-961e-4631-b187-0e0ce5f4d826" value="true"><code>family = "mother", "father", "sister", "brother"</code></input>
 </label>
 <label>
-<input type="checkbox" name="de2351ed-fa01-47fd-a9f4-456faf125c89" value="true"><code>family = ("mother", "father", "sister", "brother")</code></input>
+<input type="checkbox" name="a2feb54b-961e-4631-b187-0e0ce5f4d826" value="true"><code>family = ("mother", "father", "sister", "brother")</code></input>
 </label>
 <label>
-<input type="checkbox" name="de2351ed-fa01-47fd-a9f4-456faf125c89" value="false"><code>family = {"mother", "father", "sister", "brother"}</code></input>
+<input type="checkbox" name="a2feb54b-961e-4631-b187-0e0ce5f4d826" value="false"><code>family = {"mother", "father", "sister", "brother"}</code></input>
 </label>
 <label>
-<input type="checkbox" name="de2351ed-fa01-47fd-a9f4-456faf125c89" value="false"><code>family = ["mother", "father", "sister", "brother"]</code></input>
+<input type="checkbox" name="a2feb54b-961e-4631-b187-0e0ce5f4d826" value="false"><code>family = ["mother", "father", "sister", "brother"]</code></input>
 </label>
-<button class="check" id="8e414c14-8021-4e0a-b8ae-a2c27453931c" onclick="checkOptions(&quot;8e414c14-8021-4e0a-b8ae-a2c27453931c&quot;, &quot;de2351ed-fa01-47fd-a9f4-456faf125c89&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<button class="check" id="41e91dad-f013-4be6-9e4b-488092fb56a3" onclick="checkOptions(&quot;41e91dad-f013-4be6-9e4b-488092fb56a3&quot;, &quot;a2feb54b-961e-4631-b187-0e0ce5f4d826&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <div class="quiz">
 <div class="question">4. Оберіть правильне твердження.</div>
 <label>
-<input type="checkbox" name="8deb6edc-2d0c-47f1-a6a5-069f973ea6d5" value="false">Можна додавати та видаляти елементи кортежів</input>
+<input type="checkbox" name="a05fde7e-8e0e-4742-817c-4f2ebf324b8b" value="false">Можна додавати та видаляти елементи кортежів</input>
 </label>
 <label>
-<input type="checkbox" name="8deb6edc-2d0c-47f1-a6a5-069f973ea6d5" value="false">Можна використати функцію <code>.reverse()</code>, щоб змінити порядок елементів на зворотній</input>
+<input type="checkbox" name="a05fde7e-8e0e-4742-817c-4f2ebf324b8b" value="false">Можна використати функцію <code>.reverse()</code>, щоб змінити порядок елементів на зворотній</input>
 </label>
 <label>
-<input type="checkbox" name="8deb6edc-2d0c-47f1-a6a5-069f973ea6d5" value="false">Можна замінити елемент в кортежі на інший</input>
+<input type="checkbox" name="a05fde7e-8e0e-4742-817c-4f2ebf324b8b" value="false">Можна замінити елемент в кортежі на інший</input>
 </label>
 <label>
-<input type="checkbox" name="8deb6edc-2d0c-47f1-a6a5-069f973ea6d5" value="false">Кортежі використовують більше памʼяті, ніж списки</input>
+<input type="checkbox" name="a05fde7e-8e0e-4742-817c-4f2ebf324b8b" value="false">Кортежі використовують більше памʼяті, ніж списки</input>
 </label>
 <label>
-<input type="checkbox" name="8deb6edc-2d0c-47f1-a6a5-069f973ea6d5" value="true">Жодне твердження не є правильним</input>
+<input type="checkbox" name="a05fde7e-8e0e-4742-817c-4f2ebf324b8b" value="true">Жодне твердження не є правильним</input>
 </label>
-<button class="check" id="a6f0634d-1759-45d6-988e-5202eebd17b7" onclick="checkOptions(&quot;a6f0634d-1759-45d6-988e-5202eebd17b7&quot;, &quot;8deb6edc-2d0c-47f1-a6a5-069f973ea6d5&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<button class="check" id="6f2e2683-8a10-4d97-8203-d9026255e8f5" onclick="checkOptions(&quot;6f2e2683-8a10-4d97-8203-d9026255e8f5&quot;, &quot;a05fde7e-8e0e-4742-817c-4f2ebf324b8b&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <div class="quiz">
 <div class="question">5. Чи можемо ми дізнатися до якої структури даних належить <code>tuple</code>?</div>
 <label>
-<input type="radio" name="470e2cb9-19b5-4e4f-972f-db08bb06e7b5" value="true">Так, за допомогою функції <code>type()</code></input>
+<input type="radio" name="db0d914c-eb36-4cdf-a407-fb2d063d277e" value="true">Так, за допомогою функції <code>type()</code></input>
 </label>
 <label>
-<input type="radio" name="470e2cb9-19b5-4e4f-972f-db08bb06e7b5" value="false">Ні</input>
+<input type="radio" name="db0d914c-eb36-4cdf-a407-fb2d063d277e" value="false">Ні</input>
 </label>
-<button class="check" id="6a436fa5-bdd7-482f-bd9e-e1d7aabdce98" onclick="checkOptions(&quot;6a436fa5-bdd7-482f-bd9e-e1d7aabdce98&quot;, &quot;470e2cb9-19b5-4e4f-972f-db08bb06e7b5&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="d9004692-b77e-4ea9-a89d-00cbe009c161" onclick="checkOptions(&quot;d9004692-b77e-4ea9-a89d-00cbe009c161&quot;, &quot;db0d914c-eb36-4cdf-a407-fb2d063d277e&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('470e2cb9-19b5-4e4f-972f-db08bb06e7b5');
-    const submitButton = document.getElementById('6a436fa5-bdd7-482f-bd9e-e1d7aabdce98');
+    const radioButtons = document.getElementsByName('db0d914c-eb36-4cdf-a407-fb2d063d277e');
+    const submitButton = document.getElementById('d9004692-b77e-4ea9-a89d-00cbe009c161');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -637,15 +634,15 @@ type(country_codes)
 <div class="quiz">
 <div class="question">6. Як отримати доступ до елементів <code>tuple</code>?</div>
 <label>
-<input type="checkbox" name="ad19d62f-582b-40eb-a2e2-4c562770c758" value="true">За допомогою індексів</input>
+<input type="checkbox" name="7e1bbb4d-0efa-4798-87cf-fd1d2e7b1ad8" value="true">За допомогою індексів</input>
 </label>
 <label>
-<input type="checkbox" name="ad19d62f-582b-40eb-a2e2-4c562770c758" value="true">За допомогою зрізів</input>
+<input type="checkbox" name="7e1bbb4d-0efa-4798-87cf-fd1d2e7b1ad8" value="true">За допомогою зрізів</input>
 </label>
 <label>
-<input type="checkbox" name="ad19d62f-582b-40eb-a2e2-4c562770c758" value="false">Ніяк</input>
+<input type="checkbox" name="7e1bbb4d-0efa-4798-87cf-fd1d2e7b1ad8" value="false">Ніяк</input>
 </label>
-<button class="check" id="f4dd5104-0def-4f5f-89d5-ef9a587dfadc" onclick="checkOptions(&quot;f4dd5104-0def-4f5f-89d5-ef9a587dfadc&quot;, &quot;ad19d62f-582b-40eb-a2e2-4c562770c758&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<button class="check" id="de781481-f29c-4edf-9e38-b7fb9cd63683" onclick="checkOptions(&quot;de781481-f29c-4edf-9e38-b7fb9cd63683&quot;, &quot;7e1bbb4d-0efa-4798-87cf-fd1d2e7b1ad8&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 </details>
 
