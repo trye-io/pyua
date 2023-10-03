@@ -9,8 +9,7 @@ bibliography: [book.bib, packages.bib]
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
   Ця книга містить в собі базові знання з Python програмування, необхідні для
-  подальшого опанування 🧠 Artificial
-  Intelligence, 🤖 Machine Learning та  📈 Data Science.
+  подальшого опанування штучного інтелекту, машинного навчання та науки про дані.
 link-citations: yes
 github-repo: rstudio/bookdown-demo
 ---
