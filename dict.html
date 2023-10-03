@@ -225,7 +225,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.3</b> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел</a></li>
 <li class="chapter" data-level="6.4" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.4</b> 🐂 Використовуємо тип <code>bool</code> для бульових значень</a></li>
 <li class="chapter" data-level="6.5" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.5</b> 🔤 Використовуємо тип <code>str</code> для текстових стрічок</a></li>
-<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a></li>
+<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="scalars.html"><a href="scalars.html#перевіряємо-тип-обєкта-з-type"><i class="fa fa-check"></i><b>6.6.1</b> Перевіряємо тип об’єкта з <code>type()</code></a></li>
+<li class="chapter" data-level="6.6.2" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-int-та-float-з-int-та-float"><i class="fa fa-check"></i><b>6.6.2</b> Перетворюємо об’єкти на <code>int</code> та <code>float</code> з <code>int()</code> та <code>float()</code></a></li>
+<li class="chapter" data-level="6.6.3" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-bool-з-bool"><i class="fa fa-check"></i><b>6.6.3</b> Перетворюємо об’єкти на <code>bool</code> з <code>bool()</code></a></li>
+<li class="chapter" data-level="6.6.4" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-str-з-str"><i class="fa fa-check"></i><b>6.6.4</b> Перетворюємо об’єкти на <code>str</code> з <code>str()</code></a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>7</b> Списки <code>list</code></a>
 <ul>
@@ -474,31 +480,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="images/9-dict.png" width="100%" /></p>
 <p>Щоб створити <code>dict</code>, нам треба прописати через кому усі пари у вигляді <code>ключ:значення</code> і загорнути все це у фігурні дужки <code>{</code> та <code>}</code>.</p>
 <p>Насправді це виглядає легше ніж звучить. Давайте створимо словник <code>baltic_capitals</code> із пар країна-столиця:</p>
-<div class="sourceCode" id="cb203"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb203-1"><a href="dict.html#cb203-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals <span class="op">=</span> {</span>
-<span id="cb203-2"><a href="dict.html#cb203-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Estonia&quot;</span>: <span class="st">&quot;Tallinn&quot;</span>,</span>
-<span id="cb203-3"><a href="dict.html#cb203-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Latvia&quot;</span>: <span class="st">&quot;Riga&quot;</span>,</span>
-<span id="cb203-4"><a href="dict.html#cb203-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Lithuania&quot;</span>: <span class="st">&quot;Vilnius&quot;</span></span>
-<span id="cb203-5"><a href="dict.html#cb203-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb203-6"><a href="dict.html#cb203-6" aria-hidden="true" tabindex="-1"></a>baltic_capitals</span></code></pre></div>
+<div class="sourceCode" id="cb201"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb201-1"><a href="dict.html#cb201-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals <span class="op">=</span> {</span>
+<span id="cb201-2"><a href="dict.html#cb201-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Estonia&quot;</span>: <span class="st">&quot;Tallinn&quot;</span>,</span>
+<span id="cb201-3"><a href="dict.html#cb201-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Latvia&quot;</span>: <span class="st">&quot;Riga&quot;</span>,</span>
+<span id="cb201-4"><a href="dict.html#cb201-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;Lithuania&quot;</span>: <span class="st">&quot;Vilnius&quot;</span></span>
+<span id="cb201-5"><a href="dict.html#cb201-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb201-6"><a href="dict.html#cb201-6" aria-hidden="true" tabindex="-1"></a>baltic_capitals</span></code></pre></div>
 <pre><code>## {&#39;Estonia&#39;: &#39;Tallinn&#39;, &#39;Latvia&#39;: &#39;Riga&#39;, &#39;Lithuania&#39;: &#39;Vilnius&#39;}</code></pre>
 <p>У цьому випадку <code>"Estonia"</code>, <code>"Latvia"</code> та <code>"Lithuania"</code> будуть ключами 🔑, за якими ми зможемо отримати значення <code>"Tallinn"</code>, <code>"Riga"</code> та <code>"Vilnius"</code>.</p>
 <p><img src="images/9-create.png" width="100%" /></p>
 <p>До речі, нам не обов’язково розміщувати елементи на окремих рядках. Ми це зробили виключно для зручності, щоб легше було читати код.</p>
 <p>А ось інший приклад словника <code>nums</code>. Ключами якого є об’єкти <code>float</code>, <code>int</code> та <code>str</code>, а значення – <code>str</code> та <code>list</code>. Цей словник не має жодного сенсу, крім того, що демонструє можливості <code>dict</code>:</p>
-<div class="sourceCode" id="cb205"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb205-1"><a href="dict.html#cb205-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> {</span>
-<span id="cb205-2"><a href="dict.html#cb205-2" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.1</span>: <span class="st">&quot;one point one&quot;</span>,</span>
-<span id="cb205-3"><a href="dict.html#cb205-3" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.5</span>: <span class="st">&quot;two point 5&quot;</span>,</span>
-<span id="cb205-4"><a href="dict.html#cb205-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;four&quot;</span>: [<span class="dv">4</span>, <span class="st">&quot;four&quot;</span>, <span class="fl">4.0</span>]</span>
-<span id="cb205-5"><a href="dict.html#cb205-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb205-6"><a href="dict.html#cb205-6" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div>
+<div class="sourceCode" id="cb203"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb203-1"><a href="dict.html#cb203-1" aria-hidden="true" tabindex="-1"></a>nums <span class="op">=</span> {</span>
+<span id="cb203-2"><a href="dict.html#cb203-2" aria-hidden="true" tabindex="-1"></a>    <span class="fl">1.1</span>: <span class="st">&quot;one point one&quot;</span>,</span>
+<span id="cb203-3"><a href="dict.html#cb203-3" aria-hidden="true" tabindex="-1"></a>    <span class="fl">2.5</span>: <span class="st">&quot;two point 5&quot;</span>,</span>
+<span id="cb203-4"><a href="dict.html#cb203-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;four&quot;</span>: [<span class="dv">4</span>, <span class="st">&quot;four&quot;</span>, <span class="fl">4.0</span>]</span>
+<span id="cb203-5"><a href="dict.html#cb203-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb203-6"><a href="dict.html#cb203-6" aria-hidden="true" tabindex="-1"></a>nums</span></code></pre></div>
 <pre><code>## {1.1: &#39;one point one&#39;, 2.5: &#39;two point 5&#39;, &#39;four&#39;: [4, &#39;four&#39;, 4.0]}</code></pre>
 <p>Якщо ж ми спробуємо створити словник з <span class="highlight-container"> <span class="highlight"> дуплікованими <span class="tooltiptext">🇬🇧 duplicated</span> </span> </span> ключами (тобто з повторюючимися чи двома однаковими ключами), то словник буде містити тільки останню зазначену пару. Давайте подивимось як це відбувається у прикладі внизу:</p>
-<div class="sourceCode" id="cb207"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb207-1"><a href="dict.html#cb207-1" aria-hidden="true" tabindex="-1"></a>ua_en <span class="op">=</span> {</span>
-<span id="cb207-2"><a href="dict.html#cb207-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;кіт&quot;</span>: <span class="st">&quot;cat&quot;</span>,</span>
-<span id="cb207-3"><a href="dict.html#cb207-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;собака&quot;</span>: <span class="st">&quot;dog&quot;</span>,  <span class="co"># зверніть увагу на дуплікований ключ &quot;собака&quot;</span></span>
-<span id="cb207-4"><a href="dict.html#cb207-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;собака&quot;</span>: <span class="st">&quot;doggo&quot;</span> <span class="co"># зверніть увагу на дуплікований ключ &quot;собака&quot;</span></span>
-<span id="cb207-5"><a href="dict.html#cb207-5" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb207-6"><a href="dict.html#cb207-6" aria-hidden="true" tabindex="-1"></a>ua_en</span></code></pre></div>
+<div class="sourceCode" id="cb205"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb205-1"><a href="dict.html#cb205-1" aria-hidden="true" tabindex="-1"></a>ua_en <span class="op">=</span> {</span>
+<span id="cb205-2"><a href="dict.html#cb205-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;кіт&quot;</span>: <span class="st">&quot;cat&quot;</span>,</span>
+<span id="cb205-3"><a href="dict.html#cb205-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;собака&quot;</span>: <span class="st">&quot;dog&quot;</span>,  <span class="co"># зверніть увагу на дуплікований ключ &quot;собака&quot;</span></span>
+<span id="cb205-4"><a href="dict.html#cb205-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&quot;собака&quot;</span>: <span class="st">&quot;doggo&quot;</span> <span class="co"># зверніть увагу на дуплікований ключ &quot;собака&quot;</span></span>
+<span id="cb205-5"><a href="dict.html#cb205-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb205-6"><a href="dict.html#cb205-6" aria-hidden="true" tabindex="-1"></a>ua_en</span></code></pre></div>
 <pre><code>## {&#39;кіт&#39;: &#39;cat&#39;, &#39;собака&#39;: &#39;doggo&#39;}</code></pre>
 </div>
 <div id="працюємо-з-ключами" class="section level2 hasAnchor" number="9.2">
@@ -507,11 +513,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="отримуємо-елемент-за-його-ключем" class="section level3 hasAnchor" number="9.2.1">
 <h3><span class="header-section-number">9.2.1</span> Отримуємо елемент за його ключем<a href="dict.html#отримуємо-елемент-за-його-ключем" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Наприклад, ми хочемо дізнатися столицю Естонії 🇪🇪. Для отримання елемента, потрібно прописати ім’я словника, і потім ключ загорнутий у квадратні дужки <code>[</code> та <code>]</code>:</p>
-<div class="sourceCode" id="cb209"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb209-1"><a href="dict.html#cb209-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb207"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb207-1"><a href="dict.html#cb207-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>]</span></code></pre></div>
 <pre><code>## &#39;Tallinn&#39;</code></pre>
 <p><img src="images/9-access.png" width="100%" /></p>
 <p>До речі, навпаки це не працює. Якщо ми хочемо отримати країну, столиця якої <code>"Tallinn"</code>, то вираз <code>baltic_capitals["Tallinn"]</code> не спрацює (тому що у нас не існує ключа 🔑 <code>"Tallinn"</code>):</p>
-<div class="sourceCode" id="cb211"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb211-1"><a href="dict.html#cb211-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Tallinn&quot;</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb209"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb209-1"><a href="dict.html#cb209-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Tallinn&quot;</span>]</span></code></pre></div>
 <pre><code>Traceback (most recent call last):
   File &quot;&lt;stdin&gt;&quot;, line 1, in &lt;module&gt;
 KeyError: &#39;Tallinn&#39;</code></pre>
@@ -520,16 +526,16 @@ KeyError: &#39;Tallinn&#39;</code></pre>
 <div id="змінюємо-елемент-за-його-ключем" class="section level3 hasAnchor" number="9.2.2">
 <h3><span class="header-section-number">9.2.2</span> Змінюємо елемент за його ключем<a href="dict.html#змінюємо-елемент-за-його-ключем" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Так само як і в <code>list</code>, ми можемо змінити елементи. Синтаксис такий самий як і у списках, але замість індексу, нам треба зазначити ключ 🔑:</p>
-<div class="sourceCode" id="cb213"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb213-1"><a href="dict.html#cb213-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>] <span class="op">=</span> <span class="st">&quot;Tartu&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb211"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb211-1"><a href="dict.html#cb211-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>] <span class="op">=</span> <span class="st">&quot;Tartu&quot;</span></span></code></pre></div>
 <p><img src="images/9-change.png" width="100%" /></p>
 <p>Але давайте все ж таки залишимо <code>"Tallinn"</code>, як столицю Естонії 🇪🇪:</p>
-<div class="sourceCode" id="cb214"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb214-1"><a href="dict.html#cb214-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>] <span class="op">=</span> <span class="st">&quot;Tallinn&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb212"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb212-1"><a href="dict.html#cb212-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Estonia&quot;</span>] <span class="op">=</span> <span class="st">&quot;Tallinn&quot;</span></span></code></pre></div>
 </div>
 <div id="додаємо-новий-елемент-з-ключем" class="section level3 hasAnchor" number="9.2.3">
 <h3><span class="header-section-number">9.2.3</span> Додаємо новий елемент з ключем<a href="dict.html#додаємо-новий-елемент-з-ключем" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Щоб додати новий елемент до словника <code>dict</code>, ми можемо використати такий самий синтаксис, який ми використовували для змінення значень елементів: <code>name_of_dict[new_key] = new_value</code>.</p>
 <p>Давайте додамо Польщу 🇵🇱 до Балтійських країн (не хвилюйтеся, ми скоро її видалимо). Ключем в цій парі буде <code>"Poland"</code>, а значенням – <code>"Warsaw"</code>.</p>
-<div class="sourceCode" id="cb215"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb215-1"><a href="dict.html#cb215-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Poland&quot;</span>] <span class="op">=</span> <span class="st">&quot;Warsaw&quot;</span></span></code></pre></div>
+<div class="sourceCode" id="cb213"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb213-1"><a href="dict.html#cb213-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals[<span class="st">&quot;Poland&quot;</span>] <span class="op">=</span> <span class="st">&quot;Warsaw&quot;</span></span></code></pre></div>
 <p><img src="images/9-add.png" width="100%" /></p>
 </div>
 </div>
@@ -537,7 +543,7 @@ KeyError: &#39;Tallinn&#39;</code></pre>
 <h2><span class="header-section-number">9.3</span> ➕ Застосовуємо оператори<a href="dict.html#застосовуємо-оператори-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>На відміну від <code>lists</code>, коли ми використовуємо оператор <code>in</code>, ми перевіряємо наявність ключа 🔑, а не значення елементу. Це означає що ми можемо перевірити чи є, скажімо <code>"Poland"</code> чи <code>"Latvia"</code> серед ключів, але не можемо перевірити чи є <code>"Warsaw"</code> серед значень.</p>
 <p>Давайте перевіримо, чи є <code>"Poland"</code> серед ключів:</p>
-<div class="sourceCode" id="cb216"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb216-1"><a href="dict.html#cb216-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Poland&quot;</span> <span class="kw">in</span> baltic_capitals</span></code></pre></div>
+<div class="sourceCode" id="cb214"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb214-1"><a href="dict.html#cb214-1" aria-hidden="true" tabindex="-1"></a><span class="co">&quot;Poland&quot;</span> <span class="kw">in</span> baltic_capitals</span></code></pre></div>
 <pre><code>## True</code></pre>
 <p><img src="images/9-in.png" width="100%" /></p>
 <p>Так само як і у <code>list</code>, ми можемо використати оператор <code>not in</code>. А ось оператори <code>+</code> та <code>*</code> не реалізовані для словників <code>dict</code>.</p>
@@ -547,18 +553,18 @@ KeyError: &#39;Tallinn&#39;</code></pre>
 <p>Словники мають одинадцять 1️⃣1️⃣ методів, але ми подивимось тільки на ті, що найчастіше використовуються.
 ### Видаляємо елемент</p>
 <p>Все ж таки Польща 🇵🇱 не вважається Балтійською державою і нам треба видалити елемент з ключем <code>"Poland"</code> з нашого словнику. Для цього існує метод <code>.pop()</code>, для використання якого нам треба зазначити ключ в дужках:</p>
-<div class="sourceCode" id="cb218"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb218-1"><a href="dict.html#cb218-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.pop(<span class="st">&quot;Poland&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb216"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb216-1"><a href="dict.html#cb216-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.pop(<span class="st">&quot;Poland&quot;</span>)</span></code></pre></div>
 <pre><code>## &#39;Warsaw&#39;</code></pre>
-<div class="sourceCode" id="cb220"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb220-1"><a href="dict.html#cb220-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals</span></code></pre></div>
+<div class="sourceCode" id="cb218"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb218-1"><a href="dict.html#cb218-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals</span></code></pre></div>
 <pre><code>## {&#39;Estonia&#39;: &#39;Tallinn&#39;, &#39;Latvia&#39;: &#39;Riga&#39;, &#39;Lithuania&#39;: &#39;Vilnius&#39;}</code></pre>
 <p><img src="images/9-delete.png" width="100%" /></p>
 <p>Це не буде працювати зі значеннями (тобто <code>"Warsaw"</code> в попередньому випадку).</p>
 <p>Інший корисний метод – це <code>.keys()</code>. Він повертає усі ключі 🔑, що містяться в словнику:</p>
-<div class="sourceCode" id="cb222"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb222-1"><a href="dict.html#cb222-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.keys()</span></code></pre></div>
+<div class="sourceCode" id="cb220"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb220-1"><a href="dict.html#cb220-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.keys()</span></code></pre></div>
 <pre><code>## dict_keys([&#39;Estonia&#39;, &#39;Latvia&#39;, &#39;Lithuania&#39;])</code></pre>
 <p><img src="images/9-keys.png" width="100%" /></p>
 <p>І дзеркальний 🪞 метод існує також і для значень – <code>.values()</code>:</p>
-<div class="sourceCode" id="cb224"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb224-1"><a href="dict.html#cb224-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.values()</span></code></pre></div>
+<div class="sourceCode" id="cb222"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb222-1"><a href="dict.html#cb222-1" aria-hidden="true" tabindex="-1"></a>baltic_capitals.values()</span></code></pre></div>
 <pre><code>## dict_values([&#39;Tallinn&#39;, &#39;Riga&#39;, &#39;Vilnius&#39;])</code></pre>
 <p><img src="images/9-values.png" width="100%" /></p>
 <p>Якщо ви хочете використати ключі або значення як послідовності, не забудьте загорнути їх у функцію <code>list()</code>, наприклад <code>list(baltic_capitals.keys())</code>. Тому що обидва методи повертають дещо спеціальний об’єкт, який нам треба трансформувати у <code>list</code>.</p>
@@ -572,24 +578,24 @@ KeyError: &#39;Tallinn&#39;</code></pre>
 <div class="quiz">
 <div class="question">1. Оберіть правильні твердження щодо словників <code>dict</code>:</div>
 <label>
-<input type="checkbox" name="2e5455ac-1349-445c-9277-d152fcf87642" value="false">Порядок елементів у словниках є дуже важливим</input>
+<input type="checkbox" name="ed9d5941-9eaa-411e-82f6-af87c4adcd30" value="false">Порядок елементів у словниках є дуже важливим</input>
 </label>
 <label>
-<input type="checkbox" name="2e5455ac-1349-445c-9277-d152fcf87642" value="true">Отримати доступ до елементів можна за допомогою ключів</input>
+<input type="checkbox" name="ed9d5941-9eaa-411e-82f6-af87c4adcd30" value="true">Отримати доступ до елементів можна за допомогою ключів</input>
 </label>
 <label>
-<input type="checkbox" name="2e5455ac-1349-445c-9277-d152fcf87642" value="false">Значення повинні бути унікальними</input>
+<input type="checkbox" name="ed9d5941-9eaa-411e-82f6-af87c4adcd30" value="false">Значення повинні бути унікальними</input>
 </label>
 <label>
-<input type="checkbox" name="2e5455ac-1349-445c-9277-d152fcf87642" value="true">Ключі повинні бути унікальними</input>
+<input type="checkbox" name="ed9d5941-9eaa-411e-82f6-af87c4adcd30" value="true">Ключі повинні бути унікальними</input>
 </label>
 <label>
-<input type="checkbox" name="2e5455ac-1349-445c-9277-d152fcf87642" value="false">Значення повинні бути обʼєктами незмінних типів, таких як <code>int</code>, <code>str</code>, <code>tuple</code></input>
+<input type="checkbox" name="ed9d5941-9eaa-411e-82f6-af87c4adcd30" value="false">Значення повинні бути обʼєктами незмінних типів, таких як <code>int</code>, <code>str</code>, <code>tuple</code></input>
 </label>
 <label>
-<input type="checkbox" name="2e5455ac-1349-445c-9277-d152fcf87642" value="true">Словники можуть мати безліч ключів та елементів</input>
+<input type="checkbox" name="ed9d5941-9eaa-411e-82f6-af87c4adcd30" value="true">Словники можуть мати безліч ключів та елементів</input>
 </label>
-<button class="check" id="6d1086eb-076a-40a8-8b32-e81c68b00b9f" onclick="checkOptions(&quot;6d1086eb-076a-40a8-8b32-e81c68b00b9f&quot;, &quot;2e5455ac-1349-445c-9277-d152fcf87642&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<button class="check" id="cee6d11d-5c4e-4f4a-b5da-af18245f9568" onclick="checkOptions(&quot;cee6d11d-5c4e-4f4a-b5da-af18245f9568&quot;, &quot;ed9d5941-9eaa-411e-82f6-af87c4adcd30&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <div class="quiz">
 <div class="question">2. Наступні рядки створять новий словник:</div>
@@ -598,22 +604,22 @@ KeyError: &#39;Tallinn&#39;</code></pre>
                     "age" : [39, 36, 8, 10]}</code></pre>
 <div class="question">Ключами цього словника є:</div>
 <label>
-<input type="radio" name="c4c61637-854d-448a-922a-750976117b75" value="false"><code>"Homer", "marge", "Lisa", "Bart"</code></input>
+<input type="radio" name="7ababb7a-1bfd-4a4a-bdc3-be9a5948c2d3" value="false"><code>"Homer", "marge", "Lisa", "Bart"</code></input>
 </label>
 <label>
-<input type="radio" name="c4c61637-854d-448a-922a-750976117b75" value="false"><code>"father", "mother", "sister", "brother"</code></input>
+<input type="radio" name="7ababb7a-1bfd-4a4a-bdc3-be9a5948c2d3" value="false"><code>"father", "mother", "sister", "brother"</code></input>
 </label>
 <label>
-<input type="radio" name="c4c61637-854d-448a-922a-750976117b75" value="false"><code>"age" : 39, 36, 8, 10</code></input>
+<input type="radio" name="7ababb7a-1bfd-4a4a-bdc3-be9a5948c2d3" value="false"><code>"age" : 39, 36, 8, 10</code></input>
 </label>
 <label>
-<input type="radio" name="c4c61637-854d-448a-922a-750976117b75" value="true"><code>"name",  "fam_role", "age"</code></input>
+<input type="radio" name="7ababb7a-1bfd-4a4a-bdc3-be9a5948c2d3" value="true"><code>"name",  "fam_role", "age"</code></input>
 </label>
-<button class="check" id="e35e905a-1517-4ba3-b808-94847bcd4982" onclick="checkOptions(&quot;e35e905a-1517-4ba3-b808-94847bcd4982&quot;, &quot;c4c61637-854d-448a-922a-750976117b75&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="43f84579-44d9-4d44-a2f4-7b6b307560af" onclick="checkOptions(&quot;43f84579-44d9-4d44-a2f4-7b6b307560af&quot;, &quot;7ababb7a-1bfd-4a4a-bdc3-be9a5948c2d3&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('c4c61637-854d-448a-922a-750976117b75');
-    const submitButton = document.getElementById('e35e905a-1517-4ba3-b808-94847bcd4982');
+    const radioButtons = document.getElementsByName('7ababb7a-1bfd-4a4a-bdc3-be9a5948c2d3');
+    const submitButton = document.getElementById('43f84579-44d9-4d44-a2f4-7b6b307560af');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -624,19 +630,19 @@ KeyError: &#39;Tallinn&#39;</code></pre>
 <div class="quiz">
 <div class="question">3. Що поверне наступний код <code>simpsons["Homer"]</code>?</div>
 <label>
-<input type="radio" name="5001239a-6690-4b65-908c-b3591a03b41c" value="false">Ключ елемента</input>
+<input type="radio" name="3fa4eb9d-64f0-471f-b555-6a2c8c534b7d" value="false">Ключ елемента</input>
 </label>
 <label>
-<input type="radio" name="5001239a-6690-4b65-908c-b3591a03b41c" value="false"><code>"Homer"</code></input>
+<input type="radio" name="3fa4eb9d-64f0-471f-b555-6a2c8c534b7d" value="false"><code>"Homer"</code></input>
 </label>
 <label>
-<input type="radio" name="5001239a-6690-4b65-908c-b3591a03b41c" value="true">Помилку</input>
+<input type="radio" name="3fa4eb9d-64f0-471f-b555-6a2c8c534b7d" value="true">Помилку</input>
 </label>
-<button class="check" id="338e4db7-d5fa-4b46-9161-b23ce1eea0aa" onclick="checkOptions(&quot;338e4db7-d5fa-4b46-9161-b23ce1eea0aa&quot;, &quot;5001239a-6690-4b65-908c-b3591a03b41c&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="0851e71a-937c-4faf-9040-4566b21b8eef" onclick="checkOptions(&quot;0851e71a-937c-4faf-9040-4566b21b8eef&quot;, &quot;3fa4eb9d-64f0-471f-b555-6a2c8c534b7d&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('5001239a-6690-4b65-908c-b3591a03b41c');
-    const submitButton = document.getElementById('338e4db7-d5fa-4b46-9161-b23ce1eea0aa');
+    const radioButtons = document.getElementsByName('3fa4eb9d-64f0-471f-b555-6a2c8c534b7d');
+    const submitButton = document.getElementById('0851e71a-937c-4faf-9040-4566b21b8eef');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -647,25 +653,25 @@ KeyError: &#39;Tallinn&#39;</code></pre>
 <div class="quiz">
 <div class="question">4. Як правильно змінити елемент <code>"marge"</code> у словнику?</div>
 <label>
-<input type="radio" name="58d5b0d5-3683-4e45-a901-eb68f8b747f0" value="false"><code>simpsons["name"] = "Marge"</code></input>
+<input type="radio" name="47c87a3a-504d-4714-afb5-05d6910bac8a" value="false"><code>simpsons["name"] = "Marge"</code></input>
 </label>
 <label>
-<input type="radio" name="58d5b0d5-3683-4e45-a901-eb68f8b747f0" value="false"><code>simpsons["marge"] = "Marge"</code></input>
+<input type="radio" name="47c87a3a-504d-4714-afb5-05d6910bac8a" value="false"><code>simpsons["marge"] = "Marge"</code></input>
 </label>
 <label>
-<input type="radio" name="58d5b0d5-3683-4e45-a901-eb68f8b747f0" value="true"><code>simpsons["name"][1] = "Marge"</code></input>
+<input type="radio" name="47c87a3a-504d-4714-afb5-05d6910bac8a" value="true"><code>simpsons["name"][1] = "Marge"</code></input>
 </label>
 <label>
-<input type="radio" name="58d5b0d5-3683-4e45-a901-eb68f8b747f0" value="false"><code>simpsons["name"][2] = "Marge"</code></input>
+<input type="radio" name="47c87a3a-504d-4714-afb5-05d6910bac8a" value="false"><code>simpsons["name"][2] = "Marge"</code></input>
 </label>
 <label>
-<input type="radio" name="58d5b0d5-3683-4e45-a901-eb68f8b747f0" value="false">Жоден варіант не є правильним</input>
+<input type="radio" name="47c87a3a-504d-4714-afb5-05d6910bac8a" value="false">Жоден варіант не є правильним</input>
 </label>
-<button class="check" id="41dcec9b-b8a6-4371-b513-9cdbd9e44685" onclick="checkOptions(&quot;41dcec9b-b8a6-4371-b513-9cdbd9e44685&quot;, &quot;58d5b0d5-3683-4e45-a901-eb68f8b747f0&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="8bf02991-16a8-4bca-b727-4f889fafb026" onclick="checkOptions(&quot;8bf02991-16a8-4bca-b727-4f889fafb026&quot;, &quot;47c87a3a-504d-4714-afb5-05d6910bac8a&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('58d5b0d5-3683-4e45-a901-eb68f8b747f0');
-    const submitButton = document.getElementById('41dcec9b-b8a6-4371-b513-9cdbd9e44685');
+    const radioButtons = document.getElementsByName('47c87a3a-504d-4714-afb5-05d6910bac8a');
+    const submitButton = document.getElementById('8bf02991-16a8-4bca-b727-4f889fafb026');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -676,21 +682,21 @@ KeyError: &#39;Tallinn&#39;</code></pre>
 <div class="quiz">
 <div class="question">5. Як правильно додати ще одного забутого члена сімʼї <code>"Meggie"</code> до словника?</div>
 <label>
-<input type="checkbox" name="2604d1ce-1f2e-4b51-a735-225a5fb9412e" value="false"><code>simpsons = "Meggie", "sister", 1</code></input>
+<input type="checkbox" name="ed22d7d5-f434-4e3f-9091-8bb777809ab7" value="false"><code>simpsons = "Meggie", "sister", 1</code></input>
 </label>
 <label>
-<input type="checkbox" name="2604d1ce-1f2e-4b51-a735-225a5fb9412e" value="false"><code>simpsons[["name", "fam_role", "age"]] = "Meggie", "sister", 1</code></input>
+<input type="checkbox" name="ed22d7d5-f434-4e3f-9091-8bb777809ab7" value="false"><code>simpsons[["name", "fam_role", "age"]] = "Meggie", "sister", 1</code></input>
 </label>
 <label>
-<input type="checkbox" name="2604d1ce-1f2e-4b51-a735-225a5fb9412e" value="true"><code>simpsons["name"].append("Meggie")</code></input>
+<input type="checkbox" name="ed22d7d5-f434-4e3f-9091-8bb777809ab7" value="true"><code>simpsons["name"].append("Meggie")</code></input>
 </label>
 <label>
-<input type="checkbox" name="2604d1ce-1f2e-4b51-a735-225a5fb9412e" value="true"><code>simpsons["fam_role"].append("sister")</code></input>
+<input type="checkbox" name="ed22d7d5-f434-4e3f-9091-8bb777809ab7" value="true"><code>simpsons["fam_role"].append("sister")</code></input>
 </label>
 <label>
-<input type="checkbox" name="2604d1ce-1f2e-4b51-a735-225a5fb9412e" value="true"><code>simpsons["age"].append(1)</code></input>
+<input type="checkbox" name="ed22d7d5-f434-4e3f-9091-8bb777809ab7" value="true"><code>simpsons["age"].append(1)</code></input>
 </label>
-<button class="check" id="964e273c-facc-4afa-b5d7-dfe50aff610d" onclick="checkOptions(&quot;964e273c-facc-4afa-b5d7-dfe50aff610d&quot;, &quot;2604d1ce-1f2e-4b51-a735-225a5fb9412e&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<button class="check" id="53a5922d-f5d7-474d-a0ec-10c0f576d68e" onclick="checkOptions(&quot;53a5922d-f5d7-474d-a0ec-10c0f576d68e&quot;, &quot;ed22d7d5-f434-4e3f-9091-8bb777809ab7&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <div class="quiz">
 <div class="question">6. Який код потрібно написати, щоб отримати наступний результат?</div>
@@ -699,22 +705,22 @@ KeyError: &#39;Tallinn&#39;</code></pre>
 [39, 36, 8, 10]])</code></pre>
 <div class='question'>Оберіть правильну відповідь:</div>
 <label>
-<input type="radio" name="64e6a297-b8df-4f38-ad07-5ecb19d861c8" value="false"><code>simpsons.value()</code></input>
+<input type="radio" name="5731e03e-fdfe-43ee-adac-b1e16a47101b" value="false"><code>simpsons.value()</code></input>
 </label>
 <label>
-<input type="radio" name="64e6a297-b8df-4f38-ad07-5ecb19d861c8" value="true"><code>simpsons.values()</code></input>
+<input type="radio" name="5731e03e-fdfe-43ee-adac-b1e16a47101b" value="true"><code>simpsons.values()</code></input>
 </label>
 <label>
-<input type="radio" name="64e6a297-b8df-4f38-ad07-5ecb19d861c8" value="false"><code>simpsons.key()</code></input>
+<input type="radio" name="5731e03e-fdfe-43ee-adac-b1e16a47101b" value="false"><code>simpsons.key()</code></input>
 </label>
 <label>
-<input type="radio" name="64e6a297-b8df-4f38-ad07-5ecb19d861c8" value="false"><code>simpsons.keys()</code></input>
+<input type="radio" name="5731e03e-fdfe-43ee-adac-b1e16a47101b" value="false"><code>simpsons.keys()</code></input>
 </label>
-<button class="check" id="9eb113b4-8c09-4cdc-a0cb-dba5c31c1ef5" onclick="checkOptions(&quot;9eb113b4-8c09-4cdc-a0cb-dba5c31c1ef5&quot;, &quot;64e6a297-b8df-4f38-ad07-5ecb19d861c8&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="fa200c0f-5e59-450f-ad26-b4da5e5cccd8" onclick="checkOptions(&quot;fa200c0f-5e59-450f-ad26-b4da5e5cccd8&quot;, &quot;5731e03e-fdfe-43ee-adac-b1e16a47101b&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('64e6a297-b8df-4f38-ad07-5ecb19d861c8');
-    const submitButton = document.getElementById('9eb113b4-8c09-4cdc-a0cb-dba5c31c1ef5');
+    const radioButtons = document.getElementsByName('5731e03e-fdfe-43ee-adac-b1e16a47101b');
+    const submitButton = document.getElementById('fa200c0f-5e59-450f-ad26-b4da5e5cccd8');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {

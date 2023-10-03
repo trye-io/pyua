@@ -225,7 +225,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.3</b> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел</a></li>
 <li class="chapter" data-level="6.4" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.4</b> 🐂 Використовуємо тип <code>bool</code> для бульових значень</a></li>
 <li class="chapter" data-level="6.5" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.5</b> 🔤 Використовуємо тип <code>str</code> для текстових стрічок</a></li>
-<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a></li>
+<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="scalars.html"><a href="scalars.html#перевіряємо-тип-обєкта-з-type"><i class="fa fa-check"></i><b>6.6.1</b> Перевіряємо тип об’єкта з <code>type()</code></a></li>
+<li class="chapter" data-level="6.6.2" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-int-та-float-з-int-та-float"><i class="fa fa-check"></i><b>6.6.2</b> Перетворюємо об’єкти на <code>int</code> та <code>float</code> з <code>int()</code> та <code>float()</code></a></li>
+<li class="chapter" data-level="6.6.3" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-bool-з-bool"><i class="fa fa-check"></i><b>6.6.3</b> Перетворюємо об’єкти на <code>bool</code> з <code>bool()</code></a></li>
+<li class="chapter" data-level="6.6.4" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-str-з-str"><i class="fa fa-check"></i><b>6.6.4</b> Перетворюємо об’єкти на <code>str</code> з <code>str()</code></a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>7</b> Списки <code>list</code></a>
 <ul>
@@ -466,29 +472,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="повторне-використання" class="section level2 hasAnchor" number="15.1">
 <h2><span class="header-section-number">15.1</span> Повторне використання<a href="навіщо-нам-фунцкії.html#повторне-використання" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Фунцкію дозволяють використовувати один і той самий код скільки завгодно разів. Наприклад, у нас є список який складається з імен, які користувачі ввели в анкеті. Нажаль такі дані дуже часто є “брудними” і неоднорідними: вони можуть містити зайві пробіли, починатися з маленької літери, а не з великої тощо. Тому перед тим як аналізувати такі дані, нам треба їх почистити. У Додатку <a href="string.html#string">D</a> ми глянули на два корисні методи стрічок, <code>.trim()</code> та <code>.title</code>, які прибирають пробіли на початку та у кінці стрічок та роблять першу букву кожного слова великою. Нам треба використати ці два методи на усі елементи списку за допомогою циклу <code>for</code>, щоб його відчистити:</p>
-<div class="sourceCode" id="cb373"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb373-1"><a href="навіщо-нам-фунцкії.html#cb373-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;  olha &quot;</span>, <span class="st">&quot;hector&quot;</span>, <span class="st">&quot;  Volodymyr  &quot;</span>]</span>
-<span id="cb373-2"><a href="навіщо-нам-фунцкії.html#cb373-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(names):</span>
-<span id="cb373-3"><a href="навіщо-нам-фунцкії.html#cb373-3" aria-hidden="true" tabindex="-1"></a>    names[i] <span class="op">=</span> names[i].strip() <span class="co"># видаляємо зайві пробіли</span></span>
-<span id="cb373-4"><a href="навіщо-нам-фунцкії.html#cb373-4" aria-hidden="true" tabindex="-1"></a>    names[i] <span class="op">=</span> names[i].title() <span class="co"># робимо першу літеру великой</span></span>
-<span id="cb373-5"><a href="навіщо-нам-фунцкії.html#cb373-5" aria-hidden="true" tabindex="-1"></a>names</span></code></pre></div>
+<div class="sourceCode" id="cb371"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb371-1"><a href="навіщо-нам-фунцкії.html#cb371-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;  olha &quot;</span>, <span class="st">&quot;hector&quot;</span>, <span class="st">&quot;  Volodymyr  &quot;</span>]</span>
+<span id="cb371-2"><a href="навіщо-нам-фунцкії.html#cb371-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(names):</span>
+<span id="cb371-3"><a href="навіщо-нам-фунцкії.html#cb371-3" aria-hidden="true" tabindex="-1"></a>    names[i] <span class="op">=</span> names[i].strip() <span class="co"># видаляємо зайві пробіли</span></span>
+<span id="cb371-4"><a href="навіщо-нам-фунцкії.html#cb371-4" aria-hidden="true" tabindex="-1"></a>    names[i] <span class="op">=</span> names[i].title() <span class="co"># робимо першу літеру великой</span></span>
+<span id="cb371-5"><a href="навіщо-нам-фунцкії.html#cb371-5" aria-hidden="true" tabindex="-1"></a>names</span></code></pre></div>
 <pre><code>## [&#39;Olha&#39;, &#39;Hector&#39;, &#39;Volodymyr&#39;]</code></pre>
 <p>Згодом, ми отримаємо ще і прізвища, і нам треба зробити те ж саме:</p>
-<div class="sourceCode" id="cb375"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb375-1"><a href="навіщо-нам-фунцкії.html#cb375-1" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> [<span class="st">&quot;  martynovska  &quot;</span>, <span class="st">&quot;Jimenez-Bravo&quot;</span>, <span class="st">&quot;  yaroslavskyi  &quot;</span>]</span>
-<span id="cb375-2"><a href="навіщо-нам-фунцкії.html#cb375-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(surnames):</span>
-<span id="cb375-3"><a href="навіщо-нам-фунцкії.html#cb375-3" aria-hidden="true" tabindex="-1"></a>    surnames[i] <span class="op">=</span> surnames[i].strip() <span class="co"># видаляємо зайві пробіли</span></span>
-<span id="cb375-4"><a href="навіщо-нам-фунцкії.html#cb375-4" aria-hidden="true" tabindex="-1"></a>    surnames[i] <span class="op">=</span> surnames[i].title() <span class="co"># робимо першу літеру великой</span></span>
-<span id="cb375-5"><a href="навіщо-нам-фунцкії.html#cb375-5" aria-hidden="true" tabindex="-1"></a>surnames</span></code></pre></div>
+<div class="sourceCode" id="cb373"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb373-1"><a href="навіщо-нам-фунцкії.html#cb373-1" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> [<span class="st">&quot;  martynovska  &quot;</span>, <span class="st">&quot;Jimenez-Bravo&quot;</span>, <span class="st">&quot;  yaroslavskyi  &quot;</span>]</span>
+<span id="cb373-2"><a href="навіщо-нам-фунцкії.html#cb373-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(surnames):</span>
+<span id="cb373-3"><a href="навіщо-нам-фунцкії.html#cb373-3" aria-hidden="true" tabindex="-1"></a>    surnames[i] <span class="op">=</span> surnames[i].strip() <span class="co"># видаляємо зайві пробіли</span></span>
+<span id="cb373-4"><a href="навіщо-нам-фунцкії.html#cb373-4" aria-hidden="true" tabindex="-1"></a>    surnames[i] <span class="op">=</span> surnames[i].title() <span class="co"># робимо першу літеру великой</span></span>
+<span id="cb373-5"><a href="навіщо-нам-фунцкії.html#cb373-5" aria-hidden="true" tabindex="-1"></a>surnames</span></code></pre></div>
 <pre><code>## [&#39;Martynovska&#39;, &#39;Jimenez-Bravo&#39;, &#39;Yaroslavskyi&#39;]</code></pre>
 <p>Воу, це вже багато коду. А в нашій анкеті ще є міста, по-батькові тощо. Трюк у тому, що ми можемо загорнути цей цикл у фунцкію:</p>
-<div class="sourceCode" id="cb377"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb377-1"><a href="навіщо-нам-фунцкії.html#cb377-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_names(items): </span>
-<span id="cb377-2"><a href="навіщо-нам-фунцкії.html#cb377-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(items):</span>
-<span id="cb377-3"><a href="навіщо-нам-фунцкії.html#cb377-3" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> items[i].strip()</span>
-<span id="cb377-4"><a href="навіщо-нам-фунцкії.html#cb377-4" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> items[i].title()</span>
-<span id="cb377-5"><a href="навіщо-нам-фунцкії.html#cb377-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> items</span></code></pre></div>
+<div class="sourceCode" id="cb375"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb375-1"><a href="навіщо-нам-фунцкії.html#cb375-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_names(items): </span>
+<span id="cb375-2"><a href="навіщо-нам-фунцкії.html#cb375-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(items):</span>
+<span id="cb375-3"><a href="навіщо-нам-фунцкії.html#cb375-3" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> items[i].strip()</span>
+<span id="cb375-4"><a href="навіщо-нам-фунцкії.html#cb375-4" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> items[i].title()</span>
+<span id="cb375-5"><a href="навіщо-нам-фунцкії.html#cb375-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> items</span></code></pre></div>
 <p>І потім просто використати її приміняючи на кожному списку:</p>
-<div class="sourceCode" id="cb378"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb378-1"><a href="навіщо-нам-фунцкії.html#cb378-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> clean_names(names)</span>
-<span id="cb378-2"><a href="навіщо-нам-фунцкії.html#cb378-2" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> clean_names(surnames)</span>
-<span id="cb378-3"><a href="навіщо-нам-фунцкії.html#cb378-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code></pre></div>
+<div class="sourceCode" id="cb376"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb376-1"><a href="навіщо-нам-фунцкії.html#cb376-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> clean_names(names)</span>
+<span id="cb376-2"><a href="навіщо-нам-фунцкії.html#cb376-2" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> clean_names(surnames)</span>
+<span id="cb376-3"><a href="навіщо-нам-фунцкії.html#cb376-3" aria-hidden="true" tabindex="-1"></a><span class="co"># ...</span></span></code></pre></div>
 <p>Це все добре, але в чому проблема копіювати постійно код? По-перше, коли ми копіюємо, дуже велика ймовірність зробити помилку у коді. Наприклад, забути поміняти <code>names[i]</code> на <code>surnames[i]</code> десь всередині циклу. По-друге, короткий та лаконічний код набагато простіше читати. І якщо вам потрібно буде повернутись і розібратись, що саме цей код робить, то вам буде простіше зрозуміти сто рядків замість тисячі.</p>
 <p>Це твердження формулюється у концепт, який називається <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">“Don’t repeat yourself”</a>, або українською “Не повторюйся”. Якщо ви скопіювали та вставили якись код, дуже велика ймовірніть що краще “загорнути” цей код у функцію.</p>
 </div>
@@ -505,59 +511,59 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Це і є модуляція – розбиття одної великої задачі на маленькі підзадачі або кроки. Використовуючи фунцкії, ми розбиваємо складну програму на маленькі підпрограми, які ми можемо легко та швидко реалізувати.</p>
 <p>До нашого попереднього прикладу ми додамо ще вік, який теж був отриманий через анкету. Кожен елемент списку <code>ages</code> треба перевести з <code>str</code> до <code>int</code>:</p>
-<div class="sourceCode" id="cb379"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb379-1"><a href="навіщо-нам-фунцкії.html#cb379-1" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="st">&quot;33&quot;</span>, <span class="st">&quot;44&quot;</span>, <span class="st">&quot;51&quot;</span>]</span>
-<span id="cb379-2"><a href="навіщо-нам-фунцкії.html#cb379-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb379-3"><a href="навіщо-нам-фунцкії.html#cb379-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(ages):</span>
-<span id="cb379-4"><a href="навіщо-нам-фунцкії.html#cb379-4" aria-hidden="true" tabindex="-1"></a>    ages[i] <span class="op">=</span> <span class="bu">int</span>(ages[i])</span>
-<span id="cb379-5"><a href="навіщо-нам-фунцкії.html#cb379-5" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb379-6"><a href="навіщо-нам-фунцкії.html#cb379-6" aria-hidden="true" tabindex="-1"></a>ages</span></code></pre></div>
+<div class="sourceCode" id="cb377"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb377-1"><a href="навіщо-нам-фунцкії.html#cb377-1" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="st">&quot;33&quot;</span>, <span class="st">&quot;44&quot;</span>, <span class="st">&quot;51&quot;</span>]</span>
+<span id="cb377-2"><a href="навіщо-нам-фунцкії.html#cb377-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb377-3"><a href="навіщо-нам-фунцкії.html#cb377-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(ages):</span>
+<span id="cb377-4"><a href="навіщо-нам-фунцкії.html#cb377-4" aria-hidden="true" tabindex="-1"></a>    ages[i] <span class="op">=</span> <span class="bu">int</span>(ages[i])</span>
+<span id="cb377-5"><a href="навіщо-нам-фунцкії.html#cb377-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb377-6"><a href="навіщо-нам-фунцкії.html#cb377-6" aria-hidden="true" tabindex="-1"></a>ages</span></code></pre></div>
 <pre><code>## [33, 44, 51]</code></pre>
 <p>А тепер ми цей код об’єднаємо з кодом який ми використовували для очищеня імен (до використання фунцкій):</p>
-<div class="sourceCode" id="cb381"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb381-1"><a href="навіщо-нам-фунцкії.html#cb381-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;  olha &quot;</span>, <span class="st">&quot;hector&quot;</span>, <span class="st">&quot;  Volodymyr  &quot;</span>]</span>
-<span id="cb381-2"><a href="навіщо-нам-фунцкії.html#cb381-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(names):</span>
-<span id="cb381-3"><a href="навіщо-нам-фунцкії.html#cb381-3" aria-hidden="true" tabindex="-1"></a>    names[i] <span class="op">=</span> names[i].strip()</span>
-<span id="cb381-4"><a href="навіщо-нам-фунцкії.html#cb381-4" aria-hidden="true" tabindex="-1"></a>    names[i] <span class="op">=</span> names[i].title()</span>
-<span id="cb381-5"><a href="навіщо-нам-фунцкії.html#cb381-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb381-6"><a href="навіщо-нам-фунцкії.html#cb381-6" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> [<span class="st">&quot;  martynovska  &quot;</span>, <span class="st">&quot;Jimenez-Bravo&quot;</span>, <span class="st">&quot;  yaroslavskyi  &quot;</span>]</span>
-<span id="cb381-7"><a href="навіщо-нам-фунцкії.html#cb381-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(surnames):</span>
-<span id="cb381-8"><a href="навіщо-нам-фунцкії.html#cb381-8" aria-hidden="true" tabindex="-1"></a>    surnames[i] <span class="op">=</span> surnames[i].strip()</span>
-<span id="cb381-9"><a href="навіщо-нам-фунцкії.html#cb381-9" aria-hidden="true" tabindex="-1"></a>    surnames[i] <span class="op">=</span> surnames[i].title()</span>
-<span id="cb381-10"><a href="навіщо-нам-фунцкії.html#cb381-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb381-11"><a href="навіщо-нам-фунцкії.html#cb381-11" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="st">&quot;33&quot;</span>, <span class="st">&quot;44&quot;</span>, <span class="st">&quot;51&quot;</span>]</span>
-<span id="cb381-12"><a href="навіщо-нам-фунцкії.html#cb381-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(ages):</span>
-<span id="cb381-13"><a href="навіщо-нам-фунцкії.html#cb381-13" aria-hidden="true" tabindex="-1"></a>    ages[i] <span class="op">=</span> <span class="bu">int</span>(ages[i])</span></code></pre></div>
+<div class="sourceCode" id="cb379"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb379-1"><a href="навіщо-нам-фунцкії.html#cb379-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;  olha &quot;</span>, <span class="st">&quot;hector&quot;</span>, <span class="st">&quot;  Volodymyr  &quot;</span>]</span>
+<span id="cb379-2"><a href="навіщо-нам-фунцкії.html#cb379-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(names):</span>
+<span id="cb379-3"><a href="навіщо-нам-фунцкії.html#cb379-3" aria-hidden="true" tabindex="-1"></a>    names[i] <span class="op">=</span> names[i].strip()</span>
+<span id="cb379-4"><a href="навіщо-нам-фунцкії.html#cb379-4" aria-hidden="true" tabindex="-1"></a>    names[i] <span class="op">=</span> names[i].title()</span>
+<span id="cb379-5"><a href="навіщо-нам-фунцкії.html#cb379-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb379-6"><a href="навіщо-нам-фунцкії.html#cb379-6" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> [<span class="st">&quot;  martynovska  &quot;</span>, <span class="st">&quot;Jimenez-Bravo&quot;</span>, <span class="st">&quot;  yaroslavskyi  &quot;</span>]</span>
+<span id="cb379-7"><a href="навіщо-нам-фунцкії.html#cb379-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(surnames):</span>
+<span id="cb379-8"><a href="навіщо-нам-фунцкії.html#cb379-8" aria-hidden="true" tabindex="-1"></a>    surnames[i] <span class="op">=</span> surnames[i].strip()</span>
+<span id="cb379-9"><a href="навіщо-нам-фунцкії.html#cb379-9" aria-hidden="true" tabindex="-1"></a>    surnames[i] <span class="op">=</span> surnames[i].title()</span>
+<span id="cb379-10"><a href="навіщо-нам-фунцкії.html#cb379-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb379-11"><a href="навіщо-нам-фунцкії.html#cb379-11" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="st">&quot;33&quot;</span>, <span class="st">&quot;44&quot;</span>, <span class="st">&quot;51&quot;</span>]</span>
+<span id="cb379-12"><a href="навіщо-нам-фунцкії.html#cb379-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(ages):</span>
+<span id="cb379-13"><a href="навіщо-нам-фунцкії.html#cb379-13" aria-hidden="true" tabindex="-1"></a>    ages[i] <span class="op">=</span> <span class="bu">int</span>(ages[i])</span></code></pre></div>
 <p>Трохи громіздко, чи не так? А ось якщо у нас буде дві фунцкії визначенні в окремомих клітинках Google Colab і одна де ми почистимо усі дані, це буде виглядати більш зрозуміло. Давайте визначемо фунцкії у наступній клітині:</p>
-<div class="sourceCode" id="cb382"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb382-1"><a href="навіщо-нам-фунцкії.html#cb382-1" aria-hidden="true" tabindex="-1"></a><span class="co"># визначаємо фунцкії</span></span>
-<span id="cb382-2"><a href="навіщо-нам-фунцкії.html#cb382-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb382-3"><a href="навіщо-нам-фунцкії.html#cb382-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_names(items): </span>
-<span id="cb382-4"><a href="навіщо-нам-фунцкії.html#cb382-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(items):</span>
-<span id="cb382-5"><a href="навіщо-нам-фунцкії.html#cb382-5" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> items[i].strip()</span>
-<span id="cb382-6"><a href="навіщо-нам-фунцкії.html#cb382-6" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> items[i].title()</span>
-<span id="cb382-7"><a href="навіщо-нам-фунцкії.html#cb382-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> items</span>
-<span id="cb382-8"><a href="навіщо-нам-фунцкії.html#cb382-8" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb382-9"><a href="навіщо-нам-фунцкії.html#cb382-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convert_ages(items): </span>
-<span id="cb382-10"><a href="навіщо-нам-фунцкії.html#cb382-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(items):</span>
-<span id="cb382-11"><a href="навіщо-нам-фунцкії.html#cb382-11" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> <span class="bu">int</span>(items[i])</span>
-<span id="cb382-12"><a href="навіщо-нам-фунцкії.html#cb382-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> items</span></code></pre></div>
+<div class="sourceCode" id="cb380"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb380-1"><a href="навіщо-нам-фунцкії.html#cb380-1" aria-hidden="true" tabindex="-1"></a><span class="co"># визначаємо фунцкії</span></span>
+<span id="cb380-2"><a href="навіщо-нам-фунцкії.html#cb380-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb380-3"><a href="навіщо-нам-фунцкії.html#cb380-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> clean_names(items): </span>
+<span id="cb380-4"><a href="навіщо-нам-фунцкії.html#cb380-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(items):</span>
+<span id="cb380-5"><a href="навіщо-нам-фунцкії.html#cb380-5" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> items[i].strip()</span>
+<span id="cb380-6"><a href="навіщо-нам-фунцкії.html#cb380-6" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> items[i].title()</span>
+<span id="cb380-7"><a href="навіщо-нам-фунцкії.html#cb380-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> items</span>
+<span id="cb380-8"><a href="навіщо-нам-фунцкії.html#cb380-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb380-9"><a href="навіщо-нам-фунцкії.html#cb380-9" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convert_ages(items): </span>
+<span id="cb380-10"><a href="навіщо-нам-фунцкії.html#cb380-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i, element <span class="kw">in</span> <span class="bu">enumerate</span>(items):</span>
+<span id="cb380-11"><a href="навіщо-нам-фунцкії.html#cb380-11" aria-hidden="true" tabindex="-1"></a>        items[i] <span class="op">=</span> <span class="bu">int</span>(items[i])</span>
+<span id="cb380-12"><a href="навіщо-нам-фунцкії.html#cb380-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> items</span></code></pre></div>
 <p>А тепер використаємо їх:</p>
-<div class="sourceCode" id="cb383"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb383-1"><a href="навіщо-нам-фунцкії.html#cb383-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;  olha &quot;</span>, <span class="st">&quot;hector&quot;</span>, <span class="st">&quot;  Volodymyr  &quot;</span>]</span>
-<span id="cb383-2"><a href="навіщо-нам-фунцкії.html#cb383-2" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> clean_names(names)</span>
-<span id="cb383-3"><a href="навіщо-нам-фунцкії.html#cb383-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb383-4"><a href="навіщо-нам-фунцкії.html#cb383-4" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> [<span class="st">&quot;  martynovska  &quot;</span>, <span class="st">&quot;Jimenez-Bravo&quot;</span>, <span class="st">&quot;  yaroslavskyi  &quot;</span>]</span>
-<span id="cb383-5"><a href="навіщо-нам-фунцкії.html#cb383-5" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> clean_names(surnames)</span>
-<span id="cb383-6"><a href="навіщо-нам-фунцкії.html#cb383-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb383-7"><a href="навіщо-нам-фунцкії.html#cb383-7" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="st">&quot;33&quot;</span>, <span class="st">&quot;44&quot;</span>, <span class="st">&quot;51&quot;</span>]</span>
-<span id="cb383-8"><a href="навіщо-нам-фунцкії.html#cb383-8" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> convert_ages(ages)</span></code></pre></div>
+<div class="sourceCode" id="cb381"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb381-1"><a href="навіщо-нам-фунцкії.html#cb381-1" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> [<span class="st">&quot;  olha &quot;</span>, <span class="st">&quot;hector&quot;</span>, <span class="st">&quot;  Volodymyr  &quot;</span>]</span>
+<span id="cb381-2"><a href="навіщо-нам-фунцкії.html#cb381-2" aria-hidden="true" tabindex="-1"></a>names <span class="op">=</span> clean_names(names)</span>
+<span id="cb381-3"><a href="навіщо-нам-фунцкії.html#cb381-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb381-4"><a href="навіщо-нам-фунцкії.html#cb381-4" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> [<span class="st">&quot;  martynovska  &quot;</span>, <span class="st">&quot;Jimenez-Bravo&quot;</span>, <span class="st">&quot;  yaroslavskyi  &quot;</span>]</span>
+<span id="cb381-5"><a href="навіщо-нам-фунцкії.html#cb381-5" aria-hidden="true" tabindex="-1"></a>surnames <span class="op">=</span> clean_names(surnames)</span>
+<span id="cb381-6"><a href="навіщо-нам-фунцкії.html#cb381-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb381-7"><a href="навіщо-нам-фунцкії.html#cb381-7" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="st">&quot;33&quot;</span>, <span class="st">&quot;44&quot;</span>, <span class="st">&quot;51&quot;</span>]</span>
+<span id="cb381-8"><a href="навіщо-нам-фунцкії.html#cb381-8" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> convert_ages(ages)</span></code></pre></div>
 </div>
 <div id="абстракція" class="section level2 hasAnchor" number="15.3">
 <h2><span class="header-section-number">15.3</span> Абстракція<a href="навіщо-нам-фунцкії.html#абстракція" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Абстрація – теж не саме зрозуміле слово у світі. Ідея полягає у тому, щоб приховати усі деталі як саме фунцкія працює, залишаючи тільки необхідну інформацію. Ми про це вже говорили, коли казали що функція – це така собі чорна скриня. Попередній приклад – це також гарна ілюстрація ідеї абрстракії. Для того щоб зрозуміти що саме коїться у попередньому коді, у нас нема необхідності розуміти деталі реалізації <code>convert_ages()</code>. Все що нам треба знати – параметри функції, її призначення та у якому форматі вона повертає значення.</p>
 <p>Наприклад, якщо код фунцкії <code>convert_ages()</code> буде виглядати наступним чином:</p>
-<div class="sourceCode" id="cb384"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb384-1"><a href="навіщо-нам-фунцкії.html#cb384-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convert_ages(items): </span>
-<span id="cb384-2"><a href="навіщо-нам-фунцкії.html#cb384-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="bu">int</span>, items))</span></code></pre></div>
+<div class="sourceCode" id="cb382"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb382-1"><a href="навіщо-нам-фунцкії.html#cb382-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> convert_ages(items): </span>
+<span id="cb382-2"><a href="навіщо-нам-фунцкії.html#cb382-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">list</span>(<span class="bu">map</span>(<span class="bu">int</span>, items))</span></code></pre></div>
 <p>Це ні як не вплине на розуміння того, як працюють наступні рядки, тому що ми можемо сприймати <code>convert_ages()</code> як чорну скриню:</p>
-<div class="sourceCode" id="cb385"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb385-1"><a href="навіщо-нам-фунцкії.html#cb385-1" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="st">&quot;33&quot;</span>, <span class="st">&quot;44&quot;</span>, <span class="st">&quot;51&quot;</span>]</span>
-<span id="cb385-2"><a href="навіщо-нам-фунцкії.html#cb385-2" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> convert_ages(ages)</span></code></pre></div>
+<div class="sourceCode" id="cb383"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb383-1"><a href="навіщо-нам-фунцкії.html#cb383-1" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> [<span class="st">&quot;33&quot;</span>, <span class="st">&quot;44&quot;</span>, <span class="st">&quot;51&quot;</span>]</span>
+<span id="cb383-2"><a href="навіщо-нам-фунцкії.html#cb383-2" aria-hidden="true" tabindex="-1"></a>ages <span class="op">=</span> convert_ages(ages)</span></code></pre></div>
 <hr />
 <hr />
 <details id="funcs_motivation_exercises">
@@ -567,19 +573,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">1. Що означає принцип <code>Don’t repeat yourself</code> (Не повторюйся)?</div>
 <label>
-<input type="radio" name="56d0330c-871c-4cfe-8275-d7048089b2ba" value="true">Функції можуть бути використані багато разів без повторення коду.</input>
+<input type="radio" name="0f057bc4-99b3-4ddc-b7fc-7a86de3f5f0c" value="true">Функції можуть бути використані багато разів без повторення коду.</input>
 </label>
 <label>
-<input type="radio" name="56d0330c-871c-4cfe-8275-d7048089b2ba" value="false">Варто повторювати код для кращої швидкості виконання програми.</input>
+<input type="radio" name="0f057bc4-99b3-4ddc-b7fc-7a86de3f5f0c" value="false">Варто повторювати код для кращої швидкості виконання програми.</input>
 </label>
 <label>
-<input type="radio" name="56d0330c-871c-4cfe-8275-d7048089b2ba" value="false">Повторення коду є допустимим лише для коротких програм.</input>
+<input type="radio" name="0f057bc4-99b3-4ddc-b7fc-7a86de3f5f0c" value="false">Повторення коду є допустимим лише для коротких програм.</input>
 </label>
-<button class="check" id="fe06c8d4-697b-47c9-b20d-13e357ece6f9" onclick="checkOptions(&quot;fe06c8d4-697b-47c9-b20d-13e357ece6f9&quot;, &quot;56d0330c-871c-4cfe-8275-d7048089b2ba&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="c9ad4e78-2bf9-42d4-8caa-74c0164c8847" onclick="checkOptions(&quot;c9ad4e78-2bf9-42d4-8caa-74c0164c8847&quot;, &quot;0f057bc4-99b3-4ddc-b7fc-7a86de3f5f0c&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('56d0330c-871c-4cfe-8275-d7048089b2ba');
-    const submitButton = document.getElementById('fe06c8d4-697b-47c9-b20d-13e357ece6f9');
+    const radioButtons = document.getElementsByName('0f057bc4-99b3-4ddc-b7fc-7a86de3f5f0c');
+    const submitButton = document.getElementById('c9ad4e78-2bf9-42d4-8caa-74c0164c8847');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -590,19 +596,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">2. Які переваги модулярності в програмуванні?</div>
 <label>
-<input type="radio" name="95169738-f0f8-4686-8754-d9e7576d6b70" value="false">Модульний код допомагає зменшити використання функцій у програмі.</input>
+<input type="radio" name="770665f7-be97-49f0-8083-7da20ce38e61" value="false">Модульний код допомагає зменшити використання функцій у програмі.</input>
 </label>
 <label>
-<input type="radio" name="95169738-f0f8-4686-8754-d9e7576d6b70" value="false">Модулярний код робить програму менш зрозумілою для читача.</input>
+<input type="radio" name="770665f7-be97-49f0-8083-7da20ce38e61" value="false">Модулярний код робить програму менш зрозумілою для читача.</input>
 </label>
 <label>
-<input type="radio" name="95169738-f0f8-4686-8754-d9e7576d6b70" value="true">Модулярність дозволяє розділити велику задачу на менші підзадачі для легшого розв'язання.</input>
+<input type="radio" name="770665f7-be97-49f0-8083-7da20ce38e61" value="true">Модулярність дозволяє розділити велику задачу на менші підзадачі для легшого розв'язання.</input>
 </label>
-<button class="check" id="105d35e3-43a4-42b2-a10f-2c1e96569921" onclick="checkOptions(&quot;105d35e3-43a4-42b2-a10f-2c1e96569921&quot;, &quot;95169738-f0f8-4686-8754-d9e7576d6b70&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="7ba473d7-156b-4235-9853-d130486ab8ab" onclick="checkOptions(&quot;7ba473d7-156b-4235-9853-d130486ab8ab&quot;, &quot;770665f7-be97-49f0-8083-7da20ce38e61&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('95169738-f0f8-4686-8754-d9e7576d6b70');
-    const submitButton = document.getElementById('105d35e3-43a4-42b2-a10f-2c1e96569921');
+    const radioButtons = document.getElementsByName('770665f7-be97-49f0-8083-7da20ce38e61');
+    const submitButton = document.getElementById('7ba473d7-156b-4235-9853-d130486ab8ab');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -613,19 +619,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">3. Що означає принцип <code>абстракції</code> в програмуванні?</div>
 <label>
-<input type="radio" name="37de1ccc-c730-4d31-a02a-0b0b953480f1" value="true">Приховування деталей реалізації функції, залишаючи тільки необхідну інформацію.</input>
+<input type="radio" name="aad79de8-3a6d-4a7d-bb61-912c358a1373" value="true">Приховування деталей реалізації функції, залишаючи тільки необхідну інформацію.</input>
 </label>
 <label>
-<input type="radio" name="37de1ccc-c730-4d31-a02a-0b0b953480f1" value="false">Повторення коду для кращої читабельності програми.</input>
+<input type="radio" name="aad79de8-3a6d-4a7d-bb61-912c358a1373" value="false">Повторення коду для кращої читабельності програми.</input>
 </label>
 <label>
-<input type="radio" name="37de1ccc-c730-4d31-a02a-0b0b953480f1" value="false">Використання багатьох змінних для збереження даних.</input>
+<input type="radio" name="aad79de8-3a6d-4a7d-bb61-912c358a1373" value="false">Використання багатьох змінних для збереження даних.</input>
 </label>
-<button class="check" id="bb6fd69c-3492-41e2-8dd7-5d2cbe6c3fbc" onclick="checkOptions(&quot;bb6fd69c-3492-41e2-8dd7-5d2cbe6c3fbc&quot;, &quot;37de1ccc-c730-4d31-a02a-0b0b953480f1&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="6c27c1b4-bbeb-4e49-9db4-7c53788c3d4b" onclick="checkOptions(&quot;6c27c1b4-bbeb-4e49-9db4-7c53788c3d4b&quot;, &quot;aad79de8-3a6d-4a7d-bb61-912c358a1373&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('37de1ccc-c730-4d31-a02a-0b0b953480f1');
-    const submitButton = document.getElementById('bb6fd69c-3492-41e2-8dd7-5d2cbe6c3fbc');
+    const radioButtons = document.getElementsByName('aad79de8-3a6d-4a7d-bb61-912c358a1373');
+    const submitButton = document.getElementById('6c27c1b4-bbeb-4e49-9db4-7c53788c3d4b');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -636,19 +642,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">4. Що означає <code>чорна скриня</code> в контексті абстракції?</div>
 <label>
-<input type="radio" name="b4902266-adb0-4018-bdac-7686a9f71acd" value="true">Приховування деталей реалізації функції, залишаючи тільки необхідну інформацію.</input>
+<input type="radio" name="30b441da-eec3-483d-8b50-fc2b3f1e0b88" value="true">Приховування деталей реалізації функції, залишаючи тільки необхідну інформацію.</input>
 </label>
 <label>
-<input type="radio" name="b4902266-adb0-4018-bdac-7686a9f71acd" value="false">Повторення коду для кращої читабельності програми.</input>
+<input type="radio" name="30b441da-eec3-483d-8b50-fc2b3f1e0b88" value="false">Повторення коду для кращої читабельності програми.</input>
 </label>
 <label>
-<input type="radio" name="b4902266-adb0-4018-bdac-7686a9f71acd" value="false">Використання багатьох змінних для збереження даних.</input>
+<input type="radio" name="30b441da-eec3-483d-8b50-fc2b3f1e0b88" value="false">Використання багатьох змінних для збереження даних.</input>
 </label>
-<button class="check" id="e49f6f82-67ad-40d8-befa-65a8718f0ef3" onclick="checkOptions(&quot;e49f6f82-67ad-40d8-befa-65a8718f0ef3&quot;, &quot;b4902266-adb0-4018-bdac-7686a9f71acd&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="29ef4fd2-0d38-4dd6-bc13-cfda0a209f72" onclick="checkOptions(&quot;29ef4fd2-0d38-4dd6-bc13-cfda0a209f72&quot;, &quot;30b441da-eec3-483d-8b50-fc2b3f1e0b88&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('b4902266-adb0-4018-bdac-7686a9f71acd');
-    const submitButton = document.getElementById('e49f6f82-67ad-40d8-befa-65a8718f0ef3');
+    const radioButtons = document.getElementsByName('30b441da-eec3-483d-8b50-fc2b3f1e0b88');
+    const submitButton = document.getElementById('29ef4fd2-0d38-4dd6-bc13-cfda0a209f72');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -659,19 +665,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">5. Який принцип програмування допомагає уникнути реплікації коду та зробити його легше читабельним?</div>
 <label>
-<input type="radio" name="3b77824c-b244-4ad0-b277-b8bba60e11f2" value="false">Абстракція</input>
+<input type="radio" name="003482e2-39c8-49a1-a2e6-5b948cda7876" value="false">Абстракція</input>
 </label>
 <label>
-<input type="radio" name="3b77824c-b244-4ad0-b277-b8bba60e11f2" value="false">Повторення</input>
+<input type="radio" name="003482e2-39c8-49a1-a2e6-5b948cda7876" value="false">Повторення</input>
 </label>
 <label>
-<input type="radio" name="3b77824c-b244-4ad0-b277-b8bba60e11f2" value="true">Модулярність</input>
+<input type="radio" name="003482e2-39c8-49a1-a2e6-5b948cda7876" value="true">Модулярність</input>
 </label>
-<button class="check" id="1bae9129-7f0a-48d8-9e2e-ff353c01a80a" onclick="checkOptions(&quot;1bae9129-7f0a-48d8-9e2e-ff353c01a80a&quot;, &quot;3b77824c-b244-4ad0-b277-b8bba60e11f2&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="db1be2f9-fb9c-402a-a4e0-e81341d42f59" onclick="checkOptions(&quot;db1be2f9-fb9c-402a-a4e0-e81341d42f59&quot;, &quot;003482e2-39c8-49a1-a2e6-5b948cda7876&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('3b77824c-b244-4ad0-b277-b8bba60e11f2');
-    const submitButton = document.getElementById('1bae9129-7f0a-48d8-9e2e-ff353c01a80a');
+    const radioButtons = document.getElementsByName('003482e2-39c8-49a1-a2e6-5b948cda7876');
+    const submitButton = document.getElementById('db1be2f9-fb9c-402a-a4e0-e81341d42f59');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -682,19 +688,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">6. Що можна зробити, використовуючи абстракцію в програмуванні?</div>
 <label>
-<input type="radio" name="4321c552-5ed5-4133-becb-5d0162e084fa" value="true">Приховати деталі реалізації функцій, зберігаючи їхні параметри та повернені значення.</input>
+<input type="radio" name="36010da9-c699-4231-9920-2e9ad4dfdca4" value="true">Приховати деталі реалізації функцій, зберігаючи їхні параметри та повернені значення.</input>
 </label>
 <label>
-<input type="radio" name="4321c552-5ed5-4133-becb-5d0162e084fa" value="false">Зробити програму більш складною для розуміння та зміни.</input>
+<input type="radio" name="36010da9-c699-4231-9920-2e9ad4dfdca4" value="false">Зробити програму більш складною для розуміння та зміни.</input>
 </label>
 <label>
-<input type="radio" name="4321c552-5ed5-4133-becb-5d0162e084fa" value="false">Заповнити код багатьма змінними для кращої продуктивності.</input>
+<input type="radio" name="36010da9-c699-4231-9920-2e9ad4dfdca4" value="false">Заповнити код багатьма змінними для кращої продуктивності.</input>
 </label>
-<button class="check" id="9e80caf3-bdf0-42c9-a64e-75c86b5e9f5c" onclick="checkOptions(&quot;9e80caf3-bdf0-42c9-a64e-75c86b5e9f5c&quot;, &quot;4321c552-5ed5-4133-becb-5d0162e084fa&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="1aa6bffd-d14d-4437-8eb3-a326a33617ef" onclick="checkOptions(&quot;1aa6bffd-d14d-4437-8eb3-a326a33617ef&quot;, &quot;36010da9-c699-4231-9920-2e9ad4dfdca4&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('4321c552-5ed5-4133-becb-5d0162e084fa');
-    const submitButton = document.getElementById('9e80caf3-bdf0-42c9-a64e-75c86b5e9f5c');
+    const radioButtons = document.getElementsByName('36010da9-c699-4231-9920-2e9ad4dfdca4');
+    const submitButton = document.getElementById('1aa6bffd-d14d-4437-8eb3-a326a33617ef');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {

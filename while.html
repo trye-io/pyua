@@ -225,7 +225,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.3</b> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел</a></li>
 <li class="chapter" data-level="6.4" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.4</b> 🐂 Використовуємо тип <code>bool</code> для бульових значень</a></li>
 <li class="chapter" data-level="6.5" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.5</b> 🔤 Використовуємо тип <code>str</code> для текстових стрічок</a></li>
-<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a></li>
+<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="scalars.html"><a href="scalars.html#перевіряємо-тип-обєкта-з-type"><i class="fa fa-check"></i><b>6.6.1</b> Перевіряємо тип об’єкта з <code>type()</code></a></li>
+<li class="chapter" data-level="6.6.2" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-int-та-float-з-int-та-float"><i class="fa fa-check"></i><b>6.6.2</b> Перетворюємо об’єкти на <code>int</code> та <code>float</code> з <code>int()</code> та <code>float()</code></a></li>
+<li class="chapter" data-level="6.6.3" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-bool-з-bool"><i class="fa fa-check"></i><b>6.6.3</b> Перетворюємо об’єкти на <code>bool</code> з <code>bool()</code></a></li>
+<li class="chapter" data-level="6.6.4" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-str-з-str"><i class="fa fa-check"></i><b>6.6.4</b> Перетворюємо об’єкти на <code>str</code> з <code>str()</code></a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>7</b> Списки <code>list</code></a>
 <ul>
@@ -466,10 +472,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- XXX: flow chart of while loop -->
 <p>Ця блок-схема досить схожа на умовний перехід <code>if/else</code>. Різниця полягає в тому, що сценарій або поток <strong>Так</strong> після тіла циклу переходить назад на початок умови, тоді як поток <strong>Ні</strong> вказує на наступну після циклу інструкцію.</p>
 <p>А ось і приклад цикла <code>while</code> у Python:</p>
-<div class="sourceCode" id="cb342"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb342-1"><a href="while.html#cb342-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb342-2"><a href="while.html#cb342-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="op">&lt;</span> <span class="dv">3</span>):</span>
-<span id="cb342-3"><a href="while.html#cb342-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
-<span id="cb342-4"><a href="while.html#cb342-4" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
+<div class="sourceCode" id="cb340"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb340-1"><a href="while.html#cb340-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb340-2"><a href="while.html#cb340-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (i <span class="op">&lt;</span> <span class="dv">3</span>):</span>
+<span id="cb340-3"><a href="while.html#cb340-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb340-4"><a href="while.html#cb340-4" aria-hidden="true" tabindex="-1"></a>    i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span></span></code></pre></div>
 <pre><code>## 0
 ## 1
 ## 2</code></pre>
@@ -482,21 +488,21 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <p>Як і в умовному переході <code>if/else</code> та циклі <code>for</code>, інструкції тіла цикла повинні починатись з відступу. Замість <code>i &lt; 3</code> може бути будь яка змінна чи вираз які повертають значення типу <code>bool</code>: <code>True</code> або <code>False</code>. Якщо ми підставимо замість <code>i &lt; 3</code> значення <code>True</code>, то ми потрапимо до безкінечного циклу – тіло циклу буде виконуватись потійно, в чому не так багато сенсу.</p>
 <p>Давайте “розгорнемо” наш цикл, тобто пропишемо усю послідновність інструкцій, ітерацію за ітерацією:</p>
-<div class="sourceCode" id="cb344"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb344-1"><a href="while.html#cb344-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb344-2"><a href="while.html#cb344-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb344-3"><a href="while.html#cb344-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
-<span id="cb344-4"><a href="while.html#cb344-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 0</span></span>
-<span id="cb344-5"><a href="while.html#cb344-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 1</span></span>
-<span id="cb344-6"><a href="while.html#cb344-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb344-7"><a href="while.html#cb344-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
-<span id="cb344-8"><a href="while.html#cb344-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 1</span></span>
-<span id="cb344-9"><a href="while.html#cb344-9" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 2</span></span>
-<span id="cb344-10"><a href="while.html#cb344-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb344-11"><a href="while.html#cb344-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
-<span id="cb344-12"><a href="while.html#cb344-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 2</span></span>
-<span id="cb344-13"><a href="while.html#cb344-13" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 3</span></span>
-<span id="cb344-14"><a href="while.html#cb344-14" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb344-15"><a href="while.html#cb344-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 &lt; 3 не є істинною, тому виконуємо пропускаємо тіло циклу і йдемо далі</span></span></code></pre></div>
+<div class="sourceCode" id="cb342"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb342-1"><a href="while.html#cb342-1" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb342-2"><a href="while.html#cb342-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb342-3"><a href="while.html#cb342-3" aria-hidden="true" tabindex="-1"></a><span class="co"># 0 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
+<span id="cb342-4"><a href="while.html#cb342-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 0</span></span>
+<span id="cb342-5"><a href="while.html#cb342-5" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 1</span></span>
+<span id="cb342-6"><a href="while.html#cb342-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb342-7"><a href="while.html#cb342-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
+<span id="cb342-8"><a href="while.html#cb342-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 1</span></span>
+<span id="cb342-9"><a href="while.html#cb342-9" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 2</span></span>
+<span id="cb342-10"><a href="while.html#cb342-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb342-11"><a href="while.html#cb342-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 2 &lt; 3 є істинною, тому виконуємо тіло циклу</span></span>
+<span id="cb342-12"><a href="while.html#cb342-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(i) <span class="co"># друкуємо 2</span></span>
+<span id="cb342-13"><a href="while.html#cb342-13" aria-hidden="true" tabindex="-1"></a>i <span class="op">=</span> i <span class="op">+</span> <span class="dv">1</span> <span class="co"># тепер i дорівнює 3</span></span>
+<span id="cb342-14"><a href="while.html#cb342-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb342-15"><a href="while.html#cb342-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 3 &lt; 3 не є істинною, тому виконуємо пропускаємо тіло циклу і йдемо далі</span></span></code></pre></div>
 <p>У циклах ми можемо ще використати ключові слова <code>break</code> та <code>continue</code>. Команда <code>break</code> дозволяє вийти з циклу завчасно, а <code>continue</code> – пропустити усі інструкції в ітерації та повернутись до перевірки умови. З ними ми докладніше познайомимось у вправах, посилання на які ви знайдете нагорі.</p>
 <p>Цикл <code>while</code> не такий поширений як цикл <code>for</code> в конексті AI, ML та DS. Це тому що більшість задач які встають у цих галузях, можна вирішити за допомгою <code>for</code>. Тим паче, що використовючи цикл <code>while</code>, існує ймовірність попасти у нескінченний цикл. В цьому нічого страшного не має, але бувають моменти коли помилку в коді досить важко знайти.</p>
 <hr />
@@ -513,22 +519,22 @@ while x < 5:
 print(x)</code></pre>
 <div class="question">Оберіть правильну відповідь:</div>
 <label>
-<input type="radio" name="84c11c81-671e-4d16-aff4-bd3d3454ca0b" value="false">1</input>
+<input type="radio" name="ca491034-2b87-476d-b6fd-7c7ff11e42a7" value="false">1</input>
 </label>
 <label>
-<input type="radio" name="84c11c81-671e-4d16-aff4-bd3d3454ca0b" value="false">0</input>
+<input type="radio" name="ca491034-2b87-476d-b6fd-7c7ff11e42a7" value="false">0</input>
 </label>
 <label>
-<input type="radio" name="84c11c81-671e-4d16-aff4-bd3d3454ca0b" value="true">5</input>
+<input type="radio" name="ca491034-2b87-476d-b6fd-7c7ff11e42a7" value="true">5</input>
 </label>
 <label>
-<input type="radio" name="84c11c81-671e-4d16-aff4-bd3d3454ca0b" value="false">4</input>
+<input type="radio" name="ca491034-2b87-476d-b6fd-7c7ff11e42a7" value="false">4</input>
 </label>
-<button class="check" id="16e915b3-b98d-487d-97b4-aad2b8b2abbe" onclick="checkOptions(&quot;16e915b3-b98d-487d-97b4-aad2b8b2abbe&quot;, &quot;84c11c81-671e-4d16-aff4-bd3d3454ca0b&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="f7245337-c552-4ce5-8ce8-34445ddb3829" onclick="checkOptions(&quot;f7245337-c552-4ce5-8ce8-34445ddb3829&quot;, &quot;ca491034-2b87-476d-b6fd-7c7ff11e42a7&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('84c11c81-671e-4d16-aff4-bd3d3454ca0b');
-    const submitButton = document.getElementById('16e915b3-b98d-487d-97b4-aad2b8b2abbe');
+    const radioButtons = document.getElementsByName('ca491034-2b87-476d-b6fd-7c7ff11e42a7');
+    const submitButton = document.getElementById('f7245337-c552-4ce5-8ce8-34445ddb3829');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -550,22 +556,22 @@ while x <= 5:
 </code></pre>
 <div class="question">Оберіть правильну відповідь:</div>
 <label>
-<input type="radio" name="ca79a946-6a5c-4d8b-b4cf-b8125a703063" value="false">Перший</input>
+<input type="radio" name="d4fb9236-e28f-401c-86bc-0522226e69ca" value="false">Перший</input>
 </label>
 <label>
-<input type="radio" name="ca79a946-6a5c-4d8b-b4cf-b8125a703063" value="false">Другий</input>
+<input type="radio" name="d4fb9236-e28f-401c-86bc-0522226e69ca" value="false">Другий</input>
 </label>
 <label>
-<input type="radio" name="ca79a946-6a5c-4d8b-b4cf-b8125a703063" value="true">Обидва</input>
+<input type="radio" name="d4fb9236-e28f-401c-86bc-0522226e69ca" value="true">Обидва</input>
 </label>
 <label>
-<input type="radio" name="ca79a946-6a5c-4d8b-b4cf-b8125a703063" value="false">Жоден</input>
+<input type="radio" name="d4fb9236-e28f-401c-86bc-0522226e69ca" value="false">Жоден</input>
 </label>
-<button class="check" id="a5b99454-1531-4235-aad7-16a1c98023c1" onclick="checkOptions(&quot;a5b99454-1531-4235-aad7-16a1c98023c1&quot;, &quot;ca79a946-6a5c-4d8b-b4cf-b8125a703063&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="6b9906e2-6802-48e3-a05e-f0ed81f55d16" onclick="checkOptions(&quot;6b9906e2-6802-48e3-a05e-f0ed81f55d16&quot;, &quot;d4fb9236-e28f-401c-86bc-0522226e69ca&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('ca79a946-6a5c-4d8b-b4cf-b8125a703063');
-    const submitButton = document.getElementById('a5b99454-1531-4235-aad7-16a1c98023c1');
+    const radioButtons = document.getElementsByName('d4fb9236-e28f-401c-86bc-0522226e69ca');
+    const submitButton = document.getElementById('6b9906e2-6802-48e3-a05e-f0ed81f55d16');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -581,22 +587,22 @@ while x > 0:
     x = x - 1</code></pre>
 <div class="question">Оберіть правильну відповідь:</div>
 <label>
-<input type="radio" name="c9dd843f-0862-4e2b-81df-8b5e02ad1214" value="false">1 2 3 4 5</input>
+<input type="radio" name="6c579d0a-abbd-43e3-b3ec-35111267143d" value="false">1 2 3 4 5</input>
 </label>
 <label>
-<input type="radio" name="c9dd843f-0862-4e2b-81df-8b5e02ad1214" value="true">5 4 3 2 1</input>
+<input type="radio" name="6c579d0a-abbd-43e3-b3ec-35111267143d" value="true">5 4 3 2 1</input>
 </label>
 <label>
-<input type="radio" name="c9dd843f-0862-4e2b-81df-8b5e02ad1214" value="false">0 0 0 0 0 </input>
+<input type="radio" name="6c579d0a-abbd-43e3-b3ec-35111267143d" value="false">0 0 0 0 0 </input>
 </label>
 <label>
-<input type="radio" name="c9dd843f-0862-4e2b-81df-8b5e02ad1214" value="false">1 1 1 1 1</input>
+<input type="radio" name="6c579d0a-abbd-43e3-b3ec-35111267143d" value="false">1 1 1 1 1</input>
 </label>
-<button class="check" id="be84c015-9a4c-4287-80a6-13ebffd87828" onclick="checkOptions(&quot;be84c015-9a4c-4287-80a6-13ebffd87828&quot;, &quot;c9dd843f-0862-4e2b-81df-8b5e02ad1214&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="5f634e30-7772-48be-ac30-7d4f508f188e" onclick="checkOptions(&quot;5f634e30-7772-48be-ac30-7d4f508f188e&quot;, &quot;6c579d0a-abbd-43e3-b3ec-35111267143d&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('c9dd843f-0862-4e2b-81df-8b5e02ad1214');
-    const submitButton = document.getElementById('be84c015-9a4c-4287-80a6-13ebffd87828');
+    const radioButtons = document.getElementsByName('6c579d0a-abbd-43e3-b3ec-35111267143d');
+    const submitButton = document.getElementById('5f634e30-7772-48be-ac30-7d4f508f188e');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {

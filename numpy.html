@@ -225,7 +225,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.3" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-float-для-дійсних-чисел"><i class="fa fa-check"></i><b>6.3</b> ⛵️ Використовуємо тип <code>float</code> для дійсних чисел</a></li>
 <li class="chapter" data-level="6.4" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-bool-для-бульових-значень"><i class="fa fa-check"></i><b>6.4</b> 🐂 Використовуємо тип <code>bool</code> для бульових значень</a></li>
 <li class="chapter" data-level="6.5" data-path="scalars.html"><a href="scalars.html#використовуємо-тип-str-для-текстових-стрічок"><i class="fa fa-check"></i><b>6.5</b> 🔤 Використовуємо тип <code>str</code> для текстових стрічок</a></li>
-<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a></li>
+<li class="chapter" data-level="6.6" data-path="scalars.html"><a href="scalars.html#перетворюємо-типи"><i class="fa fa-check"></i><b>6.6</b> 🪄 Перетворюємо типи</a>
+<ul>
+<li class="chapter" data-level="6.6.1" data-path="scalars.html"><a href="scalars.html#перевіряємо-тип-обєкта-з-type"><i class="fa fa-check"></i><b>6.6.1</b> Перевіряємо тип об’єкта з <code>type()</code></a></li>
+<li class="chapter" data-level="6.6.2" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-int-та-float-з-int-та-float"><i class="fa fa-check"></i><b>6.6.2</b> Перетворюємо об’єкти на <code>int</code> та <code>float</code> з <code>int()</code> та <code>float()</code></a></li>
+<li class="chapter" data-level="6.6.3" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-bool-з-bool"><i class="fa fa-check"></i><b>6.6.3</b> Перетворюємо об’єкти на <code>bool</code> з <code>bool()</code></a></li>
+<li class="chapter" data-level="6.6.4" data-path="scalars.html"><a href="scalars.html#перетворюємо-обєкти-на-str-з-str"><i class="fa fa-check"></i><b>6.6.4</b> Перетворюємо об’єкти на <code>str</code> з <code>str()</code></a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="7" data-path="list.html"><a href="list.html"><i class="fa fa-check"></i><b>7</b> Списки <code>list</code></a>
 <ul>
@@ -484,39 +490,39 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="завантажуємо-бібліотеку-numpy" class="section level2 hasAnchor" number="18.2">
 <h2><span class="header-section-number">18.2</span> Завантажуємо бібліотеку NumPy<a href="numpy.html#завантажуємо-бібліотеку-numpy" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Так як ми працюємо у Google Colab, то NumPy вже встановленно і нам не треба нічого робити. Перед тим як використовувати пакет NumPy у Google Colab записнику, нам треба його завантажити. Це можна зробити використовуючи інструкцію <code>import</code>. За конвенцією NumPy, ми переіменуємо її до <code>np</code>. Це дозволить нам не писати кожного разу п’ять літер <code>numpy</code>, а тільки дві <code>np</code>:</p>
-<div class="sourceCode" id="cb419"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb419-1"><a href="numpy.html#cb419-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
+<div class="sourceCode" id="cb417"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb417-1"><a href="numpy.html#cb417-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span></code></pre></div>
 </div>
 <div id="створюємо-масив-ndarray" class="section level2 hasAnchor" number="18.3">
 <h2><span class="header-section-number">18.3</span> Створюємо масив <code>ndarray</code><a href="numpy.html#створюємо-масив-ndarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Найчастіше ми будемо створювати ndarray за допомогою функції <code>np.array()</code>. Аргументом цієї функції можуть бути об’єкти різних типів, але найчастіше ми будемо використовувати наш улюблений список <code>list</code>.</p>
 <p>Якщо ви ще пам’ятаєте як створювати <code>list</code> в Python (Глава <a href="list.html#list">7</a>), вважайте що ви вже вмієте створювати <code>ndarray</code>. Якщо ви не пам’ятаєте або не знаєте що це таке, це не проблема, тому що синтаксис дуже простий, зрозумілий та природній. Щоб створити <code>list</code>, нам просто треба “загорнути” значення у квадратні дужки.</p>
 <p>Давайте зараз створемо <code>list</code>, який буде містити оцінки у школі і потім використаємо як аргумент до нашої функції <code>np.array()</code>:</p>
-<div class="sourceCode" id="cb420"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb420-1"><a href="numpy.html#cb420-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span>
-<span id="cb420-2"><a href="numpy.html#cb420-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb420-3"><a href="numpy.html#cb420-3" aria-hidden="true" tabindex="-1"></a>inna</span></code></pre></div>
+<div class="sourceCode" id="cb418"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb418-1"><a href="numpy.html#cb418-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span>
+<span id="cb418-2"><a href="numpy.html#cb418-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb418-3"><a href="numpy.html#cb418-3" aria-hidden="true" tabindex="-1"></a>inna</span></code></pre></div>
 <pre><code>## array([ 9,  8, 10])</code></pre>
 <p>Увага: клас об’єкту називається <code>ndarray</code>, a функція щоб його створити просто <code>np.array()</code>.</p>
 <p>Фунцкію <code>np.array()</code> ми також використовуємо для створення двовимірних масивів. Так само ми будемо створювати використовуючи list. Але цього разу, кожен елемент цього list буде також list. Знов ж таки, якщо ви не пам’ятаєте що таке <code>list</code>, просто загорніть значення кожного рядку в квадратні дужки, а потім і самі рядки:</p>
-<div class="sourceCode" id="cb422"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb422-1"><a href="numpy.html#cb422-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">=</span> np.array([[<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>], [<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">9</span>], [<span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">11</span>], [<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>]])</span>
-<span id="cb422-2"><a href="numpy.html#cb422-2" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb420"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb420-1"><a href="numpy.html#cb420-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">=</span> np.array([[<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>], [<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">9</span>], [<span class="dv">12</span>, <span class="dv">11</span>, <span class="dv">11</span>], [<span class="dv">10</span>, <span class="dv">12</span>, <span class="dv">9</span>]])</span>
+<span id="cb420-2"><a href="numpy.html#cb420-2" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
 <p>Також існує більше сорока допоміжних функцій, які дозволяють створити різні ndarray. Ми не будемо розглядати кожну з них, а розглянемо тільки кілька корисних функцій. Наприклад, <code>np.arange()</code>. Вона створює ndarray з рівномірно розподілениими значеннями в заданому інтервалі. Якщо ви пам’ятаєте функцію <code>range()</code> (Глава <a href="#for"><strong>??</strong></a>), то це її NumPy еквівалент.</p>
 <p>Скажімо я хочу створити ndarray який міститеме числа від нуля до дев’яти:</p>
-<div class="sourceCode" id="cb424"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb424-1"><a href="numpy.html#cb424-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
-<span id="cb424-2"><a href="numpy.html#cb424-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
+<div class="sourceCode" id="cb422"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb422-1"><a href="numpy.html#cb422-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine <span class="op">=</span> np.arange(<span class="dv">10</span>)</span>
+<span id="cb422-2"><a href="numpy.html#cb422-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
 <pre><code>## array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre>
 <p>Далі, дуже корисні функції <code>np.zeros()</code> та <code>np.ones()</code>. Вони створюють ndarray, усі елементи яких нулі або одиниці, відповідно. Нам треба зазначити тільки розмір, тобто якщо це двовимірний масив, то кількість рядків та стовпчиків.</p>
-<div class="sourceCode" id="cb426"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb426-1"><a href="numpy.html#cb426-1" aria-hidden="true" tabindex="-1"></a>ones <span class="op">=</span> np.ones(shape<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
-<span id="cb426-2"><a href="numpy.html#cb426-2" aria-hidden="true" tabindex="-1"></a>ones</span></code></pre></div>
+<div class="sourceCode" id="cb424"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb424-1"><a href="numpy.html#cb424-1" aria-hidden="true" tabindex="-1"></a>ones <span class="op">=</span> np.ones(shape<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
+<span id="cb424-2"><a href="numpy.html#cb424-2" aria-hidden="true" tabindex="-1"></a>ones</span></code></pre></div>
 <pre><code>## array([[1., 1., 1.],
 ##        [1., 1., 1.],
 ##        [1., 1., 1.],
 ##        [1., 1., 1.]])</code></pre>
-<div class="sourceCode" id="cb428"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb428-1"><a href="numpy.html#cb428-1" aria-hidden="true" tabindex="-1"></a>zero <span class="op">=</span> np.zeros(shape<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
-<span id="cb428-2"><a href="numpy.html#cb428-2" aria-hidden="true" tabindex="-1"></a>zero</span></code></pre></div>
+<div class="sourceCode" id="cb426"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb426-1"><a href="numpy.html#cb426-1" aria-hidden="true" tabindex="-1"></a>zero <span class="op">=</span> np.zeros(shape<span class="op">=</span>(<span class="dv">4</span>, <span class="dv">3</span>))</span>
+<span id="cb426-2"><a href="numpy.html#cb426-2" aria-hidden="true" tabindex="-1"></a>zero</span></code></pre></div>
 <pre><code>## array([[0., 0., 0.],
 ##        [0., 0., 0.],
 ##        [0., 0., 0.],
@@ -525,27 +531,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="працюємо-з-атребутами-ndarray" class="section level2 hasAnchor" number="18.4">
 <h2><span class="header-section-number">18.4</span> Працюємо з атребутами <code>ndarray</code><a href="numpy.html#працюємо-з-атребутами-ndarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Коли ми будемо більш конкретно працювати з <code>ndarray</code>, рано чи пізно нам знадобиться інформація про нього. Ну наприклад, який це <code>ndarray</code>, одновимірний чи двовимірний? Щоб дізнатись кількість вимірів, ми можемо подивитись на значення атрібуту <code>ndim</code>:</p>
-<div class="sourceCode" id="cb430"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb430-1"><a href="numpy.html#cb430-1" aria-hidden="true" tabindex="-1"></a>inna.ndim</span></code></pre></div>
+<div class="sourceCode" id="cb428"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb428-1"><a href="numpy.html#cb428-1" aria-hidden="true" tabindex="-1"></a>inna.ndim</span></code></pre></div>
 <pre><code>## 1</code></pre>
 <p>Змінна <code>inna</code> дійсно є одновимірним <code>ndarray</code>. Давайте переконаємось, що <code>class10b</code> є двовимірним масивом:</p>
-<div class="sourceCode" id="cb432"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb432-1"><a href="numpy.html#cb432-1" aria-hidden="true" tabindex="-1"></a>class10b.ndim</span></code></pre></div>
+<div class="sourceCode" id="cb430"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb430-1"><a href="numpy.html#cb430-1" aria-hidden="true" tabindex="-1"></a>class10b.ndim</span></code></pre></div>
 <pre><code>## 2</code></pre>
 <p>Йдемо далі. В нашому <code>ndarray</code> <code>inna</code> ми маємо три значення. Іншими словами, довжина цього одновимірного масива дорівню трьом. Щоб отримати це значення, ми роздрукуємо занчення атрибуту <code>shape</code>:</p>
-<div class="sourceCode" id="cb434"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb434-1"><a href="numpy.html#cb434-1" aria-hidden="true" tabindex="-1"></a>inna.shape</span></code></pre></div>
+<div class="sourceCode" id="cb432"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb432-1"><a href="numpy.html#cb432-1" aria-hidden="true" tabindex="-1"></a>inna.shape</span></code></pre></div>
 <pre><code>## (3,)</code></pre>
 <p><code>Ndarray</code> <code>class10b</code> має три стовпчики та чотири рядки. Кількість рядків та стовпчиків теж знаходиться в атрибуті <code>shape</code>:</p>
-<div class="sourceCode" id="cb436"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb436-1"><a href="numpy.html#cb436-1" aria-hidden="true" tabindex="-1"></a>class10b.shape</span></code></pre></div>
+<div class="sourceCode" id="cb434"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb434-1"><a href="numpy.html#cb434-1" aria-hidden="true" tabindex="-1"></a>class10b.shape</span></code></pre></div>
 <pre><code>## (4, 3)</code></pre>
 <p>Останній атрибут який ми розглянемо – це тип даних. Як і скаляр, NumPy <code>ndarray</code> має свій тип даних, який до речі, нагадую, один і той самий для усіх елементів масиву. Значення цього атрібуту можна отримати, якщо зазначити атрибут <code>dtype</code> після крапки. Давайте подивимось на тип даних нашої змінної <code>inna</code>:</p>
-<div class="sourceCode" id="cb438"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb438-1"><a href="numpy.html#cb438-1" aria-hidden="true" tabindex="-1"></a>inna.dtype</span></code></pre></div>
+<div class="sourceCode" id="cb436"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb436-1"><a href="numpy.html#cb436-1" aria-hidden="true" tabindex="-1"></a>inna.dtype</span></code></pre></div>
 <pre><code>## dtype(&#39;int64&#39;)</code></pre>
 <p>Тип даних <code>inna</code> – <code>int</code>, тобто ціле число. Також у нас є <code>float</code> для дійсних чисел. Давайте швиденько подивимось:</p>
-<div class="sourceCode" id="cb440"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb440-1"><a href="numpy.html#cb440-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> np.array([<span class="fl">36.6</span>])</span>
-<span id="cb440-2"><a href="numpy.html#cb440-2" aria-hidden="true" tabindex="-1"></a>temp.dtype</span></code></pre></div>
+<div class="sourceCode" id="cb438"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb438-1"><a href="numpy.html#cb438-1" aria-hidden="true" tabindex="-1"></a>temp <span class="op">=</span> np.array([<span class="fl">36.6</span>])</span>
+<span id="cb438-2"><a href="numpy.html#cb438-2" aria-hidden="true" tabindex="-1"></a>temp.dtype</span></code></pre></div>
 <pre><code>## dtype(&#39;float64&#39;)</code></pre>
 <p>Так само як і у скалярів, у нас ще є тип <code>bool</code>, який приймає або <code>True</code> або <code>False</code> значення:</p>
-<div class="sourceCode" id="cb442"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb442-1"><a href="numpy.html#cb442-1" aria-hidden="true" tabindex="-1"></a>good_student <span class="op">=</span> np.array([<span class="va">True</span>])</span>
-<span id="cb442-2"><a href="numpy.html#cb442-2" aria-hidden="true" tabindex="-1"></a>good_student.dtype</span></code></pre></div>
+<div class="sourceCode" id="cb440"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb440-1"><a href="numpy.html#cb440-1" aria-hidden="true" tabindex="-1"></a>good_student <span class="op">=</span> np.array([<span class="va">True</span>])</span>
+<span id="cb440-2"><a href="numpy.html#cb440-2" aria-hidden="true" tabindex="-1"></a>good_student.dtype</span></code></pre></div>
 <pre><code>## dtype(&#39;bool&#39;)</code></pre>
 <p>Ми також можемо зберігати тексти та символи у <code>ndarray</code>, елементи якого будуть мати тип <code>str</code>. Але це досить рідкісний випадок, тому ми не будемо його розглядати.</p>
 </div>
@@ -553,32 +559,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">18.5</span> Використовуємо оператори для <code>ndarray</code><a href="numpy.html#використовуємо-оператори-для-ndarray" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>NumPy дуже зручний коли йдеться про арефметичні операції. Під арефметичними операціями, ми маємо на увазі додавання, віднімання, множення і ділення. Ці операції виконуються поелементно. Наприклад, якщо ми додамо два ndarray поелементно, це означає що ми додамо перший елемент до першого, другий - до другого, і так далі.</p>
 <p>Давайте порахуємо скільки Інна та Андрій отримали балів разом з кожного предмету:</p>
-<div class="sourceCode" id="cb444"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb444-1"><a href="numpy.html#cb444-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span>
-<span id="cb444-2"><a href="numpy.html#cb444-2" aria-hidden="true" tabindex="-1"></a>andrii <span class="op">=</span> np.array([<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">9</span>])</span>
-<span id="cb444-3"><a href="numpy.html#cb444-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb444-4"><a href="numpy.html#cb444-4" aria-hidden="true" tabindex="-1"></a>inna <span class="op">+</span> andrii</span></code></pre></div>
+<div class="sourceCode" id="cb442"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb442-1"><a href="numpy.html#cb442-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">=</span> np.array([<span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">10</span>])</span>
+<span id="cb442-2"><a href="numpy.html#cb442-2" aria-hidden="true" tabindex="-1"></a>andrii <span class="op">=</span> np.array([<span class="dv">7</span>, <span class="dv">12</span>, <span class="dv">9</span>])</span>
+<span id="cb442-3"><a href="numpy.html#cb442-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb442-4"><a href="numpy.html#cb442-4" aria-hidden="true" tabindex="-1"></a>inna <span class="op">+</span> andrii</span></code></pre></div>
 <pre><code>## array([16, 20, 19])</code></pre>
 <p>Такм же чином, ми можемо помножити ці ndarray. Це не буде мати фізичного сенсу, проте продемонструє як працює арифметика:</p>
-<div class="sourceCode" id="cb446"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb446-1"><a href="numpy.html#cb446-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">*</span> andrii</span></code></pre></div>
+<div class="sourceCode" id="cb444"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb444-1"><a href="numpy.html#cb444-1" aria-hidden="true" tabindex="-1"></a>inna <span class="op">*</span> andrii</span></code></pre></div>
 <pre><code>## array([63, 96, 90])</code></pre>
 <p>Це правило також поширюється і на масиви з більшою кількістю вимірів:</p>
-<div class="sourceCode" id="cb448"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb448-1"><a href="numpy.html#cb448-1" aria-hidden="true" tabindex="-1"></a>class10b </span></code></pre></div>
+<div class="sourceCode" id="cb446"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb446-1"><a href="numpy.html#cb446-1" aria-hidden="true" tabindex="-1"></a>class10b </span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb450"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb450-1"><a href="numpy.html#cb450-1" aria-hidden="true" tabindex="-1"></a>ones</span></code></pre></div>
+<div class="sourceCode" id="cb448"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb448-1"><a href="numpy.html#cb448-1" aria-hidden="true" tabindex="-1"></a>ones</span></code></pre></div>
 <pre><code>## array([[1., 1., 1.],
 ##        [1., 1., 1.],
 ##        [1., 1., 1.],
 ##        [1., 1., 1.]])</code></pre>
-<div class="sourceCode" id="cb452"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb452-1"><a href="numpy.html#cb452-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">+</span> ones</span></code></pre></div>
+<div class="sourceCode" id="cb450"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb450-1"><a href="numpy.html#cb450-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">+</span> ones</span></code></pre></div>
 <pre><code>## array([[10.,  9., 11.],
 ##        [ 8., 13., 10.],
 ##        [13., 12., 12.],
 ##        [11., 13., 10.]])</code></pre>
 <p>Якщо ми замість другого або першого ndarray підставимо скаляр, то кожний елемент з цього ndarray буде, наприклад, помноженно на цей скаляр:</p>
-<div class="sourceCode" id="cb454"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb454-1"><a href="numpy.html#cb454-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
+<div class="sourceCode" id="cb452"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb452-1"><a href="numpy.html#cb452-1" aria-hidden="true" tabindex="-1"></a>class10b <span class="op">*</span> <span class="dv">2</span></span></code></pre></div>
 <pre><code>## array([[18, 16, 20],
 ##        [14, 24, 18],
 ##        [24, 22, 22],
@@ -588,16 +594,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="використовуємо-універсальні-функції-ufunc" class="section level2 hasAnchor" number="18.6">
 <h2><span class="header-section-number">18.6</span> Використовуємо універсальні функції ufunc<a href="numpy.html#використовуємо-універсальні-функції-ufunc" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Також NumPy має великий набір корисних функцій, які застосовуються до кожного елементу. Давайте подивимось на декілька з них:</p>
-<div class="sourceCode" id="cb456"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb456-1"><a href="numpy.html#cb456-1" aria-hidden="true" tabindex="-1"></a>inna</span></code></pre></div>
+<div class="sourceCode" id="cb454"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb454-1"><a href="numpy.html#cb454-1" aria-hidden="true" tabindex="-1"></a>inna</span></code></pre></div>
 <pre><code>## array([ 9,  8, 10])</code></pre>
-<div class="sourceCode" id="cb458"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb458-1"><a href="numpy.html#cb458-1" aria-hidden="true" tabindex="-1"></a>np.sqrt(inna)</span></code></pre></div>
+<div class="sourceCode" id="cb456"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb456-1"><a href="numpy.html#cb456-1" aria-hidden="true" tabindex="-1"></a>np.sqrt(inna)</span></code></pre></div>
 <pre><code>## array([3.        , 2.82842712, 3.16227766])</code></pre>
-<div class="sourceCode" id="cb460"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb460-1"><a href="numpy.html#cb460-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb458"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb458-1"><a href="numpy.html#cb458-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb462"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb462-1"><a href="numpy.html#cb462-1" aria-hidden="true" tabindex="-1"></a>np.log(class10b)</span></code></pre></div>
+<div class="sourceCode" id="cb460"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb460-1"><a href="numpy.html#cb460-1" aria-hidden="true" tabindex="-1"></a>np.log(class10b)</span></code></pre></div>
 <pre><code>## array([[2.19722458, 2.07944154, 2.30258509],
 ##        [1.94591015, 2.48490665, 2.19722458],
 ##        [2.48490665, 2.39789527, 2.39789527],
@@ -608,63 +614,63 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">18.7</span> Узагалнюємо із статистичними методами<a href="numpy.html#узагалнюємо-із-статистичними-методами" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Дуже часто нам буде цікаво подивитись на узагальнення наших даних. Наприклад, на середній бал, мінімальну оцінку, максимальну оцінку тощо. Такі значення називаються статичтичними показниками, і NumPy має цілу ниску цих фунцкій. Давайте подивимось на показники, які ви зразу ж можете зрозуміти та використовувати.</p>
 <p>Наприклад, щоб знайти середній бал Інни, нам достатньо прописати настпну інструкцію:</p>
-<div class="sourceCode" id="cb464"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb464-1"><a href="numpy.html#cb464-1" aria-hidden="true" tabindex="-1"></a>np.mean(class10b)</span></code></pre></div>
+<div class="sourceCode" id="cb462"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb462-1"><a href="numpy.html#cb462-1" aria-hidden="true" tabindex="-1"></a>np.mean(class10b)</span></code></pre></div>
 <pre><code>## 10.0</code></pre>
 <p>Мінімальний та максимальний бали, відповідно:</p>
-<div class="sourceCode" id="cb466"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb466-1"><a href="numpy.html#cb466-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">min</span>(class10b)</span></code></pre></div>
+<div class="sourceCode" id="cb464"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb464-1"><a href="numpy.html#cb464-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">min</span>(class10b)</span></code></pre></div>
 <pre><code>## 7</code></pre>
-<div class="sourceCode" id="cb468"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb468-1"><a href="numpy.html#cb468-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">max</span>(class10b)</span></code></pre></div>
+<div class="sourceCode" id="cb466"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb466-1"><a href="numpy.html#cb466-1" aria-hidden="true" tabindex="-1"></a>np.<span class="bu">max</span>(class10b)</span></code></pre></div>
 <pre><code>## 12</code></pre>
 </div>
 <div id="звертаємось-до-елементів" class="section level2 hasAnchor" number="18.8">
 <h2><span class="header-section-number">18.8</span> Звертаємось до елементів<a href="numpy.html#звертаємось-до-елементів" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>В багатьох випадках нам буде необхідно отримати значення якогось елементу або елементів з <code>ndarray</code>. Наприклад, нас цікавить оцінка Інни з біології – то нам треба отримати елемент з індексом два. Індексація в <code>ndarray</code> починається з нуля, так само як і у списка <code>list</code>. Щоб отримати елемент одновимірного масиву за заданим ідексом, нам достатьно написати ім’я змінної і індекс загорнутий в квадратні дужки. Давайте спробуємо:</p>
-<div class="sourceCode" id="cb470"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb470-1"><a href="numpy.html#cb470-1" aria-hidden="true" tabindex="-1"></a>inna[<span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb468"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb468-1"><a href="numpy.html#cb468-1" aria-hidden="true" tabindex="-1"></a>inna[<span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## 10</code></pre>
-<div class="sourceCode" id="cb472"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb472-1"><a href="numpy.html#cb472-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">4</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb470"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb470-1"><a href="numpy.html#cb470-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">4</span>]</span></code></pre></div>
 <pre><code>## 4</code></pre>
 <p>У NumPy теж реалізован слайсінг. Як ми вже казали у Главі <a href="list.html#list">7</a>, слайсінг дозволяє отримати декілька елементів (тобто зріз) однією командою. Для цього треба зазначити початковий індекс, двокрапку і останній індекс.</p>
 <p>Використаємо слайсінг на <code>zero_to_nine</code>:</p>
-<div class="sourceCode" id="cb474"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb474-1"><a href="numpy.html#cb474-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
+<div class="sourceCode" id="cb472"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb472-1"><a href="numpy.html#cb472-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
 <pre><code>## array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])</code></pre>
-<div class="sourceCode" id="cb476"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb476-1"><a href="numpy.html#cb476-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">1</span>:<span class="dv">5</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb474"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb474-1"><a href="numpy.html#cb474-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">1</span>:<span class="dv">5</span>]</span></code></pre></div>
 <pre><code>## array([1, 2, 3, 4])</code></pre>
 <p>Як бачимо, у результаті цієї команди ми отримали елементи із індексами 1, 2, 3 та 4. Тобто усі числа з індексу один включно і до самої п’ятірки. При чому елемент з індексом 5 ми не включили.</p>
 <p>Давайте ще раз спробуємо отримати елементи з індексами 3, 4 та 5. Треба зазначити спочатку 3, тому що перший елемент до двокрапок ми включаємо, далі двокрапку, і шість – тому що шість ми вже не включимо</p>
-<div class="sourceCode" id="cb478"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb478-1"><a href="numpy.html#cb478-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">3</span>:<span class="dv">6</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb476"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb476-1"><a href="numpy.html#cb476-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">3</span>:<span class="dv">6</span>]</span></code></pre></div>
 <pre><code>## array([3, 4, 5])</code></pre>
 <p>До речі, усі трюки які ми бачили коли дивились на слайсігу списків, як наприклад від’ємні індекси або дві двокрапки, можна використати і з <code>ndarray</code>.</p>
 <p>Якщо ми хочемо прикзначити нове значення якомусь елементу в <code>ndarray</code>, ми також можемо використати індексацію та слайсінг:</p>
-<div class="sourceCode" id="cb480"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb480-1"><a href="numpy.html#cb480-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb480-2"><a href="numpy.html#cb480-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
+<div class="sourceCode" id="cb478"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb478-1"><a href="numpy.html#cb478-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">2</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb478-2"><a href="numpy.html#cb478-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
 <pre><code>## array([0, 1, 5, 3, 4, 5, 6, 7, 8, 9])</code></pre>
-<div class="sourceCode" id="cb482"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb482-1"><a href="numpy.html#cb482-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">4</span>:<span class="dv">6</span>] <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb482-2"><a href="numpy.html#cb482-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
+<div class="sourceCode" id="cb480"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb480-1"><a href="numpy.html#cb480-1" aria-hidden="true" tabindex="-1"></a>zero_to_nine[<span class="dv">4</span>:<span class="dv">6</span>] <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb480-2"><a href="numpy.html#cb480-2" aria-hidden="true" tabindex="-1"></a>zero_to_nine</span></code></pre></div>
 <pre><code>## array([0, 1, 5, 3, 5, 5, 6, 7, 8, 9])</code></pre>
 <p>В двовимірних масивах, кожен елемент має два індекси. Щоб отримати значення елементу за індексами, треба написати і’мя змінної, потім викдрити квадратні дужки, зазначити перший індекс, кома, другий індекс, та зачинити квадратну дужку. Давайте спробуємо на <code>class10b</code>:</p>
-<div class="sourceCode" id="cb484"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb484-1"><a href="numpy.html#cb484-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb482"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb482-1"><a href="numpy.html#cb482-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb486"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb486-1"><a href="numpy.html#cb486-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb484"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb484-1"><a href="numpy.html#cb484-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## 9</code></pre>
 <p>Ми також можемо використати slicing для першого або другого індексу. Я хочу отримати оцінки з української для Андрія та Оксани:</p>
-<div class="sourceCode" id="cb488"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb488-1"><a href="numpy.html#cb488-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb486"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb486-1"><a href="numpy.html#cb486-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb490"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb490-1"><a href="numpy.html#cb490-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">1</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb488"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb488-1"><a href="numpy.html#cb488-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">0</span>:<span class="dv">2</span>, <span class="dv">1</span>]</span></code></pre></div>
 <pre><code>## array([ 8, 12])</code></pre>
 <p>Аналогічно до одновимірного масиву, ми можемо змінити елементи <code>ndarray</code>. Наприклад, ми зробили помилку, і Інна отримала одинадцять з математики. Щоб скорегувати цю оцінку, достатньо призначити елементу з індексами нуль та нуль оцінку в одинадцять балів.</p>
-<div class="sourceCode" id="cb492"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb492-1"><a href="numpy.html#cb492-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb490"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb490-1"><a href="numpy.html#cb490-1" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[ 9,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
 ##        [10, 12,  9]])</code></pre>
-<div class="sourceCode" id="cb494"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb494-1"><a href="numpy.html#cb494-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="dv">11</span></span>
-<span id="cb494-2"><a href="numpy.html#cb494-2" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
+<div class="sourceCode" id="cb492"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb492-1"><a href="numpy.html#cb492-1" aria-hidden="true" tabindex="-1"></a>class10b[<span class="dv">0</span>, <span class="dv">0</span>] <span class="op">=</span> <span class="dv">11</span></span>
+<span id="cb492-2"><a href="numpy.html#cb492-2" aria-hidden="true" tabindex="-1"></a>class10b</span></code></pre></div>
 <pre><code>## array([[11,  8, 10],
 ##        [ 7, 12,  9],
 ##        [12, 11, 11],
@@ -676,10 +682,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Тривимірні масиви нам знадобляться для збереження зображень. Коли цих зображень буде декілька і нам треба буде помістити їх в один об’єкт, тоді ми використаємо чотиривимірні масиви. Взагалі, якщо не брати до уваги відео дані, то чотирьох вимірів нам як правило буде достатньо. Але все одно ви вже знаєте як утворити масиви з більшою кількістю вимірів. А ще в deep learning, масиви прийнято називати тензорами.</p>
 <p>Давайте шивденько подивимось, як працювати з тривимірними та чотиривимірними масивами.</p>
 <p>Наприклад, давайте створимо один трьохвимірний і один чотиривимірний масив:</p>
-<div class="sourceCode" id="cb496"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb496-1"><a href="numpy.html#cb496-1" aria-hidden="true" tabindex="-1"></a>array3d <span class="op">=</span> np.arange(<span class="dv">27</span>)</span>
-<span id="cb496-2"><a href="numpy.html#cb496-2" aria-hidden="true" tabindex="-1"></a>array3d.shape <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span>
-<span id="cb496-3"><a href="numpy.html#cb496-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb496-4"><a href="numpy.html#cb496-4" aria-hidden="true" tabindex="-1"></a>array3d</span></code></pre></div>
+<div class="sourceCode" id="cb494"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb494-1"><a href="numpy.html#cb494-1" aria-hidden="true" tabindex="-1"></a>array3d <span class="op">=</span> np.arange(<span class="dv">27</span>)</span>
+<span id="cb494-2"><a href="numpy.html#cb494-2" aria-hidden="true" tabindex="-1"></a>array3d.shape <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span>
+<span id="cb494-3"><a href="numpy.html#cb494-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb494-4"><a href="numpy.html#cb494-4" aria-hidden="true" tabindex="-1"></a>array3d</span></code></pre></div>
 <pre><code>## array([[[ 0,  1,  2],
 ##         [ 3,  4,  5],
 ##         [ 6,  7,  8]],
@@ -691,11 +697,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ##        [[18, 19, 20],
 ##         [21, 22, 23],
 ##         [24, 25, 26]]])</code></pre>
-<div class="sourceCode" id="cb498"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb498-1"><a href="numpy.html#cb498-1" aria-hidden="true" tabindex="-1"></a>array3d[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb496"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb496-1"><a href="numpy.html#cb496-1" aria-hidden="true" tabindex="-1"></a>array3d[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## 5</code></pre>
-<div class="sourceCode" id="cb500"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb500-1"><a href="numpy.html#cb500-1" aria-hidden="true" tabindex="-1"></a>array4d <span class="op">=</span> np.arange(<span class="dv">81</span>)</span>
-<span id="cb500-2"><a href="numpy.html#cb500-2" aria-hidden="true" tabindex="-1"></a>array4d.shape <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
-<div class="sourceCode" id="cb501"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb501-1"><a href="numpy.html#cb501-1" aria-hidden="true" tabindex="-1"></a>array4d[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span></code></pre></div>
+<div class="sourceCode" id="cb498"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb498-1"><a href="numpy.html#cb498-1" aria-hidden="true" tabindex="-1"></a>array4d <span class="op">=</span> np.arange(<span class="dv">81</span>)</span>
+<span id="cb498-2"><a href="numpy.html#cb498-2" aria-hidden="true" tabindex="-1"></a>array4d.shape <span class="op">=</span> (<span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb499"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb499-1"><a href="numpy.html#cb499-1" aria-hidden="true" tabindex="-1"></a>array4d[<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">2</span>]</span></code></pre></div>
 <pre><code>## 2</code></pre>
 <hr />
 <hr />
@@ -706,48 +712,48 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">1. Оберіть правильні твердження щодо масивів <code>ndarrays</code>:</div>
 <label>
-<input type="checkbox" name="69f387f6-f5e5-4315-937e-9d130f056ee3" value="true">Елементи повинні бути одного типу</input>
+<input type="checkbox" name="7dcf351a-7638-4ad4-8426-b4129f00f03e" value="true">Елементи повинні бути одного типу</input>
 </label>
 <label>
-<input type="checkbox" name="69f387f6-f5e5-4315-937e-9d130f056ee3" value="false">Елементи можуть мати різні типи</input>
+<input type="checkbox" name="7dcf351a-7638-4ad4-8426-b4129f00f03e" value="false">Елементи можуть мати різні типи</input>
 </label>
 <label>
-<input type="checkbox" name="69f387f6-f5e5-4315-937e-9d130f056ee3" value="false">К-ть елементів у масиві обмежена</input>
+<input type="checkbox" name="7dcf351a-7638-4ad4-8426-b4129f00f03e" value="false">К-ть елементів у масиві обмежена</input>
 </label>
 <label>
-<input type="checkbox" name="69f387f6-f5e5-4315-937e-9d130f056ee3" value="true">З тривимірних масивів можна створити чотиривимірний масив</input>
+<input type="checkbox" name="7dcf351a-7638-4ad4-8426-b4129f00f03e" value="true">З тривимірних масивів можна створити чотиривимірний масив</input>
 </label>
 <label>
-<input type="checkbox" name="69f387f6-f5e5-4315-937e-9d130f056ee3" value="false">Всі твердження є правильними</input>
+<input type="checkbox" name="7dcf351a-7638-4ad4-8426-b4129f00f03e" value="false">Всі твердження є правильними</input>
 </label>
 <label>
-<input type="checkbox" name="69f387f6-f5e5-4315-937e-9d130f056ee3" value="false">Всі твердження не є правильним</input>
+<input type="checkbox" name="7dcf351a-7638-4ad4-8426-b4129f00f03e" value="false">Всі твердження не є правильним</input>
 </label>
-<button class="check" id="6989db9f-0fd9-4ccd-bdaf-377491b5ddca" onclick="checkOptions(&quot;6989db9f-0fd9-4ccd-bdaf-377491b5ddca&quot;, &quot;69f387f6-f5e5-4315-937e-9d130f056ee3&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
+<button class="check" id="637cccea-d36e-46ac-ab38-1c09d264d3c9" onclick="checkOptions(&quot;637cccea-d36e-46ac-ab38-1c09d264d3c9&quot;, &quot;7dcf351a-7638-4ad4-8426-b4129f00f03e&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);">Перевірити</button>
 </div>
 <div class="quiz">
 <div class="question">2. Котрий рядок коду правильно створить масив <code>ndarray</code>?
 </div>
 <label>
-<input type="radio" name="512d7be4-00ca-46b3-8e8c-cc88a23adcf4" value="false"><code>prices = [15, 20, 25, 30, 35]</code></input>
+<input type="radio" name="61470273-61ab-4e79-8325-9ee68af6577e" value="false"><code>prices = [15, 20, 25, 30, 35]</code></input>
 </label>
 <label>
-<input type="radio" name="512d7be4-00ca-46b3-8e8c-cc88a23adcf4" value="true"><code>prices = np.array([15, 20, 25, 30, 35])</code></input>
+<input type="radio" name="61470273-61ab-4e79-8325-9ee68af6577e" value="true"><code>prices = np.array([15, 20, 25, 30, 35])</code></input>
 </label>
 <label>
-<input type="radio" name="512d7be4-00ca-46b3-8e8c-cc88a23adcf4" value="false"><code>prices = np.array([15, 20, 25, 30, 35], [635, 33, 37, 25, 93])</code></input>
+<input type="radio" name="61470273-61ab-4e79-8325-9ee68af6577e" value="false"><code>prices = np.array([15, 20, 25, 30, 35], [635, 33, 37, 25, 93])</code></input>
 </label>
 <label>
-<input type="radio" name="512d7be4-00ca-46b3-8e8c-cc88a23adcf4" value="false">Всі рядки коду неправильно створюють масив</input>
+<input type="radio" name="61470273-61ab-4e79-8325-9ee68af6577e" value="false">Всі рядки коду неправильно створюють масив</input>
 </label>
 <label>
-<input type="radio" name="512d7be4-00ca-46b3-8e8c-cc88a23adcf4" value="false">Всі рядки коду правильно створюють масив</input>
+<input type="radio" name="61470273-61ab-4e79-8325-9ee68af6577e" value="false">Всі рядки коду правильно створюють масив</input>
 </label>
-<button class="check" id="c57f47f8-302a-4b0a-be03-b692bce1dea9" onclick="checkOptions(&quot;c57f47f8-302a-4b0a-be03-b692bce1dea9&quot;, &quot;512d7be4-00ca-46b3-8e8c-cc88a23adcf4&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="64d2491c-8f47-4727-a925-9593675a2c98" onclick="checkOptions(&quot;64d2491c-8f47-4727-a925-9593675a2c98&quot;, &quot;61470273-61ab-4e79-8325-9ee68af6577e&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('512d7be4-00ca-46b3-8e8c-cc88a23adcf4');
-    const submitButton = document.getElementById('c57f47f8-302a-4b0a-be03-b692bce1dea9');
+    const radioButtons = document.getElementsByName('61470273-61ab-4e79-8325-9ee68af6577e');
+    const submitButton = document.getElementById('64d2491c-8f47-4727-a925-9593675a2c98');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -759,22 +765,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="question">3. Який атрибут дозволяє дізнатись кількість вимірів <code>ndarray</code>?
 </div>
 <label>
-<input type="radio" name="2d7ae151-3bbe-4728-ab64-50e89f9e8aba" value="false"><code>.shape</code></input>
+<input type="radio" name="f426cd91-e4b6-47bb-b23d-2878de5d99ba" value="false"><code>.shape</code></input>
 </label>
 <label>
-<input type="radio" name="2d7ae151-3bbe-4728-ab64-50e89f9e8aba" value="true"><code>.ndim</code></input>
+<input type="radio" name="f426cd91-e4b6-47bb-b23d-2878de5d99ba" value="true"><code>.ndim</code></input>
 </label>
 <label>
-<input type="radio" name="2d7ae151-3bbe-4728-ab64-50e89f9e8aba" value="false"><code>.dtype</code></input>
+<input type="radio" name="f426cd91-e4b6-47bb-b23d-2878de5d99ba" value="false"><code>.dtype</code></input>
 </label>
 <label>
-<input type="radio" name="2d7ae151-3bbe-4728-ab64-50e89f9e8aba" value="false"><code>.size</code></input>
+<input type="radio" name="f426cd91-e4b6-47bb-b23d-2878de5d99ba" value="false"><code>.size</code></input>
 </label>
-<button class="check" id="85b31fa7-0f35-49d2-9147-aaa51eb715c7" onclick="checkOptions(&quot;85b31fa7-0f35-49d2-9147-aaa51eb715c7&quot;, &quot;2d7ae151-3bbe-4728-ab64-50e89f9e8aba&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="c0259b34-7dae-444e-9dc6-897a7ea59d7f" onclick="checkOptions(&quot;c0259b34-7dae-444e-9dc6-897a7ea59d7f&quot;, &quot;f426cd91-e4b6-47bb-b23d-2878de5d99ba&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('2d7ae151-3bbe-4728-ab64-50e89f9e8aba');
-    const submitButton = document.getElementById('85b31fa7-0f35-49d2-9147-aaa51eb715c7');
+    const radioButtons = document.getElementsByName('f426cd91-e4b6-47bb-b23d-2878de5d99ba');
+    const submitButton = document.getElementById('c0259b34-7dae-444e-9dc6-897a7ea59d7f');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -785,22 +791,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">4. Що показує значення атрибуту <code>.shape</code> для одновимірного <code>ndarray</code>?</div>
 <label>
-<input type="radio" name="cfd125c6-9159-46a6-ac7b-165d07846d35" value="false">Кількість стовпчиків та рядків</input>
+<input type="radio" name="b1cf4ea5-2ccd-4604-a9d8-5ffdef82222b" value="false">Кількість стовпчиків та рядків</input>
 </label>
 <label>
-<input type="radio" name="cfd125c6-9159-46a6-ac7b-165d07846d35" value="false">Кількість рядків</input>
+<input type="radio" name="b1cf4ea5-2ccd-4604-a9d8-5ffdef82222b" value="false">Кількість рядків</input>
 </label>
 <label>
-<input type="radio" name="cfd125c6-9159-46a6-ac7b-165d07846d35" value="false">Кількість стовпчиків</input>
+<input type="radio" name="b1cf4ea5-2ccd-4604-a9d8-5ffdef82222b" value="false">Кількість стовпчиків</input>
 </label>
 <label>
-<input type="radio" name="cfd125c6-9159-46a6-ac7b-165d07846d35" value="true">Кількість елементів</input>
+<input type="radio" name="b1cf4ea5-2ccd-4604-a9d8-5ffdef82222b" value="true">Кількість елементів</input>
 </label>
-<button class="check" id="f4e99430-f923-4d80-9278-1b1045da71ad" onclick="checkOptions(&quot;f4e99430-f923-4d80-9278-1b1045da71ad&quot;, &quot;cfd125c6-9159-46a6-ac7b-165d07846d35&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="97e1ec8d-8c99-457c-bc82-3e83660db2f7" onclick="checkOptions(&quot;97e1ec8d-8c99-457c-bc82-3e83660db2f7&quot;, &quot;b1cf4ea5-2ccd-4604-a9d8-5ffdef82222b&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('cfd125c6-9159-46a6-ac7b-165d07846d35');
-    const submitButton = document.getElementById('f4e99430-f923-4d80-9278-1b1045da71ad');
+    const radioButtons = document.getElementsByName('b1cf4ea5-2ccd-4604-a9d8-5ffdef82222b');
+    const submitButton = document.getElementById('97e1ec8d-8c99-457c-bc82-3e83660db2f7');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -811,22 +817,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">5. Які арефметичні операції можна виконати з двома <code>ndarray</code>?</div>
 <label>
-<input type="radio" name="9c9aeb11-6416-46fe-af36-72a5ae3cf626" value="true">Будь-які</input>
+<input type="radio" name="a817c09b-da24-407e-9443-595f882c24b2" value="true">Будь-які</input>
 </label>
 <label>
-<input type="radio" name="9c9aeb11-6416-46fe-af36-72a5ae3cf626" value="false">Лише додавання та віднімання</input>
+<input type="radio" name="a817c09b-da24-407e-9443-595f882c24b2" value="false">Лише додавання та віднімання</input>
 </label>
 <label>
-<input type="radio" name="9c9aeb11-6416-46fe-af36-72a5ae3cf626" value="false">Лише множення і ділення</input>
+<input type="radio" name="a817c09b-da24-407e-9443-595f882c24b2" value="false">Лише множення і ділення</input>
 </label>
 <label>
-<input type="radio" name="9c9aeb11-6416-46fe-af36-72a5ae3cf626" value="false">Лише додавання та множення</input>
+<input type="radio" name="a817c09b-da24-407e-9443-595f882c24b2" value="false">Лише додавання та множення</input>
 </label>
-<button class="check" id="f8238825-daa2-4ae2-bbb5-e316e6203cfb" onclick="checkOptions(&quot;f8238825-daa2-4ae2-bbb5-e316e6203cfb&quot;, &quot;9c9aeb11-6416-46fe-af36-72a5ae3cf626&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="792f8cc3-596a-4257-9c06-2ef5c2df4021" onclick="checkOptions(&quot;792f8cc3-596a-4257-9c06-2ef5c2df4021&quot;, &quot;a817c09b-da24-407e-9443-595f882c24b2&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('9c9aeb11-6416-46fe-af36-72a5ae3cf626');
-    const submitButton = document.getElementById('f8238825-daa2-4ae2-bbb5-e316e6203cfb');
+    const radioButtons = document.getElementsByName('a817c09b-da24-407e-9443-595f882c24b2');
+    const submitButton = document.getElementById('792f8cc3-596a-4257-9c06-2ef5c2df4021');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -838,22 +844,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="question">6. Як отримати елемент з індексом 3 з одновимірного <code>ndarray</code>?
 </div>
 <label>
-<input type="radio" name="31df4427-6832-4d3f-bf25-dc9f0301776f" value="false"><code>prices(3)</code></input>
+<input type="radio" name="0e6c9b9f-32ef-4576-89c5-29700b4ebbed" value="false"><code>prices(3)</code></input>
 </label>
 <label>
-<input type="radio" name="31df4427-6832-4d3f-bf25-dc9f0301776f" value="false"><code>prices{3}</code></input>
+<input type="radio" name="0e6c9b9f-32ef-4576-89c5-29700b4ebbed" value="false"><code>prices{3}</code></input>
 </label>
 <label>
-<input type="radio" name="31df4427-6832-4d3f-bf25-dc9f0301776f" value="true"><code>prices[3]</code></input>
+<input type="radio" name="0e6c9b9f-32ef-4576-89c5-29700b4ebbed" value="true"><code>prices[3]</code></input>
 </label>
 <label>
-<input type="radio" name="31df4427-6832-4d3f-bf25-dc9f0301776f" value="false"><code>prices.3</code></input>
+<input type="radio" name="0e6c9b9f-32ef-4576-89c5-29700b4ebbed" value="false"><code>prices.3</code></input>
 </label>
-<button class="check" id="d2d92500-75d9-4b04-9a98-c8c862384921" onclick="checkOptions(&quot;d2d92500-75d9-4b04-9a98-c8c862384921&quot;, &quot;31df4427-6832-4d3f-bf25-dc9f0301776f&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="bee52590-cb2b-4c7a-82a4-78331a2c2124" onclick="checkOptions(&quot;bee52590-cb2b-4c7a-82a4-78331a2c2124&quot;, &quot;0e6c9b9f-32ef-4576-89c5-29700b4ebbed&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('31df4427-6832-4d3f-bf25-dc9f0301776f');
-    const submitButton = document.getElementById('d2d92500-75d9-4b04-9a98-c8c862384921');
+    const radioButtons = document.getElementsByName('0e6c9b9f-32ef-4576-89c5-29700b4ebbed');
+    const submitButton = document.getElementById('bee52590-cb2b-4c7a-82a4-78331a2c2124');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -864,22 +870,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">7. Яким індексом в <code>ndarray</code>починається індексація?</div>
 <label>
-<input type="radio" name="af4d1bd9-e7f1-4d29-87ce-741838d8726f" value="true">0</input>
+<input type="radio" name="1bf73213-0da8-4738-a8ad-ec4d0dcbade2" value="true">0</input>
 </label>
 <label>
-<input type="radio" name="af4d1bd9-e7f1-4d29-87ce-741838d8726f" value="false">1</input>
+<input type="radio" name="1bf73213-0da8-4738-a8ad-ec4d0dcbade2" value="false">1</input>
 </label>
 <label>
-<input type="radio" name="af4d1bd9-e7f1-4d29-87ce-741838d8726f" value="false">-1</input>
+<input type="radio" name="1bf73213-0da8-4738-a8ad-ec4d0dcbade2" value="false">-1</input>
 </label>
 <label>
-<input type="radio" name="af4d1bd9-e7f1-4d29-87ce-741838d8726f" value="false">2</input>
+<input type="radio" name="1bf73213-0da8-4738-a8ad-ec4d0dcbade2" value="false">2</input>
 </label>
-<button class="check" id="a54cc6f7-cb99-4a2b-a28c-4845ae4cb1f6" onclick="checkOptions(&quot;a54cc6f7-cb99-4a2b-a28c-4845ae4cb1f6&quot;, &quot;af4d1bd9-e7f1-4d29-87ce-741838d8726f&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="c8043a59-7a26-4efd-9a73-5d232eb2373d" onclick="checkOptions(&quot;c8043a59-7a26-4efd-9a73-5d232eb2373d&quot;, &quot;1bf73213-0da8-4738-a8ad-ec4d0dcbade2&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('af4d1bd9-e7f1-4d29-87ce-741838d8726f');
-    const submitButton = document.getElementById('a54cc6f7-cb99-4a2b-a28c-4845ae4cb1f6');
+    const radioButtons = document.getElementsByName('1bf73213-0da8-4738-a8ad-ec4d0dcbade2');
+    const submitButton = document.getElementById('c8043a59-7a26-4efd-9a73-5d232eb2373d');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -891,22 +897,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="question">8. Що буде результатом виконання коду <code>zero_to_nine[1:5]</code>?
 </div>
 <label>
-<input type="radio" name="ceb78155-355e-49d7-8084-89446c429b4d" value="false">[0, 1, 2, 3, 4]</input>
+<input type="radio" name="6ecce3e4-b3e1-47ee-847c-b52c1a1ab969" value="false">[0, 1, 2, 3, 4]</input>
 </label>
 <label>
-<input type="radio" name="ceb78155-355e-49d7-8084-89446c429b4d" value="true">[1, 2, 3, 4]</input>
+<input type="radio" name="6ecce3e4-b3e1-47ee-847c-b52c1a1ab969" value="true">[1, 2, 3, 4]</input>
 </label>
 <label>
-<input type="radio" name="ceb78155-355e-49d7-8084-89446c429b4d" value="false">[1, 2, 3, 4, 5]</input>
+<input type="radio" name="6ecce3e4-b3e1-47ee-847c-b52c1a1ab969" value="false">[1, 2, 3, 4, 5]</input>
 </label>
 <label>
-<input type="radio" name="ceb78155-355e-49d7-8084-89446c429b4d" value="false">[1, 3, 5, 7]</input>
+<input type="radio" name="6ecce3e4-b3e1-47ee-847c-b52c1a1ab969" value="false">[1, 3, 5, 7]</input>
 </label>
-<button class="check" id="dfece4b3-dfc3-4ac3-a1fb-876b255ea356" onclick="checkOptions(&quot;dfece4b3-dfc3-4ac3-a1fb-876b255ea356&quot;, &quot;ceb78155-355e-49d7-8084-89446c429b4d&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="ffc6c3c3-b443-40d7-a36a-f510a79dc7d3" onclick="checkOptions(&quot;ffc6c3c3-b443-40d7-a36a-f510a79dc7d3&quot;, &quot;6ecce3e4-b3e1-47ee-847c-b52c1a1ab969&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('ceb78155-355e-49d7-8084-89446c429b4d');
-    const submitButton = document.getElementById('dfece4b3-dfc3-4ac3-a1fb-876b255ea356');
+    const radioButtons = document.getElementsByName('6ecce3e4-b3e1-47ee-847c-b52c1a1ab969');
+    const submitButton = document.getElementById('ffc6c3c3-b443-40d7-a36a-f510a79dc7d3');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
@@ -917,22 +923,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div class="quiz">
 <div class="question">9. Що буде результатом виконання коду <code>class10b[0, 0] = 8</code>?</div>
 <label>
-<input type="radio" name="677f9e27-91b3-450a-b076-d07223fc25bf" value="true">ndarray class10b зі значенням 8 у першому рядку та першому стовпці</input>
+<input type="radio" name="746732db-8c21-473a-9313-e429a5999870" value="true">ndarray class10b зі значенням 8 у першому рядку та першому стовпці</input>
 </label>
 <label>
-<input type="radio" name="677f9e27-91b3-450a-b076-d07223fc25bf" value="false">ndarray class10b без змін</input>
+<input type="radio" name="746732db-8c21-473a-9313-e429a5999870" value="false">ndarray class10b без змін</input>
 </label>
 <label>
-<input type="radio" name="677f9e27-91b3-450a-b076-d07223fc25bf" value="false">ndarray class10b зі значенням 8 у другому рядку та першому стовпці</input>
+<input type="radio" name="746732db-8c21-473a-9313-e429a5999870" value="false">ndarray class10b зі значенням 8 у другому рядку та першому стовпці</input>
 </label>
 <label>
-<input type="radio" name="677f9e27-91b3-450a-b076-d07223fc25bf" value="false">ndarray class10b зі значенням 8 у першому рядку та другому стовпці</input>
+<input type="radio" name="746732db-8c21-473a-9313-e429a5999870" value="false">ndarray class10b зі значенням 8 у першому рядку та другому стовпці</input>
 </label>
-<button class="check" id="6103647d-6b0c-4efd-88d7-45f24f84f119" onclick="checkOptions(&quot;6103647d-6b0c-4efd-88d7-45f24f84f119&quot;, &quot;677f9e27-91b3-450a-b076-d07223fc25bf&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
+<button class="check" id="412dd21f-943c-4d81-87af-d79082bebe0c" onclick="checkOptions(&quot;412dd21f-943c-4d81-87af-d79082bebe0c&quot;, &quot;746732db-8c21-473a-9313-e429a5999870&quot;, [&quot;Так тримати, чемпіон 🌟&quot;, &quot;Просто супер 🤩&quot;, &quot;Ти -- молодец 😎&quot;, &quot;Йой, бачу довідченого кодера 🤓&quot;, &quot;А ти точно не прцював в OpenAI до цього 🤖&quot;], [&quot;Упс, ще трошки 😬&quot;, &quot;Це не зовсім те, що ми мали на увазі, але вже близько 🙊&quot;, &quot;Ти ще на один крок ближче до успіху, тільки не здавайся 🚀&quot;, &quot;Нічого, головне не здаватися 💪&quot;]);" disabled="disabled">Перевірити</button>
 </div>
 <script>window.addEventListener('DOMContentLoaded', function() {
-    const radioButtons = document.getElementsByName('677f9e27-91b3-450a-b076-d07223fc25bf');
-    const submitButton = document.getElementById('6103647d-6b0c-4efd-88d7-45f24f84f119');
+    const radioButtons = document.getElementsByName('746732db-8c21-473a-9313-e429a5999870');
+    const submitButton = document.getElementById('412dd21f-943c-4d81-87af-d79082bebe0c');
 
     radioButtons.forEach(function(radioButton) {
       radioButton.addEventListener('change', function() {
